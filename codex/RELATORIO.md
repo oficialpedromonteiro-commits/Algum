@@ -2,13 +2,13 @@
 
 ## 1. Questões restauradas ao texto original
 
-Das **738** questões de prova marcadas como "Adaptada de …" nos oito cadernos enviados, **287** foram restauradas exatamente como aparecem na prova:
+Das **1.016** questões de prova adaptadas nos nove cadernos enviados, **390** foram restauradas exatamente como aparecem na prova:
 
 - enunciado, assertivas e alternativas copiados do caderno oficial;
 - gabarito conferido no gabarito oficial **definitivo** (ou no preliminar mantido após os recursos, quando não havia definitivo);
 - rótulo sem o "Adaptada de", com banca, ano e cargo da prova de onde a questão saiu de fato.
 
-O caderno do Título II (Patrimônio) já não tinha questões adaptadas. No Título XII há mais 8 questões marcadas como adaptadas do livro "Legislação Integrada"; elas não vêm de provas e ficaram como estavam.
+O caderno do Título II (Patrimônio) já não tinha questões adaptadas. No Título I, que não trazia o rótulo "Adaptada de", as 175 questões não restauradas passaram a trazê-lo, e a nota de abertura do caderno foi ajustada. No Título XII há mais 8 questões marcadas como adaptadas do livro "Legislação Integrada"; elas não vêm de provas e ficaram como estavam.
 
 | Caderno | Adaptadas | Restauradas | Continuam adaptadas |
 |---|---:|---:|---:|
@@ -20,14 +20,15 @@ O caderno do Título II (Patrimônio) já não tinha questões adaptadas. No Tí
 | Título X – Fé Pública | 126 | 52 | 74 |
 | Título XI – Administração Pública | 189 | 103 | 86 |
 | Título XII – Estado Democrático de Direito | 12 | 4 | 8 |
-| **Total** | **738** | **287** | **451** |
+| Título I – Crimes contra a Pessoa | 278 | 103 | 175 |
+| **Total** | **1.016** | **390** | **626** |
 
 ### Fontes usadas
 
-- **FGV** (225 de 312): cadernos e gabaritos em `conhecimento.fgv.br` (concursos e a seção "Exames", com as edições do ENAM), e cadernos da 1ª fase da OAB (XVI ao 47º Exame) em `oab.fgv.br`.
-- **Cebraspe** (62 de 125): cadernos e gabaritos definitivos publicados pela própria banca (concursos de 2016 em diante).
+- **FGV** (294 de 390): cadernos e gabaritos em `conhecimento.fgv.br` (concursos e a seção "Exames", com as edições do ENAM), e cadernos da 1ª fase da OAB (XVI ao 47º Exame) em `oab.fgv.br`.
+- **Cebraspe** (96 de 191): cadernos e gabaritos definitivos publicados pela própria banca (concursos de 2016 em diante).
 
-### Por que as outras 451 continuam adaptadas
+### Por que as outras 626 continuam adaptadas
 
 O texto original não estava acessível de forma verificável:
 
@@ -46,11 +47,13 @@ Essas questões **não foram reescritas de memória**. Continuam com o rótulo "
 - FGV · 2024 · Juiz Substituto (TJ SC) — Caio e o furto do carro: gabarito oficial **B** (furto qualificado); o material marcava A.
 - Cebraspe · 2018 · ABIN — Marcos, auxiliar de enfermagem: gabarito oficial **Errado** (o item fala em "exercício ilegal da profissão"); o material marcava Certo.
 - Cebraspe · 2020 · PRF — remarcação do chassi com o número original: gabarito oficial **Errado**; o material marcava Certo. A nota na questão explica a divergência.
+- Cebraspe · 2026 · Delegado (PC DF), item 85 — infanticídio como "crime de homicídio" com pena reduzida: o gabarito preliminar era Certo, mas o **definitivo é Errado**. O material seguia o preliminar; o comentário foi reescrito e a nota registra a mudança.
 
 **Itens anulados pela banca** (mantive o gabarito do material, com nota avisando da anulação):
 
 - Cebraspe · 2021 · TCDF — assinatura em nome de subordinado.
 - Cebraspe · 2017 · PJC MT — crimes contra a dignidade sexual (Questão 58).
+- Título I: Cebraspe · 2026 · PC DF, item 69 (feminicídio e agravante); Cebraspe · 2018 · PF, item 96 (invasão de dispositivo contra o SERPRO); Cebraspe · 2017 · TRE TO, Questão 54 (ex-marido armado); e a questão da PM TO.
 
 **Formato devolvido ao original** (o material tinha transformado em Certo/Errado; voltaram a ser de múltipla escolha, com o comentário reescrito):
 
@@ -68,13 +71,13 @@ Essas questões **não foram reescritas de memória**. Continuam com o rótulo "
 
 ## 3. Questões intercaladas com o conteúdo
 
-Nos nove cadernos, as questões de cada artigo foram redistribuídas entre os blocos de texto:
+Nos dez cadernos, as questões de cada artigo foram redistribuídas entre os blocos de texto:
 
 - cada questão fica logo depois do parágrafo (ou do texto de lei) do mesmo tópico com que mais se relaciona;
 - no máximo duas questões por bloco de texto;
 - nenhuma questão atravessa um subtítulo;
 - os quadros de jurisprudência continuam junto do texto a que pertencem.
 
-O maior trecho de questões seguidas sem texto explicativo caiu de 10–11 para 2–3 na maioria dos cadernos.
+O maior trecho de questões seguidas sem texto explicativo caiu de 10–11 para 2–3 na maioria dos cadernos (no Título I, de 33 para 6).
 
 Todas as páginas foram abertas no Chromium depois das mudanças: todas as questões aparecem, com as alternativas, e não há erros de script.
