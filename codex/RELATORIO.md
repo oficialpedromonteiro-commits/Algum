@@ -2,35 +2,37 @@
 
 ## 1. Questões restauradas ao texto original
 
-Das **726** questões marcadas como "Adaptada de …" nos sete cadernos enviados, **274** foram restauradas exatamente como aparecem na prova:
+Das **738** questões de prova marcadas como "Adaptada de …" nos oito cadernos enviados, **287** foram restauradas exatamente como aparecem na prova:
 
 - enunciado, assertivas e alternativas copiados do caderno oficial;
 - gabarito conferido no gabarito oficial **definitivo** (ou no preliminar mantido após os recursos, quando não havia definitivo);
 - rótulo sem o "Adaptada de", com banca, ano e cargo da prova de onde a questão saiu de fato.
 
-O caderno do Título II (Patrimônio) já não tinha questões adaptadas.
+O caderno do Título II (Patrimônio) já não tinha questões adaptadas. No Título XII há mais 8 questões marcadas como adaptadas do livro "Legislação Integrada"; elas não vêm de provas e ficaram como estavam.
 
 | Caderno | Adaptadas | Restauradas | Continuam adaptadas |
 |---|---:|---:|---:|
 | Títulos III a V – Imaterial, Trabalho, Religião e Mortos | 36 | 13 | 23 |
-| Título VI – Dignidade Sexual | 176 | 82 | 94 |
+| Título VI – Dignidade Sexual | 176 | 83 | 93 |
 | Título VII – Família | 46 | 4 | 42 |
 | Título VIII – Incolumidade Pública | 99 | 16 | 83 |
 | Título IX – Paz Pública | 54 | 12 | 42 |
-| Título X – Fé Pública | 126 | 51 | 75 |
-| Título XI – Administração Pública | 189 | 96 | 93 |
-| **Total** | **726** | **274** | **452** |
+| Título X – Fé Pública | 126 | 52 | 74 |
+| Título XI – Administração Pública | 189 | 103 | 86 |
+| Título XII – Estado Democrático de Direito | 12 | 4 | 8 |
+| **Total** | **738** | **287** | **451** |
 
 ### Fontes usadas
 
-- **FGV** (213 de 307): cadernos e gabaritos em `conhecimento.fgv.br`, e cadernos da 1ª fase da OAB (XVI ao 47º Exame) em `oab.fgv.br`.
-- **Cebraspe** (61 de 124): cadernos e gabaritos definitivos publicados pela própria banca (concursos de 2016 em diante).
+- **FGV** (225 de 312): cadernos e gabaritos em `conhecimento.fgv.br` (concursos e a seção "Exames", com as edições do ENAM), e cadernos da 1ª fase da OAB (XVI ao 47º Exame) em `oab.fgv.br`.
+- **Cebraspe** (62 de 125): cadernos e gabaritos definitivos publicados pela própria banca (concursos de 2016 em diante).
 
-### Por que as outras 452 continuam adaptadas
+### Por que as outras 451 continuam adaptadas
 
 O texto original não estava acessível de forma verificável:
 
 - **VUNESP, Quadrix, IBFC, Instituto AOCP, Consulplan e FUNDATEC**: os sites bloqueiam o acesso automatizado.
+- **Bancos de questões e agregadores** (QConcursos, Gran Questões, Aprova Concursos, TEC, PCI Concursos): bloqueiam o acesso ou exigem resolver captcha. O buscador encontra essas questões, mas só devolve um resumo, que não é literal.
 - **FCC**: a banca não publica os cadernos de prova.
 - **FGV antiga** (até cerca de 2016, incluindo a OAB até o XV Exame) e **Cebraspe anterior a 2016**: os cadernos não estão mais no site da banca.
 - **Bancas pequenas e provas municipais**: não há página de provas utilizável.
@@ -66,7 +68,7 @@ Essas questões **não foram reescritas de memória**. Continuam com o rótulo "
 
 ## 3. Questões intercaladas com o conteúdo
 
-Nos oito cadernos, as questões de cada artigo foram redistribuídas entre os blocos de texto:
+Nos nove cadernos, as questões de cada artigo foram redistribuídas entre os blocos de texto:
 
 - cada questão fica logo depois do parágrafo (ou do texto de lei) do mesmo tópico com que mais se relaciona;
 - no máximo duas questões por bloco de texto;
