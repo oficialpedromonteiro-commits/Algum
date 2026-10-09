@@ -1,0 +1,1768 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Estado Democrático · Direito Penal · Parte Especial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --col:80ch;--fs-body:17.5px;--fs-lex:17.5px;--fs-sub:normal;
+  --ls-h1:-.035em;--ls-h2:-.02em;--tt-h1:uppercase;
+  --r-sm:6px;--r-md:8px;--r-lg:10px;--r-chip:999px;--r-selo:0 8px 8px 0;--art-top:5px;--blur:saturate(1.4) blur(10px);
+  --f-display:'Archivo',system-ui,sans-serif;--f-body:'Newsreader',Georgia,serif;
+  --f-ui:'Archivo Narrow','Archivo',system-ui,sans-serif;--f-mono:'IBM Plex Mono',ui-monospace,monospace;
+
+  --g1:#E2281E;--gm:#8A3FB4;--g2:#1F6FF0;
+  --ground:#FFF5F3;--ground-2:#FFF8F6;--surface:#FFFFFF;--surface-2:#FFF9F8;
+  --edge:#E8D3D1;--edge-soft:#F3E6E4;--ink:#1E1212;--ink-2:#4A3432;--muted:#82696A;
+  --accent:#C8261C;--accent-wash:rgba(200,38,28,.09);
+  --alt:#1D5FD6;--alt-wash:rgba(29,95,214,.09);
+  --alt2:#7432B4;--alt2-wash:rgba(116,50,180,.09);
+  --ok:#0A875F;--ok-wash:rgba(10,135,95,.10);
+  --warn:#B3102C;--warn-wash:rgba(179,16,44,.08);
+  --azul:#1D5FD6;--azul-wash:rgba(29,95,214,.09);
+  --teal:#0B7F74;--teal-wash:rgba(11,127,116,.10);
+  --rail-bg:linear-gradient(180deg,rgba(226,40,30,.10),rgba(255,255,255,.55) 30%,rgba(31,111,240,.07)),rgba(255,251,250,.86);
+  --selo-bg:#FFFFFF;--selo-head:linear-gradient(92deg,var(--sw),transparent 80%),#FFFAF9;
+  --head-bg:linear-gradient(92deg,rgba(226,40,30,.11),rgba(31,111,240,.06) 74%,transparent),#FFFAF9;
+  --console-bg:rgba(255,255,255,.92);
+  --abertura-bg:linear-gradient(140deg,rgba(226,40,30,.08),rgba(31,111,240,.06) 70%),#FFFFFF;
+  --grad-title:linear-gradient(96deg,#D42418 0%,#B8322E 22%,#8A3FB4 55%,#1F6FF0 100%);
+  --veil:radial-gradient(900px 480px at 88% 6%,rgba(226,40,30,.18),transparent 58%),
+         radial-gradient(1100px 720px at 40% 108%,rgba(31,111,240,.14),transparent 60%),
+         radial-gradient(1100px 700px at 10% -10%,#FF9C8C 0%,transparent 62%),
+         linear-gradient(158deg,#FFB2A5 0%,#FFC4B9 24%,#F9DAD3 44%,#E6E4EE 58%,#D6E3FA 74%,#C6DAFF 100%);
+  --barra-bg:rgba(255,247,245,.88);
+  --shadow:0 1px 2px rgba(70,20,30,.06),0 14px 34px rgba(70,20,40,.10);
+  --shadow-lift:0 2px 10px rgba(70,20,30,.10),0 24px 54px rgba(70,20,40,.16);
+  --hud:#C8261C;
+  /* paleta de componentes (cartões, mnemônicos, fluxos) */
+  --c-ambar:#B25E00;--c-ambar-w:rgba(178,94,0,.10);
+  --c-coral:#D0321F;--c-coral-w:rgba(208,50,31,.10);
+  --c-violeta:#7432B4;--c-violeta-w:rgba(116,50,180,.10);
+  --c-verde:#0A875F;--c-verde-w:rgba(10,135,95,.10);
+  --c-azul:#1D5FD6;--c-azul-w:rgba(29,95,214,.10);
+  --c-teal:#0B7F74;--c-teal-w:rgba(11,127,116,.10);
+  --c-vinho:#8E1330;--c-vinho-w:rgba(142,19,48,.09);
+  --c-cinza:#5E6475;--c-cinza-w:rgba(94,100,117,.09);
+  --on-c:#FFFFFF;
+  /* código de cores nas palavras */
+  --k-org:#1D4FC4;--k-neg:#B3102C;--k-ref:#6B2FB0;--k-cond:#9A5200;--k-efe:#07784F;--k-ato:#7432B4;
+}
+:root[data-theme="dark"]{
+  --g1:#FF4B3E;--gm:#A248C8;--g2:#2E7BFF;
+  --ground:#12090F;--ground-2:#1A1120;--surface:#150F1B;--surface-2:#1D1524;
+  --edge:#3A2C42;--edge-soft:#291F31;--ink:#F4EFF2;--ink-2:#CBBFC9;--muted:#8D8095;
+  --accent:#FF7A6E;--accent-wash:rgba(255,122,110,.15);
+  --alt:#6FA8FF;--alt-wash:rgba(111,168,255,.15);
+  --alt2:#B592F2;--alt2-wash:rgba(181,146,242,.16);
+  --ok:#2FD69C;--ok-wash:rgba(47,214,156,.14);
+  --warn:#FF6B7F;--warn-wash:rgba(255,107,127,.14);
+  --azul:#6FA8FF;--azul-wash:rgba(111,168,255,.15);
+  --teal:#3CD6C4;--teal-wash:rgba(60,214,196,.14);
+  --rail-bg:linear-gradient(180deg,rgba(255,75,62,.14),transparent 30%,rgba(46,123,255,.10)),rgba(18,10,20,.9);
+  --selo-bg:#150F1B;--selo-head:linear-gradient(92deg,var(--sw),transparent 80%),#1D1524;
+  --head-bg:linear-gradient(92deg,rgba(255,75,62,.16),rgba(46,123,255,.08) 74%,transparent),#1D1524;
+  --console-bg:rgba(21,15,27,.94);
+  --abertura-bg:linear-gradient(140deg,rgba(255,75,62,.12),rgba(46,123,255,.10) 70%),#150F1B;
+  --grad-title:linear-gradient(96deg,#FF7A6E 0%,#E0706A 22%,#C78BE0 55%,#6FA8FF 100%);
+  --veil:radial-gradient(900px 500px at 88% 8%,rgba(255,75,62,.16),transparent 58%),
+         radial-gradient(1100px 760px at 40% 108%,rgba(46,123,255,.18),transparent 60%),
+         radial-gradient(1200px 800px at 10% -10%,#5A0E14 0%,transparent 62%),
+         linear-gradient(158deg,#3C0A10 0%,#300A14 30%,#1A1030 58%,#101A48 76%,#07215A 100%);
+  --barra-bg:rgba(20,11,18,.88);
+  --shadow:0 1px 2px rgba(0,0,0,.55),0 14px 40px rgba(0,0,0,.5);
+  --shadow-lift:0 2px 12px rgba(0,0,0,.6),0 26px 60px rgba(0,0,0,.7);
+  --hud:#FF7A6E;
+  --c-ambar:#F5A524;--c-ambar-w:rgba(245,165,36,.18);
+  --c-coral:#FF6B5C;--c-coral-w:rgba(255,107,92,.18);
+  --c-violeta:#B592F2;--c-violeta-w:rgba(181,146,242,.18);
+  --c-verde:#2FD69C;--c-verde-w:rgba(47,214,156,.16);
+  --c-azul:#6FA8FF;--c-azul-w:rgba(111,168,255,.18);
+  --c-teal:#3CD6C4;--c-teal-w:rgba(60,214,196,.16);
+  --c-vinho:#FF8FA0;--c-vinho-w:rgba(255,143,160,.16);
+  --c-cinza:#A3A9BD;--c-cinza-w:rgba(163,169,189,.16);
+  --on-c:#12090F;
+  --k-org:#8FB9FF;--k-neg:#FF8C9B;--k-ref:#C9A8FF;--k-cond:#FFC266;--k-efe:#5FE3B2;--k-ato:#C9A8FF;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-body);
+  font-size:var(--fs-body);line-height:1.78;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:var(--accent);text-underline-offset:3px}
+::selection{background:var(--accent-wash);color:var(--ink)}
+
+.bg-veil{position:fixed;inset:0;pointer-events:none;z-index:0;background:var(--veil)}
+
+/* ---------------- estrutura ---------------- */
+.shell{position:relative;z-index:1;display:flex;min-height:100vh}
+main{flex:1;min-width:0;padding:0 26px 150px;display:flex;flex-direction:column;align-items:center}
+.col{width:100%;max-width:var(--col);margin:0 auto}
+body.wide{--col:104ch}
+
+/* ---------------- rail (sumário lateral) ---------------- */
+#rail{
+  width:300px;flex:0 0 300px;background:var(--rail-bg);border-right:1px solid var(--edge);
+  position:sticky;top:0;height:100vh;overflow-y:auto;padding:22px 0 40px;
+  transition:margin-left .32s cubic-bezier(.4,0,.2,1);font-family:var(--f-ui);
+}
+body.rail-off #rail{margin-left:-300px}
+body.sem-rail #rail{display:none}
+.rail-brand{padding:0 20px 15px;border-bottom:1px solid var(--edge-soft)}
+.rail-brand h1{font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 4px;color:var(--accent)}
+.rail-brand p{margin:0;font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.rail-stats{padding:15px 20px;display:flex;gap:13px;align-items:center;border-bottom:1px solid var(--edge-soft)}
+.ring-wrap{position:relative;width:58px;height:58px;flex:0 0 58px}
+.ring-txt{position:absolute;inset:0;display:grid;place-items:center;font-size:13px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+.stat-lines{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--muted)}
+.stat-lines b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.rail-nav{padding:12px 10px 0}
+.rn-g{font-family:var(--f-display);font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin:14px 0 6px;padding:0 10px}
+.rail-nav a{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink-2);font-size:13px;line-height:1.4;border-left:2px solid transparent}
+.rail-nav a:hover{background:var(--surface-2);color:var(--ink)}
+.rail-nav a.on{background:var(--accent-wash);border-left-color:var(--accent);color:var(--ink)}
+.rail-nav a.done{background:var(--ok-wash)}
+.rn-num{font-family:var(--f-display);font-size:11px;font-weight:700;color:var(--accent);min-width:52px;flex:0 0 52px}
+.rn-body{flex:1;min-width:0}
+.rn-title{display:block;font-size:11.5px;color:var(--muted)}
+.rn-check{flex:0 0 15px;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--edge);margin-top:3px;display:grid;place-items:center;font-size:9px;color:transparent}
+.rail-nav a.done .rn-check{background:var(--ok);border-color:var(--ok);color:var(--ground)}
+.rail-foot{padding:16px 20px 0;margin-top:12px;border-top:1px solid var(--edge-soft);font-size:11px;color:var(--muted)}
+.rail-foot button{font-family:var(--f-ui);font-size:11px;background:none;border:1px solid var(--edge);color:var(--muted);border-radius:var(--r-sm);padding:6px 10px;cursor:pointer;margin-top:8px}
+.rail-foot button:hover{border-color:var(--warn);color:var(--warn)}
+
+/* ---------------- console flutuante ---------------- */
+#console{
+  position:fixed;bottom:18px;right:18px;z-index:60;display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+  background:var(--console-bg);border:1px solid var(--accent);border-radius:var(--r-md);
+  padding:7px 9px;box-shadow:var(--shadow);font-family:var(--f-ui);backdrop-filter:var(--blur)
+}
+.cbtn{border:1px solid var(--edge);background:var(--surface-2);color:var(--ink-2);width:34px;height:34px;border-radius:var(--r-sm);cursor:pointer;display:grid;place-items:center;font-size:14px;padding:0;font-family:var(--f-ui)}
+.cbtn:hover{border-color:var(--accent);color:var(--accent)}
+#clock{font-family:var(--f-mono);font-size:15px;font-variant-numeric:tabular-nums;color:var(--accent);padding:0 6px;min-width:82px;text-align:center}
+#clock.run{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+#timerBox{display:flex;align-items:center;gap:6px}
+body.timer-off #timerBox{display:none}
+#settings{
+  position:fixed;bottom:76px;right:18px;z-index:70;width:270px;background:var(--surface);
+  border:1px solid var(--edge);border-radius:var(--r-md);box-shadow:var(--shadow-lift);padding:14px 16px;
+  font-family:var(--f-ui);display:none;backdrop-filter:var(--blur)
+}
+#settings.on{display:block}
+#settings h5{margin:0 0 10px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.srow{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;font-size:13px;color:var(--ink-2)}
+.srow+.srow{border-top:1px solid var(--edge-soft)}
+.tgl{width:38px;height:21px;border-radius:11px;border:1px solid var(--edge);background:var(--ground-2);position:relative;cursor:pointer;flex:0 0 38px;padding:0}
+.tgl::after{content:"";position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;background:var(--muted);transition:transform .22s,background .22s}
+.tgl[aria-pressed="true"]{background:var(--accent-wash);border-color:var(--accent)}
+.tgl[aria-pressed="true"]::after{transform:translateX(17px);background:var(--accent)}
+
+/* ---------------- hero ---------------- */
+.hero{padding:62px 0 10px;text-align:center}
+.hero .eyebrow{font-family:var(--f-ui);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin:0 0 20px}
+.hero h1{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,5.4vw,52px);line-height:1.12;letter-spacing:var(--ls-h1);text-transform:var(--tt-h1);margin:0;color:var(--ink);text-wrap:balance}
+.hero h1 .gilt{background:var(--grad-title);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:18px;color:var(--ink-2);margin:20px auto 0;max-width:62ch;font-style:var(--fs-sub);text-wrap:balance}
+.frieze{display:flex;align-items:center;gap:10px;margin:22px auto 0;width:min(360px,80%)}
+.frieze i{flex:1;height:2px;display:block;border-radius:2px;background:linear-gradient(90deg,transparent,var(--accent))}
+.frieze i:last-child{background:linear-gradient(90deg,var(--accent),transparent)}
+.frieze b{width:8px;height:8px;background:var(--accent);transform:rotate(45deg);display:block;flex:0 0 8px;box-shadow:0 0 12px var(--accent)}
+.marks{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:var(--r-md);overflow:hidden;margin:34px 0 8px;font-family:var(--f-ui)}
+.marks div{background:var(--surface);padding:14px 12px;text-align:center}
+.marks b{display:block;font-size:22px;font-variant-numeric:tabular-nums;font-weight:600;line-height:1.2;color:var(--accent)}
+.marks div:nth-child(2) b{color:var(--alt)}
+.marks div:nth-child(3) b{color:var(--alt2)}
+.marks div:nth-child(4) b{color:var(--ok)}
+.marks span{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.fontes{font-family:var(--f-ui);font-size:12px;color:var(--muted);margin-top:20px;text-align:center}
+.fontes b{color:var(--ink-2)}
+
+/* ---------------- sumário ocultável ---------------- */
+.top-sum{margin:32px 0 0;border:1px solid var(--edge);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.ts-h{display:flex;align-items:center;gap:12px;padding:13px 20px;cursor:pointer;user-select:none;background:var(--head-bg);border-bottom:1px solid var(--edge-soft)}
+.top-sum.fechado .ts-h{border-bottom-color:transparent}
+.ts-h h2{font-family:var(--f-display);font-weight:700;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;margin:0;color:var(--ink)}
+.ts-sub{display:block;font-family:var(--f-ui);font-weight:500;font-size:11px;letter-spacing:.02em;text-transform:none;color:var(--muted);margin-top:3px}
+.ts-chev{flex:0 0 28px;width:28px;height:28px;border-radius:var(--r-sm);border:1px solid var(--edge);background:var(--surface);display:grid;place-items:center;color:var(--accent);transition:transform .28s}
+.top-sum.fechado .ts-chev{transform:rotate(-90deg)}
+.ts-body{padding:18px 22px 22px}
+.top-sum.fechado .ts-body{display:none}
+.ts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.ts-grid a{display:block;padding:9px 11px;border-radius:var(--r-sm);text-decoration:none;border:1px solid var(--edge-soft);background:var(--ground-2);color:var(--ink-2);font-family:var(--f-ui);font-size:12.5px;line-height:1.4}
+.ts-grid a:hover{border-color:var(--accent);color:var(--accent)}
+.ts-grid a b{display:block;font-family:var(--f-display);font-size:11px;color:var(--accent);font-weight:700;margin-bottom:2px}
+.ts-tit{font-family:var(--f-display);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 9px}
+
+/* ---------------- busca ---------------- */
+#barra{position:sticky;top:0;z-index:40;margin:24px 0 0;padding:12px 0 10px;background:var(--ground);border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui)}
+.busca-linha{display:flex;gap:9px;align-items:center}
+.campo{flex:1;display:flex;align-items:center;gap:9px;min-width:0;background:var(--surface);border:1px solid var(--edge);border-radius:var(--r-md);padding:0 12px;box-shadow:var(--shadow)}
+.campo .lupa{font-size:17px;color:var(--muted);line-height:1}
+#q{flex:1;min-width:0;border:none;background:none;outline:none;color:var(--ink);font-family:var(--f-ui);font-size:14.5px;padding:11px 0}
+#q::placeholder{color:var(--muted)}
+#limpar{border:none;background:none;color:var(--muted);cursor:pointer;font-size:18px;line-height:1;padding:4px;display:none}
+#limpar.on{display:block}
+#btnBarra{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-ui);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--surface);border:1px solid var(--edge);color:var(--muted);border-radius:var(--r-md);padding:11px 13px;cursor:pointer;line-height:1;white-space:nowrap;box-shadow:var(--shadow)}
+#btnBarra:hover{color:var(--ink);border-color:var(--accent)}
+#btnBarra .cv{transition:transform .25s;display:inline-block}
+body.barra-off #btnBarra .cv{transform:rotate(180deg)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.chip{font-family:var(--f-ui);font-size:11.5px;border:1px solid var(--edge);background:var(--surface);color:var(--muted);border-radius:var(--r-chip);padding:5px 11px;cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent-wash);border-color:var(--accent);color:var(--accent);font-weight:600}
+.chip.forte{border-color:var(--warn);color:var(--warn)}
+.chip.forte[aria-pressed="true"]{background:var(--warn-wash);border-color:var(--warn);color:var(--warn)}
+#contador{font-family:var(--f-ui);font-size:11.5px;color:var(--muted);margin:9px 0 0;font-variant-numeric:tabular-nums}
+#contador b{color:var(--ink-2)}
+.barra-aviso{display:none;margin:0;font-family:var(--f-ui);font-size:12.5px;color:var(--muted)}
+body.barra-off .barra-aviso{display:block}
+body.barra-off #barra .campo,body.barra-off #barra .chips,body.barra-off #barra #contador{display:none}
+body.barra-off #barra{padding:9px 0 8px}
+body.barra-off .artigo,body.barra-off .divisor,body.barra-off .bloco-q,body.barra-off .questao{scroll-margin-top:110px}
+.vazio{display:none;text-align:center;font-family:var(--f-ui);font-size:14px;color:var(--muted);padding:46px 20px;border:1px dashed var(--edge);border-radius:var(--r-lg);margin:28px 0}
+.vazio.on{display:block}
+
+/* ---------------- divisores e abertura ---------------- */
+.divisor{text-align:center;scroll-margin-top:190px;margin:56px 0 24px}
+.d-num{font-family:var(--f-display);font-weight:700;font-size:11px;letter-spacing:.3em;color:var(--accent);text-transform:uppercase;display:inline-block;padding:5px 14px;border-radius:var(--r-chip);background:var(--accent-wash);border:1px solid var(--accent)}
+.divisor h2{font-family:var(--f-display);font-weight:700;font-size:clamp(19px,3vw,27px);line-height:1.22;letter-spacing:var(--ls-h2);text-transform:var(--tt-h1);margin:12px 0 0;color:var(--ink)}
+.abertura{margin:34px 0 0;padding:20px 24px;border:1px solid var(--edge);border-radius:var(--r-lg);background:var(--abertura-bg);box-shadow:var(--shadow)}
+.abertura h2{font-family:var(--f-display);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px;font-weight:700;text-align:center}
+.abertura p{margin:10px 0;font-size:15.5px;color:var(--ink-2);line-height:1.72}
+
+/* ---------------- artigo ---------------- */
+.artigo{margin:28px 0;scroll-margin-top:190px;border:1px solid var(--edge);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow);overflow:hidden;position:relative}
+.artigo::before{content:"";position:absolute;left:0;right:0;top:0;height:var(--art-top);background:var(--grad-title)}
+.artigo.done{border-color:var(--ok)}
+.artigo.done::before{background:var(--ok)}
+.art-head{display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:center;padding:15px 20px 13px;border-bottom:1px solid var(--edge-soft);background:var(--head-bg);font-family:var(--f-ui)}
+.ah-l{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;min-width:0}
+.art-num{font-family:var(--f-display);font-weight:700;font-size:17px;letter-spacing:.04em;color:var(--ink)}
+.art-tema{grid-column:1/2;margin:0;font-size:12.5px;color:var(--muted);line-height:1.5}
+.art-check{grid-row:1/3;grid-column:2/3;align-self:center;display:flex;align-items:center;gap:7px;cursor:pointer;font-family:var(--f-ui);font-size:11px;letter-spacing:.05em;font-weight:700;border:1px solid var(--edge);background:var(--surface);color:var(--muted);border-radius:var(--r-sm);padding:8px 12px;white-space:nowrap}
+.art-check:hover{border-color:var(--ok);color:var(--ok)}
+.acx{width:16px;height:16px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;font-size:9px;flex:0 0 16px}
+.artigo.done .art-check{background:var(--ok);border-color:var(--ok);color:var(--ground)}
+/* botao de conclusao reposicionado ao fim do topico */
+.art-corpo>.art-check{grid-row:auto;grid-column:auto;width:100%;justify-content:center;gap:9px;
+  margin:26px 0 12px;padding:13px 16px;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+  border-style:dashed;border-color:var(--edge);background:var(--ground-2)}
+.art-corpo>.art-check:hover{border-style:solid;border-color:var(--ok);background:var(--ok-wash);color:var(--ok)}
+.artigo.done .art-corpo>.art-check{border-style:solid;background:var(--ok);border-color:var(--ok);color:var(--ground)}
+.art-corpo>.art-check .acx{font-size:13px}
+.artigo.done .act{font-size:0}
+.artigo.done .act::before{content:"Estudado";font-size:11px}
+.art-corpo{padding:16px 22px 6px}
+p.lex{margin:11px 0;font-size:var(--fs-lex);line-height:1.76;text-align:justify;hyphens:auto}
+p.lex b{font-weight:700;color:var(--ink)}
+p.lex u{text-decoration-color:var(--accent);text-decoration-thickness:1.5px;text-underline-offset:3px}
+p.lex.sub{margin:8px 0 8px 22px;font-size:calc(var(--fs-lex) - .8px)}
+
+.ct{font-family:var(--f-ui);font-size:9.5px;letter-spacing:.11em;font-weight:700;text-transform:uppercase;border:1px solid var(--accent);color:var(--accent);border-radius:var(--r-chip);padding:2px 8px;background:var(--surface)}
+.ct.alt{border-color:var(--edge);color:var(--muted);text-transform:none;letter-spacing:.02em}
+.ct.divergencia{border-color:var(--warn);color:var(--warn)}
+
+/* ---------------- zonas e selos ---------------- */
+.zona{padding:6px 0 14px}
+.zona.inline{border-left:2px solid var(--edge-soft);padding-left:14px;margin:18px 0}
+.zona-t{font-family:var(--f-ui);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:14px 0 11px;display:flex;align-items:center;gap:10px}
+.zona-t::after{content:"";flex:1;height:1px;background:var(--edge-soft)}
+.selos{display:flex;flex-direction:column;gap:13px}
+.selo{--sk:var(--accent);--sw:var(--accent-wash);border:1px solid var(--edge);border-left:3px solid var(--sk);border-radius:var(--r-selo);background:var(--selo-bg);overflow:hidden}
+.selo[data-k="sumula"]{--sk:var(--alt);--sw:var(--alt-wash)}
+.selo[data-k="teses"]{--sk:var(--accent);--sw:var(--accent-wash)}
+.selo[data-k="atencao"]{--sk:var(--warn);--sw:var(--warn-wash)}
+.selo[data-k="divergencia"]{--sk:var(--warn);--sw:var(--warn-wash);border-left-width:4px}
+.selo[data-k="nota"]{--sk:var(--alt2);--sw:var(--alt2-wash)}
+.selo-h{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 15px;background:var(--selo-head);border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--sk);font-weight:700}
+.selo-h .si{flex:0 0 16px;display:grid;place-items:center;font-size:12px}
+.selo-h .sl{flex:1;min-width:0}
+.selo-h .sl{flex:1 1 240px}
+.selo-h .ct{border-color:var(--sk);color:var(--sk)}
+.src{font-size:10px;letter-spacing:.02em;text-transform:none;color:var(--muted);font-weight:500}
+.selo-b{padding:13px 18px 15px}
+.selo-t{font-family:var(--f-ui);font-size:14.5px;font-weight:600;line-height:1.5;margin:0 0 8px;color:var(--ink)}
+.selo-b p{margin:8px 0;font-size:15.5px;line-height:1.7;color:var(--ink-2)}
+.selo-b p b{color:var(--ink)}
+.mesmo{display:block;margin-top:6px;font-family:var(--f-ui);font-size:12.5px;color:var(--muted)}
+.cite{display:block;font-family:var(--f-mono);font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.6}
+.dq-res{font-family:var(--f-ui);font-size:14px;line-height:1.62;color:var(--ink-2);margin:0 0 13px;padding-bottom:12px;border-bottom:1px dashed var(--edge)}
+.posicoes{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.pos{border:1px solid var(--edge);border-top:3px solid var(--pc,var(--muted));border-radius:var(--r-sm);padding:12px 14px;background:var(--ground-2);min-width:0}
+.pos[data-corte="STF"]{--pc:var(--accent)}
+.pos[data-corte="STJ"]{--pc:var(--alt)}
+.pos-h{display:flex;gap:8px;align-items:center;margin:0 0 8px}
+.pos-r{font-family:var(--f-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--pc);flex:1}
+.pos-h .ct{border-color:var(--pc);color:var(--pc)}
+.pos-t{margin:0;font-size:15px;line-height:1.65;color:var(--ink-2)}
+.pos .cite{margin-top:9px;font-size:11px}
+.hoje{margin:14px 0 0;padding:12px 15px;border-radius:var(--r-sm);font-size:15px;line-height:1.65;background:var(--ok-wash);border:1px solid var(--ok);color:var(--ink-2)}
+.hoje b{color:var(--ok);font-family:var(--f-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:5px;font-weight:700}
+
+.esquema{border:1px solid var(--edge-soft);border-radius:var(--r-md);background:var(--ground-2);padding:15px 18px;font-family:var(--f-ui);font-size:14px;line-height:1.62;margin:18px 0}
+.esquema .es-t{margin:0 0 10px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.esquema ol{margin:0;padding-left:20px}
+.esquema li{margin:7px 0}
+.esquema li b{color:var(--ink)}
+.es-seta{color:var(--accent);font-weight:700}
+
+.tbl-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--edge);border-radius:var(--r-md);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--f-ui);font-size:13.5px;min-width:480px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--edge-soft);vertical-align:top;line-height:1.55}
+th{background:var(--head-bg);font-weight:700;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);border-bottom:2px solid var(--accent)}
+tbody tr:last-child td{border-bottom:none}
+
+/* ---------------- botão de conclusão ---------------- */
+.cap-fim{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 18px}
+.cap-fim.grande{justify-content:center;margin:34px 0 10px}
+.btn-fim{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-ui);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;border:1px solid var(--ok);background:var(--ok-wash);color:var(--ok);border-radius:var(--r-md);padding:12px 18px;cursor:pointer;line-height:1}
+.btn-fim:hover{background:var(--ok);color:var(--ground)}
+.btn-fim.feito{background:var(--ok);color:var(--ground)}
+.btn-fim.feito .bf-txt::after{content:" ✓"}
+.bf-i{font-size:13px}
+.bf-hint{font-family:var(--f-ui);font-size:11.5px;color:var(--muted)}
+
+/* ---------------- questões ---------------- */
+.bloco-q{margin:40px 0 8px;scroll-margin-top:190px}
+.bloco-q-h{display:flex;align-items:center;gap:11px;margin:0 0 16px;font-family:var(--f-ui);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--alt2)}
+.bloco-q-h::after{content:"";flex:1;height:1px;background:var(--alt2);opacity:.35}
+.bq-n{font-variant-numeric:tabular-nums;border:1px solid var(--alt2);border-radius:var(--r-chip);padding:3px 9px}
+.placar{display:flex;align-items:center;gap:13px;flex-wrap:wrap;border:1px solid var(--edge);border-radius:var(--r-md);background:var(--surface);padding:12px 15px;margin:0 0 18px;font-family:var(--f-ui);box-shadow:var(--shadow)}
+.placar-aro{position:relative;width:52px;height:52px;flex:0 0 52px}
+.pa-txt{position:absolute;inset:0;display:grid;place-items:center;font-size:12.5px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.placar-linhas{display:flex;flex-direction:column;gap:2px;font-size:12.5px;color:var(--muted)}
+.placar-linhas b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.pl-tit{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--alt2)}
+.placar button{margin-left:auto;font-family:var(--f-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:none;border:1px solid var(--edge);color:var(--muted);border-radius:var(--r-sm);padding:7px 11px;cursor:pointer}
+.placar button:hover{color:var(--warn);border-color:var(--warn)}
+
+.questao{border:1px solid var(--edge);border-left:4px solid var(--alt2);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow);padding:16px 18px 14px;margin:0 0 16px;scroll-margin-top:190px}
+.questao.acertou{border-left-color:var(--ok)}
+.questao.errou{border-left-color:var(--warn)}
+.q-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:11px;font-family:var(--f-ui)}
+.q-num{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--alt2)}
+.q-dif{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:1px solid currentColor;border-radius:4px;padding:2px 7px}
+.q-dif[data-d="dificil"]{color:var(--alt)}
+.q-dif[data-d="muito"]{color:var(--warn)}
+.q-banca{font-size:10px;letter-spacing:.08em;color:var(--muted);margin-left:auto;text-transform:uppercase}
+.q-marca{display:none;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:4px;padding:2px 7px}
+.questao.acertou .q-marca,.questao.errou .q-marca{display:inline-block}
+.questao.acertou .q-marca{background:var(--ok);color:var(--ground)}
+.questao.errou .q-marca{background:var(--warn);color:#fff}
+.q-enunciado{font-family:var(--f-body);font-size:16px;line-height:1.72;color:var(--ink);margin:0 0 14px;text-align:justify}
+.q-alts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.q-alt{display:flex;align-items:flex-start;gap:9px}
+.q-tesoura{flex:0 0 32px;width:32px;height:32px;margin-top:2px;display:grid;place-items:center;cursor:pointer;background:var(--ground-2);border:1px solid var(--edge);border-radius:var(--r-sm);color:var(--muted);font-size:14px;transition:all .15s}
+.q-tesoura:hover{color:var(--warn);border-color:var(--warn);background:var(--warn-wash)}
+.q-alt.cortada .q-tesoura{background:var(--warn);border-color:var(--warn);color:#fff;transform:rotate(-18deg)}
+.q-pick{flex:1;min-width:0;display:flex;align-items:flex-start;gap:10px;text-align:left;cursor:pointer;background:var(--ground-2);border:1px solid var(--edge);border-radius:var(--r-sm);padding:10px 13px;font-family:var(--f-body);font-size:15.5px;line-height:1.62;color:var(--ink-2)}
+.q-pick:hover{border-color:var(--alt2);color:var(--ink)}
+.q-letra{flex:0 0 20px;font-family:var(--f-ui);font-size:12.5px;font-weight:700;color:var(--alt2);padding-top:2px}
+.q-alt.marcada .q-pick{border-color:var(--alt2);background:var(--alt2-wash);color:var(--ink)}
+.q-alt.cortada .q-pick{opacity:.42;text-decoration:line-through;text-decoration-color:var(--warn);text-decoration-thickness:1.5px}
+.questao.respondida .q-pick{cursor:default;pointer-events:none}
+.questao.respondida .q-tesoura{pointer-events:none;opacity:.5}
+.q-alt.certa .q-pick{border-color:var(--ok);background:var(--ok-wash);color:var(--ink)}
+.q-alt.certa .q-letra{color:var(--ok)}
+.q-alt.errada-marcada .q-pick{border-color:var(--warn);background:var(--warn-wash)}
+.q-alt.errada-marcada .q-letra{color:var(--warn)}
+.q-acoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px;align-items:center}
+.q-btn{font-family:var(--f-ui);font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;border-radius:var(--r-sm);padding:9px 14px;cursor:pointer;line-height:1;border:1px solid var(--edge);background:var(--surface-2);color:var(--ink-2)}
+.q-btn.primario{background:var(--alt2);border-color:var(--alt2);color:var(--ground)}
+.q-btn:hover{border-color:var(--alt2);color:var(--ink)}
+.q-btn.primario:hover{filter:brightness(1.12);color:var(--ground)}
+.questao.respondida .q-btn.primario{display:none}
+.q-aviso{font-family:var(--f-ui);font-size:11.5px;color:var(--muted)}
+.q-coment{margin-top:14px;padding:13px 15px;border-radius:var(--r-sm);border-left:3px solid var(--accent);background:var(--accent-wash)}
+.qc-t{font-family:var(--f-ui);font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+.q-coment p{margin:0 0 8px;font-size:15px;line-height:1.66}
+.q-coment ul{margin:8px 0 0;padding-left:19px}
+.q-coment li{margin-bottom:5px;font-size:14.5px;line-height:1.6}
+.qc-gab{font-family:var(--f-ui);font-weight:700;color:var(--ok)}
+.qc-fonte{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+
+/* ---------------- fecho, toast, confete ---------------- */
+.fecho{margin:60px 0 0;padding:22px;text-align:center;border-top:1px solid var(--edge-soft);color:var(--muted);font-family:var(--f-ui);font-size:13px}
+.fe-t{font-family:var(--f-display);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);z-index:90;background:var(--surface);border:1px solid var(--accent);color:var(--ink);font-family:var(--f-ui);font-size:13px;padding:11px 18px;border-radius:var(--r-md);box-shadow:var(--shadow-lift);opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;max-width:min(92vw,520px);text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@keyframes pop{0%{transform:scale(.7);opacity:0}100%{transform:scale(1);opacity:1}}
+
+/* ---- ignicao do painel: substitui a comemoracao com confete ---- */
+#fx{position:fixed;inset:0;z-index:95;pointer-events:none;opacity:0;transition:opacity .3s ease}
+#fx.on{opacity:1}
+#festa{position:fixed;left:0;right:0;bottom:26px;z-index:96;display:none;justify-content:center;pointer-events:none;padding:0 16px}
+#festa.on{display:flex}
+.festa-card{
+  --hud:var(--teal);
+  display:flex;align-items:center;gap:15px;width:min(430px,100%);
+  background:var(--surface);
+  border:1px solid var(--edge);border-left:3px solid var(--hud);
+  border-radius:15px;padding:13px 17px 13px 15px;font-family:var(--f-ui);
+  box-shadow:0 20px 52px rgba(0,0,0,.55),0 0 34px -16px var(--hud);
+  animation:hudOn .55s cubic-bezier(.16,1,.3,1)
+}
+.festa-card.max{--hud:var(--ok)}
+@keyframes hudOn{0%{opacity:0;transform:translateY(16px) scale(.985)}60%{opacity:1}100%{opacity:1;transform:none}}
+.fc-g{position:relative;flex:0 0 52px;width:52px;height:52px}
+.fc-g svg{display:block;transform:rotate(-90deg)}
+.fc-g .gtrack{fill:none;stroke:var(--edge);stroke-width:4}
+.fc-g .garc{fill:none;stroke:var(--hud);stroke-width:4;stroke-linecap:round;filter:drop-shadow(0 0 4px var(--hud));transition:stroke-dashoffset 1.05s cubic-bezier(.16,1,.3,1)}
+.fc-g .gtxt{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-mono);font-size:12.5px;font-weight:700;color:var(--hud);letter-spacing:-.03em}
+.fc-b{flex:1;min-width:0}
+.fc-h{display:flex;align-items:center;gap:8px;margin:0 0 3px}
+.fc-t{font-size:13.5px;font-weight:700;color:var(--ink);margin:0;letter-spacing:.01em}
+.fc-i{font-family:var(--f-mono);font-size:9.5px;font-weight:800;letter-spacing:.1em;color:var(--hud);border:1px solid var(--hud);border-radius:999px;padding:1.5px 7px;white-space:nowrap;opacity:.92}
+.fc-s{font-size:11.8px;color:var(--muted);margin:0 0 7px;line-height:1.45}
+.fc-seg{display:flex;gap:3px}
+.fc-seg i{display:block;height:3px;flex:1;border-radius:2px;background:var(--edge);animation:segOn .5s ease forwards}
+.fc-seg i:nth-child(1){animation-delay:.10s}
+.fc-seg i:nth-child(2){animation-delay:.17s}
+.fc-seg i:nth-child(3){animation-delay:.24s}
+.fc-seg i:nth-child(4){animation-delay:.31s}
+.fc-seg i:nth-child(5){animation-delay:.38s}
+.fc-seg i:nth-child(6){animation-delay:.45s}
+.fc-seg i:nth-child(7){animation-delay:.52s}
+.fc-seg i:nth-child(8){animation-delay:.59s}
+@keyframes segOn{to{background:var(--hud);box-shadow:0 0 7px -1px var(--hud)}}
+@media (prefers-reduced-motion:reduce){
+  .festa-card{animation:none}
+  .fc-seg i{animation:none;background:var(--hud)}
+  .fc-g .garc{transition:none}
+}
+@media (max-width:760px){#festa{bottom:92px}}
+
+.hide{display:none!important}
+
+@media (max-width:1040px){ #rail{position:fixed;z-index:80;left:0;top:0;box-shadow:var(--shadow-lift)} }
+@media (max-width:760px){
+  main{padding:0 14px 150px}
+  .q-enunciado{text-align:left}
+  #console{left:12px;right:12px;bottom:12px;justify-content:center}
+  #settings{left:12px;right:12px;width:auto;bottom:80px}
+  .busca-linha{flex-wrap:wrap}
+  #btnBarra{order:-1}
+}
+
+
+/* ---------- elementos exclusivos do material ---------- */
+p.texto{margin:12px 0;font-size:var(--fs-body);line-height:1.78;color:var(--ink-2)}
+p.texto b{color:var(--ink)}
+p.lex.rev{opacity:.6;text-decoration:line-through;text-decoration-color:var(--warn);text-decoration-thickness:1px}
+s.rev-in{opacity:.6;text-decoration-color:var(--warn);text-decoration-thickness:1.5px}
+/* quando a revogacao e PARCIAL (ha um <s class="rev-in"> dentro), o paragrafo inteiro nao pode
+   ficar riscado nem esmaecido: so o trecho revogado e que leva o risco */
+p.lex.rev:has(s.rev-in){opacity:1;text-decoration:none}
+p.lex.rev:has(s.rev-in) s.rev-in{opacity:.6;text-decoration:line-through;
+  text-decoration-color:var(--warn);text-decoration-thickness:1.5px}
+/* a nota "hoje" nunca herda risco/opacidade e vira bloco proprio */
+p.lex.rev .hoje,p.lex .hoje{display:block;opacity:1;text-decoration:none}
+p.lex.rev .hoje b,p.lex .hoje b{text-decoration:none;opacity:1}
+.alt-leg{font-family:var(--f-ui);font-size:11.5px;color:var(--warn);letter-spacing:.01em}
+ul.plain{margin:10px 0;padding-left:20px}
+ul.plain li{margin:7px 0;font-size:15.5px;line-height:1.7;color:var(--ink-2)}
+ul.plain li b{color:var(--ink)}
+.ct.novo{border-color:var(--ok);color:var(--ok)}
+.selo[data-k="novidade"]{--sk:var(--ok);--sw:var(--ok-wash)}
+.selo[data-k="superado"]{--sk:var(--muted);--sw:var(--surface-2);border-left-width:4px;position:relative}
+.selo[data-k="superado"] .selo-h{padding-right:96px}
+.selo[data-k="superado"]::after{content:"SUPERADO";position:absolute;top:9px;right:12px;font-family:var(--f-ui);
+ font-size:9px;font-weight:700;letter-spacing:.16em;color:var(--warn);border:1px solid var(--warn);
+ border-radius:4px;padding:2px 6px;opacity:.8;pointer-events:none;background:var(--surface)}
+.selo[data-k="superado"] .selo-t{text-decoration:line-through;text-decoration-color:var(--warn);opacity:.75}
+.ct.superado{border-color:var(--warn);color:var(--warn)}
+.hoje.vigente{border-left:3px solid var(--ok);background:var(--ok-wash);border:none;border-left:3px solid var(--ok);
+ padding:11px 14px;border-radius:0 8px 8px 0;margin-top:12px}
+.hoje.vigente .h-t{font-family:var(--f-ui);font-size:10px;font-weight:700;letter-spacing:.15em;
+ text-transform:uppercase;color:var(--ok);margin:0 0 5px}
+.hoje.vigente p{margin:0;font-size:15px;line-height:1.66}
+.ts-tit{margin-top:0}
+table td b{color:var(--ink)}
+
+/* ===================== GRADE DE CARTÕES COLORIDOS ===================== */
+.grade-cores{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:20px 0}
+.cartao-cor{
+  position:relative;border-radius:14px;padding:14px 15px 15px;overflow:hidden;
+  background:linear-gradient(150deg,var(--cc-wash),transparent 65%),var(--surface);
+  border:1px solid var(--cc);box-shadow:0 8px 22px rgba(4,3,16,.35);
+  --cc:var(--accent);--cc-wash:var(--accent-wash);
+}
+.cartao-cor[data-cor="ambar"]{--cc:#F5A524;--cc-wash:rgba(245,165,36,.20)}
+.cartao-cor[data-cor="coral"]{--cc:#FF5C7A;--cc-wash:rgba(255,92,122,.20)}
+.cartao-cor[data-cor="violeta"]{--cc:#A855F7;--cc-wash:rgba(168,85,247,.22)}
+.cartao-cor[data-cor="verde"]{--cc:#22D37F;--cc-wash:rgba(34,211,127,.20)}
+.cartao-cor[data-cor="azul"]{--cc:#6EA8FE;--cc-wash:rgba(110,168,254,.20)}
+.cartao-cor[data-cor="teal"]{--cc:#2DD4BF;--cc-wash:rgba(45,212,191,.20)}
+.cartao-cor[data-cor="rosa"]{--cc:#FF4D8D;--cc-wash:rgba(255,77,141,.20)}
+.cartao-cor[data-cor="cinza"]{--cc:#9AA3BF;--cc-wash:rgba(154,163,191,.18)}
+.cartao-cor[data-cor="a"]{--cc:#22D37F;--cc-wash:rgba(34,211,127,.20)}
+.cartao-cor[data-cor="b"]{--cc:#F5A524;--cc-wash:rgba(245,165,36,.20)}
+.cartao-cor[data-cor="c"]{--cc:#FF5C7A;--cc-wash:rgba(255,92,122,.20)}
+.cartao-cor[data-cor="d"]{--cc:#A855F7;--cc-wash:rgba(168,85,247,.22)}
+.cartao-cor[data-cor="e"]{--cc:#6EA8FE;--cc-wash:rgba(110,168,254,.20)}
+.cc-tit{
+  display:inline-block;font-family:var(--f-display);font-size:15px;font-weight:800;letter-spacing:.02em;
+  text-transform:uppercase;color:#0A0912;background:var(--cc);border-radius:8px;padding:5px 12px;margin:0 0 10px;
+  box-shadow:0 3px 0 rgba(0,0,0,.25);
+}
+.cc-txt{margin:0;font-size:14.5px;line-height:1.6;color:var(--ink-2)}
+.cc-txt b{color:var(--ink)}
+.cc-tag{
+  display:inline-block;margin-top:11px;font-family:var(--f-ui);font-size:10px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--cc);border:1px dashed var(--cc);
+  border-radius:6px;padding:3px 9px;background:rgba(0,0,0,.25);
+}
+
+/* ===================== MNEMÔNICO ===================== */
+.mnemo{
+  margin:22px 0;border:2px solid var(--accent);border-radius:16px;overflow:hidden;
+  background:linear-gradient(160deg,rgba(245,165,36,.14),transparent 60%),var(--surface);
+}
+.mnemo-h{
+  display:flex;align-items:center;gap:9px;padding:10px 16px;background:rgba(245,165,36,.16);
+  border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui);font-size:11px;font-weight:800;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--accent);
+}
+.mnemo-frase{
+  text-align:center;font-family:var(--f-display);font-size:clamp(22px,4vw,32px);font-weight:800;
+  color:var(--ink);margin:16px 0 4px;letter-spacing:-.01em;
+}
+.mnemo-frase em{color:var(--accent);font-style:normal}
+.mnemo-letras{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;padding:12px 16px 6px}
+.mn-l{
+  border-radius:12px;padding:12px 10px;text-align:center;border:1px solid var(--ml,var(--accent));
+  background:linear-gradient(180deg,var(--ml-wash,var(--accent-wash)),transparent 75%),var(--ground-2);
+}
+.mn-l[data-c="1"]{--ml:#22D37F;--ml-wash:rgba(34,211,127,.22)}
+.mn-l[data-c="2"]{--ml:#F5A524;--ml-wash:rgba(245,165,36,.22)}
+.mn-l[data-c="3"]{--ml:#6EA8FE;--ml-wash:rgba(110,168,254,.22)}
+.mn-l[data-c="4"]{--ml:#A855F7;--ml-wash:rgba(168,85,247,.22)}
+.mn-l[data-c="5"]{--ml:#FF5C7A;--ml-wash:rgba(255,92,122,.22)}
+/* aliases nominais e alfabeticos para mn-l */
+.mn-l[data-c="verde"],.mn-l[data-c="a"]{--ml:#22D37F;--ml-wash:rgba(34,211,127,.22)}
+.mn-l[data-c="ambar"],.mn-l[data-c="b"]{--ml:#F5A524;--ml-wash:rgba(245,165,36,.22)}
+.mn-l[data-c="azul"],.mn-l[data-c="c"]{--ml:#6EA8FE;--ml-wash:rgba(110,168,254,.22)}
+.mn-l[data-c="violeta"],.mn-l[data-c="d"]{--ml:#A855F7;--ml-wash:rgba(168,85,247,.22)}
+.mn-l[data-c="coral"],.mn-l[data-c="e"]{--ml:#FF5C7A;--ml-wash:rgba(255,92,122,.22)}
+.mn-l[data-c="teal"]{--ml:#2DD4BF;--ml-wash:rgba(45,212,191,.22)}
+.mn-l[data-c="rosa"]{--ml:#FF4D8D;--ml-wash:rgba(255,77,141,.22)}
+.mn-l[data-c="cinza"]{--ml:#9AA3BF;--ml-wash:rgba(154,163,191,.20)}
+.mn-big{display:block;font-family:var(--f-display);font-size:34px;font-weight:800;line-height:1;color:var(--ml)}
+.mn-txt{display:block;margin-top:7px;font-family:var(--f-ui);font-size:12px;font-weight:600;color:var(--ink-2)}
+.mnemo-pe{
+  margin:8px 12px 14px;padding:9px 14px;border-radius:10px;background:var(--ground-2);
+  font-family:var(--f-ui);font-size:12.5px;color:var(--ink-2);text-align:center;border:1px dashed var(--edge)
+}
+
+/* ===================== PARA NÃO CONFUNDIR ===================== */
+.confundir{
+  margin:22px 0;border:1px solid var(--azul);border-radius:16px;overflow:hidden;background:var(--surface);
+}
+.cf-h{
+  display:flex;align-items:center;gap:9px;padding:10px 16px;background:rgba(110,168,254,.14);
+  border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui);font-size:11px;font-weight:800;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--azul);
+}
+.cf-cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--edge-soft)}
+.cf-col{background:var(--surface);padding:0 0 14px}
+.cf-col-t{
+  margin:0 0 10px;padding:9px 14px;font-family:var(--f-ui);font-size:11.5px;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;text-align:center;color:#0A0912;
+}
+.cf-col.a .cf-col-t{background:#8FC7FF}
+.cf-col.b .cf-col-t{background:#FFCB6B}
+.cf-col ul{list-style:none;margin:0;padding:0 14px;display:flex;flex-direction:column;gap:9px}
+.cf-col li{display:block;position:relative;padding-left:26px;font-size:14px;line-height:1.55;color:var(--ink-2)}
+.cf-col li::before{content:"✔";position:absolute;left:0;top:2px;width:17px;height:17px;border-radius:50%;display:grid;place-items:center;font-size:10px}
+.cf-col.a li::before{background:rgba(110,168,254,.25);color:var(--azul)}
+.cf-col.b li::before{background:rgba(245,165,36,.25);color:var(--accent)}
+.cf-col li b{color:var(--ink)}
+@media (max-width:640px){.cf-cols{grid-template-columns:1fr}}
+
+/* ===================== IMPORTANTE (alerta) ===================== */
+.importante{
+  margin:22px 0;border:1px solid var(--warn);border-radius:16px;overflow:hidden;
+  background:linear-gradient(150deg,rgba(255,92,122,.12),transparent 60%),var(--surface);
+}
+.imp-h{
+  display:flex;align-items:center;gap:9px;padding:10px 16px;background:rgba(255,92,122,.18);
+  border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui);font-size:11.5px;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;color:#FFB3C0;
+}
+.imp-b{padding:14px 16px 16px;display:block}
+.imp-b:has(> .imp-x){display:flex;gap:14px;align-items:flex-start}
+.imp-b:has(> .imp-x) > :not(.imp-x){flex:1;min-width:0}
+.imp-b > p:last-child{margin-bottom:0}
+.imp-b .tbl-wrap{margin:6px 0 10px}
+.imp-x{
+  flex:0 0 38px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  background:var(--warn);color:#0A0912;font-size:20px;font-weight:800;
+}
+.imp-b p{margin:0 0 8px;font-size:15px;line-height:1.66;color:var(--ink-2)}
+.imp-b ul{margin:6px 0 0;padding-left:18px}
+.imp-b li{margin:5px 0;font-size:14.5px;line-height:1.6;color:var(--ink-2)}
+.imp-b li b{color:var(--ink)}
+
+/* ===================== CASOS NUMERADOS ===================== */
+.casos{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin:20px 0}
+.caso{
+  border:1px solid var(--edge);border-radius:14px;padding:14px 15px;background:var(--ground-2);position:relative;
+  box-shadow:0 6px 18px rgba(4,3,16,.3);
+}
+.caso-n{
+  position:absolute;top:-11px;left:14px;width:26px;height:26px;border-radius:50%;
+  display:grid;place-items:center;background:var(--accent);color:#0A0912;
+  font-family:var(--f-display);font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(0,0,0,.4);
+}
+.caso-t{margin:8px 0 7px;font-family:var(--f-display);font-size:15px;font-weight:700;color:var(--ink);line-height:1.25}
+.caso-t em{color:var(--accent);font-style:normal}
+.caso p{margin:0;font-size:13.8px;line-height:1.6;color:var(--ink-2)}
+.caso p b{color:var(--ink)}
+
+/* ===================== LINHA DO TEMPO ===================== */
+.linha-tempo{list-style:none;margin:20px 0;padding:0 0 0 6px;position:relative}
+.linha-tempo::before{content:"";position:absolute;left:62px;top:10px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--edge),var(--accent))}
+.lt-item{display:flex;gap:0;align-items:flex-start;padding:0 0 18px;position:relative}
+.lt-q{flex:0 0 62px;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
+.lt-item::after{content:"";position:absolute;left:56px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:2px solid var(--edge);z-index:1}
+.lt-item[data-s="atual"]::after{border-color:var(--ok);background:var(--ok)}
+.lt-item[data-s="lei"]::after{border-color:var(--accent);background:var(--accent)}
+.lt-item[data-s="sup"]::after{border-color:var(--muted);background:var(--ground-2)}
+.lt-c{flex:1;min-width:0;padding-left:24px}
+.lt-t{display:inline-block;font-family:var(--f-ui);font-size:9.5px;font-weight:800;letter-spacing:.14em;
+ text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:2px 9px;margin-bottom:6px}
+.lt-item[data-s="atual"] .lt-t{color:var(--ok)}
+.lt-item[data-s="lei"] .lt-t{color:var(--accent)}
+.lt-item[data-s="sup"] .lt-t{color:var(--muted)}
+.lt-c p{margin:0;font-size:14.5px;line-height:1.62;color:var(--ink-2)}
+.lt-c p b{color:var(--ink)}
+.lt-item[data-s="sup"] .lt-c p{opacity:.8}
+
+/* ===================== FLUXO (passos com setas) ===================== */
+.fluxo{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:20px 0}
+.fx-p{
+  flex:1 1 150px;min-width:140px;border:1px solid var(--edge);border-radius:12px;padding:12px 13px;
+  background:linear-gradient(170deg,var(--fxw,var(--accent-wash)),transparent 70%),var(--surface);
+}
+.fx-p[data-c="1"]{--fx:#6EA8FE;--fxw:rgba(110,168,254,.16)}
+.fx-p[data-c="2"]{--fx:#A855F7;--fxw:rgba(168,85,247,.16)}
+.fx-p[data-c="3"]{--fx:#F5A524;--fxw:rgba(245,165,36,.16)}
+.fx-p[data-c="4"]{--fx:#22D37F;--fxw:rgba(34,211,127,.16)}
+/* aliases nominais e alfabeticos para fx-p */
+.fx-p[data-c="azul"],.fx-p[data-c="a"]{--fx:#6EA8FE;--fxw:rgba(110,168,254,.16)}
+.fx-p[data-c="violeta"],.fx-p[data-c="b"]{--fx:#A855F7;--fxw:rgba(168,85,247,.16)}
+.fx-p[data-c="ambar"],.fx-p[data-c="c"]{--fx:#F5A524;--fxw:rgba(245,165,36,.16)}
+.fx-p[data-c="verde"],.fx-p[data-c="d"]{--fx:#22D37F;--fxw:rgba(34,211,127,.16)}
+.fx-p[data-c="coral"],.fx-p[data-c="e"]{--fx:#FF5C7A;--fxw:rgba(255,92,122,.16)}
+.fx-p[data-c="teal"]{--fx:#2DD4BF;--fxw:rgba(45,212,191,.16)}
+.fx-p[data-c="rosa"]{--fx:#FF4D8D;--fxw:rgba(255,77,141,.16)}
+.fx-p[data-c="cinza"]{--fx:#9AA3BF;--fxw:rgba(154,163,191,.16)}
+.fx-n{font-family:var(--f-ui);font-size:9.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--fx,var(--accent))}
+.fx-t{display:block;margin:6px 0 5px;font-family:var(--f-display);font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.25}
+.fx-p p{margin:0;font-size:13px;line-height:1.55;color:var(--ink-2)}
+.fx-seta{align-self:center;color:var(--accent);font-size:19px;font-weight:700;flex:0 0 auto}
+@media (max-width:700px){.fx-seta{display:none}}
+
+/* ===================== QUESTÃO INLINE ===================== */
+.q-inline{margin:26px 0 22px}
+.q-inline .bloco-q-h{margin-bottom:12px}
+.placar-mini{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid var(--edge);border-radius:12px;
+  background:var(--surface);padding:10px 14px;margin:0 0 16px;font-family:var(--f-ui);font-size:12.5px;color:var(--muted)
+}
+.placar-mini b{color:var(--ink);font-variant-numeric:tabular-nums}
+.placar-mini .pm-t{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--alt2)}
+.placar-mini button{margin-left:auto;font-family:var(--f-ui);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+ background:none;border:1px solid var(--edge);color:var(--muted);border-radius:8px;padding:6px 10px;cursor:pointer}
+
+/* ===================== CITAÇÃO DE DOUTRINA ===================== */
+.citacao{
+  margin:16px 0;padding:14px 18px;border-left:3px solid var(--alt2);border-radius:0 12px 12px 0;
+  background:linear-gradient(90deg,rgba(168,85,247,.10),transparent 70%),var(--ground-2);
+}
+.citacao p{margin:0;font-size:15px;line-height:1.7;color:var(--ink-2);font-style:italic}
+.citacao .ct-autor{display:block;margin-top:9px;font-family:var(--f-ui);font-size:11.5px;font-style:normal;color:var(--alt2);font-weight:700;letter-spacing:.04em}
+
+.dq-fecho{margin:12px 0 0;padding-top:11px;border-top:1px dashed var(--edge);font-family:var(--f-ui);
+ font-size:13.5px;line-height:1.62;color:var(--ink-2)}
+.dq-fecho b{color:var(--ink)}
+.pos[data-corte="TJ"]{--pc:var(--teal)}
+.pos[data-corte="DOUT"]{--pc:var(--alt2)}
+
+/* ===================== DESAFIO DIGITADO (resposta escrita) ===================== */
+.desafio{
+  margin:22px 0;border:1px solid var(--edge);border-radius:var(--r-md);overflow:hidden;
+  background:linear-gradient(150deg,rgba(45,212,191,.10),transparent 58%),var(--surface);
+  position:relative;
+}
+.desafio::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--teal)}
+.df-h{display:flex;align-items:center;gap:9px;padding:10px 16px 0 18px}
+.df-ic{font-size:14px;line-height:1}
+.df-t{font-family:var(--f-ui);font-size:9.5px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--teal)}
+.df-tag{margin-left:auto;font-family:var(--f-ui);font-size:9.5px;font-weight:700;letter-spacing:.12em;
+ text-transform:uppercase;color:var(--muted);border:1px solid var(--edge-soft);border-radius:999px;padding:2px 9px}
+.df-p{margin:8px 0 0;padding:0 16px 0 18px;font-size:15.2px;line-height:1.68;color:var(--ink)}
+.df-p b{color:var(--ink);font-weight:700}
+.df-gap{display:inline-block;min-width:74px;text-align:center;border-bottom:2px dashed var(--teal);
+ color:var(--teal);font-family:var(--f-mono);font-size:14px;letter-spacing:.06em;margin:0 3px;vertical-align:baseline}
+.df-in{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 16px 14px 18px}
+.df-campo{
+  flex:1 1 230px;min-width:0;font-family:var(--f-ui);font-size:14.5px;color:var(--ink);
+  background:var(--ground-2);border:1px solid var(--edge);border-radius:10px;padding:10px 13px;outline:none;
+}
+.df-campo::placeholder{color:var(--muted)}
+.df-campo:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-wash)}
+.df-ok,.df-ver,.df-de{
+  font-family:var(--f-ui);font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  border-radius:10px;padding:10px 15px;cursor:pointer;border:1px solid var(--edge);background:none;color:var(--ink-2);
+}
+.df-ok{background:var(--teal);border-color:var(--teal);color:#07211D}
+.df-ok:hover{filter:brightness(1.08)}
+.df-ver:hover,.df-de:hover{border-color:var(--muted);color:var(--ink)}
+.df-fb{margin:0;padding:0 16px 14px 18px;font-size:14px;line-height:1.62;color:var(--ink-2)}
+.df-fb b{color:var(--ink)}
+.df-fb .fb-ok{color:var(--ok);font-weight:700}
+.df-fb .fb-no{color:var(--warn);font-weight:700}
+.df-fb .fb-qs{color:var(--accent);font-weight:700}
+.desafio.acertou{background:linear-gradient(150deg,rgba(34,211,127,.14),transparent 58%),var(--surface)}
+.desafio.acertou::before{background:var(--ok)}
+.desafio.acertou .df-t{color:var(--ok)}
+.desafio.acertou .df-campo{border-color:var(--ok);color:var(--ok);font-weight:700}
+.desafio.errou::before{background:var(--warn)}
+.desafio.errou .df-campo{border-color:var(--warn)}
+.desafio.revelado::before{background:var(--muted)}
+.desafio.revelado .df-t{color:var(--muted)}
+.df-resp{display:block;margin-top:7px;font-family:var(--f-mono);font-size:14px;color:var(--ok);letter-spacing:.02em}
+.desafio.revelado .df-resp{color:var(--accent)}
+.df-alt{display:block;margin-top:5px;font-size:12.5px;color:var(--muted)}
+@media (max-width:620px){.df-in{flex-direction:column;align-items:stretch}.df-ok,.df-ver{width:100%}}
+
+s.rev-in{opacity:.6;text-decoration:line-through;text-decoration-color:var(--warn);text-decoration-thickness:1.5px}
+p.lex .hoje{display:block;opacity:1;text-decoration:none;margin-top:12px}
+p.lex .hoje b{text-decoration:none;opacity:1}
+p.lex.nova{position:relative;margin-top:22px}
+p.lex.nova::after{
+  content:"NOVO";position:absolute;right:0;top:-15px;font-family:var(--f-ui);font-size:8.5px;
+  font-weight:800;letter-spacing:.14em;color:var(--teal);border:1px solid var(--teal);border-radius:999px;padding:1px 7px;
+  background:var(--ground-2)
+}
+@media (max-width:760px){p.lex.nova::after{position:static;display:inline-block;margin-left:8px}}
+.ct.novo{border-color:var(--teal);color:var(--teal)}
+table td.ok-cell{color:var(--ok);font-weight:700}
+table td.no-cell{color:var(--warn);font-weight:700}
+table td.ok-cell b{color:var(--ok)}
+table td.no-cell b{color:var(--warn)}
+table td b{color:var(--ink)}
+.mnemo-letras{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.mnemo-letras .mn-big{font-size:clamp(15px,1.9vw,27px);letter-spacing:-.02em;white-space:nowrap}
+.mnemo-frase{text-wrap:balance}
+.casos .caso-n{font-size:15px;letter-spacing:-.02em}
+table tbody tr td:first-child{white-space:normal}
+.selo table{margin:10px 0 2px}
+.selo table th,.selo table td{font-size:13.5px;padding:7px 9px}
+.linha-tempo::before{left:76px}
+.lt-q{flex:0 0 76px;font-size:11.5px}
+@media (max-width:640px){.linha-tempo::before{left:70px}.lt-q{flex:0 0 70px;font-size:10.5px}}
+.tbl-wrap{border:0;background:transparent;border-radius:0;margin:18px 0}
+.selo-b .tbl-wrap{margin:10px 0 2px}
+.selo-b .tbl-wrap table{margin:0}
+h3.sub-h{font-family:var(--f-display);font-size:clamp(17px,2vw,21px);font-weight:600;letter-spacing:-.02em;
+  color:var(--ink);margin:30px 0 12px;padding-top:14px;border-top:1px solid var(--edge)}
+.art-corpo h3.sub-h:first-child{border-top:0;padding-top:0;margin-top:0}
+
+html{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark}
+body{background:var(--ground)}
+#barra{background:var(--barra-bg);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur)}
+#rail{backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur)}
+.faixa{background:var(--grad-title)!important;color:#fff!important}
+
+/* ---------- identidade Magma ---------- */
+.hero{text-align:left;padding-top:58px}
+.hero .eyebrow{display:flex;align-items:center;gap:14px;letter-spacing:.26em;color:var(--accent);font-weight:700}
+.hero .eyebrow::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--g1),var(--g2))}
+.hero h1{font-weight:900;font-size:clamp(34px,6.4vw,64px);line-height:1.02;text-wrap:balance}
+.hero .sub{margin-left:0;font-size:18.5px}
+.frieze{margin:26px 0 0;width:100%}
+.frieze i,.frieze i:last-child{height:4px;background:linear-gradient(90deg,var(--g1),var(--gm),var(--g2))}
+.frieze b{display:none}
+.marks{background:transparent;border:0;gap:10px;grid-template-columns:repeat(auto-fit,minmax(112px,1fr))}
+.marks div{border:1px solid var(--edge);border-radius:var(--r-md);box-shadow:var(--shadow)}
+.marks b{font-family:var(--f-display);font-weight:800;font-size:26px}
+.marks div:nth-child(1) b{color:var(--g1)}
+.marks div:nth-child(2) b{color:var(--alt2)}
+.marks div:nth-child(3) b{color:var(--alt)}
+.marks div:nth-child(4) b{color:var(--teal)}
+.marks div:nth-child(5) b{color:var(--ok)}
+.art-num{font-family:var(--f-display);font-size:26px;font-weight:800;letter-spacing:-.03em;
+  background:var(--grad-title);-webkit-background-clip:text;background-clip:text;color:transparent}
+.divisor{text-align:left}
+.divisor h2{font-weight:900;font-size:clamp(22px,3.4vw,32px);letter-spacing:-.025em}
+.d-num{background:var(--surface);letter-spacing:.24em}
+.q-num{font-family:var(--f-display);font-weight:800;font-size:13px}
+.mn-big{font-size:34px;font-weight:900}
+.ct{font-weight:700}
+th{font-family:var(--f-ui);font-weight:700;color:var(--accent);border-bottom-color:var(--accent)}
+.artigo{box-shadow:0 0 0 1px rgba(226,40,30,.04),var(--shadow)}
+.artigo:hover{box-shadow:0 0 0 1px rgba(226,40,30,.14),var(--shadow-lift)}
+p.lex{background:linear-gradient(90deg,var(--accent-wash),transparent 70%);border-left:3px solid var(--accent);
+  padding:9px 14px;border-radius:0 var(--r-sm) var(--r-sm) 0;text-align:left}
+p.lex.sub{margin-left:22px;border-left-color:var(--alt2);background:linear-gradient(90deg,var(--alt2-wash),transparent 70%)}
+p.lex.cf{border-left-color:var(--alt);background:linear-gradient(90deg,var(--alt-wash),transparent 70%)}
+.q-coment{border-left-color:var(--alt);background:var(--alt-wash)}
+.qc-t{color:var(--alt)}
+.questao{border-left-color:var(--alt2)}
+.q-banca{font-weight:600}
+.q-tipo{font-family:var(--f-ui);font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border-radius:4px;padding:2px 7px}
+.q-tipo.real{background:var(--grad-title);color:#fff}
+.q-tipo.autoral{border:1px solid var(--edge);color:var(--muted)}
+.q-alt.certa .q-pick{box-shadow:0 0 0 1px var(--ok)}
+.q-alt.cortada .q-tesoura,.questao.errou .q-marca{color:#fff}
+
+/* ---------- componentes: paleta Magma ---------- */
+.cartao-cor{box-shadow:var(--shadow)}
+.cartao-cor[data-cor="ambar"],.cartao-cor[data-cor="b"]{--cc:var(--c-ambar);--cc-wash:var(--c-ambar-w)}
+.cartao-cor[data-cor="coral"],.cartao-cor[data-cor="c"],.cartao-cor[data-cor="vermelho"]{--cc:var(--c-coral);--cc-wash:var(--c-coral-w)}
+.cartao-cor[data-cor="violeta"],.cartao-cor[data-cor="d"]{--cc:var(--c-violeta);--cc-wash:var(--c-violeta-w)}
+.cartao-cor[data-cor="verde"],.cartao-cor[data-cor="a"]{--cc:var(--c-verde);--cc-wash:var(--c-verde-w)}
+.cartao-cor[data-cor="azul"],.cartao-cor[data-cor="e"]{--cc:var(--c-azul);--cc-wash:var(--c-azul-w)}
+.cartao-cor[data-cor="teal"]{--cc:var(--c-teal);--cc-wash:var(--c-teal-w)}
+.cartao-cor[data-cor="rosa"],.cartao-cor[data-cor="vinho"]{--cc:var(--c-vinho);--cc-wash:var(--c-vinho-w)}
+.cartao-cor[data-cor="cinza"]{--cc:var(--c-cinza);--cc-wash:var(--c-cinza-w)}
+.cc-tit{color:var(--on-c);box-shadow:none;font-size:13.5px;letter-spacing:.05em}
+.cc-tag{background:var(--surface)}
+.mnemo{border-color:var(--accent);background:var(--abertura-bg)}
+.mnemo-h{background:linear-gradient(90deg,var(--accent-wash),var(--alt-wash))}
+.mnemo-frase{font-size:clamp(18px,2.5vw,27px);padding:0 16px;line-height:1.25}
+.mn-l{background:linear-gradient(180deg,var(--ml-wash,var(--accent-wash)),transparent 75%),var(--surface)}
+.mn-l[data-c="1"],.mn-l[data-c="verde"],.mn-l[data-c="a"]{--ml:var(--c-verde);--ml-wash:var(--c-verde-w)}
+.mn-l[data-c="2"],.mn-l[data-c="ambar"],.mn-l[data-c="b"]{--ml:var(--c-ambar);--ml-wash:var(--c-ambar-w)}
+.mn-l[data-c="3"],.mn-l[data-c="azul"],.mn-l[data-c="c"]{--ml:var(--c-azul);--ml-wash:var(--c-azul-w)}
+.mn-l[data-c="4"],.mn-l[data-c="violeta"],.mn-l[data-c="d"]{--ml:var(--c-violeta);--ml-wash:var(--c-violeta-w)}
+.mn-l[data-c="5"],.mn-l[data-c="coral"],.mn-l[data-c="e"],.mn-l[data-c="vermelho"]{--ml:var(--c-coral);--ml-wash:var(--c-coral-w)}
+.mn-l[data-c="teal"]{--ml:var(--c-teal);--ml-wash:var(--c-teal-w)}
+.mn-l[data-c="rosa"],.mn-l[data-c="vinho"]{--ml:var(--c-vinho);--ml-wash:var(--c-vinho-w)}
+.mn-l[data-c="cinza"]{--ml:var(--c-cinza);--ml-wash:var(--c-cinza-w)}
+.fx-p[data-c="1"],.fx-p[data-c="azul"],.fx-p[data-c="a"]{--fx:var(--c-azul);--fxw:var(--c-azul-w)}
+.fx-p[data-c="2"],.fx-p[data-c="violeta"],.fx-p[data-c="b"]{--fx:var(--c-violeta);--fxw:var(--c-violeta-w)}
+.fx-p[data-c="3"],.fx-p[data-c="ambar"],.fx-p[data-c="c"]{--fx:var(--c-ambar);--fxw:var(--c-ambar-w)}
+.fx-p[data-c="4"],.fx-p[data-c="verde"],.fx-p[data-c="d"]{--fx:var(--c-verde);--fxw:var(--c-verde-w)}
+.fx-p[data-c="coral"],.fx-p[data-c="e"],.fx-p[data-c="vermelho"]{--fx:var(--c-coral);--fxw:var(--c-coral-w)}
+.fx-p[data-c="teal"]{--fx:var(--c-teal);--fxw:var(--c-teal-w)}
+.fx-p[data-c="rosa"],.fx-p[data-c="vinho"]{--fx:var(--c-vinho);--fxw:var(--c-vinho-w)}
+.fx-p[data-c="cinza"]{--fx:var(--c-cinza);--fxw:var(--c-cinza-w)}
+.fx-p{border-top:3px solid var(--fx,var(--accent))}
+.confundir{border-color:var(--edge)}
+.cf-h{background:linear-gradient(90deg,var(--accent-wash),var(--alt-wash));color:var(--ink)}
+.cf-col-t{color:#fff}
+.cf-col.a .cf-col-t{background:var(--c-coral)}
+.cf-col.b .cf-col-t{background:var(--c-azul)}
+.cf-col.a li::before{background:var(--c-coral-w);color:var(--c-coral)}
+.cf-col.b li::before{background:var(--c-azul-w);color:var(--c-azul)}
+.importante{background:linear-gradient(150deg,var(--warn-wash),transparent 60%),var(--surface)}
+.imp-h{background:var(--warn-wash);color:var(--warn)}
+.imp-x{color:#fff}
+.caso{background:var(--surface);box-shadow:var(--shadow)}
+.caso-n{color:#fff;box-shadow:none;background:var(--grad-title)}
+.citacao{background:linear-gradient(90deg,var(--alt2-wash),transparent 70%),var(--surface)}
+.desafio{background:linear-gradient(150deg,var(--teal-wash),transparent 58%),var(--surface)}
+.df-ok{color:#fff}
+.desafio.acertou{background:linear-gradient(150deg,var(--ok-wash),transparent 58%),var(--surface)}
+.pos{background:var(--surface)}
+.esquema{background:var(--surface)}
+.ts-grid a{background:var(--surface)}
+.festa-card{box-shadow:0 20px 52px rgba(60,10,20,.22),0 0 34px -16px var(--hud)}
+:root[data-theme="dark"] .cf-col-t,:root[data-theme="dark"] .imp-x,:root[data-theme="dark"] .caso-n,:root[data-theme="dark"] .df-ok{color:#12090F}
+
+/* ---------- código de cores nas palavras ---------- */
+.k-org{color:var(--k-org);font-weight:700}
+.k-neg{color:var(--k-neg);font-weight:700}
+.k-ref{color:var(--k-ref);font-weight:700;font-variant-numeric:tabular-nums}
+.k-cond{color:var(--k-cond);font-weight:700}
+.k-efe{color:var(--k-efe);font-weight:700}
+.k-ato{color:var(--k-ato);font-weight:700}
+.hl{font-weight:700;padding:1px 5px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hl-org{color:var(--k-org);background:var(--c-azul-w);box-shadow:inset 0 -2px 0 var(--c-azul)}
+.hl-ato{color:var(--k-ato);background:var(--c-violeta-w);box-shadow:inset 0 -2px 0 var(--c-violeta)}
+.hl-cond{color:var(--k-cond);background:var(--c-ambar-w);box-shadow:inset 0 -2px 0 var(--c-ambar)}
+.hl-neg{color:var(--k-neg);background:var(--warn-wash);box-shadow:inset 0 -2px 0 var(--warn)}
+.hl-efe{color:var(--k-efe);background:var(--c-verde-w);box-shadow:inset 0 -2px 0 var(--c-verde)}
+.hl-ref{color:var(--k-ref);background:var(--c-violeta-w);box-shadow:inset 0 -2px 0 var(--k-ref)}
+.legenda{margin:26px 0 0;padding:14px 18px;border:1px solid var(--edge);border-radius:var(--r-md);
+ background:linear-gradient(120deg,var(--accent-wash),var(--alt-wash));font-family:var(--f-ui)}
+.lg-t{margin:0 0 10px;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.lg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:7px 18px}
+.lg{font-size:12.5px;color:var(--ink-2);display:block;line-height:1.5}
+.lg i{margin-right:7px;font-style:normal;font-size:11px}
+.lg em{color:var(--muted);font-style:normal;font-size:11.5px}
+
+/* ---------- NOVOS COMPONENTES DO CURSO DE PENAL ---------- */
+/* pílulas de prazo / pena / fração */
+.pz{display:inline-block;font-family:var(--f-mono);font-size:.84em;font-weight:600;letter-spacing:-.01em;
+  padding:0 7px;border-radius:5px;color:#fff;background:var(--g1);white-space:nowrap;line-height:1.55;vertical-align:1px}
+.pz.azul{background:var(--alt)}.pz.vio{background:var(--alt2)}.pz.verde{background:var(--ok)}.pz.ambar{background:var(--c-ambar)}
+.pz.lin{background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent)}
+:root[data-theme="dark"] .pz:not(.lin){color:#12090F}
+
+/* escala (espectro vermelho -> azul com marcos) */
+.escala{margin:22px 0;padding:18px 18px 14px;border:1px solid var(--edge);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow)}
+.esc-t{margin:0 0 14px;font-family:var(--f-ui);font-size:10.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.esc-barra{height:10px;border-radius:999px;background:linear-gradient(90deg,var(--g1),var(--gm),var(--g2));position:relative;margin:0 6px 8px}
+.esc-marcos{display:grid;grid-template-columns:repeat(auto-fit,minmax(172px,1fr));gap:10px;margin-top:4px}
+.esc-m{position:relative;padding:12px 12px 10px;border-radius:var(--r-md);background:var(--ground-2);border:1px solid var(--edge-soft);border-top:4px solid var(--mc,var(--accent))}
+.esc-m>b{display:block;font-family:var(--f-display);font-size:14px;font-weight:800;color:var(--mc,var(--accent));margin-bottom:4px;letter-spacing:-.01em}
+.esc-m p{margin:0;font-family:var(--f-ui);font-size:13px;line-height:1.5;color:var(--ink-2)}
+.esc-m p b{color:var(--mc,var(--accent))}
+.esc-m p+p{margin-top:5px}
+@media (max-width:640px){.esc-marcos{grid-template-columns:1fr}}
+
+/* árvore de classificação */
+.arvore{margin:22px 0;padding:16px;border:1px solid var(--edge);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow)}
+.ar-raiz{display:block;width:max-content;max-width:100%;margin:0 auto 14px;padding:8px 18px;border-radius:999px;
+  font-family:var(--f-display);font-weight:800;font-size:14px;letter-spacing:.02em;text-transform:uppercase;color:#fff;background:var(--grad-title)}
+.ar-filhos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;position:relative}
+.ar-no{border:1px solid var(--edge);border-top:4px solid var(--nc,var(--accent));border-radius:var(--r-md);padding:11px 13px;background:var(--surface-2)}
+.ar-no>b{display:block;font-family:var(--f-display);font-weight:800;font-size:14px;color:var(--nc,var(--accent));margin-bottom:5px}
+.ar-no p{margin:0 0 6px;font-family:var(--f-ui);font-size:13px;line-height:1.5;color:var(--ink-2)}
+.ar-no ul{margin:6px 0 0;padding-left:16px;font-family:var(--f-ui);font-size:13px;line-height:1.5;color:var(--ink-2)}
+.ar-no li{margin:3px 0}
+.ar-no .ar-ex{display:block;margin-top:6px;font-size:12px;color:var(--muted);font-style:italic;font-family:var(--f-body)}
+[data-nc="r"]{--nc:var(--c-coral)}[data-nc="v"]{--nc:var(--c-violeta)}[data-nc="a"]{--nc:var(--c-azul)}
+[data-nc="t"]{--nc:var(--c-teal)}[data-nc="m"]{--nc:var(--c-ambar)}[data-nc="g"]{--nc:var(--c-verde)}[data-nc="w"]{--nc:var(--c-vinho)}
+:root[data-theme="dark"] .ar-raiz{color:#12090F}
+
+/* duelo: A x B */
+.duelo{display:grid;grid-template-columns:1fr auto 1fr;gap:0;margin:22px 0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--edge);box-shadow:var(--shadow);background:var(--surface)}
+.du-l{padding:14px 16px}
+.du-l:first-child{background:linear-gradient(160deg,var(--c-coral-w),transparent 70%)}
+.du-l:last-child{background:linear-gradient(200deg,var(--c-azul-w),transparent 70%)}
+.du-l h4{margin:0 0 8px;font-family:var(--f-display);font-size:15px;font-weight:800;letter-spacing:-.01em;text-transform:uppercase}
+.du-l:first-child h4{color:var(--c-coral)}.du-l:last-child h4{color:var(--c-azul)}
+.du-l p,.du-l li{font-family:var(--f-ui);font-size:13.5px;line-height:1.55;color:var(--ink-2)}
+.du-l p{margin:0 0 7px}.du-l ul{margin:0;padding-left:17px}.du-l li{margin:4px 0}
+.du-x{display:grid;place-items:center;padding:0 6px;font-family:var(--f-display);font-weight:900;font-size:15px;color:#fff;background:var(--grad-title);writing-mode:vertical-rl;letter-spacing:.2em}
+@media (max-width:640px){.duelo{grid-template-columns:1fr}.du-x{writing-mode:horizontal-tb;padding:5px}}
+
+/* nota de fonte (doutrinador) */
+.autor{display:inline-block;font-family:var(--f-ui);font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--alt2);border:1px solid var(--alt2);border-radius:999px;padding:0 8px;margin-right:4px;vertical-align:1px}
+
+.faixa{position:fixed;top:0;left:0;right:0;z-index:100;
+ font-family:var(--f-ui);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+ text-align:center;padding:5px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body{padding-top:26px}
+#rail{top:26px;height:calc(100vh - 26px)}
+#barra{top:26px}
+
+/* =====================================================================
+   CAPÍTULO 2 — leitura confortável (padrão Codex Penal) e contornos suaves
+   ===================================================================== */
+:root{
+  --f-body:'Public Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-ui:'Public Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  --fs-body:16.5px;--fs-lex:16.2px;--col:88ch;
+  --r-sm:8px;--r-md:12px;--r-lg:18px;--r-selo:0 12px 12px 0;
+  --edge:#EEDFDD;--edge-soft:#F6ECEA;
+  --shadow:0 1px 2px rgba(70,20,30,.035),0 10px 28px rgba(70,20,40,.065);
+  --shadow-lift:0 2px 8px rgba(70,20,30,.07),0 18px 44px rgba(70,20,40,.11);
+}
+:root[data-theme="dark"]{--edge:#34283B;--edge-soft:#261D2D}
+body{font-size:var(--fs-body);line-height:1.7;letter-spacing:.002em;font-feature-settings:"kern","liga"}
+body.wide{--col:112ch}
+p.texto{margin:0 0 1em;line-height:1.74;color:var(--ink-2);text-wrap:pretty}
+.art-corpo{padding:20px 26px 10px}
+.art-corpo>p.texto:first-child{margin-top:4px}
+p.lex{font-size:var(--fs-lex);line-height:1.68;text-align:left;hyphens:manual;margin:14px 0;padding:10px 16px;border-left-width:3px;border-radius:0 12px 12px 0}
+p.lex.sub{margin-left:18px}
+.artigo{border-radius:var(--r-lg);border-color:var(--edge)}
+.artigo::before{height:4px;opacity:.9}
+.art-head{padding:17px 24px 15px}
+h3.sub-h{font-size:clamp(17px,2vw,20px);margin:34px 0 14px;padding-top:18px;border-top:1px dashed var(--edge)}
+.selo{border-radius:0 14px 14px 0;border-color:var(--edge-soft)}
+.selo-b{padding:14px 20px 16px}
+.selo-b p{font-size:15.2px;line-height:1.7}
+.selo-t{font-size:15px}
+.questao{border-radius:16px;border-color:var(--edge);padding:18px 20px 16px}
+.q-enunciado{font-family:var(--f-body);font-size:15.8px;line-height:1.7;text-align:left;margin:0 0 14px;color:var(--ink)}
+.q-enunciado p{margin:0 0 .6em}
+.q-enunciado p:last-child{margin-bottom:0}
+.q-pick{font-size:15px;line-height:1.6;border-radius:10px}
+.q-tesoura{border-radius:10px}
+.q-coment{border-radius:12px}
+.q-coment p{font-size:14.8px}
+.q-tipo.mat{background:var(--alt2-wash);color:var(--alt2);border:1px solid var(--alt2)}
+.q-inline{margin:26px 0 24px}
+.q-inline .bloco-q-h{margin-bottom:10px;font-size:10.5px;letter-spacing:.18em}
+.cartao-cor,.caso,.fx-p,.esc-m,.ar-no,.pos,.mn-l{border-radius:14px}
+.tbl-wrap table{font-size:13.8px}
+th,td{padding:10px 14px}
+.esquema{border-radius:14px}
+.importante,.confundir,.mnemo,.desafio,.duelo,.arvore,.escala{border-radius:18px}
+.citacao{border-radius:0 14px 14px 0}
+.abertura{border-radius:20px}
+/* realce pontual de prazos e números (pílulas) herdado do Cap. 1 */
+.pz{font-family:var(--f-mono)}
+/* régua de leitura: linha do tempo com rótulo curto */
+.lt-t{font-family:var(--f-ui)}
+/* etiqueta de pendente */
+.selo[data-k="pendente"]{--sk:var(--c-ambar);--sw:var(--c-ambar-w);border-left-width:4px}
+.ct.pend{border-color:var(--c-ambar);color:var(--c-ambar)}
+/* bloco discursivo (roteiro) */
+.roteiro{margin:22px 0;border:1px solid var(--edge);border-radius:18px;background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
+.rt-h{display:flex;align-items:center;gap:10px;padding:11px 18px;background:linear-gradient(90deg,var(--alt-wash),var(--accent-wash));font-family:var(--f-ui);font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--alt)}
+.rt-b{padding:14px 20px 16px}
+.rt-b p{margin:0 0 10px;font-size:15.2px;line-height:1.7;color:var(--ink-2)}
+.rt-b textarea{width:100%;min-height:120px;border:1px solid var(--edge);border-radius:12px;padding:12px 14px;font-family:var(--f-body);font-size:15px;line-height:1.6;background:var(--ground-2);color:var(--ink);resize:vertical}
+.rt-b details{margin-top:12px;border:1px dashed var(--edge);border-radius:12px;padding:10px 14px;background:var(--surface-2)}
+.rt-b summary{cursor:pointer;font-family:var(--f-ui);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.rt-b ol{margin:10px 0 0;padding-left:20px}
+.rt-b li{margin:7px 0;font-size:14.8px;line-height:1.62;color:var(--ink-2)}
+/* painel do Delegado */
+.painel-del td:first-child{font-weight:600;color:var(--ink)}
+@media (max-width:760px){.art-corpo{padding:16px 16px 8px}.art-head{padding:14px 16px 12px}p.lex{padding:9px 12px}}
+
+/* =====================================================================
+   A PARTIR DO CAPÍTULO 10 — tipografia do “Codex Penal” (fonte, tamanhos,
+   cores de texto e espaçamentos), mantendo o fundo Magma claro do curso
+   ===================================================================== */
+:root{
+  --f-display:"Big Shoulders Display",Impact,"Arial Narrow",sans-serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-ui:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --fs-body:16.5px;--fs-lex:16.5px;
+  --ink:#141827;--ink-2:#343a4f;--muted:#586079;
+  --k-org:#1846e6;--k-neg:#d0122c;--k-ref:#6b34d6;--k-efe:#11803f;--k-cond:#6d4b00;--k-ato:#6b34d6;
+  --alt:#1846e6;--alt2:#6b34d6;--ok:#11803f;
+}
+body{font:var(--fs-body)/1.66 var(--f-body);color:var(--ink);letter-spacing:0}
+p.texto{line-height:1.66;margin:0 0 .8em;color:var(--ink)}
+.art-corpo ul.plain li,.art-corpo li{line-height:1.6}
+p.lex{font-size:var(--fs-lex);line-height:1.6}
+.hero h1,.divisor h2,h3.sub-h,.art-num,.caso-t,.fx-t,.du-l h4,.marks b,.mn-big{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.01em}
+.hero h1{font-weight:900;font-size:clamp(2.6rem,8vw,4.6rem);line-height:.95}
+.divisor h2{font-weight:800;font-size:clamp(1.6rem,4.4vw,2.3rem);line-height:1}
+h3.sub-h{font-weight:800;font-size:clamp(1.25rem,3vw,1.6rem);line-height:1.05}
+.art-num{font-weight:900;font-size:2.1rem;line-height:.9}
+.caso-t,.fx-t{font-size:1.05rem;font-weight:800;line-height:1.1}
+.marks b{font-weight:900;font-size:1.9rem}
+.q-enunciado{font-size:16px;line-height:1.62;font-weight:600;color:var(--ink)}
+.q-pick{font-size:15.5px;line-height:1.5}
+.q-coment p,.q-coment li{font-size:.95rem;line-height:1.55}
+.selo-b p{font-size:.95rem;line-height:1.6;color:var(--ink)}
+.tbl-wrap table{font-size:.9rem;line-height:1.45}
+.k-org,.k-ref,.k-efe{font-weight:700}
+.hl-cond{color:#6d4b00;background:linear-gradient(transparent 52%,#fff0b8 52%);box-shadow:none;font-weight:700}
+:root[data-theme="dark"]{--ink:#F4EFF2;--ink-2:#CBBFC9;--muted:#9a90a3;--k-org:#8FB9FF;--k-neg:#FF8C9B;--k-ref:#C9A8FF;--k-efe:#5FE3B2;--k-cond:#FFC266}
+:root[data-theme="dark"] .hl-cond{color:#FFC266;background:rgba(245,165,36,.18)}
+@media (max-width:640px){body{font-size:16px}.art-num{font-size:1.7rem}}
+.q-dif[data-d="facil"]{color:var(--ok)}
+.sim-com p{margin:.45em 0}.sim-com{font-size:.97em}
+@media (max-width:620px){.df-in .df-campo{flex:0 0 auto}}
+
+/* ===================== PARTE ESPECIAL · componentes do Código comentado ===================== */
+.lei-bloco{margin:24px 0 18px;padding:14px 20px 10px;border:1px solid var(--edge);border-left:4px solid var(--alt);
+  border-radius:0 var(--r-lg) var(--r-lg) 0;background:linear-gradient(160deg,var(--alt-wash),transparent 55%),var(--surface);box-shadow:var(--shadow)}
+.lei-k{display:block;font-family:var(--f-ui);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--alt);font-weight:800;margin-bottom:2px}
+.lex-rub{margin:14px 0 0;font-family:var(--f-ui);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:var(--accent)}
+.lei-bloco p.lex{margin:8px 0}
+p.lex.pena{font-weight:600;color:var(--ink)}
+p.lex.sub.ali{margin-left:44px}
+.lex-nota{font-family:var(--f-ui);font-size:11.5px;color:var(--muted);text-align:left}
+p.lex.rev .lex-nota{text-decoration:none}
+.quadro{margin:22px 0}
+.quadro-t{font-family:var(--f-ui);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--accent);margin:26px 0 8px}
+.quadro .quadro-t{margin-top:0}
+.quadro-nota{font-size:14px;color:var(--muted);margin:6px 0 0}
+ul.pontos,ol.pontos{margin:10px 0 16px;padding-left:22px}
+ul.pontos li,ol.pontos li{margin:7px 0;line-height:1.7;color:var(--ink-2)}
+ul.pontos li b,ol.pontos li b{color:var(--ink)}
+p.texto.nota{font-size:15px;color:var(--muted)}
+.sub-kick{display:block;font-family:var(--f-ui);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:4px}
+.divisor.secao{margin:44px 0 18px}
+.divisor.secao .d-num{background:var(--alt-wash);color:var(--alt)}
+.divisor.secao h2{font-size:clamp(16px,2.4vw,21px)}
+.grade-cores.vs3 .cc-txt ul{margin:4px 0 0;padding-left:18px}
+.grade-cores.vs3 .cc-txt li{margin:4px 0;font-size:14px;line-height:1.55}
+.selo-b p.sj-cit{font-family:var(--f-ui);font-size:12.5px;line-height:1.55;color:var(--muted);margin-top:10px}
+.selo-b ul{margin:6px 0;padding-left:20px}
+.selo-b li{margin:4px 0;font-size:15px;line-height:1.65;color:var(--ink-2)}
+.selo-h .ct{margin-left:auto}
+.q-nota{font-size:14px;color:var(--muted)}
+.importante.call-novo{border-color:var(--ok);background:linear-gradient(150deg,var(--ok-wash),transparent 60%),var(--surface)}
+.importante.call-novo .imp-h{background:var(--ok-wash);color:var(--ok)}
+.importante.call-macete{border-color:var(--alt2);background:linear-gradient(150deg,var(--alt2-wash),transparent 60%),var(--surface)}
+.importante.call-macete .imp-h{background:var(--alt2-wash);color:var(--alt2)}
+.importante.call-atencao{border-color:var(--c-ambar);background:linear-gradient(150deg,var(--c-ambar-w),transparent 60%),var(--surface)}
+.importante.call-atencao .imp-h{background:var(--c-ambar-w);color:var(--c-ambar)}
+.imp-h .imp-x{flex:0 0 22px;width:22px;height:22px;font-size:12px;background:currentColor}
+.imp-h .imp-x{color:inherit}
+.imp-h .imp-x::first-letter{color:#fff}
+details.caiu{margin:22px 0;border:1px solid var(--edge);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
+details.caiu summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:12px;padding:11px 16px;
+  background:linear-gradient(92deg,var(--accent-wash),transparent 70%);font-family:var(--f-ui)}
+details.caiu summary::-webkit-details-marker{display:none}
+details.caiu summary::after{content:"▾";margin-left:auto;color:var(--muted);transition:transform .2s}
+details.caiu[open] summary::after{transform:rotate(180deg)}
+.caiu-k{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#fff;background:var(--grad-title);border-radius:4px;padding:3px 9px}
+.caiu-n{font-size:13px;color:var(--ink-2);font-weight:600}
+details.caiu ul{list-style:none;margin:0;padding:6px 16px 12px}
+details.caiu li{display:grid;grid-template-columns:150px 1fr;gap:2px 14px;padding:9px 0;border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui);font-size:13.5px;line-height:1.5}
+details.caiu li:last-child{border-bottom:0}
+.caiu-b{font-weight:800;color:var(--accent);grid-row:span 2}
+.caiu-c{color:var(--muted);font-size:12px}
+.caiu-p{color:var(--ink-2)}
+.caiu-q{margin-left:6px;font-weight:700;white-space:nowrap}
+@media (max-width:640px){details.caiu li{grid-template-columns:1fr}.caiu-b{grid-row:auto}}
+.q-inline:target .questao,.q-inline:target{outline:2px solid var(--accent);outline-offset:4px;border-radius:12px}
+.zona.compilado .zona-t{color:var(--alt2)}
+.zona.compilado{margin-top:26px;padding-top:4px;border-top:2px dashed var(--edge)}
+.zona.compilado .zona-t b{color:var(--ink)}
+.selos{display:grid;gap:12px}
+details.mais-jur{margin:10px 0 18px;box-shadow:none}
+details.mais-jur .mais-b{padding:4px 14px 10px}
+details.mais-jur .caiu-k{background:var(--alt2)}
+</style></head><body>
+<div class="faixa">Direito Penal · Parte Especial — Título XII — Dos Crimes contra o Estado Democrático de Direito · arts. 359-I a 359-U · soberania · instituições democráticas · processo eleitoral · sabotagem</div>
+<div class="bg-veil"></div>
+<div class="shell">
+
+<aside id="rail" aria-label="Sumário lateral">
+  <div class="rail-brand">
+    <h1>Direito Penal</h1>
+    <p>Parte Especial &middot; Título XII &middot; Delegado PCPR</p>
+  </div>
+  <div class="rail-stats">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="26" fill="none" stroke="var(--edge)" stroke-width="4"></circle><circle id="ringArc" cx="29" cy="29" r="26" fill="none" stroke="var(--ok)" stroke-width="4" stroke-linecap="round" stroke-dasharray="163.4" stroke-dashoffset="163.4" transform="rotate(-90 29 29)"></circle></svg>
+      <span class="ring-txt" id="ringTxt">0%</span>
+    </div>
+    <div class="stat-lines">
+      <span><b id="stA">0</b> artigos estudados</span>
+      <span id="stFiltro">Sem filtro ativo</span>
+      <span>Questões: <b id="stQ">&mdash;</b></span>
+    </div>
+  </div>
+  <nav class="rail-nav" id="railNav"></nav>
+  <div class="rail-foot">
+    <p>Progresso, respostas, desafios e tempo ficam salvos neste navegador.</p>
+    <button id="btnReset" type="button">Zerar progresso</button>
+  </div>
+</aside>
+
+<main><div class="col">
+<header class="hero">
+  <p class="eyebrow">Direito Penal · Parte Especial · Título XII</p>
+  <h1>Crimes contra o <span class="gilt">Estado Democrático de Direito</span></h1>
+  <p class="sub">Arts. 359-I a 359-U do Código Penal (Lei 14.197/2021, que revogou a Lei de Segurança Nacional) · <b>atentado à soberania</b> e espionagem · <b>abolição violenta</b> e <b>golpe de Estado</b> · Lei 15.402/2026 · interrupção do processo eleitoral · sabotagem · excludente do art. 359-T.</p>
+  <div class="frieze"><i></i><b></b><i></i></div>
+  <div class="marks">
+    <div><b id="mkArt">0</b><span>Artigos</span></div>
+    <div><b id="mkJur">0</b><span>Cartões</span></div>
+    <div><b id="mkQ">0</b><span>Questões</span></div>
+    <div><b id="mkD">0</b><span>Desafios</span></div>
+    <div><b id="mkPct">0%</b><span>Concluído</span></div>
+  </div>
+</header>
+
+<section class="legenda">
+  <p class="lg-t">Código de cores deste curso</p>
+  <div class="lg-grid">
+    <span class="lg"><b class="hl hl-cond">fundo âmbar</b> — o trecho que decide a questão</span>
+    <span class="lg"><b class="k-neg">vermelho</b> — pena, vedação, exceção, pegadinha</span>
+    <span class="lg"><b class="k-org">azul</b> — núcleo do tipo, termo técnico que você precisa nomear</span>
+    <span class="lg"><b class="k-ref">violeta</b> — referência normativa <em>(artigo, súmula, tema)</em></span>
+    <span class="lg"><b class="k-efe">verde</b> — permitido, favorável ao réu, efeito jurídico</span>
+    <span class="lg"><span class="pz">prazo · pena · fração</span> — número que cai em prova</span>
+  </div>
+</section>
+
+<section class="top-sum" id="topSum">
+  <div class="ts-h" id="tsHead" role="button" tabindex="0" aria-expanded="true">
+    <div style="flex:1;min-width:0">
+      <h2>Sumário do Título<span class="ts-sub">Clique para recolher ou abrir</span></h2>
+    </div>
+    <span class="ts-chev" aria-hidden="true">▾</span>
+  </div>
+  <div class="ts-body" id="tsBody"></div>
+</section>
+
+<div id="barra">
+  <div class="busca-linha">
+    <label class="campo" for="q">
+      <span class="lupa" aria-hidden="true">⌕</span>
+      <input id="q" type="text" placeholder="Buscar artigo, crime, tema…  (tecla /)" autocomplete="off">
+      <button id="limpar" type="button" aria-label="Limpar busca">×</button>
+    </label>
+    <button id="btnBarra" type="button" aria-expanded="true"><span id="btnBarraTxt">Ocultar busca</span> <span class="cv" aria-hidden="true">▴</span></button>
+  </div>
+  <div class="chips" id="chips">
+    <button class="chip" type="button" data-f="STF" aria-pressed="false">STF</button>
+    <button class="chip" type="button" data-f="STJ" aria-pressed="false">STJ</button>
+    <button class="chip" type="button" data-k="sumula" aria-pressed="false">Súmulas</button>
+    <button class="chip forte" type="button" data-k="divergencia" aria-pressed="false">Divergências</button>
+    <button class="chip" type="button" data-k="atencao" aria-pressed="false">Pegadinhas</button>
+    <button class="chip" type="button" data-k="novidade" aria-pressed="false">Novidades</button>
+    <button class="chip" type="button" data-k="tese" aria-pressed="false">Teses fixadas</button>
+    <button class="chip" type="button" data-k="superado" aria-pressed="false">Superados</button>
+    <button class="chip" type="button" data-e="pendentes" aria-pressed="false">Só artigos não estudados</button>
+  </div>
+  <p id="contador">Exibindo <b id="cA">0</b> artigos · <b id="cJ">0</b> cartões</p>
+  <p class="barra-aviso">Busca oculta — clique em “Mostrar busca” para filtrar novamente.</p>
+</div>
+<div class="vazio" id="vazio">Nada encontrado com esse filtro. Limpe a busca e tente outro termo.</div>
+
+<div class="placar-mini">
+  <span class="pm-t">Treino</span>
+  <span><b id="qCertas">0</b> certas · <b id="qErradas">0</b> erradas · <b id="qFeitas">0</b> de <b id="qTotal">0</b></span>
+  <span>Aproveitamento: <b id="qPct">0%</b></span>
+  <svg width="0" height="0" aria-hidden="true"><circle id="qArc" r="23.5" stroke-dasharray="147.65" stroke-dashoffset="147.65"></circle></svg>
+  <button id="qZerar" type="button">Zerar placar</button>
+</div>
+
+<div class="placar-mini">
+  <span class="pm-t" style="color:var(--teal)">Escrita</span>
+  <span>Desafios digitados: <b id="dCertos">0</b> de <b id="dTotal">0</b> resolvidos de cabeça</span>
+  <button id="dZerar" type="button">Zerar desafios</button>
+</div>
+<div class="divisor titulo" id="s-abertura"><span class="d-num">Parte Especial · Título XII</span><h2>Crimes de atentado: tentar já é consumar</h2></div>
+<section class="abertura"><h2>Antes de começar</h2><p class="texto">Arts. 359-I a 359-U, conforme o texto compilado do Planalto em vigor em 2/10/2026. Título criado pela Lei 14.197/2021, que revogou a Lei de Segurança Nacional, e alterado pela Lei 15.402/2026 (“Lei da Dosimetria”), que incluiu o concurso formal próprio obrigatório (art. 359-M-A) e a redução de pena no contexto de multidão (art. 359-M-B). A aplicação dessa lei nas execuções do 8 de janeiro em curso no STF está suspensa por decisão do relator nas ADIs 7.966 e 7.967, ainda sem julgamento do Plenário. Também estão aqui as condenações do 8 de janeiro (AP 1.060) e da trama golpista (AP 2.668). Os pontos centrais são abolição violenta × golpe de Estado (crimes de atentado), o objeto da espionagem (só documento secreto ou ultrassecreto), o meio vinculado da interrupção do processo eleitoral, a violência política e a cláusula do art. 359-T, que protege a crítica e as manifestações.</p>
+  <p>Título curto, mas em alta por causa dos julgamentos do 8 de janeiro. Três chaves: a <span class="hl hl-cond">revogação da LSN sem abolitio criminis</span> geral; os <span class="hl hl-cond">crimes de atentado</span> (abolição violenta e golpe de Estado punem a tentativa com a pena cheia); e a <span class="hl hl-cond">excludente do art. 359-T</span>, que protege a crítica, a imprensa e a manifestação pacífica.</p>
+  <div class="importante call-novo"><div class="imp-h"><span class="imp-x">★</span> Como este arquivo está organizado</div><div class="imp-b">
+    <p><b>Leitura em blocos curtos.</b> A explicação de cada artigo foi dividida em parágrafos, e cada questão vem logo depois do ponto que cobra, nunca mais de duas seguidas — inclusive na visão geral, que tinha cinco questões em sequência —, com textos curtos e desafios de escrita entre elas.</p>
+    <p><b>Compilado (ilovepdf):</b> o material traz um único julgado específico sobre o Título (competência da Justiça comum), que entrou no art. 359-I.</p>
+    <p><b>Ferramentas:</b> busca (tecla <b>/</b>), filtros, marcação de artigo estudado, placar com tesoura, desafios de escrita, cronômetro e tema escuro (⚙). Tudo fica salvo neste navegador.</p>
+  </div></div></section>
+<div class="divisor" id="tX" data-grupo="Título XII · Dos Crimes contra o Estado Democrático de Direito"><span class="d-num">Título XII · Arts. 359-I a 359-U · Visão geral</span><h2>Dos Crimes contra o Estado Democrático de Direito</h2></div>
+<section class="abertura"><h2>Dos Crimes contra o Estado Democrático de Direito</h2><p>Incluído pela Lei 14.197/2021, que revogou a antiga Lei de Segurança Nacional (Lei 7.170/1983, da ditadura) e trouxe para o Código Penal os crimes contra a soberania, as instituições democráticas, o processo eleitoral e os serviços essenciais. É o título dos processos do 8 de janeiro de 2023 e da trama golpista julgada pelo STF em 2025. Em maio de 2026, a Lei 15.402/2026 (“Lei da Dosimetria”) incluiu os arts. 359-M-A e 359-M-B, de aplicação ainda discutida no STF.</p><p class="quadro-t">O Título XII no tempo</p><div class="linha-tempo"><div class="lt-item" data-s="lei"><span class="lt-q">1983</span><div class="lt-c"><p class="lt-t">Lei 7.170</p><p>Lei de Segurança Nacional, editada no regime militar, com tipos abertos e criticados pela doutrina.</p></div></div><div class="lt-item" data-s="lei"><span class="lt-q">1/9/2021</span><div class="lt-c"><p class="lt-t">Lei 14.197</p><p>Revoga a LSN e cria os arts. 359-I a 359-U do CP. Vários dispositivos são vetados (comunicação enganosa em massa, crimes contra a cidadania, ação privada subsidiária por partido político, causas de aumento para militares e funcionários). Vigência 90 dias após a publicação.</p></div></div><div class="lt-item" data-s="lei"><span class="lt-q">8/1/2023</span><div class="lt-c"><p class="lt-t">Atos em Brasília</p><p>Invasão e depredação das sedes dos três Poderes. Centenas de denúncias por abolição violenta, golpe de Estado, dano qualificado e associação criminosa armada.</p></div></div><div class="lt-item" data-s="lei"><span class="lt-q">14/9/2023</span><div class="lt-c"><p class="lt-t">STF, AP 1.060</p><p>Primeira condenação do 8 de janeiro. O Plenário aplica concurso material entre abolição violenta e golpe de Estado.</p></div></div><div class="lt-item" data-s="lei"><span class="lt-q">11/9/2025</span><div class="lt-c"><p class="lt-t">STF, AP 2.668</p><p>A 1ª Turma condena o ex-presidente Jair Bolsonaro e outros réus do “núcleo crucial” da trama golpista. A pena do ex-presidente é de 27 anos e 3 meses.</p></div></div><div class="lt-item" data-s="lei"><span class="lt-q">8/1/2026</span><div class="lt-c"><p class="lt-t">Veto total</p><p>O Presidente da República veta integralmente o projeto da dosimetria.</p></div></div><div class="lt-item" data-s="lei"><span class="lt-q">30/4/2026</span><div class="lt-c"><p class="lt-t">Veto derrubado</p><p>O Congresso derruba o veto. A lei é promulgada em 8/5/2026 como Lei 15.402/2026.</p></div></div><div class="lt-item" data-s="atual"><span class="lt-q">9/5/2026</span><div class="lt-c"><p class="lt-t">ADIs 7.966 e 7.967</p><p>O relator, Min. Alexandre de Moraes, suspende a aplicação da lei nas execuções penais do 8 de janeiro em curso no STF, até o julgamento do Plenário, que seguia pendente em 2/10/2026.</p></div></div></div><div class="quadro"><p class="quadro-t">Os crimes do Título XII</p><div class="tbl-wrap"><table><thead><tr><th>Capítulo</th><th>Artigo</th><th>Crime</th><th>Pena</th></tr></thead><tbody><tr><td><b>I. Soberania nacional</b></td><td>359-I</td><td>Atentado à soberania</td><td>reclusão, 3 a 8 (§ 2º: 4 a 12)</td></tr><tr><td><b>I. Soberania nacional</b></td><td>359-J</td><td>Atentado à integridade nacional</td><td>reclusão, 2 a 6, além da pena da violência</td></tr><tr><td><b>I. Soberania nacional</b></td><td>359-K</td><td>Espionagem</td><td>reclusão, 3 a 12 (§ 2º: 6 a 15; § 3º: detenção, 1 a 4)</td></tr><tr><td><b>II. Instituições democráticas</b></td><td>359-L</td><td>Abolição violenta do Estado Democrático de Direito</td><td>reclusão, 4 a 8, além da pena da violência</td></tr><tr><td><b>II. Instituições democráticas</b></td><td>359-M</td><td>Golpe de Estado</td><td>reclusão, 4 a 12, além da pena da violência</td></tr><tr><td><b>III. Processo eleitoral</b></td><td>359-N</td><td>Interrupção do processo eleitoral</td><td>reclusão, 3 a 6, e multa</td></tr><tr><td><b>III. Processo eleitoral</b></td><td>359-P</td><td>Violência política</td><td>reclusão, 3 a 6, e multa, além da pena da violência</td></tr><tr><td><b>IV. Serviços essenciais</b></td><td>359-R</td><td>Sabotagem</td><td>reclusão, 2 a 8</td></tr></tbody></table></div></div><div class="arvore"><span class="ar-raiz">Pontos que valem para todo o título</span><div class="ar-filhos"><div class="ar-no" data-nc="r"><b>Excludente geral (359-T)</b><p>não é crime a manifestação crítica aos Poderes, a atividade jornalística nem a reivindicação de direitos por passeatas, reuniões, greves, aglomerações ou outra manifestação política com propósitos sociais</p></div><div class="ar-no" data-nc="v"><b>Crimes de atentado</b><p>abolição violenta (359-L) e golpe de Estado (359-M) punem o “tentar”: a tentativa é o próprio crime, sem redução do art. 14, parágrafo único</p></div><div class="ar-no" data-nc="a"><b>Competência</b><p>quando configuram crime político, Justiça Federal (CF, art. 109, IV), com recurso ordinário ao STF (CF, art. 102, II, “b”). Os processos do 8 de janeiro tramitaram no STF por conexão com investigados com foro e por decisão da própria Corte</p></div><div class="ar-no" data-nc="t"><b>Constituição</b><p>constitui crime inafiançável e imprescritível a ação de grupos armados, civis ou militares, contra a ordem constitucional e o Estado Democrático (CF, art. 5º, XLIV)</p></div><div class="ar-no" data-nc="m"><b>Não confundir</b><p>a incitação à animosidade entre as Forças Armadas e os Poderes está no art. 286, parágrafo único (Título IX), também incluído pela Lei 14.197/2021</p></div></div></div><div class="qz" id="real-camara23fgvpol" data-tipo="real" data-gab="A" data-banca="Adaptada de FGV · 2023 · Consultor Legislativo (Câmara dos Deputados) · Múltipla escolha" data-q="hd03d6e2251"><p>João foi indiciado por sabotar serviços destinados à defesa nacional, para abolir a organização política vigente e permitir o domínio do país por um Estado estrangeiro, conduta considerada crime político. Pela Constituição, a ação penal contra João deve ser ajuizada perante:</p><ol><li>juiz federal, com recurso para o STF.</li><li>juiz federal, com recurso para o STJ.</li><li>juiz estadual, com recurso para o Tribunal de Justiça.</li><li>juiz federal, com recurso para o Tribunal Regional Federal.</li><li>o STF, sem recurso para instância superior.</li></ol><div class="gab"><p><b>A.</b> Os juízes federais julgam os crimes políticos (CF, art. 109, IV), e cabe recurso ordinário ao STF (CF, art. 102, II, “b”).</p><p><b>B e D:</b> a Constituição prevê recurso direto ao STF, sem passar pelo TRF ou pelo STJ. <b>C:</b> a competência é federal. <b>E:</b> o STF não julga originariamente crime político de quem não tem foro.</p></div></div><div class="qz" id="real-pmscm24objetiva" data-tipo="real" data-gab="A" data-banca="Adaptada de OBJETIVA · 2024 · Pedreiro (Pref. Santa Cruz de Monte Castelo) · Múltipla escolha" data-q="hfd8539e71c"><p>Pela Constituição, é crime inafiançável e imprescritível:</p><ol><li>a ação de grupos armados, civis ou militares, contra a ordem constitucional e o Estado Democrático.</li><li>o tráfico ilícito de entorpecentes e drogas afins.</li><li>os crimes hediondos, por eles respondendo os mandantes e os executores.</li><li>a tortura.</li></ol><div class="gab"><p><b>A.</b> CF, art. 5º, XLIV. Também são imprescritíveis o racismo (inciso XLII).</p><p><b>B, C e D</b> são inafiançáveis e insuscetíveis de graça ou anistia (CF, art. 5º, XLIII), mas prescrevem.</p></div></div><p class="texto">A segunda questão vem da Constituição: constitui crime <b>inafiançável e imprescritível</b> a ação de grupos armados, civis ou militares, contra a ordem constitucional e o Estado Democrático (art. 5º, XLIV). Agora, a cláusula de garantia do próprio Título XII.</p><div class="qz" data-tipo="mat" data-gab="E" data-ce data-banca="Adaptada de Legislação Integrada · Código Penal em Questões · Certo ou errado" data-q="h974147860e"><p>A manifestação crítica aos poderes constitucionais, a atividade jornalística e a reivindicação de direitos por meio de passeatas, reuniões, greves, aglomerações ou outra manifestação política com propósitos sociais podem configurar crime contra o Estado Democrático de Direito.</p><div class="gab"><p><b>Errado.</b> O art. 359-T exclui expressamente essas condutas.</p></div></div><div class="qz" data-tipo="aut" data-gab="C" data-ce data-banca="Inédita · estilo CEBRASPE · Certo ou errado" data-q="he2df0baaf5"><p>A Lei 14.197/2021 revogou a Lei de Segurança Nacional (Lei 7.170/1983) e incluiu no Código Penal o Título XII, dos crimes contra o Estado Democrático de Direito.</p><div class="gab"><p><b>Certo.</b> Para as condutas que continuaram típicas no novo título, aplica-se a continuidade normativo-típica. Para as que deixaram de ser crime, houve abolitio criminis.</p></div></div><p class="texto">A revogação da Lei de Segurança Nacional <b>não gerou abolitio criminis</b> geral: as condutas da LSN que encontram correspondência nos novos tipos continuam puníveis (continuidade normativo-típica), aplicando-se a lei mais benéfica aos fatos anteriores.</p><div class="qz" data-tipo="aut" data-gab="C" data-ce data-banca="Inédita · estilo CEBRASPE · Certo ou errado" data-q="hb7cea4a5a7"><p>A abolição violenta do Estado Democrático de Direito e o golpe de Estado são crimes de atentado (ou de empreendimento), em que a tentativa é punida com a mesma pena do crime consumado.</p><div class="gab"><p><b>Certo.</b> Os tipos descrevem a conduta de “tentar”, e não se aplica a redução do art. 14, parágrafo único.</p></div></div></section>
+<div class="divisor" id="c1" data-grupo="Capítulo I · Dos Crimes contra a Soberania Nacional"><span class="d-num">Capítulo I · Arts. 359-I a 359-K</span><h2>Dos Crimes contra a Soberania Nacional</h2></div>
+<section class="abertura"><h2>Dos Crimes contra a Soberania Nacional</h2><p>Protegem a independência e a integridade do território brasileiro diante de ameaças externas (atentado à soberania e espionagem) e internas (separatismo violento).</p></section>
+<article class="artigo" id="art359I" data-art="pe12-art359I" data-num="359-I" data-tit="Atentado à soberania"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-I</span><span class="ct">Atentado à soberania</span><span class="ct alt">1 cartões</span><span class="ct alt2">2 questões</span></div><p class="art-tema">Negociar com governo ou grupo estrangeiro para provocar guerra contra o Brasil ou invadi-lo.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex-rub">Atentado à soberania  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">Art. 359-I.</b> Negociar com governo ou grupo estrangeiro, ou seus agentes, com o fim de provocar atos típicos de guerra contra o País ou invadi-lo:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 3 (três) a 8 (oito) anos.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">§ 1º</b> Aumenta-se a pena de metade até o dobro, se declarada guerra em decorrência das condutas previstas no caput deste artigo.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">§ 2º</b> Se o agente participa de operação bélica com o fim de submeter o território nacional, ou parte dele, ao domínio ou à soberania de outro país:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 4 (quatro) a 12 (doze) anos.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p></div><p class="texto"><b>Tipo.</b> Crime formal: consuma-se com a <b class="k-org">negociação</b>, com o especial fim de provocar atos de guerra ou invasão. Se a guerra é declarada em consequência, a pena aumenta de metade até o dobro (§ 1º). Participar de operação bélica para submeter o território ao domínio estrangeiro é a forma qualificada (§ 2º). O “grupo estrangeiro” pode ser grupo armado não estatal, como dissidentes de outro país (FGV, Senado 2022).</p><div class="zona inline"><div class="selos"><div class="sj" data-k="tese" data-c="STF" data-t="Competência da Justiça Comum para julgar crimes contra o Estado Democrático de Direito" data-src="STF, Inq 4.293, Rel. Min. Alexandre de Moraes, decisão monocrática de 27.02.2023 · fonte: Tudo de Penal" data-tag="2023"><p>O Código Penal Militar não tutela a pessoa do militar, mas sim a dignidade da própria instituição das Forças Armadas, conforme pacificamente decidido por esta Suprema Corte ao definir que a Justiça Militar não julga “crimes de militares”, mas sim “crimes militares”. Nenhuma das hipóteses definidoras da competência da Justiça Militar da União está presente nessa investigação, pois os citados artigos do Código Penal Militar não se confundem com a responsabilidade penal prevista na Lei 13.260/2016 ou pelos tipos penais anteriormente citados e tipificados no Código Penal, em especial aqueles atentatórios ao regime democrático, notadamente porque os crimes investigados não dizem respeito à bem jurídico tipicamente associado à função castrense.</p><p>Inexiste, portanto, competência da Justiça Militar da União para processar e julgar militares das Forças Armadas ou dos Estados pela prática dos crimes ocorridos em 8/1/2023, notadamente os crimes previstos nos arts. 2º, 3º, 5º e 6º (atos terroristas, inclusive preparatórios) da Lei 13.260/16, e nos arts. 147 (ameaça), 147-A, § 1º, III, (perseguição), 163 (dano), art. 286 (incitação ao crime), art. 250, § 1 º, inciso I, alínea ”b” (incêndio majorado), 288, parágrafo único (associação criminosa armada), 359-L (abolição violenta do Estado Democrático de Direito), 359-M (golpe de Estado), todos do Código Penal, cujos inquéritos tramitam nesse STF a pedido da Procuradoria-Geral da República.</p></div></div></div><div class="qz" id="real-senado22fgvtit" data-tipo="real" data-gab="D" data-banca="Adaptada de FGV · 2022 · Consultor Legislativo (Senado Federal) · Múltipla escolha" data-q="he0592ea307"><p>Assinale a opção que corresponde a crime contra o Estado Democrático de Direito, nos termos do Título XII do CP.</p><ol><li>Entregar ao governo alemão documento secreto que põe em risco a soberania brasileira, para expor violação de direitos humanos.</li><li>Entoar cânticos cristãos para perturbar o comício de um candidato candomblecista.</li><li>Constituir associação para conscientizar o público das vantagens da independência do Rio Grande do Sul.</li><li>Negociar com dissidentes venezuelanos o disparo de mísseis contra o Brasil, para acirrar a animosidade entre os países.</li><li>Oferecer propina a parlamentares para impedir a abertura de impeachment contra o presidente da República.</li></ol><div class="gab"><p><b>D.</b> Negociar com grupo estrangeiro, com o fim de provocar atos típicos de guerra (art. 359-I).</p><p><b>A:</b> a entrega para expor violação de direitos humanos não é crime (art. 359-K, § 4º). <b>B:</b> a violência política exige violência física, sexual ou psicológica que restrinja direitos políticos. <b>C:</b> o separatismo só é crime com violência ou grave ameaça (art. 359-J), e a mera propaganda pacífica é manifestação política. <b>E:</b> é corrupção ativa (art. 333), e não crime do Título XII.</p></div></div><div class="qz" data-tipo="mat" data-gab="C" data-ce data-banca="Adaptada de Legislação Integrada · Código Penal em Questões · Certo ou errado" data-q="h9a5cae600c"><p>Negociar com governo ou grupo estrangeiro, ou seus agentes, para provocar atos típicos de guerra contra o País ou invadi-lo é crime punido com reclusão, e a pena aumenta de metade até o dobro se a guerra é declarada em decorrência da conduta.</p><div class="gab"><p><b>Certo.</b> Art. 359-I, caput e § 1º.</p></div></div><details class="caiu"><summary><span class="caiu-k">Já caiu</span><span class="caiu-n">1 prova neste artigo</span></summary><ul><li><span class="caiu-b">FGV · 2022</span><span class="caiu-c">Consultor Legislativo (Senado Federal)</span><span class="caiu-p">negociar com grupo estrangeiro disparo de mísseis: atentado à soberania <a class="caiu-q" href="#real-senado22fgvtit">ver questão ↓</a></span></li></ul></details></div></article>
+<article class="artigo" id="art359J" data-art="pe12-art359J" data-num="359-J" data-tit="Atentado à integridade nacional"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-J</span><span class="ct">Atentado à integridade nacional</span><span class="ct alt">0 cartões</span><span class="ct alt2">3 questões</span></div><p class="art-tema">Violência ou grave ameaça para separar parte do território e criar país independente.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex-rub">Atentado à integridade nacional  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">Art. 359-J.</b> Praticar violência ou grave ameaça com a finalidade de desmembrar parte do território nacional para constituir país independente:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 2 (dois) a 6 (seis) anos, além da pena correspondente à violência.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p></div><p class="texto"><b>Separatismo violento.</b> O que se pune é a <b class="k-org">violência ou grave ameaça</b> com o fim de separar parte do território para formar país independente. A defesa pacífica da separação, como uma associação ou um movimento de opinião, é manifestação política protegida (art. 359-T). A pena da violência soma-se à do crime.</p><div class="qz" id="real-tjse23fgv359j" data-tipo="real" data-gab="B" data-banca="Adaptada de FGV · 2023 · Titular de Serviços de Notas e de Registros (TJ SE) · Múltipla escolha" data-q="hbd12c4944e"><p>O MP denunciou João por ter praticado, em abril de 2023, grave ameaça com a finalidade de desmembrar parte do território nacional para constituir país independente. Os fatos foram provados em juízo. João incorrerá em:</p><ol><li>abolição violenta do Estado Democrático de Direito.</li><li>atentado à integridade nacional.</li><li>atentado à soberania.</li><li>golpe de Estado.</li><li>sabotagem.</li></ol><div class="gab"><p><b>B.</b> Art. 359-J.</p><p><b>A:</b> exige o fim de abolir o Estado Democrático, impedindo ou restringindo os Poderes. <b>C:</b> exige negociação com governo ou grupo estrangeiro para guerra ou invasão. <b>D:</b> exige o fim de depor o governo. <b>E:</b> exige destruir meios de comunicação ou instalações da defesa nacional.</p></div></div><p class="texto">O art. 359-J protege a <b>integridade territorial</b> — a “união indissolúvel” dos Estados, Municípios e Distrito Federal (art. 1º da CF). Atenção à data nas questões: fatos posteriores à vigência da Lei 14.197/2021 já estão sob o Título XII, e não sob a LSN revogada.</p><div class="qz" data-tipo="aut" data-gab="E" data-ce data-banca="Inédita · estilo CEBRASPE · Certo ou errado" data-q="hba5351c9f0"><p>Fundar um movimento que, por meio de reuniões, publicações e passeatas pacíficas, defende a independência de um estado da federação configura atentado à integridade nacional.</p><div class="gab"><p><b>Errado.</b> O art. 359-J exige violência ou grave ameaça. A defesa pacífica da ideia é manifestação política protegida pelo art. 359-T.</p></div></div><div class="qz" data-tipo="aut" data-gab="C" data-ce data-banca="Inédita · estilo CEBRASPE · Certo ou errado" data-q="h44b71735fa"><p>No atentado à integridade nacional, a pena de reclusão de 2 a 6 anos é aplicada sem prejuízo da pena correspondente à violência empregada.</p><div class="gab"><p><b>Certo.</b> Preceito secundário do art. 359-J (“além da pena correspondente à violência”).</p></div></div><details class="caiu"><summary><span class="caiu-k">Já caiu</span><span class="caiu-n">1 prova neste artigo</span></summary><ul><li><span class="caiu-b">FGV · 2023</span><span class="caiu-c">Titular de Serviços de Notas e de Registros (TJ SE)</span><span class="caiu-p">grave ameaça para desmembrar o território: atentado à integridade nacional <a class="caiu-q" href="#real-tjse23fgv359j">ver questão ↓</a></span></li></ul></details></div></article>
+<article class="artigo" id="art359K" data-art="pe12-art359K" data-num="359-K" data-tit="Espionagem"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-K</span><span class="ct">Espionagem</span><span class="ct alt">0 cartões</span><span class="ct alt2">4 questões</span></div><p class="art-tema">Entregar a governo estrangeiro documento secreto ou ultrassecreto. Excludente para expor crimes e violações de direitos humanos.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex-rub">Espionagem  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">Art. 359-K.</b> Entregar a governo estrangeiro, a seus agentes, ou a organização criminosa estrangeira, em desacordo com determinação legal ou regulamentar, documento ou informação classificados como secretos ou ultrassecretos nos termos da lei, cuja revelação possa colocar em perigo a preservação da ordem constitucional ou a soberania nacional:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 3 (três) a 12 (doze) anos.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">§ 1º</b> Incorre na mesma pena quem presta auxílio a espião, conhecendo essa circunstância, para subtraí-lo à ação da autoridade pública.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">§ 2º</b> Se o documento, dado ou informação é transmitido ou revelado com violação do dever de sigilo:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 6 (seis) a 15 (quinze) anos.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">§ 3º</b> Facilitar a prática de qualquer dos crimes previstos neste artigo mediante atribuição, fornecimento ou empréstimo de senha, ou de qualquer outra forma de acesso de pessoas não autorizadas a sistemas de informações:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - detenção, de 1 (um) a 4 (quatro) anos.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">§ 4º</b> Não constitui crime a comunicação, a entrega ou a publicação de informações ou de documentos com o fim de expor a prática de crime ou a violação de direitos humanos.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p></div><p class="texto"><b>Objeto.</b> Documento ou informação classificado como <b class="k-org">secreto ou ultrassecreto</b> nos termos da Lei de Acesso à Informação (Lei 12.527/2011), cuja revelação possa pôr em perigo a ordem constitucional ou a soberania. A informação apenas <b>reservada</b> (o grau mais baixo) não serve: a FGV considerou que entregar a estrangeiros informações reservadas sobre o desmatamento <b class="k-neg">não é espionagem</b> (Senado 2022). Destinatários: governo estrangeiro, seus agentes ou organização criminosa estrangeira.</p><div class="qz" id="real-senado22fgvjudas" data-tipo="real" data-gab="B" data-banca="Adaptada de FGV · 2022 · Consultor Legislativo (Senado Federal) · Múltipla escolha" data-q="h84b2a5445b"><p>Para obter dinheiro, Judas obteve e entregou ilegalmente a agentes de governos estrangeiros e de ONGs informações <b>reservadas</b> do Ministério do Meio Ambiente sobre o combate ao desmatamento na Amazônia. O crime de Judas:</p><ol><li>é inafiançável e insuscetível de anistia, indulto ou graça.</li><li>não é espionagem.</li><li>é inafiançável e imprescritível.</li><li>afeta o Estado Democrático de Direito.</li><li>é de natureza militar.</li></ol><div class="gab"><p><b>B.</b> A espionagem exige informação classificada como secreta ou ultrassecreta, e que possa pôr em perigo a ordem constitucional ou a soberania.</p><p><b>A:</b> esse regime é o dos hediondos e equiparados (CF, art. 5º, XLIII), e a espionagem não é hedionda. <b>C:</b> só o racismo e a ação de grupos armados contra a ordem constitucional são imprescritíveis. <b>D:</b> sem o objeto típico, a conduta não chega ao Título XII. <b>E:</b> o fato não envolve militar nem patrimônio militar.</p></div></div><p class="texto"><b>Figuras.</b> § 1º: o favorecimento pessoal do espião. § 2º: forma qualificada, quando quem revela tem dever de sigilo (pena de 6 a 15 anos). § 3º: facilitar o crime com empréstimo de senha ou outro acesso indevido a sistemas, com detenção. § 4º: excludente de tipicidade para o <b>denunciante</b> (whistleblower) que divulga para expor crime ou violação de direitos humanos.</p><div class="qz" id="real-mpesp25vunesp359" data-tipo="real" data-gab="C" data-banca="Adaptada de VUNESP · 2025 · Analista de Promotoria (MPE SP) · Múltipla escolha" data-q="h8dba30ec24"><p>Sobre os crimes contra o Estado Democrático de Direito, assinale a correta.</p><ol><li>A violência política praticada contra mulher é qualificada.</li><li>Os crimes contra a soberania nacional exigem, todos, elemento subjetivo especial.</li><li>A espionagem é qualificada quando há violação do dever de sigilo.</li><li>Os crimes contra a soberania nacional são próprios de funcionário público.</li><li>Nos crimes contra as instituições democráticas e contra o processo eleitoral, os meios de execução são só a violência e a grave ameaça.</li></ol><div class="gab"><p><b>C.</b> Art. 359-K, § 2º (reclusão, de 6 a 15 anos).</p><p><b>A:</b> o art. 359-P não tem essa qualificadora. A violência política contra a mulher candidata está no art. 326-B do Código Eleitoral. <b>B:</b> a espionagem não tem fim especial descrito. <b>D:</b> são crimes comuns. <b>E:</b> a interrupção do processo eleitoral se faz pela violação dos mecanismos de segurança da urna.</p></div></div><div class="qz" data-tipo="aut" data-gab="C" data-banca="Inédita · estilo FGV · Múltipla escolha" data-q="h774917ba8c"><p>Hélio, servidor com dever de sigilo, entregou a agentes de governo estrangeiro documento classificado como ultrassecreto, cuja revelação podia pôr em risco a soberania. Para isso, usou a senha que a colega Íris lhe emprestou, sabendo ela do plano. Descoberto, Hélio se escondeu na casa do amigo Jair, que, conhecendo os fatos, o ajudou a escapar da polícia. Considerando o art. 359-K do CP, assinale a correta.</p><ol><li>Hélio responde por espionagem simples, porque o dever de sigilo é irrelevante.</li><li>Íris não comete crime, porque só emprestou a senha.</li><li>Hélio responde pela forma qualificada (§ 2º), Íris pelo § 3º (facilitação mediante empréstimo de senha) e Jair pela mesma pena do caput (§ 1º).</li><li>Jair responde por favorecimento pessoal do art. 348, com isenção de pena.</li><li>Os três respondem por espionagem simples, em concurso de pessoas.</li></ol><div class="gab"><p><b>C.</b> § 2º: revelação com violação do dever de sigilo (reclusão, 6 a 15). § 3º: facilitar mediante empréstimo de senha (detenção, 1 a 4). § 1º: auxílio a espião para subtraí-lo à autoridade.</p><p><b>A e E:</b> o dever de sigilo qualifica o crime de Hélio. <b>B:</b> o § 3º tipifica a facilitação por senha. <b>D:</b> há tipo especial (§ 1º), e Jair não é parente para ter escusa (que nem existe nesse tipo).</p><p class="q-nota">Questão escrita para treino.</p></div></div><p class="texto">§ 3º: quem <b>facilita</b> a espionagem mediante atribuição, fornecimento ou empréstimo de senha, ou de qualquer outra forma de acesso de pessoas não autorizadas a sistemas de informações, responde com detenção de 1 a 4 anos.</p><div class="qz" data-tipo="mat" data-gab="E" data-ce data-banca="Adaptada de Legislação Integrada · Código Penal em Questões · Certo ou errado" data-q="h7629e57e97"><p>Constitui crime a comunicação, a entrega ou a publicação de informações ou documentos, ainda que o fim seja expor a prática de crime ou a violação de direitos humanos.</p><div class="gab"><p><b>Errado.</b> O art. 359-K, § 4º, exclui o crime nesse caso.</p></div></div><details class="caiu"><summary><span class="caiu-k">Já caiu</span><span class="caiu-n">2 provas neste artigo</span></summary><ul><li><span class="caiu-b">FGV · 2022</span><span class="caiu-c">Consultor Legislativo (Senado Federal)</span><span class="caiu-p">informações apenas reservadas: não é espionagem <a class="caiu-q" href="#real-senado22fgvjudas">ver questão ↓</a></span></li><li><span class="caiu-b">VUNESP · 2025</span><span class="caiu-c">Analista de Promotoria (MPE SP)</span><span class="caiu-p">espionagem com violação do dever de sigilo: forma qualificada <a class="caiu-q" href="#real-mpesp25vunesp359">ver questão ↓</a></span></li></ul></details></div></article>
+<div class="divisor" id="c2" data-grupo="Capítulo II · Dos Crimes contra as Instituições Democráticas"><span class="d-num">Capítulo II · Arts. 359-L a 359-M-B</span><h2>Dos Crimes contra as Instituições Democráticas</h2></div>
+<section class="abertura"><h2>Dos Crimes contra as Instituições Democráticas</h2><p>O núcleo dos processos do 8 de janeiro e da trama golpista. Os dois tipos são crimes de atentado (punem o “tentar”) e exigem violência ou grave ameaça. A Lei 15.402/2026 acrescentou regras próprias de concurso de crimes e de redução de pena para o contexto de multidão.</p><p class="quadro-t">Abolição violenta × golpe de Estado</p><div class="duelo"><div class="du-l"><h4>Abolição violenta (359-L)</h4><ul><li><b>Tentar abolir</b> o Estado Democrático de Direito</li><li>Meio: impedir ou restringir o exercício dos <b>poderes constitucionais</b> (Legislativo, Executivo, Judiciário)</li><li>Reclusão, 4 a 8 anos, além da pena da violência</li></ul></div><div class="du-x">×</div><div class="du-l"><h4>Golpe de Estado (359-M)</h4><ul><li><b>Tentar depor</b> o governo legitimamente constituído</li><li>Alvo: o governo (Poder Executivo) eleito ou empossado legitimamente</li><li>Reclusão, 4 a 12 anos, além da pena da violência</li></ul></div></div></section>
+<article class="artigo" id="art359L" data-art="pe12-art359L" data-num="359-L" data-tit="Abolição violenta do Estado Democrático de Direito"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-L</span><span class="ct">Abolição violenta do Estado Democrático de Direito</span><span class="ct alt">0 cartões</span><span class="ct alt2">1 questões</span></div><p class="art-tema">Tentar abolir o Estado Democrático com violência ou grave ameaça, impedindo ou restringindo os Poderes.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex-rub">Abolição violenta do Estado Democrático de Direito  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">Art. 359-L.</b> Tentar, com emprego de violência ou grave ameaça, abolir o Estado Democrático de Direito, impedindo ou restringindo o exercício dos poderes constitucionais:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 4 (quatro) a 8 (oito) anos, além da pena correspondente à violência.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p></div><p class="texto"><b>Crime de atentado.</b> O tipo já descreve a tentativa (“tentar abolir”): se a abolição se consumasse, não haveria mais Estado Democrático para punir. Por isso não incide a redução do art. 14, parágrafo único, e a consumação ocorre com o emprego de violência ou grave ameaça idôneo a impedir ou restringir o exercício dos Poderes. A pena da violência (lesões, dano) soma-se à do crime.</p><div class="qz" data-tipo="mat" data-gab="E" data-ce data-banca="Adaptada de Legislação Integrada · Código Penal em Questões · Certo ou errado" data-q="h7c568c5ed1"><p>Tentar, com violência ou grave ameaça, abolir o Estado Democrático de Direito, impedindo ou restringindo o exercício dos poderes constitucionais, é punido com reclusão de 12 a 30 anos.</p><div class="gab"><p><b>Errado.</b> Reclusão, de 4 a 8 anos, além da pena da violência.</p></div></div><div class="dz" data-resp="8|oito" data-dica="O golpe de Estado vai até 12." data-porque="&lt;b&gt;De 4 a 8 anos&lt;/b&gt; (art. 359-L). O golpe de Estado (art. 359-M) é punido com reclusão de 4 a 12 anos, também somada à pena da violência." data-tag="Art. 359-L" data-d="t12d1">A abolição violenta do Estado Democrático de Direito é punida com reclusão de 4 a ___ anos, além da pena correspondente à violência.</div><p class="texto"><b>8 de janeiro.</b> O STF entendeu que a invasão e depredação das sedes dos três Poderes, com a pretensão de provocar intervenção militar e impedir o funcionamento das instituições, configurou abolição violenta e golpe de Estado, além de dano qualificado, deterioração de patrimônio tombado e associação criminosa armada (AP 1.060 e seguintes).</p></div></article>
+<article class="artigo" id="art359M" data-art="pe12-art359M" data-num="359-M" data-tit="Golpe de Estado"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-M</span><span class="ct">Golpe de Estado</span><span class="ct alt">2 cartões</span><span class="ct alt2">4 questões</span></div><p class="art-tema">Tentar depor, com violência ou grave ameaça, o governo legitimamente constituído.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex-rub">Golpe de Estado  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">Art. 359-M.</b> Tentar depor, por meio de violência ou grave ameaça, o governo legitimamente constituído:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 4 (quatro) a 12 (doze) anos, além da pena correspondente à violência.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p></div><p class="texto"><b>Tipo.</b> Também é crime de atentado: “tentar depor” o governo legitimamente constituído, por violência ou grave ameaça. A tentativa é punida com a pena cheia, sem a redução do art. 14 (CEBRASPE, PC-PE 2024). Exige atos executórios idôneos: planejar sem iniciar a execução é ato preparatório. O STF, na AP 2.668, entendeu que a trama para impedir a posse do governo eleito em 2022, com plano de ruptura e atos violentos, configurou golpe de Estado tentado em concurso com abolição violenta, organização criminosa armada, dano qualificado e deterioração de patrimônio tombado.</p><div class="zona inline"><div class="selos"><div class="sj" data-k="tese" data-c="STF" data-t="Primeira condenação do 8 de janeiro: concurso material entre abolição e golpe" data-src="STF · Plenário" data-tag="AP 1.060/DF · 14/9/2023"><p>O STF condenou o primeiro réu dos atos de 8 de janeiro de 2023 por abolição violenta do Estado Democrático de Direito, golpe de Estado, dano qualificado, deterioração de patrimônio tombado e associação criminosa armada. A maioria entendeu que abolição e golpe protegem bens distintos e aplicou o concurso material, afastando a consunção.</p><p class="sj-cit">STF, Plenário, AP 1.060/DF, Rel. Min. Alexandre de Moraes, j. 14/9/2023. Atenção: o art. 359-M-A (Lei 15.402/2026) passou a exigir o concurso formal próprio para os crimes do capítulo praticados no mesmo contexto.</p></div></div></div><div class="zona inline"><div class="selos"><div class="sj" data-k="novidade" data-c="STF" data-t="Trama golpista: condenação do “núcleo crucial”" data-src="STF · 1ª Turma" data-tag="AP 2.668/DF · 11/9/2025"><p>A 1ª Turma condenou o ex-presidente Jair Bolsonaro e outros integrantes do chamado núcleo crucial por organização criminosa armada, tentativa de abolição violenta do Estado Democrático de Direito, golpe de Estado, dano qualificado e deterioração de patrimônio tombado. A pena do ex-presidente foi fixada em 27 anos e 3 meses.</p><p class="sj-cit">STF, 1ª Turma, AP 2.668/DF, Rel. Min. Alexandre de Moraes, j. 11/9/2025.</p></div></div></div><div class="qz" id="real-alro26fgvnino" data-tipo="real" data-gab="D" data-banca="Adaptada de FGV · 2026 · Analista Legislativo (AL RO) · Múltipla escolha" data-q="hde13ee7ef6"><p>Nino, com dolo e em comunhão de ações e desígnios com Dexter, tentou depor, por meio de violência e grave ameaça, o governo legitimamente constituído no Brasil. Pelo CP, Nino e Dexter responderão por crime contra:</p><ol><li>o funcionamento das instituições democráticas no processo eleitoral.</li><li>as instituições democráticas e contra a soberania nacional.</li><li>o funcionamento dos serviços essenciais.</li><li>as instituições democráticas.</li><li>a soberania nacional.</li></ol><div class="gab"><p><b>D.</b> O golpe de Estado (art. 359-M) está no Capítulo II, dos crimes contra as instituições democráticas.</p><p><b>A:</b> o Capítulo III trata da interrupção do processo eleitoral e da violência política. <b>B e E:</b> a soberania (Capítulo I) protege contra ameaças estrangeiras e separatistas. <b>C:</b> o Capítulo IV trata da sabotagem.</p></div></div><div class="qz" id="real-pcpe24cesp359m" data-tipo="real" data-gab="C" data-banca="Adaptada de CEBRASPE · 2024 · Delegado de Polícia (PC PE) · Múltipla escolha" data-q="h645e6fc5b8"><p>Entre os crimes contra as instituições democráticas, tentar depor, por meio de grave ameaça, o governo legitimamente constituído é:</p><ol><li>atípico.</li><li>golpe de Estado, com redução de um a dois terços pela tentativa.</li><li>golpe de Estado, sem previsão de redução pela tentativa.</li><li>crime, inclusive quando praticado por manifestação crítica aos poderes constitucionais.</li><li>violência política, quando destruir estabelecimentos ou instalações da defesa nacional.</li></ol><div class="gab"><p><b>C.</b> O tipo já é “tentar depor”: a tentativa é o crime consumado.</p><p><b>A:</b> o art. 359-M tipifica a conduta. <b>B:</b> não se aplica o art. 14, parágrafo único, a crime de atentado. <b>D:</b> a manifestação crítica é excluída pelo art. 359-T. <b>E:</b> destruir instalações da defesa nacional para abolir o Estado Democrático é sabotagem (art. 359-R).</p></div></div><p class="texto">Abolição violenta (359-L) × golpe de Estado (359-M): no primeiro, o alvo são os <b>Poderes constitucionais</b> — impedir ou restringir o seu exercício; no segundo, o <b>governo legitimamente constituído</b> — depô-lo. Os dois são crimes de atentado e somam a pena da violência empregada.</p><div class="qz" id="real-furg25pena359m" data-tipo="real" data-gab="E" data-banca="Adaptada de FURG · 2025 · Assistente Administrativo (FURG) · Múltipla escolha" data-q="h71098b789e"><p>Considerando o CP com as alterações até 31/12/2024, assinale a correta.</p><ol><li>Pelo art. 359-M, tentar depor o governo legitimamente constituído com violência ou grave ameaça tem pena de reclusão de 4 a 20 anos, além da pena da violência.</li><li>A prevaricação exige que o ato seja retardado para satisfazer interesse exclusivamente financeiro.</li><li>A condescendência criminosa tem pena de 15 dias a 2 meses de detenção, além de advertência e multa.</li><li>O art. 340 pune quem dá causa a inquérito contra alguém, imputando-lhe crime de que o sabe inocente.</li><li>Pelo art. 313-A, o funcionário autorizado que insere dados falsos em sistemas da Administração para obter vantagem comete inserção de dados falsos, com reclusão de 2 a 12 anos e multa.</li></ol><div class="gab"><p><b>E.</b> Art. 313-A.</p><p><b>A:</b> a pena máxima é de 12 anos. <b>B:</b> o interesse pode ser de qualquer natureza, inclusive sentimento pessoal. <b>C:</b> a pena é de detenção de 15 dias a 1 mês, ou multa. <b>D:</b> essa conduta é denunciação caluniosa (art. 339).</p></div></div><div class="qz" data-tipo="mat" data-gab="E" data-ce data-banca="Adaptada de Legislação Integrada · Código Penal em Questões · Certo ou errado" data-q="h74b8568b85"><p>Tentar depor, por meio de violência ou grave ameaça, o governo legitimamente constituído é punido com reclusão de 12 a 30 anos.</p><div class="gab"><p><b>Errado.</b> Reclusão, de 4 a 12 anos, além da pena da violência.</p></div></div><details class="caiu"><summary><span class="caiu-k">Já caiu</span><span class="caiu-n">3 provas neste artigo</span></summary><ul><li><span class="caiu-b">FGV · 2026</span><span class="caiu-c">Analista Legislativo (AL RO)</span><span class="caiu-p">tentar depor o governo: crime contra as instituições democráticas <a class="caiu-q" href="#real-alro26fgvnino">ver questão ↓</a></span></li><li><span class="caiu-b">CEBRASPE · 2024</span><span class="caiu-c">Delegado de Polícia (PC PE)</span><span class="caiu-p">golpe de Estado é crime de atentado: sem redução pela tentativa <a class="caiu-q" href="#real-pcpe24cesp359m">ver questão ↓</a></span></li><li><span class="caiu-b">FURG · 2025</span><span class="caiu-c">Assistente Administrativo (FURG)</span><span class="caiu-p">pena do golpe de Estado: 4 a 12 anos, e não 4 a 20 <a class="caiu-q" href="#real-furg25pena359m">ver questão ↓</a></span></li></ul></details></div></article>
+<article class="artigo" id="art359MA" data-art="pe12-art359MA" data-num="359-M-A" data-tit="Concurso formal próprio obrigatório"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-M-A</span><span class="ct">Concurso formal próprio obrigatório</span><span class="ct alt">0 cartões</span><span class="ct alt2">3 questões</span></div><p class="art-tema">Lei 15.402/2026: crimes do capítulo no mesmo contexto seguem o concurso formal próprio, mesmo com desígnios autônomos.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex nova"><b class="k-ref">Art. 359-M-A.</b> Quando os delitos deste Capítulo estão inseridos no mesmo contexto, a pena deverá ser aplicada, ainda que existente desígnio autônomo, na forma do concurso formal próprio de que trata a primeira parte do art. 70, vedando-se a aplicação do cômputo cumulativo previsto na segunda parte desse dispositivo e no art. 69, todos deste Código.  <span class="lex-nota">(Incluído pela Lei nº 15.402, de 2026)</span></p></div><div class="importante call-novo"><div class="imp-h"><span class="imp-x">★</span> Lei 15.402/2026, a “Lei da Dosimetria”</div><div class="imp-b"><p>Promulgada em 8/5/2026 pelo Presidente do Senado, depois de o Congresso derrubar, em 30/4/2026, o veto total de 8/1/2026. Além dos arts. 359-M-A e 359-M-B do CP, permitiu a remição de pena por trabalho e estudo no regime domiciliar (art. 126 da LEP). As ADIs 7.966 (ABI) e 7.967 (Federação PSOL-Rede) questionam a lei. Em 9/5/2026, o relator suspendeu a aplicação dela nas execuções penais do 8 de janeiro em curso no STF, até o julgamento do Plenário. A lei está formalmente em vigor, mas o Plenário ainda não havia decidido até 2/10/2026.</p></div></div><p class="texto"><b>O que muda.</b> Pela regra geral, abolição violenta e golpe de Estado praticados com <b class="k-org">desígnios autônomos</b> teriam as penas somadas (concurso formal impróprio, art. 70, 2ª parte, ou concurso material, art. 69, como decidiu o STF na AP 1.060). O art. 359-M-A manda aplicar, quando os crimes do Capítulo II estão no mesmo contexto, o <b>concurso formal próprio</b>: aplica-se a pena mais grave (a do golpe, de 4 a 12 anos), aumentada de 1/6 até a metade, ainda que haja desígnios autônomos. É regra especial que derroga o art. 70, 2ª parte, e o art. 69.</p><div class="qz" data-tipo="aut" data-gab="B" data-banca="Inédita · estilo FGV · Múltipla escolha" data-q="h07f9a0f68d"><p>Durante a invasão das sedes dos três Poderes, Dênis, no mesmo contexto, praticou atos violentos voltados tanto a abolir o Estado Democrático de Direito, restringindo o funcionamento do Congresso e do STF, quanto a depor o governo legitimamente constituído, com desígnios autônomos. Considerando o CP com as alterações da Lei 15.402/2026, a pena dos crimes de abolição violenta e golpe de Estado deve ser aplicada:</p><ol><li>pelo concurso material, somando-se as penas, porque os bens jurídicos são distintos.</li><li>pelo concurso formal próprio: a pena mais grave, aumentada de 1/6 até a metade, ainda que haja desígnios autônomos.</li><li>pelo concurso formal impróprio, somando-se as penas, porque houve desígnios autônomos.</li><li>pela consunção: só responde pelo golpe de Estado, que absorve a abolição.</li><li>pela continuidade delitiva, com aumento de 1/6 a 2/3.</li></ol><div class="gab"><p><b>B.</b> Art. 359-M-A: regra especial para os crimes do Capítulo II no mesmo contexto.</p><p><b>A:</b> era a solução do STF na AP 1.060, superada pela lei nova, que veda o art. 69. <b>C:</b> o art. 359-M-A afasta expressamente a 2ª parte do art. 70. <b>D:</b> a lei manda aplicar o concurso formal, o que pressupõe dois crimes. <b>E:</b> não se trata de várias condutas em continuidade, e a lei escolheu o concurso formal próprio.</p><p class="q-nota">Questão escrita para treino a partir da lei de 2026. A aplicação da Lei 15.402/2026 às execuções do 8 de janeiro em curso no STF está suspensa por decisão do relator nas ADIs 7.966 e 7.967.</p></div></div><p class="texto"><b>Alcance.</b> Vale só para os crimes deste capítulo (arts. 359-L e 359-M). Os crimes conexos, como dano qualificado e associação ou organização criminosa, continuam seguindo as regras gerais. Por ser <b class="k-org">lei penal mais benéfica</b>, a regra retroage aos fatos anteriores, inclusive com condenação definitiva (CF, art. 5º, XL; CP, art. 2º, parágrafo único), salvo se o STF a declarar inconstitucional. É justamente esse o ponto em discussão nas ADIs.</p><div class="qz" data-tipo="aut" data-gab="C" data-ce data-banca="Inédita · estilo CEBRASPE · Certo ou errado" data-q="h981982d24e"><p>Por ser lei penal mais benéfica, a regra do art. 359-M-A do CP, incluída pela Lei 15.402/2026, aplica-se em tese aos fatos anteriores, ainda que já decididos por sentença condenatória transitada em julgado, salvo se o STF a declarar inconstitucional.</p><div class="gab"><p><b>Certo.</b> CF, art. 5º, XL, e CP, art. 2º, parágrafo único. A constitucionalidade da lei está em discussão nas ADIs 7.966 e 7.967, e sua aplicação às execuções do 8 de janeiro no STF foi suspensa pelo relator em 9/5/2026.</p></div></div><div class="qz" data-tipo="aut" data-gab="E" data-ce data-banca="Inédita · estilo CEBRASPE · Certo ou errado" data-q="hb321138007"><p>O concurso formal próprio obrigatório do art. 359-M-A alcança todos os crimes praticados no mesmo contexto da tentativa de golpe, inclusive o dano qualificado e a associação criminosa armada.</p><div class="gab"><p><b>Errado.</b> A regra vale para “os delitos deste Capítulo” (arts. 359-L e 359-M). Os crimes conexos seguem as regras gerais de concurso.</p></div></div></div></article>
+<article class="artigo" id="art359MB" data-art="pe12-art359MB" data-num="359-M-B" data-tit="Redução da pena no contexto de multidão"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-M-B</span><span class="ct">Redução da pena no contexto de multidão</span><span class="ct alt">0 cartões</span><span class="ct alt2">1 questões</span></div><p class="art-tema">Lei 15.402/2026: 1/3 a 2/3 para quem não financiou nem liderou.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex nova"><b class="k-ref">Art. 359-M-B.</b> Quando os crimes previstos neste Capítulo forem praticados em contexto de multidão, a pena será reduzida de 1/3 (um terço) a 2/3 (dois terços), desde que o agente não tenha praticado ato de financiamento ou exercido papel de liderança.  <span class="lex-nota">(Incluído pela Lei nº 15.402, de 2026)</span></p></div><p class="texto"><b>Causa de diminuição.</b> Aplica-se na terceira fase da dosimetria, aos crimes do Capítulo II (abolição violenta e golpe de Estado) praticados em contexto de <b class="k-org">multidão</b>. Fica excluído quem financiou os atos ou exerceu liderança. Lembra a atenuante genérica do art. 65, III, “e” (crime cometido sob influência de multidão em tumulto que o agente não provocou), mas com efeito muito maior (1/3 a 2/3). Também é lei mais benéfica, com eficácia retroativa, sujeita ao que o STF decidir nas ADIs 7.966 e 7.967.</p><div class="qz" data-tipo="aut" data-gab="D" data-banca="Inédita · estilo FGV · Múltipla escolha" data-q="hcfe1c1b28d"><p>Em contexto de multidão, Regina participou de atos violentos para depor o governo legitimamente constituído, sem financiar a ação nem exercer liderança. Tobias, no mesmo episódio, organizou caravanas e pagou o transporte e a alimentação dos manifestantes. Considerando o CP com as alterações da Lei 15.402/2026, é correto afirmar que:</p><ol><li>os dois têm direito à redução de 1/3 a 2/3, porque agiram em contexto de multidão.</li><li>nenhum tem direito à redução, que só se aplica à abolição violenta do Estado Democrático.</li><li>Regina tem direito só à atenuante genérica do art. 65, III, “e”, e Tobias, a nada.</li><li>Regina pode ter a pena reduzida de 1/3 a 2/3, e Tobias não, porque praticou ato de financiamento.</li><li>Tobias pode ter a pena reduzida, porque não praticou violência pessoalmente.</li></ol><div class="gab"><p><b>D.</b> Art. 359-M-B: o financiador e o líder ficam excluídos.</p><p><b>A e E:</b> o financiamento afasta a redução. <b>B:</b> a redução vale para os crimes do Capítulo II, inclusive o golpe de Estado. <b>C:</b> a lei nova criou causa de diminuição específica, mais favorável que a atenuante genérica.</p><p class="q-nota">Questão escrita para treino. Ver a nota sobre a suspensão da aplicação da lei nas execuções do 8 de janeiro em curso no STF.</p></div></div></div></article>
+<div class="divisor" id="c3" data-grupo="Capítulo III · Dos Crimes contra o Funcionamento das Instituições Democráticas no Processo Eleitoral"><span class="d-num">Capítulo III · Arts. 359-N a 359-Q</span><h2>Dos Crimes contra o Funcionamento das Instituições Democráticas no Processo Eleitoral</h2></div>
+<section class="abertura"><h2>Dos Crimes contra o Funcionamento das Instituições Democráticas no Processo Eleitoral</h2><p>Dois tipos em vigor: a interrupção do processo eleitoral (só pela violação dos mecanismos de segurança da urna eletrônica) e a violência política. O art. 359-O (comunicação enganosa em massa) e o art. 359-Q (ação penal privada subsidiária por partido político) foram vetados.</p></section>
+<article class="artigo" id="art359N" data-art="pe12-art359N" data-num="359-N" data-tit="Interrupção do processo eleitoral"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-N</span><span class="ct">Interrupção do processo eleitoral</span><span class="ct alt">0 cartões</span><span class="ct alt2">2 questões</span></div><p class="art-tema">Impedir ou perturbar a eleição violando os mecanismos de segurança da urna eletrônica.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex-rub">Interrupção do processo eleitoral  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">Art. 359-N.</b> Impedir ou perturbar a eleição ou a aferição de seu resultado, mediante violação indevida de mecanismos de segurança do sistema eletrônico de votação estabelecido pela Justiça Eleitoral:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 3 (três) a 6 (seis) anos, e multa.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex rev"><b class="k-ref">Art. 359-O.</b> (VETADO).  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p></div><p class="texto"><b>Meio vinculado.</b> O crime só existe se o impedimento ou a perturbação da eleição ou da apuração ocorrer mediante <b class="k-org">violação indevida dos mecanismos de segurança do sistema eletrônico de votação</b> (ataque hacker à urna ou ao sistema de totalização). Tumultos ou invasões físicas de cartórios podem configurar crimes do Código Eleitoral, como o art. 296 (promover desordem que prejudique os trabalhos eleitorais), ou outros tipos, conforme o caso.</p><div class="qz" data-tipo="mat" data-gab="E" data-ce data-banca="Adaptada de Legislação Integrada · Código Penal em Questões · Certo ou errado" data-q="h4996fe0d28"><p>Impedir ou perturbar a eleição ou a aferição de seu resultado mediante violação indevida dos mecanismos de segurança do sistema eletrônico de votação é crime punido com detenção.</p><div class="gab"><p><b>Errado.</b> Reclusão, de 3 a 6 anos, e multa.</p></div></div><div class="qz" data-tipo="aut" data-gab="C" data-banca="Inédita · estilo FGV · Múltipla escolha" data-q="h706adc6218"><p>Na noite da apuração, Lauro invadiu remotamente o sistema de totalização da Justiça Eleitoral, burlando os mecanismos de segurança, e conseguiu atrasar a divulgação do resultado por várias horas. No mesmo dia, em outra cidade, Márcio rasgou cédulas de papel usadas por eleitores no exterior e tumultuou uma seção. Considerando o art. 359-N do CP, assinale a correta.</p><ol><li>Os dois respondem por interrupção do processo eleitoral.</li><li>Nenhum responde pelo art. 359-N, que exige violência ou grave ameaça.</li><li>Só Lauro responde pelo art. 359-N, cuja conduta exige a violação indevida dos mecanismos de segurança do sistema eletrônico de votação.</li><li>Só Márcio responde pelo art. 359-N, porque o ataque a sistemas é crime informático da Lei 12.737/2012.</li><li>Lauro responde por sabotagem (art. 359-R).</li></ol><div class="gab"><p><b>C.</b> O art. 359-N tem meio de execução vinculado.</p><p><b>A e D:</b> a conduta de Márcio não envolve o sistema eletrônico e pode caracterizar crime do Código Eleitoral. <b>B:</b> o tipo não exige violência, e sim a violação dos mecanismos de segurança. <b>E:</b> a sabotagem exige o fim de abolir o Estado Democrático e atinge meios de comunicação ou instalações da defesa nacional.</p><p class="q-nota">Questão escrita para treino.</p></div></div><div class="dz" data-resp="6|seis" data-dica="O tipo exige violação indevida de mecanismos de segurança do sistema eletrônico de votação." data-porque="&lt;b&gt;De 3 a 6 anos, e multa.&lt;/b&gt;" data-tag="Art. 359-N" data-d="t12d2">A interrupção do processo eleitoral (art. 359-N) é punida com reclusão de 3 a ___ anos, e multa.</div></div></article>
+<article class="artigo" id="art359P" data-art="pe12-art359P" data-num="359-P" data-tit="Violência política"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-P</span><span class="ct">Violência política</span><span class="ct alt">0 cartões</span><span class="ct alt2">2 questões</span></div><p class="art-tema">Restringir direitos políticos com violência física, sexual ou psicológica, em razão de sexo, raça, cor, etnia, religião ou procedência nacional.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex-rub">Violência política  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">Art. 359-P.</b> Restringir, impedir ou dificultar, com emprego de violência física, sexual ou psicológica, o exercício de direitos políticos a qualquer pessoa em razão de seu sexo, raça, cor, etnia, religião ou procedência nacional:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 3 (três) a 6 (seis) anos, e multa, além da pena correspondente à violência.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex rev"><b class="k-ref">Art. 359-Q.</b> (VETADO).  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p></div><p class="texto"><b>Elementos.</b> (1) Restringir, impedir ou dificultar o exercício de <b class="k-org">direitos políticos</b> (votar, ser votado, participar de campanha). (2) Com violência física, sexual ou psicológica. (3) Motivação discriminatória: sexo, raça, cor, etnia, religião ou procedência nacional. Bloquear a estrada da aldeia e postar capangas armados para impedir indígenas de votar é violência política (COTEC 2023).</p><div class="qz" id="real-saoromao23cotec" data-tipo="real" data-gab="A" data-banca="Adaptada de COTEC · 2023 · Advogado (Pref. São Romão) · Múltipla escolha" data-q="ha8ccad8e77"><p>Pedro, presidente do partido local Ômega, soube que os eleitores da etnia Xacriabá pretendiam votar num candidato de oposição. Na véspera da eleição, derrubou árvores nas vias de acesso à única seção eleitoral da aldeia e, no dia do pleito, posicionou capangas armados para dificultar o exercício dos direitos políticos dos eleitores. Pedro e os capangas podem responder por:</p><ol><li>violência política.</li><li>interrupção do processo eleitoral.</li><li>sabotagem.</li><li>abolição do Estado Democrático de Direito.</li><li>atentado à integridade nacional.</li></ol><div class="gab"><p><b>A.</b> Dificultaram, com violência psicológica (intimidação armada), o exercício de direitos políticos em razão da etnia (art. 359-P).</p><p><b>B:</b> exige violação dos mecanismos de segurança da urna eletrônica. <b>C:</b> exige destruir meios de comunicação ou instalações da defesa nacional. <b>D:</b> exige o fim de abolir o Estado Democrático, impedindo os Poderes. <b>E:</b> exige o fim de separar parte do território.</p></div></div><div class="qz" data-tipo="mat" data-gab="E" data-ce data-banca="Adaptada de Legislação Integrada · Código Penal em Questões · Certo ou errado" data-q="h30a1a7ca47"><p>A violência política não é crime, porque o dispositivo que a criminalizava foi vetado.</p><div class="gab"><p><b>Errado.</b> O art. 359-P está em vigor. Os vetados foram os arts. 359-O e 359-Q.</p></div></div><p class="texto"><b>Especial.</b> Assediar, constranger, humilhar, perseguir ou ameaçar candidata ou detentora de mandato, por menosprezo à condição de mulher, para impedir ou dificultar a campanha ou o mandato, é o art. 326-B do Código Eleitoral (Lei 14.192/2021). O art. 359-P não tem qualificadora para vítima mulher.</p><details class="caiu"><summary><span class="caiu-k">Já caiu</span><span class="caiu-n">1 prova neste artigo</span></summary><ul><li><span class="caiu-b">COTEC · 2023</span><span class="caiu-c">Advogado (Pref. São Romão)</span><span class="caiu-p">impedir indígenas de votar com capangas armados: violência política <a class="caiu-q" href="#real-saoromao23cotec">ver questão ↓</a></span></li></ul></details></div></article>
+<div class="divisor" id="c4" data-grupo="Capítulo IV · Dos Crimes contra o Funcionamento dos Serviços Essenciais"><span class="d-num">Capítulo IV · Art. 359-R</span><h2>Dos Crimes contra o Funcionamento dos Serviços Essenciais</h2></div>
+<section class="abertura"><h2>Dos Crimes contra o Funcionamento dos Serviços Essenciais</h2><p>Um único tipo, a sabotagem. O Capítulo V (crimes contra a cidadania, que incluía o atentado ao direito de manifestação) foi inteiramente vetado.</p></section>
+<article class="artigo" id="art359R" data-art="pe12-art359R" data-num="359-R" data-tit="Sabotagem"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-R</span><span class="ct">Sabotagem</span><span class="ct alt">0 cartões</span><span class="ct alt2">3 questões</span></div><p class="art-tema">Destruir meios de comunicação ou instalações da defesa nacional para abolir o Estado Democrático.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex-rub">Sabotagem  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex"><b class="k-ref">Art. 359-R.</b> Destruir ou inutilizar meios de comunicação ao público, estabelecimentos, instalações ou serviços destinados à defesa nacional, com o fim de abolir o Estado Democrático de Direito:  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex pena">Pena - reclusão, de 2 (dois) a 8 (oito) anos.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p></div><p class="texto"><b>Tipo.</b> Destruir ou inutilizar meios de comunicação ao público (emissoras, antenas, redes) ou estabelecimentos, instalações ou serviços da defesa nacional, com o especial fim de <b class="k-org">abolir o Estado Democrático de Direito</b>. Sem esse fim, pode haver dano qualificado (art. 163, parágrafo único, III) ou atentado contra serviço de utilidade pública (art. 265).</p><div class="qz" id="real-itapema22furb" data-tipo="real" data-gab="E" data-banca="Adaptada de FURB · 2022 · Guarda Municipal (Pref. Itapema) · Múltipla escolha" data-q="h8b7f56a0bf"><p>Pelo CP, nos crimes contra o Estado Democrático de Direito, a sabotagem consiste em:</p><ol><li>tentar depor, por meio de violência ou grave ameaça, o governo legitimamente constituído.</li><li>restringir, impedir ou dificultar, com violência física, sexual ou psicológica, o exercício de direitos políticos em razão de sexo, raça, cor, etnia, religião ou procedência nacional.</li><li>tentar, com violência ou grave ameaça, abolir o Estado Democrático de Direito, impedindo ou restringindo o exercício dos poderes constitucionais.</li><li>impedir ou perturbar a eleição ou a apuração, mediante violação dos mecanismos de segurança da urna eletrônica.</li><li>destruir ou inutilizar meios de comunicação ao público, estabelecimentos, instalações ou serviços destinados à defesa nacional, com o fim de abolir o Estado Democrático de Direito.</li></ol><div class="gab"><p><b>E.</b> Art. 359-R.</p><p><b>A:</b> é golpe de Estado. <b>B:</b> é violência política. <b>C:</b> é abolição violenta. <b>D:</b> é interrupção do processo eleitoral.</p></div></div><div class="qz" id="real-sobral22uece" data-tipo="real" data-gab="D" data-banca="Adaptada de UECE-CEV · 2022 · Guarda Municipal (Pref. Sobral) · Múltipla escolha" data-q="hdac0a803b5"><p>A sabotagem descrita no CP é crime contra:</p><ol><li>a República Federativa.</li><li>a soberania nacional.</li><li>o processo eleitoral democrático.</li><li>o Estado Democrático de Direito.</li></ol><div class="gab"><p><b>D.</b> Está no Título XII (Capítulo IV, dos serviços essenciais).</p><p><b>A:</b> não é a denominação de nenhum título do CP. <b>B:</b> a soberania é o Capítulo I. <b>C:</b> o processo eleitoral é o Capítulo III.</p></div></div><p class="texto">Sem o fim específico de abolir o Estado Democrático de Direito, a destruição de instalações volta a ser crime comum, como o dano qualificado ao patrimônio público (art. 163, parágrafo único, III). A pena da sabotagem é de reclusão de 2 a 8 anos.</p><div class="qz" data-tipo="mat" data-gab="C" data-ce data-banca="Adaptada de Legislação Integrada · Código Penal em Questões · Certo ou errado" data-q="h65a0ec02b7"><p>Destruir ou inutilizar meios de comunicação ao público, estabelecimentos, instalações ou serviços destinados à defesa nacional, com o fim de abolir o Estado Democrático de Direito, configura sabotagem.</p><div class="gab"><p><b>Certo.</b> Art. 359-R.</p></div></div><details class="caiu"><summary><span class="caiu-k">Já caiu</span><span class="caiu-n">2 provas neste artigo</span></summary><ul><li><span class="caiu-b">FURB · 2022</span><span class="caiu-c">Guarda Municipal (Pref. Itapema)</span><span class="caiu-p">descrição típica da sabotagem <a class="caiu-q" href="#real-itapema22furb">ver questão ↓</a></span></li><li><span class="caiu-b">UECE-CEV · 2022</span><span class="caiu-c">Guarda Municipal (Pref. Sobral)</span><span class="caiu-p">sabotagem: crime contra o Estado Democrático de Direito <a class="caiu-q" href="#real-sobral22uece">ver questão ↓</a></span></li></ul></details></div></article>
+<div class="divisor" id="c6" data-grupo="Capítulo VI · Disposições Comuns"><span class="d-num">Capítulo VI · Arts. 359-T e 359-U</span><h2>Disposições Comuns</h2></div>
+<section class="abertura"><h2>Disposições Comuns</h2><p>O Capítulo V (crimes contra a cidadania) foi vetado por inteiro. Das disposições comuns, só o art. 359-T está em vigor: a cláusula que protege a crítica, o jornalismo e as manifestações políticas.</p></section>
+<article class="artigo" id="art359T" data-art="pe12-art359T" data-num="359-T" data-tit="Excludente da manifestação crítica e política"><div class="art-head"><div class="ah-l"><span class="art-num">Art. 359-T</span><span class="ct">Excludente da manifestação crítica e política</span><span class="ct alt">0 cartões</span><span class="ct alt2">1 questões</span></div><p class="art-tema">Crítica aos Poderes, jornalismo e manifestações com propósitos sociais não são crimes do título.</p></div><div class="art-corpo"><div class="lei-bloco"><span class="lei-k">Texto da lei</span><p class="lex"><b class="k-ref">Art. 359-T.</b> Não constitui crime previsto neste Título a manifestação crítica aos poderes constitucionais nem a atividade jornalística ou a reivindicação de direitos e garantias constitucionais por meio de passeatas, de reuniões, de greves, de aglomerações ou de qualquer outra forma de manifestação política com propósitos sociais.  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p><p class="lex rev"><b class="k-ref">Art. 359-U.</b> (VETADO).  <span class="lex-nota">(Incluído pela Lei nº 14.197, de 2021)</span></p></div><p class="texto"><b>Natureza.</b> Cláusula que exclui a tipicidade das condutas protegidas pela liberdade de expressão, de imprensa, de reunião e de associação. O limite é a violência ou a grave ameaça voltada a abolir o Estado Democrático ou depor o governo: pedir intervenção militar em ato violento e invadir prédios públicos não é “manifestação com propósitos sociais”, como decidiu o STF nos processos do 8 de janeiro. O art. 359-U, vetado, previa causas de aumento e a perda do cargo para funcionários e militares.</p><div class="qz" data-tipo="aut" data-gab="E" data-ce data-banca="Inédita · estilo CEBRASPE · Certo ou errado" data-q="h3d260567b0"><p>Por força do art. 359-T do CP, nenhuma conduta praticada durante uma manifestação política pode configurar crime contra o Estado Democrático de Direito.</p><div class="gab"><p><b>Errado.</b> O art. 359-T protege a crítica, o jornalismo e as manifestações com propósitos sociais. Atos violentos destinados a abolir o Estado Democrático ou depor o governo continuam típicos (arts. 359-L e 359-M).</p></div></div><div class="dz" data-resp="critica|crítica" data-dica="É a cláusula de garantia do art. 359-T." data-porque="&lt;b&gt;Crítica.&lt;/b&gt; A excludente protege a manifestação política com propósitos sociais, mas não alcança atos violentos." data-tag="Art. 359-T" data-d="t12d3">Não constitui crime do Título XII a manifestação ___ aos poderes constitucionais, nem a atividade jornalística ou a reivindicação de direitos por passeatas, reuniões, greves ou aglomerações.</div></div></article>
+<footer class="fecho"><p class="fe-t">Direito Penal · Parte Especial · Título XII — Crimes contra o Estado Democrático de Direito</p><p><b>Fontes.</b> Texto legal: Código Penal compilado do Planalto, baixado e conferido dispositivo a dispositivo em 2/10/2026, incluindo os arts. 359-M-A e 359-M-B (Lei 15.402/2026). A tramitação da Lei 15.402/2026 (veto total em 8/1/2026, derrubada em 30/4/2026, promulgação em 8/5/2026) e a decisão do relator nas ADIs 7.966 e 7.967 (9/5/2026) foram conferidas em fontes públicas em 2/10/2026. Até essa data, o Plenário do STF não havia julgado o mérito. Julgados: AP 1.060 (Plenário, 14/9/2023) e AP 2.668 (1ª Turma, 11/9/2025).</p><p><b>Nesta versão.</b> A explicação de cada artigo foi dividida em parágrafos e as questões e os julgados foram reposicionados logo depois do ponto que cobram; os textos curtos entre questões e os desafios de escrita foram escritos para esta versão a partir da lei e dos comentários das próprias questões.</p></footer>
+</div></main>
+</div>
+
+<div id="console">
+  <button class="cbtn" id="btnRail" type="button" title="Mostrar/ocultar sumário lateral" aria-label="Sumário lateral">☰</button>
+  <span id="timerBox">
+    <button class="cbtn" id="btnPlay" type="button" title="Iniciar/pausar cronômetro">▶</button>
+    <span id="clock">00:00:00</span>
+    <button class="cbtn" id="btnZero" type="button" title="Zerar cronômetro">↺</button>
+  </span>
+  <button class="cbtn" id="btnGear" type="button" title="Ajustes">⚙</button>
+</div>
+
+<div id="settings" aria-label="Ajustes">
+  <h5>Ajustes de leitura</h5>
+  <div class="srow"><span>Cronômetro visível</span><button class="tgl" id="tglTimer" type="button" aria-pressed="true"></button></div>
+  <div class="srow"><span>Sumário lateral</span><button class="tgl" id="tglRail" type="button" aria-pressed="true"></button></div>
+  <div class="srow"><span>Barra de busca</span><button class="tgl" id="tglBarra" type="button" aria-pressed="true"></button></div>
+  <div class="srow"><span>Coluna larga</span><button class="tgl" id="tglWide" type="button" aria-pressed="false"></button></div>
+  <div class="srow"><span>Tema escuro</span><button class="tgl" id="tglLight" type="button" aria-pressed="false"></button></div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<canvas id="fx"></canvas>
+<div id="festa"><div class="festa-card" id="fcCard">
+  <div class="fc-g">
+    <svg viewBox="0 0 52 52" width="52" height="52" aria-hidden="true"><circle class="gtrack" cx="26" cy="26" r="22"></circle><circle class="garc" id="fcArc" cx="26" cy="26" r="22" stroke-dasharray="138.2" stroke-dashoffset="138.2"></circle></svg>
+    <span class="gtxt" id="fcPct">0%</span>
+  </div>
+  <div class="fc-b">
+    <div class="fc-h"><p class="fc-t" id="fcT">Sistema pronto</p><span class="fc-i" id="fcI">OK</span></div>
+    <p class="fc-s" id="fcS">Progresso salvo.</p>
+    <div class="fc-seg"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</div></div>
+
+<script>
+
+/* ---------- montagem: questões, desafios, cartões, sumários e contadores ---------- */
+(function(){
+'use strict';
+var D=document;
+function $$(s,r){return [].slice.call((r||D).querySelectorAll(s));}
+function nz(s){return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/\s+/g,' ').trim();}
+function mk(tag,cls,html){var e=D.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e;}
+
+/* cartões de jurisprudência compactos (.sj -> .selo) */
+var ICO={tese:'◆',sumula:'§',atencao:'▲',divergencia:'⇄',nota:'✎',novidade:'★',superado:'⊘',pendente:'⏳',lei:'¶'};
+$$('.sj').forEach(function(z){
+  var k=z.getAttribute('data-k')||'tese',s=mk('div','selo');
+  s.setAttribute('data-k',k);
+  if(z.getAttribute('data-c'))s.setAttribute('data-c',z.getAttribute('data-c'));
+  var h='<div class="selo-h"><span class="si">'+(ICO[k]||'◆')+'</span><span class="sl">'+(z.getAttribute('data-t')||'')+'</span>'
+       +(z.getAttribute('data-src')?'<span class="src">'+z.getAttribute('data-src')+'</span>':'')+(z.getAttribute('data-tag')?'<span class="ct">'+z.getAttribute('data-tag')+'</span>':'')+'</div>';
+  s.innerHTML=h+'<div class="selo-b">'+z.innerHTML+'</div>';
+  z.parentNode.replaceChild(s,z);
+});
+
+/* questões compactas (.qz -> article.questao) */
+var DIF={facil:'Fácil',media:'Média',dificil:'Difícil',muito:'Muito difícil'};
+var TIPO={real:['real','Prova real'],sim:['mat','Simulado PD · comentado'],adapt:['real','Prova real · adaptada'],mat:['mat','Seu material'],comp:['mat','Compilado · comentada'],aut:['autoral','Inédita']};
+var n=0;
+$$('.qz').forEach(function(z){
+  n++;
+  var gab=(z.getAttribute('data-gab')||'').toUpperCase(),dif=z.getAttribute('data-dif')||'';
+  var tp=TIPO[z.getAttribute('data-tipo')||'aut']||TIPO.aut,ce=z.hasAttribute('data-ce');
+  var enun='',alts=[],gabH='';
+  [].slice.call(z.children).forEach(function(c){
+    if(c.tagName==='OL'){[].slice.call(c.children).forEach(function(li){alts.push(li.innerHTML);});}
+    else if(c.classList.contains('gab')){gabH=c.innerHTML;}
+    else{enun+=c.outerHTML;}
+  });
+  var L=ce?['C','E']:['A','B','C','D','E'];
+  if(ce)alts=['Certo','Errado'];
+  var li='';
+  alts.forEach(function(t,i){li+='<li class="q-alt" data-l="'+L[i]+'"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">'+L[i]+'</span><span>'+t+'</span></button></li>';});
+  var gl=ce?(gab==='C'?'Certo':'Errado'):gab;
+  var a=mk('article','questao');
+  a.setAttribute('data-q',z.getAttribute('data-q')||('q'+n));
+  a.setAttribute('data-gab',gab);a.setAttribute('data-dif',dif);
+  a.innerHTML='<div class="q-head"><span class="q-num">Q'+n+'</span>'+(dif?'<span class="q-dif" data-d="'+dif+'">'+(DIF[dif]||'')+'</span>':'')+'<span class="q-tipo '+tp[0]+'">'+tp[1]+'</span><span class="q-marca"></span><span class="q-banca">'+(z.getAttribute('data-banca')||'')+'</span></div>'
+   +'<div class="q-enunciado">'+enun+'</div><ul class="q-alts">'+li+'</ul>'
+   +'<div class="q-acoes"><button class="q-btn primario q-responder" type="button">Revelar gabarito</button><button class="q-btn q-limpar" type="button">Limpar marcações</button><button class="q-btn q-refazer" type="button">Refazer</button><span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span></div>'
+   +'<div class="q-coment" hidden><p class="qc-t">Gabarito comentado</p><p><span class="qc-gab">Gabarito: '+gl+'.</span></p>'+gabH+'</div>';
+  var w=mk('div','q-inline');if(z.id)w.id=z.id;
+  w.appendChild(mk('div','bloco-q-h','<span class="bq-n">Q'+n+'</span> Treino no ponto'));
+  w.appendChild(a);
+  z.parentNode.replaceChild(w,z);
+});
+
+/* desafios digitados compactos (.dz -> .desafio) */
+var d=0;
+$$('.dz').forEach(function(z){
+  d++;
+  var b=mk('div','desafio');
+  b.setAttribute('data-d',z.getAttribute('data-d')||('d'+d));
+  ['resp','dica','porque'].forEach(function(k){var v=z.getAttribute('data-'+k);if(v!=null)b.setAttribute('data-'+k,v);});
+  var txt=z.innerHTML.replace('___','<span class="df-gap">?</span>');
+  b.innerHTML='<div class="df-h"><span class="df-ic">✎</span><span class="df-t">Escreva de cabeça</span><span class="df-tag">'+(z.getAttribute('data-tag')||'Desafio')+'</span></div>'
+   +'<p class="df-p">'+txt+'</p><div class="df-in"><input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false"><button class="df-ok" type="button">Conferir</button><button class="df-ver" type="button">Ver resposta</button></div><div class="df-de" hidden></div><div class="df-fb" hidden></div>';
+  z.parentNode.replaceChild(b,z);
+});
+
+/* botão "Marcar estudado" sempre ao FIM de cada tópico */
+$$('.artigo').forEach(function(a){
+  var c=a.querySelector('.art-corpo');if(!c)return;
+  var b=mk('button','art-check','<span class="acx">✓</span><span class="act">Marcar estudado</span>');
+  b.type='button';b.setAttribute('data-id',a.getAttribute('data-art'));b.setAttribute('aria-pressed','false');
+  c.appendChild(b);
+});
+
+/* índice de busca */
+$$('.artigo,.selo').forEach(function(x){if(!x.getAttribute('data-busca'))x.setAttribute('data-busca',nz(x.textContent));});
+
+/* sumário lateral e sumário do topo, gerados a partir dos blocos */
+var rail=D.getElementById('railNav'),ts=D.getElementById('tsBody'),grid=null,rh='',tsh='';
+$$('.divisor[data-grupo], .artigo').forEach(function(x){
+  if(x.classList.contains('divisor')){
+    rh+='<p class="rn-g">'+x.getAttribute('data-grupo')+'</p>';
+    tsh+=(tsh?'</div>':'')+'<p class="ts-tit"'+(tsh?' style="margin-top:16px"':'')+'>'+x.getAttribute('data-grupo')+'</p><div class="ts-grid">';
+  }else{
+    var id=x.id,num=x.getAttribute('data-num')||'',tit=x.getAttribute('data-tit')||'';
+    rh+='<a href="#'+id+'" data-nav="'+id+'"><span class="rn-num">'+num+'</span><span class="rn-body"><span class="rn-title">'+tit+'</span></span><span class="rn-check">&#10003;</span></a>';
+    tsh+='<a href="#'+id+'"><b>'+num+'</b>'+tit+'</a>';
+  }
+});
+if(rail)rail.innerHTML=rh;
+if(ts)ts.innerHTML=tsh+(tsh?'</div>':'');
+
+/* contadores do topo sincronizados com a contagem real */
+var nA=$$('.artigo').length,nJ=$$('.selo').length;
+[['mkArt',nA],['mkJur',nJ],['cA',nA],['cJ',nJ],['mkQ',n],['qTotal',n],['mkD',d],['dTotal',d]].forEach(function(p){var e=D.getElementById(p[0]);if(e)e.textContent=String(p[1]);});
+})();
+</script>
+<script>
+
+(function(){
+'use strict';
+var K='dpDelta.pe-titulo12.v1';
+var state={done:{},fim:{},timer:0,running:false,timerOff:false,railOff:false,railUser:false,topSumOff:false,wide:false,barraOff:false,light:false,quiz:{},desafio:{}};
+try{var raw=localStorage.getItem(K);if(raw){var o=JSON.parse(raw);for(var k in o)state[k]=o[k];}}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(state));}catch(e){}}
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+
+/* ---------- toast ---------- */
+var toastEl=$('#toast'),toastT;
+function toast(m){if(!toastEl)return;toastEl.textContent=m;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){toastEl.classList.remove('show');},2400);}
+
+/* ---------- ignicao do painel (substitui o confete) ---------- */
+var cv=$('#fx'),ctx=cv?cv.getContext('2d'):null,anim=null;
+function sizeCv(){if(!cv||!ctx)return;cv.width=innerWidth*devicePixelRatio;cv.height=innerHeight*devicePixelRatio;cv.style.width=innerWidth+'px';cv.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);}
+addEventListener('resize',sizeCv);sizeCv();
+var CORES=['#E2281E','#B8322E','#8A3FB4','#1F6FF0','#0A875F','#C8261C'];
+function _rgb(h){h=String(h||'').replace('#','');if(h.length===3)h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];var n=parseInt(h,16);if(isNaN(n))return '45,212,191';return ((n>>16)&255)+','+((n>>8)&255)+','+(n&255);}
+var RGB=_rgb(CORES&&CORES.length?CORES[CORES.length-1]:'#2DD4BF');
+var SUAVE=matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function agora(){return (window.performance&&performance.now)?performance.now():Date.now();}
+function ignicao(inten){
+  if(!ctx||SUAVE)return;
+  var f=Math.max(.35,Math.min(1,inten||.6)),t0=agora(),DUR=1000;
+  cv.classList.add('on');
+  if(anim)cancelAnimationFrame(anim);
+  function frame(){
+    var t=(agora()-t0)/DUR;
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+    if(t>=1){cv.classList.remove('on');anim=null;return;}
+    var fade=t<.70?1:1-(t-.70)/.30;
+    var rise=Math.min(1,t/.45);
+    var gb=ctx.createLinearGradient(0,innerHeight,0,innerHeight*(1-.40*rise));
+    gb.addColorStop(0,'rgba('+RGB+','+(.13*f*fade)+')');
+    gb.addColorStop(1,'rgba('+RGB+',0)');
+    ctx.fillStyle=gb;ctx.fillRect(0,0,innerWidth,innerHeight);
+    var e=1-Math.pow(1-Math.min(1,t/.8),3),x=(-.25+1.5*e)*innerWidth,w=innerWidth*.22;
+    var gs=ctx.createLinearGradient(x-w,0,x+w,0);
+    gs.addColorStop(0,'rgba('+RGB+',0)');
+    gs.addColorStop(.5,'rgba('+RGB+','+(.10*f*fade)+')');
+    gs.addColorStop(1,'rgba('+RGB+',0)');
+    ctx.fillStyle=gs;ctx.fillRect(x-w,0,w*2,innerHeight);
+    ctx.strokeStyle='rgba('+RGB+','+(.20*f*fade)+')';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,innerHeight);ctx.stroke();
+    anim=requestAnimationFrame(frame);
+  }
+  anim=requestAnimationFrame(frame);
+}
+var festa=$('#festa'),festaT,GARC=138.2;
+function comemorar(titulo,sub,tag,n){
+  ignicao(Math.min(1,(n||140)/240));
+  if(!festa)return;
+  var el;
+  if(el=$('#fcT'))el.textContent=titulo;
+  if(el=$('#fcS'))el.textContent=sub||'';
+  if(el=$('#fcI'))el.textContent=tag||'OK';
+  var total=(artigos&&artigos.length)||0,feitos=0;
+  if(total)artigos.forEach(function(a){if(state.done[a.dataset.art])feitos++;});
+  var pct=total?Math.round(feitos/total*100):0;
+  var card=$('#fcCard');if(card)card.classList.toggle('max',pct>=100);
+  var arc=$('#fcArc'),txt=$('#fcPct');
+  if(txt)txt.textContent=pct+'%';
+  if(arc)arc.setAttribute('stroke-dashoffset',String(GARC));
+  var segs=$$('.fc-seg i',festa);
+  segs.forEach(function(s){s.style.animation='none';});
+  void festa.offsetWidth;
+  segs.forEach(function(s){s.style.animation='';});
+  festa.classList.add('on');
+  if(arc)setTimeout(function(){arc.setAttribute('stroke-dashoffset',String(GARC-GARC*pct/100));},70);
+  clearTimeout(festaT);festaT=setTimeout(function(){festa.classList.remove('on');},2400);
+}
+
+/* ---------- progresso ---------- */
+var artigos=$$('.artigo'),navLinks=$$('#railNav a'),ARC=163.4;
+function pintaProgresso(){
+  var total=artigos.length,feitos=0;
+  artigos.forEach(function(a){var on=!!state.done[a.dataset.art];a.classList.toggle('done',on);
+    var b=$('.art-check',a);if(b)b.setAttribute('aria-pressed',on?'true':'false');if(on)feitos++;});
+  navLinks.forEach(function(l){l.classList.toggle('done',!!state.done[l.dataset.nav]);});
+  var pct=total?Math.round(feitos/total*100):0;
+  var arc=$('#ringArc');if(arc)arc.setAttribute('stroke-dashoffset',String(ARC-ARC*pct/100));
+  var rt=$('#ringTxt');if(rt)rt.textContent=pct+'%';
+  var sa=$('#stA');if(sa)sa.textContent=String(feitos);
+  var mp=$('#mkPct');if(mp)mp.textContent=pct+'%';
+}
+document.addEventListener('click',function(ev){
+  var t=ev.target;if(!t.closest)return;
+  var btn=t.closest('.art-check');
+  if(btn){var id=btn.dataset.id;state.done[id]=!state.done[id];if(!state.done[id])delete state.done[id];
+    save();pintaProgresso();filtrar();
+    if(state.done[id]){
+      var tot=artigos.length,ft=0;artigos.forEach(function(x){if(state.done[x.dataset.art])ft++;});
+      if(tot&&ft>=tot){comemorar('Título completo','Todos os artigos deste Título estão marcados.','100%',240);}
+      else{comemorar('Artigo registrado','Mais um pedaço do edital dominado.','OK',90);}
+    }else{toast('Marcação removida.');}
+    return;}
+  var fim=t.closest('.btn-fim');
+  if(fim){var f=fim.dataset.fim;state.fim[f]=!state.fim[f];if(!state.fim[f])delete state.fim[f];save();
+    fim.classList.toggle('feito',!!state.fim[f]);
+    if(state.fim[f]){
+      if(f.indexOf('capitulo')===0||f==='modulo'){comemorar('Capítulo concluído','Todos os blocos deste capítulo estão marcados.','100%',240);}
+      else{comemorar('Bloco concluído','Anotado no seu progresso.','OK',130);}
+    } else {toast('Conclusão desmarcada.');}
+    return;}
+});
+var reset=$('#btnReset');
+if(reset)reset.addEventListener('click',function(){state.done={};state.fim={};state.timer=0;state.running=false;state.quiz={};state.desafio={};save();location.reload();});
+
+/* ---------- busca ---------- */
+var q=$('#q'),limpar=$('#limpar'),vazio=$('#vazio');
+var fC={},fK={},soPend=false;
+function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function ativo(o){for(var k in o){if(o[k])return true;}return false;}
+function filtrar(){
+  var termo=norm(q?q.value.trim():''),tc=ativo(fC),tk=ativo(fK);
+  var nA=0,nJ=0;
+  artigos.forEach(function(art){
+    var pend=!state.done[art.dataset.art];
+    if(soPend&&!pend){art.classList.add('hide');return;}
+    var casa=!termo||norm(art.dataset.busca).indexOf(termo)>-1,vis=0;
+    $$('.selo',art).forEach(function(s){
+      var ok=true;
+      if(tc){var cs=(s.dataset.c||'').split(' ');ok=cs.some(function(c){return !!fC[c];});}
+      if(ok&&tk&&!fK[s.dataset.k])ok=false;
+      if(ok&&termo&&norm(s.dataset.busca).indexOf(termo)<0&&!casa)ok=false;
+      s.classList.toggle('hide',!ok);if(ok)vis++;
+    });
+    $$('.zona',art).forEach(function(z){z.classList.toggle('hide',$$('.selo:not(.hide)',z).length===0);});
+    var mostra=(tc||tk)?vis>0:(casa||vis>0);
+    art.classList.toggle('hide',!mostra);
+    if(mostra){nA++;nJ+=vis;}
+  });
+  navLinks.forEach(function(l){var alvo=document.getElementById(l.dataset.nav);
+    if(alvo&&alvo.classList.contains('artigo'))l.style.display=alvo.classList.contains('hide')?'none':'';});
+  var cA=$('#cA'),cJ=$('#cJ');if(cA)cA.textContent=String(nA);if(cJ)cJ.textContent=String(nJ);
+  if(vazio)vazio.classList.toggle('on',nA===0);
+  if(limpar)limpar.classList.toggle('on',!!(q&&q.value));
+  var sf=$('#stFiltro');if(sf)sf.textContent=(termo||tc||tk||soPend)?('Filtro ativo: '+nJ+' cartões'):'Sem filtro ativo';
+}
+if(q){var deb;q.addEventListener('input',function(){clearTimeout(deb);deb=setTimeout(filtrar,120);});
+  q.addEventListener('keydown',function(e){if(e.key==='Escape'){q.value='';filtrar();}});}
+if(limpar)limpar.addEventListener('click',function(){if(q){q.value='';q.focus();}filtrar();});
+$$('#chips .chip').forEach(function(c){c.addEventListener('click',function(){
+  var on=c.getAttribute('aria-pressed')==='true';c.setAttribute('aria-pressed',on?'false':'true');
+  if(c.dataset.f)fC[c.dataset.f]=!on;else if(c.dataset.k)fK[c.dataset.k]=!on;else soPend=!on;
+  filtrar();});});
+
+/* ---------- cronômetro ---------- */
+var clock=$('#clock'),play=$('#btnPlay'),zero=$('#btnZero'),tick;
+function fmt(s){function p(n){return (n<10?'0':'')+n;}return p(Math.floor(s/3600))+':'+p(Math.floor((s%3600)/60))+':'+p(s%60);}
+function pintaRelogio(){if(clock){clock.textContent=fmt(state.timer);clock.classList.toggle('run',!!state.running);}
+  if(play){play.textContent=state.running?'❚❚':'▶';}}
+function roda(){clearInterval(tick);if(state.running)tick=setInterval(function(){state.timer++;pintaRelogio();if(state.timer%10===0)save();},1000);}
+if(play)play.addEventListener('click',function(){state.running=!state.running;save();pintaRelogio();roda();});
+if(zero)zero.addEventListener('click',function(){state.timer=0;save();pintaRelogio();toast('Cronômetro zerado.');});
+
+/* ---------- ajustes ---------- */
+var gear=$('#btnGear'),painel=$('#settings');
+if(gear)gear.addEventListener('click',function(e){e.stopPropagation();painel.classList.toggle('on');});
+document.addEventListener('click',function(e){if(painel&&painel.classList.contains('on')&&!painel.contains(e.target)&&e.target!==gear){painel.classList.remove('on');}});
+function liga(id,chave,classe,inverso){
+  var b=document.getElementById(id);if(!b)return;
+  function pinta(){var on=!!state[chave];document.body.classList.toggle(classe,on);
+    b.setAttribute('aria-pressed',inverso?(on?'false':'true'):(on?'true':'false'));}
+  b.addEventListener('click',function(){state[chave]=!state[chave];save();pinta();if(chave==='light')pintaTema();});
+  pinta();
+}
+liga('tglTimer','timerOff','timer-off',true);
+liga('tglWide','wide','wide',false);
+liga('tglLight','light','escuro',false);
+function pintaTema(){if(state.light)document.documentElement.setAttribute('data-theme','dark');else document.documentElement.removeAttribute('data-theme');}
+pintaTema();
+
+var btnBarra=$('#btnBarra');
+function pintaBarra(){var off=!!state.barraOff;document.body.classList.toggle('barra-off',off);
+  if(btnBarra){btnBarra.setAttribute('aria-expanded',off?'false':'true');$('#btnBarraTxt').textContent=off?'Mostrar busca':'Ocultar busca';}
+  var tb=$('#tglBarra');if(tb)tb.setAttribute('aria-pressed',off?'false':'true');}
+if(btnBarra)btnBarra.addEventListener('click',function(){state.barraOff=!state.barraOff;save();pintaBarra();if(state.barraOff&&q){q.value='';filtrar();}});
+var tglB=$('#tglBarra');if(tglB)tglB.addEventListener('click',function(){state.barraOff=!state.barraOff;save();pintaBarra();});
+pintaBarra();
+
+var railBtn=$('#btnRail');
+function railOculto(){return state.railUser?!!state.railOff:(innerWidth<=1040?true:!!state.railOff);}
+function pintaRail(){var off=railOculto();document.body.classList.toggle('rail-off',off);
+  var t=$('#tglRail');if(t)t.setAttribute('aria-pressed',off?'false':'true');}
+function alternaRail(){state.railOff=!railOculto();state.railUser=true;save();pintaRail();}
+if(railBtn)railBtn.addEventListener('click',alternaRail);
+var tglR=$('#tglRail');if(tglR)tglR.addEventListener('click',alternaRail);
+pintaRail();
+addEventListener('resize',function(){if(!state.railUser)pintaRail();});
+
+var topSum=$('#topSum'),tsHead=$('#tsHead');
+function pintaTop(){var off=!!state.topSumOff;if(topSum)topSum.classList.toggle('fechado',off);if(tsHead)tsHead.setAttribute('aria-expanded',off?'false':'true');}
+if(tsHead){tsHead.addEventListener('click',function(){state.topSumOff=!state.topSumOff;save();pintaTop();});
+  tsHead.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tsHead.click();}});}
+pintaTop();
+
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(!e.isIntersecting)return;
+    navLinks.forEach(function(l){l.classList.toggle('on',l.dataset.nav===e.target.id);});});},{rootMargin:'-15% 0px -70% 0px'});
+  artigos.forEach(function(a){io.observe(a);});
+}
+document.addEventListener('keydown',function(e){
+  if(e.target&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName))return;
+  if(e.key==='/'){e.preventDefault();if(state.barraOff&&btnBarra)btnBarra.click();if(q)q.focus();}
+});
+
+/* ---------- questões ---------- */
+var questoes=$$('.questao'),AQ=147.65;
+var ELOGIOS=[['Alternativa correta','Certa — e pelo fundamento certo.','+1'],
+             ['Alternativa correta','Você separou a pegadinha da regra.','+1'],
+             ['Alternativa correta','Esse raciocínio vale ponto na prova.','+1'],
+             ['Alternativa correta','FGV adora esse detalhe — e você pegou.','+1']];
+function pintaPlacar(){
+  var total=questoes.length,feitas=0,certas=0;
+  for(var k in state.quiz){feitas++;if(state.quiz[k]&&state.quiz[k].ok)certas++;}
+  var pct=feitas?Math.round(certas/feitas*100):0;
+  var arc=$('#qArc');if(arc)arc.setAttribute('stroke-dashoffset',String(AQ-AQ*pct/100));
+  var e;
+  if(e=$('#qPct'))e.textContent=pct+'%';
+  if(e=$('#qCertas'))e.textContent=String(certas);
+  if(e=$('#qFeitas'))e.textContent=String(feitas);
+  if(e=$('#qTotal'))e.textContent=String(total);
+  if(e=$('#mkQ'))e.textContent=String(total);
+  if(e=$('#qErradas'))e.textContent=String(feitas-certas);
+  if(e=$('#stQ'))e.textContent=feitas?(pct+'% ('+certas+'/'+feitas+')'):'—';
+}
+function aplica(qe,letra,ok){
+  qe.classList.add('respondida');qe.classList.toggle('acertou',ok);qe.classList.toggle('errou',!ok);
+  var m=$('.q-marca',qe);if(m)m.textContent=ok?'Acertou':'Errou';
+  var gab=(qe.dataset.gab||'').toUpperCase();
+  $$('.q-alt',qe).forEach(function(a){var l=a.dataset.l;
+    a.classList.toggle('marcada',l===letra);a.classList.toggle('certa',l===gab);
+    a.classList.toggle('errada-marcada',l===letra&&l!==gab);});
+  var c=$('.q-coment',qe);if(c)c.hidden=false;
+}
+document.addEventListener('click',function(ev){
+  var t=ev.target;if(!t.closest)return;
+  var tes=t.closest('.q-tesoura');
+  if(tes){var a=tes.closest('.q-alt');if(!a||a.closest('.questao').classList.contains('respondida'))return;
+    a.classList.toggle('cortada');if(a.classList.contains('cortada'))a.classList.remove('marcada');
+    tes.setAttribute('aria-pressed',a.classList.contains('cortada')?'true':'false');return;}
+  var pick=t.closest('.q-pick');
+  if(pick){var al=pick.closest('.q-alt'),qe=pick.closest('.questao');
+    if(!al||!qe||qe.classList.contains('respondida'))return;
+    al.classList.remove('cortada');
+    $$('.q-alt',qe).forEach(function(x){x.classList.remove('marcada');});al.classList.add('marcada');return;}
+  var r=t.closest('.q-responder');
+  if(r){var qr=r.closest('.questao'),mk=$('.q-alt.marcada',qr);
+    if(!mk){toast('Escolha uma alternativa antes de revelar o gabarito.');return;}
+    var letra=mk.dataset.l,ok=letra===(qr.dataset.gab||'').toUpperCase();
+    state.quiz[qr.dataset.q]={r:letra,ok:ok};save();aplica(qr,letra,ok);pintaPlacar();
+    if(ok){var el=ELOGIOS[(Math.random()*ELOGIOS.length)|0];comemorar(el[0],el[1],el[2],160);}
+    else{toast('Errou — o gabarito é a alternativa '+(qr.dataset.gab||'').toUpperCase()+'. Leia o comentário.');}
+    return;}
+  var rf=t.closest('.q-refazer');
+  if(rf){var qf=rf.closest('.questao');delete state.quiz[qf.dataset.q];save();
+    qf.classList.remove('respondida','acertou','errou');
+    $$('.q-alt',qf).forEach(function(x){x.classList.remove('marcada','certa','errada-marcada','cortada');});
+    var c=$('.q-coment',qf);if(c)c.hidden=true;pintaPlacar();return;}
+  var lm=t.closest('.q-limpar');
+  if(lm){var ql=lm.closest('.questao');if(ql.classList.contains('respondida'))return;
+    $$('.q-alt',ql).forEach(function(x){x.classList.remove('marcada','cortada');});return;}
+  if(t.closest('#qZerar')){state.quiz={};save();
+    questoes.forEach(function(x){x.classList.remove('respondida','acertou','errou');
+      $$('.q-alt',x).forEach(function(y){y.classList.remove('marcada','certa','errada-marcada','cortada');});
+      var c=$('.q-coment',x);if(c)c.hidden=true;});
+    pintaPlacar();toast('Placar zerado.');return;}
+});
+questoes.forEach(function(x){var reg=state.quiz[x.dataset.q];if(reg&&reg.r)aplica(x,reg.r,!!reg.ok);});
+$$('.btn-fim').forEach(function(b){if(state.fim[b.dataset.fim])b.classList.add('feito');});
+/* ---------- DESAFIOS DIGITADOS (resposta escrita) ---------- */
+var desafios=$$('.desafio');
+function dnorm(s){
+  s=(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  s=s.replace(/[^0-9a-z\u00e7]+/g,' ').replace(/\s+/g,' ').trim();
+  s=s.replace(/^(o|a|os|as|um|uma|de|do|da|em|no|na)\s+/,'');
+  return s;
+}
+function lev(a,b){
+  if(a===b)return 0;if(!a.length)return b.length;if(!b.length)return a.length;
+  var v0=[],v1=[],i,j;for(j=0;j<=b.length;j++)v0[j]=j;
+  for(i=0;i<a.length;i++){v1[0]=i+1;
+    for(j=0;j<b.length;j++){var c=a.charAt(i)===b.charAt(j)?0:1;
+      v1[j+1]=Math.min(v1[j]+1,v0[j+1]+1,v0[j]+c);}
+    for(j=0;j<=b.length;j++)v0[j]=v1[j];}
+  return v1[b.length];
+}
+function dResp(d){return (d.dataset.resp||'').split('|').map(function(x){return x.trim();}).filter(Boolean);}
+function dConfere(d,txt){
+  var alvo=dResp(d),n=dnorm(txt),melhor=99,i,a;
+  if(!n)return {st:'vazio'};
+  for(i=0;i<alvo.length;i++){
+    a=dnorm(alvo[i]);
+    if(n===a)return {st:'ok',alvo:alvo[i]};
+    if(a.length>3&&n.length>3&&(n.indexOf(a)>=0||a.indexOf(n)>=0)&&Math.abs(a.length-n.length)<=Math.max(4,a.length*0.34))return {st:'ok',alvo:alvo[i]};
+    var dst=lev(n,a);if(dst<melhor){melhor=dst;}
+  }
+  var lim=n.length<=4?1:(n.length<=8?2:3);
+  if(melhor<=lim)return {st:'quase'};
+  return {st:'nao'};
+}
+function dPinta(d,reg){
+  var fb=$('.df-fb',d),inp=$('.df-campo',d),alvo=dResp(d);
+  d.classList.remove('acertou','errou','revelado');
+  if(!reg){if(fb){fb.hidden=true;fb.innerHTML='';}if(inp){inp.value='';inp.disabled=false;}return;}
+  if(inp&&reg.r)inp.value=reg.r;
+  var por=d.dataset.porque?('<br>'+d.dataset.porque):'';
+  if(reg.st==='ok'){
+    d.classList.add('acertou');if(inp)inp.disabled=true;
+    if(fb){fb.hidden=false;fb.innerHTML='<span class="fb-ok">✓ Isso mesmo.</span> <b>'+alvo[0]+'</b>.'+(por?' '+por:'');}
+  }else if(reg.st==='rev'){
+    d.classList.add('revelado');if(inp)inp.disabled=true;
+    if(fb){fb.hidden=false;fb.innerHTML='<span class="fb-qs">Resposta:</span> <b>'+alvo[0]+'</b>.'+por
+      +(alvo.length>1?'<span class="df-alt">Também aceito: '+alvo.slice(1).join(' · ')+'</span>':'');}
+  }
+}
+function dTotalPlacar(){
+  var t=desafios.length,c=0;for(var k in state.desafio){if(state.desafio[k]&&state.desafio[k].st==='ok')c++;}
+  var e;if(e=$('#dCertos'))e.textContent=String(c);
+  if(e=$('#dTotal'))e.textContent=String(t);
+  if(e=$('#mkD'))e.textContent=String(t);
+}
+function dResponder(d){
+  var inp=$('.df-campo',d),fb=$('.df-fb',d);if(!inp)return;
+  var res=dConfere(d,inp.value);
+  if(res.st==='vazio'){toast('Escreva sua resposta antes de conferir.');inp.focus();return;}
+  if(res.st==='ok'){
+    state.desafio[d.dataset.d]={r:inp.value,st:'ok'};save();dPinta(d,state.desafio[d.dataset.d]);dTotalPlacar();
+    comemorar('Resposta correta','Escrita de cabeça — é assim que a memória fixa.','ESCRITA',120);
+    return;}
+  d.classList.remove('acertou','revelado');d.classList.add('errou');
+  if(fb){fb.hidden=false;
+    fb.innerHTML = res.st==='quase'
+      ? '<span class="fb-qs">Quase lá!</span> A ideia está certa, mas o termo exato é outro (ou faltou precisão na grafia). Tente de novo.'
+      : '<span class="fb-no">Ainda não.</span> '+(d.dataset.dica?d.dataset.dica:'Releia o dispositivo acima e tente outra vez.');}
+  inp.select();
+}
+document.addEventListener('click',function(ev){
+  var t=ev.target;if(!t.closest)return;
+  var d=t.closest('.desafio');if(!d)return;
+  if(t.closest('.df-ok')){dResponder(d);return;}
+  if(t.closest('.df-ver')){
+    state.desafio[d.dataset.d]={r:($('.df-campo',d)||{}).value||'',st:'rev'};save();
+    dPinta(d,state.desafio[d.dataset.d]);dTotalPlacar();return;}
+  if(t.closest('.df-de')){delete state.desafio[d.dataset.d];save();dPinta(d,null);dTotalPlacar();
+    var i=$('.df-campo',d);if(i){i.disabled=false;i.value='';i.focus();}return;}
+});
+document.addEventListener('keydown',function(ev){
+  if(ev.key!=='Enter')return;var t=ev.target;
+  if(t&&t.classList&&t.classList.contains('df-campo')){ev.preventDefault();var d=t.closest('.desafio');if(d)dResponder(d);}
+});
+desafios.forEach(function(d){var reg=state.desafio[d.dataset.d];if(reg)dPinta(d,reg);});
+var dz=$('#dZerar');if(dz)dz.addEventListener('click',function(){state.desafio={};save();
+  desafios.forEach(function(d){dPinta(d,null);});dTotalPlacar();toast('Desafios zerados.');});
+dTotalPlacar();
+pintaPlacar();pintaProgresso();pintaRelogio();roda();filtrar();
+})();
+
+</script>
+<script>document.addEventListener("input",function(e){if(e.target&&e.target.id==="q"&&e.target.value.trim()){[].forEach.call(document.querySelectorAll("details.mais-jur"),function(d){d.open=true;});}});document.addEventListener("click",function(e){var c=e.target.closest&&e.target.closest("#chips .chip");if(c){[].forEach.call(document.querySelectorAll("details.mais-jur"),function(d){d.open=true;});}});</script>
+</body></html>
