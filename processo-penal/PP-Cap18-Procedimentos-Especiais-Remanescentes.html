@@ -1,0 +1,2087 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Capítulo 18 — Procedimentos Especiais Remanescentes · Processo Penal Delegado PCPR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --col:80ch;
+  --fs-body:17px;--fs-lex:17px;--fs-sub:italic;
+  --ls-h1:.04em;--ls-h2:.03em;--tt-h1:uppercase;
+  --r-sm:8px;--r-md:11px;--r-lg:13px;--r-chip:999px;--r-selo:0 11px 11px 0;
+  --art-top:3px;--blur:none;
+
+  --ground:#0A0912;--ground-2:#100E1C;--surface:#151327;--surface-2:#1D1A33;
+  --edge:#332F52;--edge-soft:#252240;--ink:#F2EEFF;--ink-2:#C9C2E3;--muted:#8D86AD;
+  --accent:#F5A524;--accent-wash:rgba(245,165,36,.15);
+  --alt:#FF4D8D;--alt-wash:rgba(255,77,141,.15);
+  --alt2:#A855F7;--alt2-wash:rgba(168,85,247,.18);
+  --ok:#22D37F;--ok-wash:rgba(34,211,127,.15);
+  --warn:#FF5C7A;--warn-wash:rgba(255,92,122,.15);
+  --azul:#6EA8FE;--azul-wash:rgba(110,168,254,.15);
+  --teal:#2DD4BF;--teal-wash:rgba(45,212,191,.15);
+  --f-display:'Outfit',system-ui,sans-serif;--f-body:'Inter',system-ui,sans-serif;
+  --f-ui:'Inter',system-ui,sans-serif;--f-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --rail-bg:linear-gradient(180deg,rgba(245,165,36,.12),rgba(168,85,247,.06) 30%,transparent 46%),#100E1C;
+  --selo-bg:#151327;--selo-head:linear-gradient(90deg,var(--sw),transparent 82%),#1D1A33;
+  --head-bg:linear-gradient(92deg,rgba(245,165,36,.16),rgba(255,77,141,.10) 55%,transparent);
+  --console-bg:linear-gradient(140deg,rgba(245,165,36,.18),transparent 60%),#151327;
+  --abertura-bg:linear-gradient(140deg,rgba(255,77,141,.12),rgba(245,165,36,.10) 55%,transparent),#151327;
+  --grad-title:linear-gradient(100deg,#F5A524 0%,#FF7E6B 45%,#6EA8FE 100%);
+  --veil:radial-gradient(1100px 700px at 82% -12%,rgba(245,165,36,.16),transparent 60%),
+         radial-gradient(900px 640px at 6% 20%,rgba(255,77,141,.15),transparent 58%),
+         radial-gradient(1000px 640px at 58% 112%,rgba(110,168,254,.13),transparent 60%);
+  --shadow:0 1px 2px rgba(0,0,0,.45),0 12px 34px rgba(10,6,26,.6);
+  --shadow-lift:0 2px 12px rgba(0,0,0,.55),0 26px 66px rgba(10,6,26,.85);
+  --r-sm:11px;--r-md:14px;--r-lg:18px;--r-selo:0 14px 14px 0;--art-top:4px;
+  --fs-body:16.5px;--fs-lex:17px;--fs-sub:normal;--ls-h1:-.02em;--tt-h1:none;--ls-h2:-.01em;
+}
+
+:root[data-theme="light"]{
+  --ground:#F5F7FB;--ground-2:#ECF1F8;--surface:#FFFFFF;--surface-2:#EEF3FA;
+  --edge:#C7D3E4;--edge-soft:#DEE7F2;--ink:#0F1723;--ink-2:#2B3846;--muted:#66768C;
+  --accent:#B45309;--alt:#BE123C;--alt2:#6D28D9;--ok:#047857;--warn:#BE123C;
+  --accent-wash:rgba(23,99,176,.12);--alt-wash:rgba(90,60,170,.10);--alt2-wash:rgba(90,60,170,.10);
+  --ok-wash:rgba(12,130,96,.12);--warn-wash:rgba(180,30,60,.10);
+  --rail-bg:#EAF0F8;--selo-bg:#FFFFFF;--selo-head:#F1F5FB;--head-bg:#F1F5FB;--console-bg:#FFFFFFEE;--abertura-bg:#FFFFFF;
+  --veil:radial-gradient(900px 600px at 80% -10%,rgba(23,99,176,.08),transparent 60%);
+  --shadow:0 1px 2px rgba(20,40,70,.06),0 8px 24px rgba(20,40,70,.08);
+  --shadow-lift:0 2px 8px rgba(20,40,70,.12),0 20px 46px rgba(20,40,70,.16);
+  --grad-title:linear-gradient(96deg,#B45309,#6D28D9);
+}
+
+
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{
+  margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-body);
+  font-size:var(--fs-body);line-height:1.78;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:var(--accent);text-underline-offset:3px}
+::selection{background:var(--accent-wash);color:var(--ink)}
+
+.bg-veil{position:fixed;inset:0;pointer-events:none;z-index:0;background:var(--veil)}
+
+/* ---------------- estrutura ---------------- */
+.shell{position:relative;z-index:1;display:flex;min-height:100vh}
+main{flex:1;min-width:0;padding:0 26px 150px;display:flex;flex-direction:column;align-items:center}
+.col{width:100%;max-width:var(--col);margin:0 auto}
+body.wide{--col:104ch}
+
+/* ---------------- rail (sumário lateral) ---------------- */
+#rail{
+  width:300px;flex:0 0 300px;background:var(--rail-bg);border-right:1px solid var(--edge);
+  position:sticky;top:0;height:100vh;overflow-y:auto;padding:22px 0 40px;
+  transition:margin-left .32s cubic-bezier(.4,0,.2,1);font-family:var(--f-ui);
+}
+body.rail-off #rail{margin-left:-300px}
+body.sem-rail #rail{display:none}
+.rail-brand{padding:0 20px 15px;border-bottom:1px solid var(--edge-soft)}
+.rail-brand h1{font-family:var(--f-display);font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 4px;color:var(--accent)}
+.rail-brand p{margin:0;font-size:11px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.rail-stats{padding:15px 20px;display:flex;gap:13px;align-items:center;border-bottom:1px solid var(--edge-soft)}
+.ring-wrap{position:relative;width:58px;height:58px;flex:0 0 58px}
+.ring-txt{position:absolute;inset:0;display:grid;place-items:center;font-size:13px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums}
+.stat-lines{display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--muted)}
+.stat-lines b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.rail-nav{padding:12px 10px 0}
+.rn-g{font-family:var(--f-display);font-size:10px;font-weight:700;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin:14px 0 6px;padding:0 10px}
+.rail-nav a{display:flex;gap:10px;align-items:flex-start;padding:8px 10px;border-radius:var(--r-sm);text-decoration:none;color:var(--ink-2);font-size:13px;line-height:1.4;border-left:2px solid transparent}
+.rail-nav a:hover{background:var(--surface-2);color:var(--ink)}
+.rail-nav a.on{background:var(--accent-wash);border-left-color:var(--accent);color:var(--ink)}
+.rail-nav a.done{background:var(--ok-wash)}
+.rn-num{font-family:var(--f-display);font-size:11px;font-weight:700;color:var(--accent);min-width:52px;flex:0 0 52px}
+.rn-body{flex:1;min-width:0}
+.rn-title{display:block;font-size:11.5px;color:var(--muted)}
+.rn-check{flex:0 0 15px;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--edge);margin-top:3px;display:grid;place-items:center;font-size:9px;color:transparent}
+.rail-nav a.done .rn-check{background:var(--ok);border-color:var(--ok);color:var(--ground)}
+.rail-foot{padding:16px 20px 0;margin-top:12px;border-top:1px solid var(--edge-soft);font-size:11px;color:var(--muted)}
+.rail-foot button{font-family:var(--f-ui);font-size:11px;background:none;border:1px solid var(--edge);color:var(--muted);border-radius:var(--r-sm);padding:6px 10px;cursor:pointer;margin-top:8px}
+.rail-foot button:hover{border-color:var(--warn);color:var(--warn)}
+
+/* ---------------- console flutuante ---------------- */
+#console{
+  position:fixed;bottom:18px;right:18px;z-index:60;display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+  background:var(--console-bg);border:1px solid var(--accent);border-radius:var(--r-md);
+  padding:7px 9px;box-shadow:var(--shadow);font-family:var(--f-ui);backdrop-filter:var(--blur)
+}
+.cbtn{border:1px solid var(--edge);background:var(--surface-2);color:var(--ink-2);width:34px;height:34px;border-radius:var(--r-sm);cursor:pointer;display:grid;place-items:center;font-size:14px;padding:0;font-family:var(--f-ui)}
+.cbtn:hover{border-color:var(--accent);color:var(--accent)}
+#clock{font-family:var(--f-mono);font-size:15px;font-variant-numeric:tabular-nums;color:var(--accent);padding:0 6px;min-width:82px;text-align:center}
+#clock.run{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+#timerBox{display:flex;align-items:center;gap:6px}
+body.timer-off #timerBox{display:none}
+#settings{
+  position:fixed;bottom:76px;right:18px;z-index:70;width:270px;background:var(--surface);
+  border:1px solid var(--edge);border-radius:var(--r-md);box-shadow:var(--shadow-lift);padding:14px 16px;
+  font-family:var(--f-ui);display:none;backdrop-filter:var(--blur)
+}
+#settings.on{display:block}
+#settings h5{margin:0 0 10px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.srow{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;font-size:13px;color:var(--ink-2)}
+.srow+.srow{border-top:1px solid var(--edge-soft)}
+.tgl{width:38px;height:21px;border-radius:11px;border:1px solid var(--edge);background:var(--ground-2);position:relative;cursor:pointer;flex:0 0 38px;padding:0}
+.tgl::after{content:"";position:absolute;top:2px;left:2px;width:15px;height:15px;border-radius:50%;background:var(--muted);transition:transform .22s,background .22s}
+.tgl[aria-pressed="true"]{background:var(--accent-wash);border-color:var(--accent)}
+.tgl[aria-pressed="true"]::after{transform:translateX(17px);background:var(--accent)}
+
+/* ---------------- hero ---------------- */
+.hero{padding:62px 0 10px;text-align:center}
+.hero .eyebrow{font-family:var(--f-ui);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin:0 0 20px}
+.hero h1{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,5.4vw,52px);line-height:1.12;letter-spacing:var(--ls-h1);text-transform:var(--tt-h1);margin:0;color:var(--ink);text-wrap:balance}
+.hero h1 .gilt{background:var(--grad-title);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:18px;color:var(--ink-2);margin:20px auto 0;max-width:62ch;font-style:var(--fs-sub);text-wrap:balance}
+.frieze{display:flex;align-items:center;gap:10px;margin:22px auto 0;width:min(360px,80%)}
+.frieze i{flex:1;height:2px;display:block;border-radius:2px;background:linear-gradient(90deg,transparent,var(--accent))}
+.frieze i:last-child{background:linear-gradient(90deg,var(--accent),transparent)}
+.frieze b{width:8px;height:8px;background:var(--accent);transform:rotate(45deg);display:block;flex:0 0 8px;box-shadow:0 0 12px var(--accent)}
+.marks{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:1px;background:var(--edge);border:1px solid var(--edge);border-radius:var(--r-md);overflow:hidden;margin:34px 0 8px;font-family:var(--f-ui)}
+.marks div{background:var(--surface);padding:14px 12px;text-align:center}
+.marks b{display:block;font-size:22px;font-variant-numeric:tabular-nums;font-weight:600;line-height:1.2;color:var(--accent)}
+.marks div:nth-child(2) b{color:var(--alt)}
+.marks div:nth-child(3) b{color:var(--alt2)}
+.marks div:nth-child(4) b{color:var(--ok)}
+.marks span{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.fontes{font-family:var(--f-ui);font-size:12px;color:var(--muted);margin-top:20px;text-align:center}
+.fontes b{color:var(--ink-2)}
+
+/* ---------------- sumário ocultável ---------------- */
+.top-sum{margin:32px 0 0;border:1px solid var(--edge);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.ts-h{display:flex;align-items:center;gap:12px;padding:13px 20px;cursor:pointer;user-select:none;background:var(--head-bg);border-bottom:1px solid var(--edge-soft)}
+.top-sum.fechado .ts-h{border-bottom-color:transparent}
+.ts-h h2{font-family:var(--f-display);font-weight:700;font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;margin:0;color:var(--ink)}
+.ts-sub{display:block;font-family:var(--f-ui);font-weight:500;font-size:11px;letter-spacing:.02em;text-transform:none;color:var(--muted);margin-top:3px}
+.ts-chev{flex:0 0 28px;width:28px;height:28px;border-radius:var(--r-sm);border:1px solid var(--edge);background:var(--surface);display:grid;place-items:center;color:var(--accent);transition:transform .28s}
+.top-sum.fechado .ts-chev{transform:rotate(-90deg)}
+.ts-body{padding:18px 22px 22px}
+.top-sum.fechado .ts-body{display:none}
+.ts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.ts-grid a{display:block;padding:9px 11px;border-radius:var(--r-sm);text-decoration:none;border:1px solid var(--edge-soft);background:var(--ground-2);color:var(--ink-2);font-family:var(--f-ui);font-size:12.5px;line-height:1.4}
+.ts-grid a:hover{border-color:var(--accent);color:var(--accent)}
+.ts-grid a b{display:block;font-family:var(--f-display);font-size:11px;color:var(--accent);font-weight:700;margin-bottom:2px}
+.ts-tit{font-family:var(--f-display);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0 0 9px}
+
+/* ---------------- busca ---------------- */
+#barra{position:sticky;top:0;z-index:40;margin:24px 0 0;padding:12px 0 10px;background:var(--ground);border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui)}
+.busca-linha{display:flex;gap:9px;align-items:center}
+.campo{flex:1;display:flex;align-items:center;gap:9px;min-width:0;background:var(--surface);border:1px solid var(--edge);border-radius:var(--r-md);padding:0 12px;box-shadow:var(--shadow)}
+.campo .lupa{font-size:17px;color:var(--muted);line-height:1}
+#q{flex:1;min-width:0;border:none;background:none;outline:none;color:var(--ink);font-family:var(--f-ui);font-size:14.5px;padding:11px 0}
+#q::placeholder{color:var(--muted)}
+#limpar{border:none;background:none;color:var(--muted);cursor:pointer;font-size:18px;line-height:1;padding:4px;display:none}
+#limpar.on{display:block}
+#btnBarra{display:inline-flex;align-items:center;gap:7px;font-family:var(--f-ui);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--surface);border:1px solid var(--edge);color:var(--muted);border-radius:var(--r-md);padding:11px 13px;cursor:pointer;line-height:1;white-space:nowrap;box-shadow:var(--shadow)}
+#btnBarra:hover{color:var(--ink);border-color:var(--accent)}
+#btnBarra .cv{transition:transform .25s;display:inline-block}
+body.barra-off #btnBarra .cv{transform:rotate(180deg)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.chip{font-family:var(--f-ui);font-size:11.5px;border:1px solid var(--edge);background:var(--surface);color:var(--muted);border-radius:var(--r-chip);padding:5px 11px;cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent-wash);border-color:var(--accent);color:var(--accent);font-weight:600}
+.chip.forte{border-color:var(--warn);color:var(--warn)}
+.chip.forte[aria-pressed="true"]{background:var(--warn-wash);border-color:var(--warn);color:var(--warn)}
+#contador{font-family:var(--f-ui);font-size:11.5px;color:var(--muted);margin:9px 0 0;font-variant-numeric:tabular-nums}
+#contador b{color:var(--ink-2)}
+.barra-aviso{display:none;margin:0;font-family:var(--f-ui);font-size:12.5px;color:var(--muted)}
+body.barra-off .barra-aviso{display:block}
+body.barra-off #barra .campo,body.barra-off #barra .chips,body.barra-off #barra #contador{display:none}
+body.barra-off #barra{padding:9px 0 8px}
+body.barra-off .artigo,body.barra-off .divisor,body.barra-off .bloco-q,body.barra-off .questao{scroll-margin-top:110px}
+.vazio{display:none;text-align:center;font-family:var(--f-ui);font-size:14px;color:var(--muted);padding:46px 20px;border:1px dashed var(--edge);border-radius:var(--r-lg);margin:28px 0}
+.vazio.on{display:block}
+
+/* ---------------- divisores e abertura ---------------- */
+.divisor{text-align:center;scroll-margin-top:190px;margin:56px 0 24px}
+.d-num{font-family:var(--f-display);font-weight:700;font-size:11px;letter-spacing:.3em;color:var(--accent);text-transform:uppercase;display:inline-block;padding:5px 14px;border-radius:var(--r-chip);background:var(--accent-wash);border:1px solid var(--accent)}
+.divisor h2{font-family:var(--f-display);font-weight:700;font-size:clamp(19px,3vw,27px);line-height:1.22;letter-spacing:var(--ls-h2);text-transform:var(--tt-h1);margin:12px 0 0;color:var(--ink)}
+.abertura{margin:34px 0 0;padding:20px 24px;border:1px solid var(--edge);border-radius:var(--r-lg);background:var(--abertura-bg);box-shadow:var(--shadow)}
+.abertura h2{font-family:var(--f-display);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px;font-weight:700;text-align:center}
+.abertura p{margin:10px 0;font-size:15.5px;color:var(--ink-2);line-height:1.72}
+
+/* ---------------- artigo ---------------- */
+.artigo{margin:28px 0;scroll-margin-top:190px;border:1px solid var(--edge);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow);overflow:hidden;position:relative}
+.artigo::before{content:"";position:absolute;left:0;right:0;top:0;height:var(--art-top);background:var(--grad-title)}
+.artigo.done{border-color:var(--ok)}
+.artigo.done::before{background:var(--ok)}
+.art-head{display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:center;padding:15px 20px 13px;border-bottom:1px solid var(--edge-soft);background:var(--head-bg);font-family:var(--f-ui)}
+.ah-l{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;min-width:0}
+.art-num{font-family:var(--f-display);font-weight:700;font-size:17px;letter-spacing:.04em;color:var(--ink)}
+.art-tema{grid-column:1/2;margin:0;font-size:12.5px;color:var(--muted);line-height:1.5}
+.art-check{grid-row:1/3;grid-column:2/3;align-self:center;display:flex;align-items:center;gap:7px;cursor:pointer;font-family:var(--f-ui);font-size:11px;letter-spacing:.05em;font-weight:700;border:1px solid var(--edge);background:var(--surface);color:var(--muted);border-radius:var(--r-sm);padding:8px 12px;white-space:nowrap}
+.art-check:hover{border-color:var(--ok);color:var(--ok)}
+.acx{width:16px;height:16px;border-radius:50%;border:1.5px solid currentColor;display:grid;place-items:center;font-size:9px;flex:0 0 16px}
+.artigo.done .art-check{background:var(--ok);border-color:var(--ok);color:var(--ground)}
+/* botao de conclusao reposicionado ao fim do topico */
+.art-corpo>.art-check{grid-row:auto;grid-column:auto;width:100%;justify-content:center;gap:9px;
+  margin:26px 0 12px;padding:13px 16px;font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+  border-style:dashed;border-color:var(--edge);background:var(--ground-2)}
+.art-corpo>.art-check:hover{border-style:solid;border-color:var(--ok);background:var(--ok-wash);color:var(--ok)}
+.artigo.done .art-corpo>.art-check{border-style:solid;background:var(--ok);border-color:var(--ok);color:var(--ground)}
+.art-corpo>.art-check .acx{font-size:13px}
+.artigo.done .act{font-size:0}
+.artigo.done .act::before{content:"Estudado";font-size:11px}
+.art-corpo{padding:16px 22px 6px}
+p.lex{margin:11px 0;font-size:var(--fs-lex);line-height:1.76;text-align:justify;hyphens:auto}
+p.lex b{font-weight:700;color:var(--ink)}
+p.lex u{text-decoration-color:var(--accent);text-decoration-thickness:1.5px;text-underline-offset:3px}
+p.lex.sub{margin:8px 0 8px 22px;font-size:calc(var(--fs-lex) - .8px)}
+
+.ct{font-family:var(--f-ui);font-size:9.5px;letter-spacing:.11em;font-weight:700;text-transform:uppercase;border:1px solid var(--accent);color:var(--accent);border-radius:var(--r-chip);padding:2px 8px;background:var(--surface)}
+.ct.alt{border-color:var(--edge);color:var(--muted);text-transform:none;letter-spacing:.02em}
+.ct.divergencia{border-color:var(--warn);color:var(--warn)}
+
+/* ---------------- zonas e selos ---------------- */
+.zona{padding:6px 0 14px}
+.zona.inline{border-left:2px solid var(--edge-soft);padding-left:14px;margin:18px 0}
+.zona-t{font-family:var(--f-ui);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:14px 0 11px;display:flex;align-items:center;gap:10px}
+.zona-t::after{content:"";flex:1;height:1px;background:var(--edge-soft)}
+.selos{display:flex;flex-direction:column;gap:13px}
+.selo{--sk:var(--accent);--sw:var(--accent-wash);border:1px solid var(--edge);border-left:3px solid var(--sk);border-radius:var(--r-selo);background:var(--selo-bg);overflow:hidden}
+.selo[data-k="sumula"]{--sk:var(--alt);--sw:var(--alt-wash)}
+.selo[data-k="teses"]{--sk:var(--accent);--sw:var(--accent-wash)}
+.selo[data-k="atencao"]{--sk:var(--warn);--sw:var(--warn-wash)}
+.selo[data-k="divergencia"]{--sk:var(--warn);--sw:var(--warn-wash);border-left-width:4px}
+.selo[data-k="nota"]{--sk:var(--alt2);--sw:var(--alt2-wash)}
+.selo-h{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 15px;background:var(--selo-head);border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--sk);font-weight:700}
+.selo-h .si{flex:0 0 16px;display:grid;place-items:center;font-size:12px}
+.selo-h .sl{flex:1;min-width:0}
+.selo-h .ct{border-color:var(--sk);color:var(--sk)}
+.src{font-size:10px;letter-spacing:.02em;text-transform:none;color:var(--muted);font-weight:500}
+.selo-b{padding:13px 18px 15px}
+.selo-t{font-family:var(--f-ui);font-size:14.5px;font-weight:600;line-height:1.5;margin:0 0 8px;color:var(--ink)}
+.selo-b p{margin:8px 0;font-size:15.5px;line-height:1.7;color:var(--ink-2)}
+.selo-b p b{color:var(--ink)}
+.mesmo{display:block;margin-top:6px;font-family:var(--f-ui);font-size:12.5px;color:var(--muted)}
+.cite{display:block;font-family:var(--f-mono);font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.6}
+.dq-res{font-family:var(--f-ui);font-size:14px;line-height:1.62;color:var(--ink-2);margin:0 0 13px;padding-bottom:12px;border-bottom:1px dashed var(--edge)}
+.posicoes{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.pos{border:1px solid var(--edge);border-top:3px solid var(--pc,var(--muted));border-radius:var(--r-sm);padding:12px 14px;background:var(--ground-2);min-width:0}
+.pos[data-corte="STF"]{--pc:var(--accent)}
+.pos[data-corte="STJ"]{--pc:var(--alt)}
+.pos-h{display:flex;gap:8px;align-items:center;margin:0 0 8px}
+.pos-r{font-family:var(--f-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--pc);flex:1}
+.pos-h .ct{border-color:var(--pc);color:var(--pc)}
+.pos-t{margin:0;font-size:15px;line-height:1.65;color:var(--ink-2)}
+.pos .cite{margin-top:9px;font-size:11px}
+.hoje{margin:14px 0 0;padding:12px 15px;border-radius:var(--r-sm);font-size:15px;line-height:1.65;background:var(--ok-wash);border:1px solid var(--ok);color:var(--ink-2)}
+.hoje b{color:var(--ok);font-family:var(--f-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:5px;font-weight:700}
+
+.esquema{border:1px solid var(--edge-soft);border-radius:var(--r-md);background:var(--ground-2);padding:15px 18px;font-family:var(--f-ui);font-size:14px;line-height:1.62;margin:18px 0}
+.esquema .es-t{margin:0 0 10px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.esquema ol{margin:0;padding-left:20px}
+.esquema li{margin:7px 0}
+.esquema li b{color:var(--ink)}
+.es-seta{color:var(--accent);font-weight:700}
+
+.tbl-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--edge);border-radius:var(--r-md);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-family:var(--f-ui);font-size:13.5px;min-width:480px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--edge-soft);vertical-align:top;line-height:1.55}
+th{background:var(--head-bg);font-weight:700;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);border-bottom:2px solid var(--accent)}
+tbody tr:last-child td{border-bottom:none}
+
+/* ---------------- botão de conclusão ---------------- */
+.cap-fim{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 18px}
+.cap-fim.grande{justify-content:center;margin:34px 0 10px}
+.btn-fim{display:inline-flex;align-items:center;gap:9px;font-family:var(--f-ui);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;border:1px solid var(--ok);background:var(--ok-wash);color:var(--ok);border-radius:var(--r-md);padding:12px 18px;cursor:pointer;line-height:1}
+.btn-fim:hover{background:var(--ok);color:var(--ground)}
+.btn-fim.feito{background:var(--ok);color:var(--ground)}
+.btn-fim.feito .bf-txt::after{content:" ✓"}
+.bf-i{font-size:13px}
+.bf-hint{font-family:var(--f-ui);font-size:11.5px;color:var(--muted)}
+
+/* ---------------- questões ---------------- */
+.bloco-q{margin:40px 0 8px;scroll-margin-top:190px}
+.bloco-q-h{display:flex;align-items:center;gap:11px;margin:0 0 16px;font-family:var(--f-ui);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--alt2)}
+.bloco-q-h::after{content:"";flex:1;height:1px;background:var(--alt2);opacity:.35}
+.bq-n{font-variant-numeric:tabular-nums;border:1px solid var(--alt2);border-radius:var(--r-chip);padding:3px 9px}
+.placar{display:flex;align-items:center;gap:13px;flex-wrap:wrap;border:1px solid var(--edge);border-radius:var(--r-md);background:var(--surface);padding:12px 15px;margin:0 0 18px;font-family:var(--f-ui);box-shadow:var(--shadow)}
+.placar-aro{position:relative;width:52px;height:52px;flex:0 0 52px}
+.pa-txt{position:absolute;inset:0;display:grid;place-items:center;font-size:12.5px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.placar-linhas{display:flex;flex-direction:column;gap:2px;font-size:12.5px;color:var(--muted)}
+.placar-linhas b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.pl-tit{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--alt2)}
+.placar button{margin-left:auto;font-family:var(--f-ui);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:none;border:1px solid var(--edge);color:var(--muted);border-radius:var(--r-sm);padding:7px 11px;cursor:pointer}
+.placar button:hover{color:var(--warn);border-color:var(--warn)}
+
+.questao{border:1px solid var(--edge);border-left:4px solid var(--alt2);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow);padding:16px 18px 14px;margin:0 0 16px;scroll-margin-top:190px}
+.questao.acertou{border-left-color:var(--ok)}
+.questao.errou{border-left-color:var(--warn)}
+.q-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:11px;font-family:var(--f-ui)}
+.q-num{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--alt2)}
+.q-dif{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border:1px solid currentColor;border-radius:4px;padding:2px 7px}
+.q-dif[data-d="dificil"]{color:var(--alt)}
+.q-dif[data-d="muito"]{color:var(--warn)}
+.q-banca{font-size:10px;letter-spacing:.08em;color:var(--muted);margin-left:auto;text-transform:uppercase}
+.q-marca{display:none;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:4px;padding:2px 7px}
+.questao.acertou .q-marca,.questao.errou .q-marca{display:inline-block}
+.questao.acertou .q-marca{background:var(--ok);color:var(--ground)}
+.questao.errou .q-marca{background:var(--warn);color:#fff}
+.q-enunciado{font-family:var(--f-body);font-size:16px;line-height:1.72;color:var(--ink);margin:0 0 14px;text-align:justify}
+.q-alts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.q-alt{display:flex;align-items:flex-start;gap:9px}
+.q-tesoura{flex:0 0 32px;width:32px;height:32px;margin-top:2px;display:grid;place-items:center;cursor:pointer;background:var(--ground-2);border:1px solid var(--edge);border-radius:var(--r-sm);color:var(--muted);font-size:14px;transition:all .15s}
+.q-tesoura:hover{color:var(--warn);border-color:var(--warn);background:var(--warn-wash)}
+.q-alt.cortada .q-tesoura{background:var(--warn);border-color:var(--warn);color:#fff;transform:rotate(-18deg)}
+.q-pick{flex:1;min-width:0;display:flex;align-items:flex-start;gap:10px;text-align:left;cursor:pointer;background:var(--ground-2);border:1px solid var(--edge);border-radius:var(--r-sm);padding:10px 13px;font-family:var(--f-body);font-size:15.5px;line-height:1.62;color:var(--ink-2)}
+.q-pick:hover{border-color:var(--alt2);color:var(--ink)}
+.q-letra{flex:0 0 20px;font-family:var(--f-ui);font-size:12.5px;font-weight:700;color:var(--alt2);padding-top:2px}
+.q-alt.marcada .q-pick{border-color:var(--alt2);background:var(--alt2-wash);color:var(--ink)}
+.q-alt.cortada .q-pick{opacity:.42;text-decoration:line-through;text-decoration-color:var(--warn);text-decoration-thickness:1.5px}
+.questao.respondida .q-pick{cursor:default;pointer-events:none}
+.questao.respondida .q-tesoura{pointer-events:none;opacity:.5}
+.q-alt.certa .q-pick{border-color:var(--ok);background:var(--ok-wash);color:var(--ink)}
+.q-alt.certa .q-letra{color:var(--ok)}
+.q-alt.errada-marcada .q-pick{border-color:var(--warn);background:var(--warn-wash)}
+.q-alt.errada-marcada .q-letra{color:var(--warn)}
+.q-acoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px;align-items:center}
+.q-btn{font-family:var(--f-ui);font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;border-radius:var(--r-sm);padding:9px 14px;cursor:pointer;line-height:1;border:1px solid var(--edge);background:var(--surface-2);color:var(--ink-2)}
+.q-btn.primario{background:var(--alt2);border-color:var(--alt2);color:var(--ground)}
+.q-btn:hover{border-color:var(--alt2);color:var(--ink)}
+.q-btn.primario:hover{filter:brightness(1.12);color:var(--ground)}
+.questao.respondida .q-btn.primario{display:none}
+.q-aviso{font-family:var(--f-ui);font-size:11.5px;color:var(--muted)}
+.q-coment{margin-top:14px;padding:13px 15px;border-radius:var(--r-sm);border-left:3px solid var(--accent);background:var(--accent-wash)}
+.qc-t{font-family:var(--f-ui);font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+.q-coment p{margin:0 0 8px;font-size:15px;line-height:1.66}
+.q-coment ul{margin:8px 0 0;padding-left:19px}
+.q-coment li{margin-bottom:5px;font-size:14.5px;line-height:1.6}
+.qc-gab{font-family:var(--f-ui);font-weight:700;color:var(--ok)}
+.qc-fonte{font-family:var(--f-mono);font-size:11.5px;color:var(--muted)}
+
+/* ---------------- fecho, toast, confete ---------------- */
+.fecho{margin:60px 0 0;padding:22px;text-align:center;border-top:1px solid var(--edge-soft);color:var(--muted);font-family:var(--f-ui);font-size:13px}
+.fe-t{font-family:var(--f-display);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);z-index:90;background:var(--surface);border:1px solid var(--accent);color:var(--ink);font-family:var(--f-ui);font-size:13px;padding:11px 18px;border-radius:var(--r-md);box-shadow:var(--shadow-lift);opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;max-width:min(92vw,520px);text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@keyframes pop{0%{transform:scale(.7);opacity:0}100%{transform:scale(1);opacity:1}}
+
+/* ---- ignicao do painel: substitui a comemoracao com confete ---- */
+#fx{position:fixed;inset:0;z-index:95;pointer-events:none;opacity:0;transition:opacity .3s ease}
+#fx.on{opacity:1}
+#festa{position:fixed;left:0;right:0;bottom:26px;z-index:96;display:none;justify-content:center;pointer-events:none;padding:0 16px}
+#festa.on{display:flex}
+.festa-card{
+  --hud:var(--teal);
+  display:flex;align-items:center;gap:15px;width:min(430px,100%);
+  background:var(--surface);
+  border:1px solid var(--edge);border-left:3px solid var(--hud);
+  border-radius:15px;padding:13px 17px 13px 15px;font-family:var(--f-ui);
+  box-shadow:0 20px 52px rgba(0,0,0,.55),0 0 34px -16px var(--hud);
+  animation:hudOn .55s cubic-bezier(.16,1,.3,1)
+}
+.festa-card.max{--hud:var(--ok)}
+@keyframes hudOn{0%{opacity:0;transform:translateY(16px) scale(.985)}60%{opacity:1}100%{opacity:1;transform:none}}
+.fc-g{position:relative;flex:0 0 52px;width:52px;height:52px}
+.fc-g svg{display:block;transform:rotate(-90deg)}
+.fc-g .gtrack{fill:none;stroke:var(--edge);stroke-width:4}
+.fc-g .garc{fill:none;stroke:var(--hud);stroke-width:4;stroke-linecap:round;filter:drop-shadow(0 0 4px var(--hud));transition:stroke-dashoffset 1.05s cubic-bezier(.16,1,.3,1)}
+.fc-g .gtxt{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-mono);font-size:12.5px;font-weight:700;color:var(--hud);letter-spacing:-.03em}
+.fc-b{flex:1;min-width:0}
+.fc-h{display:flex;align-items:center;gap:8px;margin:0 0 3px}
+.fc-t{font-size:13.5px;font-weight:700;color:var(--ink);margin:0;letter-spacing:.01em}
+.fc-i{font-family:var(--f-mono);font-size:9.5px;font-weight:800;letter-spacing:.1em;color:var(--hud);border:1px solid var(--hud);border-radius:999px;padding:1.5px 7px;white-space:nowrap;opacity:.92}
+.fc-s{font-size:11.8px;color:var(--muted);margin:0 0 7px;line-height:1.45}
+.fc-seg{display:flex;gap:3px}
+.fc-seg i{display:block;height:3px;flex:1;border-radius:2px;background:var(--edge);animation:segOn .5s ease forwards}
+.fc-seg i:nth-child(1){animation-delay:.10s}
+.fc-seg i:nth-child(2){animation-delay:.17s}
+.fc-seg i:nth-child(3){animation-delay:.24s}
+.fc-seg i:nth-child(4){animation-delay:.31s}
+.fc-seg i:nth-child(5){animation-delay:.38s}
+.fc-seg i:nth-child(6){animation-delay:.45s}
+.fc-seg i:nth-child(7){animation-delay:.52s}
+.fc-seg i:nth-child(8){animation-delay:.59s}
+@keyframes segOn{to{background:var(--hud);box-shadow:0 0 7px -1px var(--hud)}}
+@media (prefers-reduced-motion:reduce){
+  .festa-card{animation:none}
+  .fc-seg i{animation:none;background:var(--hud)}
+  .fc-g .garc{transition:none}
+}
+@media (max-width:760px){#festa{bottom:92px}}
+
+.hide{display:none!important}
+
+@media (max-width:1040px){ #rail{position:fixed;z-index:80;left:0;top:0;box-shadow:var(--shadow-lift)} }
+@media (max-width:760px){
+  main{padding:0 14px 150px}
+  .q-enunciado{text-align:left}
+  #console{left:12px;right:12px;bottom:12px;justify-content:center}
+  #settings{left:12px;right:12px;width:auto;bottom:80px}
+  .busca-linha{flex-wrap:wrap}
+  #btnBarra{order:-1}
+}
+
+
+/* ---------- identidade 5.2 ---------- */
+.hero h1{font-weight:800}
+.divisor h2{font-family:var(--f-display);font-weight:700;background:var(--grad-title);-webkit-background-clip:text;background-clip:text;color:transparent}
+.artigo{box-shadow:0 0 0 1px rgba(245,165,36,.07),var(--shadow)}
+.artigo:hover{box-shadow:0 0 0 1px rgba(245,165,36,.20),var(--shadow-lift)}
+.selo{box-shadow:0 6px 18px rgba(6,4,20,.4)}
+.q-btn.primario,.btn-fim:hover,.btn-fim.feito,.artigo.done .art-check{color:#0A0912}
+.marks div:nth-child(1) b{color:var(--accent)}
+.marks div:nth-child(2) b{color:var(--teal)}
+.marks div:nth-child(3) b{color:var(--alt2)}
+.marks div:nth-child(4) b{color:var(--ok)}
+.marks div:nth-child(5) b{color:var(--teal)}
+.marks div{background:linear-gradient(180deg,rgba(245,165,36,.10),transparent 80%),var(--surface)}
+.chip[aria-pressed="true"]{box-shadow:0 0 0 3px var(--accent-wash)}
+.frieze b{box-shadow:0 0 18px var(--accent)}
+
+/* azul: cor secundária — estrutura, referências e o que é "norma" */
+.art-num{color:var(--azul)}
+.cite{color:var(--azul);opacity:.85}
+.rn-num,.ts-grid a b{color:var(--azul)}
+.pos[data-corte="STF"]{--pc:var(--azul)}
+.pos[data-corte="STJ"]{--pc:var(--alt2)}
+.selo[data-k="teses"]{--sk:var(--azul);--sw:var(--azul-wash)}
+.selo[data-k="nota"]{--sk:var(--teal);--sw:var(--teal-wash)}
+.selo[data-k="sumula"]{--sk:var(--alt);--sw:var(--alt-wash)}
+.q-coment{border-left-color:var(--azul);background:var(--azul-wash)}
+.qc-t{color:var(--azul)}
+th{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* ---------- CÓDIGO DE CORES NAS PALAVRAS ---------- */
+/* categorias neutras: só peso, sem cor — o texto respira */
+.k-org,.k-ato,.k-cond,.k-efe{color:var(--ink);font-weight:600}
+/* as duas únicas categorias que continuam coloridas */
+.k-neg{color:#E8919F;font-weight:600}
+.k-ref{color:#8FA9D4;font-weight:600;font-variant-numeric:tabular-nums}
+p.lex .k-ref{font-weight:700}
+table .k-neg,table .k-ref,.esquema .k-neg,.esquema .k-ref{color:inherit;font-weight:600}
+
+/* destaque forte: fundo lavado + sublinhado grosso */
+.hl{font-weight:700;padding:1px 5px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hl-org{color:#CFEFE9;background:rgba(45,212,191,.13);box-shadow:inset 0 -2px 0 rgba(45,212,191,.75)}
+.hl-ato{color:#E3D7FA;background:rgba(168,85,247,.14);box-shadow:inset 0 -2px 0 rgba(168,85,247,.75)}
+.hl-cond{color:#FAE0B6;background:rgba(245,165,36,.14);box-shadow:inset 0 -2px 0 rgba(245,165,36,.8)}
+.hl-neg{color:#FBCDD5;background:rgba(255,92,122,.14);box-shadow:inset 0 -2px 0 rgba(255,92,122,.8)}
+.hl-efe{color:#C2F0D9;background:rgba(34,211,127,.14);box-shadow:inset 0 -2px 0 rgba(34,211,127,.8)}
+.hl-ref{color:#C7DCFF;background:rgba(110,168,254,.18);box-shadow:inset 0 -2px 0 var(--azul)}
+p.lex u{text-decoration:none}
+
+/* ---------- legenda do código de cores ---------- */
+.legenda{margin:26px 0 0;padding:14px 18px;border:1px solid var(--edge);border-radius:var(--r-md);
+ background:linear-gradient(120deg,rgba(255,77,141,.10),rgba(245,165,36,.08) 45%,rgba(110,168,254,.08));font-family:var(--f-ui)}
+.lg-t{margin:0 0 10px;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.lg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:7px 18px}
+.lg{font-size:12.5px;color:var(--ink-2);display:block;line-height:1.5}
+.lg i{margin-right:7px}
+.lg i{font-style:normal;font-size:11px}
+.lg em{color:var(--muted);font-style:normal;font-size:11.5px}
+
+/* tema claro: versões escurecidas das mesmas cores */
+:root[data-theme="light"] .k-org{color:#0D7C6B}
+:root[data-theme="light"] .k-ato{color:#6D28D9}
+:root[data-theme="light"] .k-cond{color:#A16207}
+:root[data-theme="light"] .k-neg{color:#BE123C}
+:root[data-theme="light"] .k-efe{color:#047857}
+:root[data-theme="light"] .k-ref{color:#1D4ED8}
+:root[data-theme="light"] .hl-org{color:#0B5F52;background:rgba(13,124,107,.14);box-shadow:inset 0 -2px 0 #0D7C6B}
+:root[data-theme="light"] .hl-ato{color:#5B21B6;background:rgba(109,40,217,.12);box-shadow:inset 0 -2px 0 #6D28D9}
+:root[data-theme="light"] .hl-cond{color:#854D0E;background:rgba(161,98,7,.14);box-shadow:inset 0 -2px 0 #A16207}
+:root[data-theme="light"] .hl-neg{color:#9F1239;background:rgba(190,18,60,.12);box-shadow:inset 0 -2px 0 #BE123C}
+:root[data-theme="light"] .hl-efe{color:#065F46;background:rgba(4,120,87,.13);box-shadow:inset 0 -2px 0 #047857}
+:root[data-theme="light"] .hl-ref{color:#1E40AF;background:rgba(29,78,216,.12);box-shadow:inset 0 -2px 0 #1D4ED8}
+
+/* ---------- elementos exclusivos do material ---------- */
+p.texto{margin:12px 0;font-size:var(--fs-body);line-height:1.78;color:var(--ink-2)}
+p.texto b{color:var(--ink)}
+p.lex.rev{opacity:.6;text-decoration:line-through;text-decoration-color:var(--warn);text-decoration-thickness:1px}
+s.rev-in{opacity:.6;text-decoration-color:var(--warn);text-decoration-thickness:1.5px}
+/* quando a revogacao e PARCIAL (ha um <s class="rev-in"> dentro), o paragrafo inteiro nao pode
+   ficar riscado nem esmaecido: so o trecho revogado e que leva o risco */
+p.lex.rev:has(s.rev-in){opacity:1;text-decoration:none}
+p.lex.rev:has(s.rev-in) s.rev-in{opacity:.6;text-decoration:line-through;
+  text-decoration-color:var(--warn);text-decoration-thickness:1.5px}
+/* a nota "hoje" nunca herda risco/opacidade e vira bloco proprio */
+p.lex.rev .hoje,p.lex .hoje{display:block;opacity:1;text-decoration:none}
+p.lex.rev .hoje b,p.lex .hoje b{text-decoration:none;opacity:1}
+.alt-leg{font-family:var(--f-ui);font-size:11.5px;color:var(--warn);letter-spacing:.01em}
+ul.plain{margin:10px 0;padding-left:20px}
+ul.plain li{margin:7px 0;font-size:15.5px;line-height:1.7;color:var(--ink-2)}
+ul.plain li b{color:var(--ink)}
+.ct.novo{border-color:var(--ok);color:var(--ok)}
+.selo[data-k="novidade"]{--sk:var(--ok);--sw:var(--ok-wash)}
+.selo[data-k="superado"]{--sk:var(--muted);--sw:var(--surface-2);border-left-width:4px;position:relative}
+.selo[data-k="superado"]::after{content:"SUPERADO";position:absolute;top:9px;right:12px;font-family:var(--f-ui);
+ font-size:9px;font-weight:700;letter-spacing:.16em;color:var(--warn);border:1px solid var(--warn);
+ border-radius:4px;padding:2px 6px;opacity:.8;pointer-events:none;background:var(--surface)}
+.selo[data-k="superado"] .selo-t{text-decoration:line-through;text-decoration-color:var(--warn);opacity:.75}
+.ct.superado{border-color:var(--warn);color:var(--warn)}
+.hoje.vigente{border-left:3px solid var(--ok);background:var(--ok-wash);border:none;border-left:3px solid var(--ok);
+ padding:11px 14px;border-radius:0 8px 8px 0;margin-top:12px}
+.hoje.vigente .h-t{font-family:var(--f-ui);font-size:10px;font-weight:700;letter-spacing:.15em;
+ text-transform:uppercase;color:var(--ok);margin:0 0 5px}
+.hoje.vigente p{margin:0;font-size:15px;line-height:1.66}
+.ts-tit{margin-top:0}
+table td b{color:var(--ink)}
+
+/* ===================== GRADE DE CARTÕES COLORIDOS ===================== */
+.grade-cores{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:20px 0}
+.cartao-cor{
+  position:relative;border-radius:14px;padding:14px 15px 15px;overflow:hidden;
+  background:linear-gradient(150deg,var(--cc-wash),transparent 65%),var(--surface);
+  border:1px solid var(--cc);box-shadow:0 8px 22px rgba(4,3,16,.35);
+  --cc:var(--accent);--cc-wash:var(--accent-wash);
+}
+.cartao-cor[data-cor="ambar"]{--cc:#F5A524;--cc-wash:rgba(245,165,36,.20)}
+.cartao-cor[data-cor="coral"]{--cc:#FF5C7A;--cc-wash:rgba(255,92,122,.20)}
+.cartao-cor[data-cor="violeta"]{--cc:#A855F7;--cc-wash:rgba(168,85,247,.22)}
+.cartao-cor[data-cor="verde"]{--cc:#22D37F;--cc-wash:rgba(34,211,127,.20)}
+.cartao-cor[data-cor="azul"]{--cc:#6EA8FE;--cc-wash:rgba(110,168,254,.20)}
+.cartao-cor[data-cor="teal"]{--cc:#2DD4BF;--cc-wash:rgba(45,212,191,.20)}
+.cartao-cor[data-cor="rosa"]{--cc:#FF4D8D;--cc-wash:rgba(255,77,141,.20)}
+.cartao-cor[data-cor="cinza"]{--cc:#9AA3BF;--cc-wash:rgba(154,163,191,.18)}
+.cartao-cor[data-cor="a"]{--cc:#22D37F;--cc-wash:rgba(34,211,127,.20)}
+.cartao-cor[data-cor="b"]{--cc:#F5A524;--cc-wash:rgba(245,165,36,.20)}
+.cartao-cor[data-cor="c"]{--cc:#FF5C7A;--cc-wash:rgba(255,92,122,.20)}
+.cartao-cor[data-cor="d"]{--cc:#A855F7;--cc-wash:rgba(168,85,247,.22)}
+.cartao-cor[data-cor="e"]{--cc:#6EA8FE;--cc-wash:rgba(110,168,254,.20)}
+.cc-tit{
+  display:inline-block;font-family:var(--f-display);font-size:15px;font-weight:800;letter-spacing:.02em;
+  text-transform:uppercase;color:#0A0912;background:var(--cc);border-radius:8px;padding:5px 12px;margin:0 0 10px;
+  box-shadow:0 3px 0 rgba(0,0,0,.25);
+}
+.cc-txt{margin:0;font-size:14.5px;line-height:1.6;color:var(--ink-2)}
+.cc-txt b{color:var(--ink)}
+.cc-tag{
+  display:inline-block;margin-top:11px;font-family:var(--f-ui);font-size:10px;font-weight:700;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--cc);border:1px dashed var(--cc);
+  border-radius:6px;padding:3px 9px;background:rgba(0,0,0,.25);
+}
+
+/* ===================== MNEMÔNICO ===================== */
+.mnemo{
+  margin:22px 0;border:2px solid var(--accent);border-radius:16px;overflow:hidden;
+  background:linear-gradient(160deg,rgba(245,165,36,.14),transparent 60%),var(--surface);
+}
+.mnemo-h{
+  display:flex;align-items:center;gap:9px;padding:10px 16px;background:rgba(245,165,36,.16);
+  border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui);font-size:11px;font-weight:800;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--accent);
+}
+.mnemo-frase{
+  text-align:center;font-family:var(--f-display);font-size:clamp(22px,4vw,32px);font-weight:800;
+  color:var(--ink);margin:16px 0 4px;letter-spacing:-.01em;
+}
+.mnemo-frase em{color:var(--accent);font-style:normal}
+.mnemo-letras{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;padding:12px 16px 6px}
+.mn-l{
+  border-radius:12px;padding:12px 10px;text-align:center;border:1px solid var(--ml,var(--accent));
+  background:linear-gradient(180deg,var(--ml-wash,var(--accent-wash)),transparent 75%),var(--ground-2);
+}
+.mn-l[data-c="1"]{--ml:#22D37F;--ml-wash:rgba(34,211,127,.22)}
+.mn-l[data-c="2"]{--ml:#F5A524;--ml-wash:rgba(245,165,36,.22)}
+.mn-l[data-c="3"]{--ml:#6EA8FE;--ml-wash:rgba(110,168,254,.22)}
+.mn-l[data-c="4"]{--ml:#A855F7;--ml-wash:rgba(168,85,247,.22)}
+.mn-l[data-c="5"]{--ml:#FF5C7A;--ml-wash:rgba(255,92,122,.22)}
+/* aliases nominais e alfabeticos para mn-l */
+.mn-l[data-c="verde"],.mn-l[data-c="a"]{--ml:#22D37F;--ml-wash:rgba(34,211,127,.22)}
+.mn-l[data-c="ambar"],.mn-l[data-c="b"]{--ml:#F5A524;--ml-wash:rgba(245,165,36,.22)}
+.mn-l[data-c="azul"],.mn-l[data-c="c"]{--ml:#6EA8FE;--ml-wash:rgba(110,168,254,.22)}
+.mn-l[data-c="violeta"],.mn-l[data-c="d"]{--ml:#A855F7;--ml-wash:rgba(168,85,247,.22)}
+.mn-l[data-c="coral"],.mn-l[data-c="e"]{--ml:#FF5C7A;--ml-wash:rgba(255,92,122,.22)}
+.mn-l[data-c="teal"]{--ml:#2DD4BF;--ml-wash:rgba(45,212,191,.22)}
+.mn-l[data-c="rosa"]{--ml:#FF4D8D;--ml-wash:rgba(255,77,141,.22)}
+.mn-l[data-c="cinza"]{--ml:#9AA3BF;--ml-wash:rgba(154,163,191,.20)}
+.mn-big{display:block;font-family:var(--f-display);font-size:34px;font-weight:800;line-height:1;color:var(--ml)}
+.mn-txt{display:block;margin-top:7px;font-family:var(--f-ui);font-size:12px;font-weight:600;color:var(--ink-2)}
+.mnemo-pe{
+  margin:8px 12px 14px;padding:9px 14px;border-radius:10px;background:var(--ground-2);
+  font-family:var(--f-ui);font-size:12.5px;color:var(--ink-2);text-align:center;border:1px dashed var(--edge)
+}
+
+/* ===================== PARA NÃO CONFUNDIR ===================== */
+.confundir{
+  margin:22px 0;border:1px solid var(--azul);border-radius:16px;overflow:hidden;background:var(--surface);
+}
+.cf-h{
+  display:flex;align-items:center;gap:9px;padding:10px 16px;background:rgba(110,168,254,.14);
+  border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui);font-size:11px;font-weight:800;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--azul);
+}
+.cf-cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--edge-soft)}
+.cf-col{background:var(--surface);padding:0 0 14px}
+.cf-col-t{
+  margin:0 0 10px;padding:9px 14px;font-family:var(--f-ui);font-size:11.5px;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;text-align:center;color:#0A0912;
+}
+.cf-col.a .cf-col-t{background:#8FC7FF}
+.cf-col.b .cf-col-t{background:#FFCB6B}
+.cf-col ul{list-style:none;margin:0;padding:0 14px;display:flex;flex-direction:column;gap:9px}
+.cf-col li{display:block;position:relative;padding-left:26px;font-size:14px;line-height:1.55;color:var(--ink-2)}
+.cf-col li::before{content:"✔";position:absolute;left:0;top:2px;width:17px;height:17px;border-radius:50%;display:grid;place-items:center;font-size:10px}
+.cf-col.a li::before{background:rgba(110,168,254,.25);color:var(--azul)}
+.cf-col.b li::before{background:rgba(245,165,36,.25);color:var(--accent)}
+.cf-col li b{color:var(--ink)}
+@media (max-width:640px){.cf-cols{grid-template-columns:1fr}}
+
+/* ===================== IMPORTANTE (alerta) ===================== */
+.importante{
+  margin:22px 0;border:1px solid var(--warn);border-radius:16px;overflow:hidden;
+  background:linear-gradient(150deg,rgba(255,92,122,.12),transparent 60%),var(--surface);
+}
+.imp-h{
+  display:flex;align-items:center;gap:9px;padding:10px 16px;background:rgba(255,92,122,.18);
+  border-bottom:1px solid var(--edge-soft);font-family:var(--f-ui);font-size:11.5px;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;color:#FFB3C0;
+}
+.imp-b{padding:14px 16px 16px;display:block}
+.imp-b:has(> .imp-x){display:flex;gap:14px;align-items:flex-start}
+.imp-b:has(> .imp-x) > :not(.imp-x){flex:1;min-width:0}
+.imp-b > p:last-child{margin-bottom:0}
+.imp-b .tbl-wrap{margin:6px 0 10px}
+.imp-x{
+  flex:0 0 38px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  background:var(--warn);color:#0A0912;font-size:20px;font-weight:800;
+}
+.imp-b p{margin:0 0 8px;font-size:15px;line-height:1.66;color:var(--ink-2)}
+.imp-b ul{margin:6px 0 0;padding-left:18px}
+.imp-b li{margin:5px 0;font-size:14.5px;line-height:1.6;color:var(--ink-2)}
+.imp-b li b{color:var(--ink)}
+
+/* ===================== CASOS NUMERADOS ===================== */
+.casos{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin:20px 0}
+.caso{
+  border:1px solid var(--edge);border-radius:14px;padding:14px 15px;background:var(--ground-2);position:relative;
+  box-shadow:0 6px 18px rgba(4,3,16,.3);
+}
+.caso-n{
+  position:absolute;top:-11px;left:14px;width:26px;height:26px;border-radius:50%;
+  display:grid;place-items:center;background:var(--accent);color:#0A0912;
+  font-family:var(--f-display);font-weight:800;font-size:14px;box-shadow:0 3px 8px rgba(0,0,0,.4);
+}
+.caso-t{margin:8px 0 7px;font-family:var(--f-display);font-size:15px;font-weight:700;color:var(--ink);line-height:1.25}
+.caso-t em{color:var(--accent);font-style:normal}
+.caso p{margin:0;font-size:13.8px;line-height:1.6;color:var(--ink-2)}
+.caso p b{color:var(--ink)}
+
+/* ===================== LINHA DO TEMPO ===================== */
+.linha-tempo{list-style:none;margin:20px 0;padding:0 0 0 6px;position:relative}
+.linha-tempo::before{content:"";position:absolute;left:62px;top:10px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--edge),var(--accent))}
+.lt-item{display:flex;gap:0;align-items:flex-start;padding:0 0 18px;position:relative}
+.lt-q{flex:0 0 62px;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
+.lt-item::after{content:"";position:absolute;left:56px;top:5px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:2px solid var(--edge);z-index:1}
+.lt-item[data-s="atual"]::after{border-color:var(--ok);background:var(--ok)}
+.lt-item[data-s="lei"]::after{border-color:var(--accent);background:var(--accent)}
+.lt-item[data-s="sup"]::after{border-color:var(--muted);background:var(--ground-2)}
+.lt-c{flex:1;min-width:0;padding-left:24px}
+.lt-t{display:inline-block;font-family:var(--f-ui);font-size:9.5px;font-weight:800;letter-spacing:.14em;
+ text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:2px 9px;margin-bottom:6px}
+.lt-item[data-s="atual"] .lt-t{color:var(--ok)}
+.lt-item[data-s="lei"] .lt-t{color:var(--accent)}
+.lt-item[data-s="sup"] .lt-t{color:var(--muted)}
+.lt-c p{margin:0;font-size:14.5px;line-height:1.62;color:var(--ink-2)}
+.lt-c p b{color:var(--ink)}
+.lt-item[data-s="sup"] .lt-c p{opacity:.8}
+
+/* ===================== FLUXO (passos com setas) ===================== */
+.fluxo{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:20px 0}
+.fx-p{
+  flex:1 1 150px;min-width:140px;border:1px solid var(--edge);border-radius:12px;padding:12px 13px;
+  background:linear-gradient(170deg,var(--fxw,var(--accent-wash)),transparent 70%),var(--surface);
+}
+.fx-p[data-c="1"]{--fx:#6EA8FE;--fxw:rgba(110,168,254,.16)}
+.fx-p[data-c="2"]{--fx:#A855F7;--fxw:rgba(168,85,247,.16)}
+.fx-p[data-c="3"]{--fx:#F5A524;--fxw:rgba(245,165,36,.16)}
+.fx-p[data-c="4"]{--fx:#22D37F;--fxw:rgba(34,211,127,.16)}
+/* aliases nominais e alfabeticos para fx-p */
+.fx-p[data-c="azul"],.fx-p[data-c="a"]{--fx:#6EA8FE;--fxw:rgba(110,168,254,.16)}
+.fx-p[data-c="violeta"],.fx-p[data-c="b"]{--fx:#A855F7;--fxw:rgba(168,85,247,.16)}
+.fx-p[data-c="ambar"],.fx-p[data-c="c"]{--fx:#F5A524;--fxw:rgba(245,165,36,.16)}
+.fx-p[data-c="verde"],.fx-p[data-c="d"]{--fx:#22D37F;--fxw:rgba(34,211,127,.16)}
+.fx-p[data-c="coral"],.fx-p[data-c="e"]{--fx:#FF5C7A;--fxw:rgba(255,92,122,.16)}
+.fx-p[data-c="teal"]{--fx:#2DD4BF;--fxw:rgba(45,212,191,.16)}
+.fx-p[data-c="rosa"]{--fx:#FF4D8D;--fxw:rgba(255,77,141,.16)}
+.fx-p[data-c="cinza"]{--fx:#9AA3BF;--fxw:rgba(154,163,191,.16)}
+.fx-n{font-family:var(--f-ui);font-size:9.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--fx,var(--accent))}
+.fx-t{display:block;margin:6px 0 5px;font-family:var(--f-display);font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.25}
+.fx-p p{margin:0;font-size:13px;line-height:1.55;color:var(--ink-2)}
+.fx-seta{align-self:center;color:var(--accent);font-size:19px;font-weight:700;flex:0 0 auto}
+@media (max-width:700px){.fx-seta{display:none}}
+
+/* ===================== QUESTÃO INLINE ===================== */
+.q-inline{margin:26px 0 22px}
+.q-inline .bloco-q-h{margin-bottom:12px}
+.placar-mini{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid var(--edge);border-radius:12px;
+  background:var(--surface);padding:10px 14px;margin:0 0 16px;font-family:var(--f-ui);font-size:12.5px;color:var(--muted)
+}
+.placar-mini b{color:var(--ink);font-variant-numeric:tabular-nums}
+.placar-mini .pm-t{font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--alt2)}
+.placar-mini button{margin-left:auto;font-family:var(--f-ui);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+ background:none;border:1px solid var(--edge);color:var(--muted);border-radius:8px;padding:6px 10px;cursor:pointer}
+
+/* ===================== CITAÇÃO DE DOUTRINA ===================== */
+.citacao{
+  margin:16px 0;padding:14px 18px;border-left:3px solid var(--alt2);border-radius:0 12px 12px 0;
+  background:linear-gradient(90deg,rgba(168,85,247,.10),transparent 70%),var(--ground-2);
+}
+.citacao p{margin:0;font-size:15px;line-height:1.7;color:var(--ink-2);font-style:italic}
+.citacao .ct-autor{display:block;margin-top:9px;font-family:var(--f-ui);font-size:11.5px;font-style:normal;color:var(--alt2);font-weight:700;letter-spacing:.04em}
+
+.dq-fecho{margin:12px 0 0;padding-top:11px;border-top:1px dashed var(--edge);font-family:var(--f-ui);
+ font-size:13.5px;line-height:1.62;color:var(--ink-2)}
+.dq-fecho b{color:var(--ink)}
+.pos[data-corte="TJ"]{--pc:var(--teal)}
+.pos[data-corte="DOUT"]{--pc:var(--alt2)}
+
+/* ===================== DESAFIO DIGITADO (resposta escrita) ===================== */
+.desafio{
+  margin:22px 0;border:1px solid var(--edge);border-radius:var(--r-md);overflow:hidden;
+  background:linear-gradient(150deg,rgba(45,212,191,.10),transparent 58%),var(--surface);
+  position:relative;
+}
+.desafio::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--teal)}
+.df-h{display:flex;align-items:center;gap:9px;padding:10px 16px 0 18px}
+.df-ic{font-size:14px;line-height:1}
+.df-t{font-family:var(--f-ui);font-size:9.5px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--teal)}
+.df-tag{margin-left:auto;font-family:var(--f-ui);font-size:9.5px;font-weight:700;letter-spacing:.12em;
+ text-transform:uppercase;color:var(--muted);border:1px solid var(--edge-soft);border-radius:999px;padding:2px 9px}
+.df-p{margin:8px 0 0;padding:0 16px 0 18px;font-size:15.2px;line-height:1.68;color:var(--ink)}
+.df-p b{color:var(--ink);font-weight:700}
+.df-gap{display:inline-block;min-width:74px;text-align:center;border-bottom:2px dashed var(--teal);
+ color:var(--teal);font-family:var(--f-mono);font-size:14px;letter-spacing:.06em;margin:0 3px;vertical-align:baseline}
+.df-in{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 16px 14px 18px}
+.df-campo{
+  flex:1 1 230px;min-width:0;font-family:var(--f-ui);font-size:14.5px;color:var(--ink);
+  background:var(--ground-2);border:1px solid var(--edge);border-radius:10px;padding:10px 13px;outline:none;
+}
+.df-campo::placeholder{color:var(--muted)}
+.df-campo:focus{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-wash)}
+.df-ok,.df-ver,.df-de{
+  font-family:var(--f-ui);font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  border-radius:10px;padding:10px 15px;cursor:pointer;border:1px solid var(--edge);background:none;color:var(--ink-2);
+}
+.df-ok{background:var(--teal);border-color:var(--teal);color:#07211D}
+.df-ok:hover{filter:brightness(1.08)}
+.df-ver:hover,.df-de:hover{border-color:var(--muted);color:var(--ink)}
+.df-fb{margin:0;padding:0 16px 14px 18px;font-size:14px;line-height:1.62;color:var(--ink-2)}
+.df-fb b{color:var(--ink)}
+.df-fb .fb-ok{color:var(--ok);font-weight:700}
+.df-fb .fb-no{color:var(--warn);font-weight:700}
+.df-fb .fb-qs{color:var(--accent);font-weight:700}
+.desafio.acertou{background:linear-gradient(150deg,rgba(34,211,127,.14),transparent 58%),var(--surface)}
+.desafio.acertou::before{background:var(--ok)}
+.desafio.acertou .df-t{color:var(--ok)}
+.desafio.acertou .df-campo{border-color:var(--ok);color:var(--ok);font-weight:700}
+.desafio.errou::before{background:var(--warn)}
+.desafio.errou .df-campo{border-color:var(--warn)}
+.desafio.revelado::before{background:var(--muted)}
+.desafio.revelado .df-t{color:var(--muted)}
+.df-resp{display:block;margin-top:7px;font-family:var(--f-mono);font-size:14px;color:var(--ok);letter-spacing:.02em}
+.desafio.revelado .df-resp{color:var(--accent)}
+.df-alt{display:block;margin-top:5px;font-size:12.5px;color:var(--muted)}
+@media (max-width:620px){.df-in{flex-direction:column;align-items:stretch}.df-ok,.df-ver{width:100%}}
+
+s.rev-in{opacity:.6;text-decoration:line-through;text-decoration-color:var(--warn);text-decoration-thickness:1.5px}
+p.lex .hoje{display:block;opacity:1;text-decoration:none;margin-top:12px}
+p.lex .hoje b{text-decoration:none;opacity:1}
+p.lex.nova{position:relative;margin-top:22px}
+p.lex.nova::after{
+  content:"NOVO";position:absolute;right:0;top:-15px;font-family:var(--f-ui);font-size:8.5px;
+  font-weight:800;letter-spacing:.14em;color:var(--teal);border:1px solid var(--teal);border-radius:999px;padding:1px 7px;
+  background:var(--ground-2)
+}
+@media (max-width:760px){p.lex.nova::after{position:static;display:inline-block;margin-left:8px}}
+.ct.novo{border-color:var(--teal);color:var(--teal)}
+table td.ok-cell{color:var(--ok);font-weight:700}
+table td.no-cell{color:var(--warn);font-weight:700}
+table td.ok-cell b{color:var(--ok)}
+table td.no-cell b{color:var(--warn)}
+table td b{color:var(--ink)}
+.mnemo-letras{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.mnemo-letras .mn-big{font-size:clamp(15px,1.9vw,27px);letter-spacing:-.02em;white-space:nowrap}
+.mnemo-frase{text-wrap:balance}
+.casos .caso-n{font-size:15px;letter-spacing:-.02em}
+table tbody tr td:first-child{white-space:normal}
+.selo table{margin:10px 0 2px}
+.selo table th,.selo table td{font-size:13.5px;padding:7px 9px}
+.linha-tempo::before{left:76px}
+.lt-q{flex:0 0 76px;font-size:11.5px}
+@media (max-width:640px){.linha-tempo::before{left:70px}.lt-q{flex:0 0 70px;font-size:10.5px}}
+.tbl-wrap{border:0;background:transparent;border-radius:0;margin:18px 0}
+.selo-b .tbl-wrap{margin:10px 0 2px}
+.selo-b .tbl-wrap table{margin:0}
+h3.sub-h{font-family:var(--f-display);font-size:clamp(17px,2vw,21px);font-weight:600;letter-spacing:-.02em;
+  color:var(--ink);margin:30px 0 12px;padding-top:14px;border-top:1px solid var(--edge)}
+.art-corpo h3.sub-h:first-child{border-top:0;padding-top:0;margin-top:0}
+
+/* faixa identificadora da amostra */
+.faixa{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--accent);color:var(--ground);
+ font-family:var(--f-ui);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+ text-align:center;padding:5px 10px}
+body{padding-top:26px}
+#rail{top:26px;height:calc(100vh - 26px)}
+#barra{top:26px}
+
+/* ---- complementos: questões, julgados e assertivas incorporados ---- */
+.q-dif[data-d="medio"]{color:var(--ok);border-color:var(--ok)}
+.fgv-as{border:1px solid var(--edge);border-left:4px solid var(--ok);border-radius:var(--r-lg,10px);background:var(--surface);padding:12px 16px;margin:0 0 12px}
+.fgv-as-h{display:flex;gap:10px;align-items:center;margin:0 0 6px;font-family:var(--f-ui);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.fgv-tag{color:var(--ok);font-weight:700}
+.fgv-n{color:var(--muted)}
+.fgv-as-t{margin:0 0 6px}
+.fgv-as-x summary{cursor:pointer;color:var(--alt2);font-weight:600;font-size:.92em}
+.fgv-as-x p{margin:.5em 0 0}
+.qx-bloco{margin:18px 0 22px;padding:14px 0 2px;border-top:1px dashed var(--edge)}
+.qx-t{font-family:var(--f-ui);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--alt2);margin:6px 0 10px}
+.selo[data-k="juris"]{--sk:var(--azul,var(--alt));--sw:var(--azul-wash,var(--alt-wash))}
+.selo[data-k="tese"]{--sk:var(--accent);--sw:var(--accent-wash)}
+details.jx{margin:8px 0 2px}
+details.jx summary{cursor:pointer;font-family:var(--f-ui);font-size:12.5px;font-weight:600;color:var(--alt2)}
+details.jx p{font-size:14.5px}
+</style>
+</head>
+<body class="">
+<div class="faixa">Capítulo 18 — Procedimentos Especiais Remanescentes · Arts. 524 a 530-I e 541 a 562 + Lei 8.038/1990 · crimes contra a propriedade imaterial: rito da queixa e rito da ação pública · Súmula 574-STJ · prazo de 30 dias do art. 529 × decadência · restauração de autos · medida de segurança por fato não criminoso · ação penal originária nos tribunais</div>
+<div class="bg-veil"></div>
+<div class="shell">
+
+<aside id="rail" aria-label="Sumário lateral">
+  <div class="rail-brand">
+    <h1>Processo Penal</h1>
+    <p>Cap. 18 &middot; Delegado PCPR</p>
+  </div>
+  <div class="rail-stats">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="26" fill="none" stroke="var(--edge)" stroke-width="4"></circle><circle id="ringArc" cx="29" cy="29" r="26" fill="none" stroke="var(--ok)" stroke-width="4" stroke-linecap="round" stroke-dasharray="163.4" stroke-dashoffset="163.4" transform="rotate(-90 29 29)"></circle></svg>
+      <span class="ring-txt" id="ringTxt">0%</span>
+    </div>
+    <div class="stat-lines">
+      <span><b id="stA">0</b> blocos estudados</span>
+      <span id="stFiltro">Sem filtro ativo</span>
+      <span>Questões: <b id="stQ">&mdash;</b></span>
+    </div>
+  </div>
+  <nav class="rail-nav" id="railNav">
+    <p class="rn-g">1 &mdash; Propriedade imaterial</p>
+    <a href="#s-teoria18" data-nav="s-teoria18"><span class="rn-num">18.1</span><span class="rn-body"><span class="rn-title">Dois ritos, um bem jurídico</span></span><span class="rn-check">&#10003;</span></a>
+    <a href="#a-cpp-524" data-nav="a-cpp-524"><span class="rn-num">524-530-A</span><span class="rn-body"><span class="rn-title">Rito da ação privada</span></span><span class="rn-check">&#10003;</span></a>
+    <a href="#a-cpp-530b" data-nav="a-cpp-530b"><span class="rn-num">530-B-530-I</span><span class="rn-body"><span class="rn-title">Rito da ação pública</span></span><span class="rn-check">&#10003;</span></a>
+    <p class="rn-g">2 &mdash; Restauração de autos</p>
+    <a href="#a-cpp-541" data-nav="a-cpp-541"><span class="rn-num">541-548</span><span class="rn-body"><span class="rn-title">Autos extraviados</span></span><span class="rn-check">&#10003;</span></a>
+    <p class="rn-g">3 &mdash; Medida de segurança</p>
+    <a href="#a-cpp-549" data-nav="a-cpp-549"><span class="rn-num">549-555</span><span class="rn-body"><span class="rn-title">Fato não criminoso</span></span><span class="rn-check">&#10003;</span></a>
+    <p class="rn-g">4 &mdash; Competência originária</p>
+    <a href="#a-cpp-556" data-nav="a-cpp-556"><span class="rn-num">556-562</span><span class="rn-body"><span class="rn-title">Revogação e Lei 8.038</span></span><span class="rn-check">&#10003;</span></a>
+    <a href="#s-lei8038" data-nav="s-lei8038"><span class="rn-num">8.038</span><span class="rn-body"><span class="rn-title">O rito nos tribunais</span></span><span class="rn-check">&#10003;</span></a>
+    <p class="rn-g">5 &mdash; Fechamento</p>
+    <a href="#s-quadro18" data-nav="s-quadro18"><span class="rn-num">Quadro</span><span class="rn-body"><span class="rn-title">Painel de decisão</span></span><span class="rn-check">&#10003;</span></a>
+    <a href="#s-revisao18" data-nav="s-revisao18"><span class="rn-num">Rev.</span><span class="rn-body"><span class="rn-title">Cinco minutos</span></span><span class="rn-check">&#10003;</span></a>
+  </nav>
+  <div class="rail-foot">
+    <p>Progresso, respostas, desafios e tempo ficam salvos neste navegador.</p>
+    <button id="btnReset" type="button">Zerar progresso</button>
+  </div>
+</aside>
+
+<main><div class="col">
+<header class="hero">
+  <p class="eyebrow">Capítulo 18 · Delegado PCPR · FGV</p>
+  <h1><span class="gilt">Procedimentos especiais remanescentes</span></h1>
+  <p class="sub">CPP, arts. <b>524 a 530-I</b> (crimes contra a <b>propriedade imaterial</b>), <b>541 a 548</b> (<b>restauração de autos</b>), <b>549 a 555</b> (medida de segurança por fato não criminoso) e <b>556 a 562</b>, revogados pela Lei 8.658/1993 — hoje, a <b>ação penal originária</b> segue a <b>Lei 8.038/1990</b>.</p>
+  <div class="frieze"><i></i><b></b><i></i></div>
+  <div class="marks">
+    <div><b id="mkArt">7</b><span>Blocos</span></div>
+    <div><b id="mkJur">7</b><span>Cartões</span></div>
+    <div><b id="mkQ">4</b><span>Questões</span></div>
+    <div><b id="mkD">9</b><span>Desafios</span></div>
+    <div><b id="mkPct">0%</b><span>Concluído</span></div>
+  </div>
+</header>
+
+<section class="legenda">
+  <p class="lg-t">Como ler os destaques</p>
+  <div class="lg-grid">
+    <span class="lg"><b class="hl hl-cond">fundo marcado</b> — o trecho que decide a questão</span>
+    <span class="lg"><i class="k-neg">■</i> proibição, exceção, pegadinha</span>
+    <span class="lg"><i class="k-ref">■</i> referência normativa <em>(artigo, súmula, tema)</em></span>
+    <span class="lg"><b class="k-org">negrito</b> — termo técnico que você precisa nomear</span>
+  </div>
+</section>
+
+<section class="top-sum" id="topSum">
+  <div class="ts-h" id="tsHead" role="button" tabindex="0" aria-expanded="true">
+    <div style="flex:1;min-width:0">
+      <h2>Sumário do capítulo<span class="ts-sub">Clique para recolher ou abrir</span></h2>
+    </div>
+    <span class="ts-chev" aria-hidden="true">▾</span>
+  </div>
+  <div class="ts-body">
+    <p class="ts-tit">Parte I — Crimes contra a propriedade imaterial</p>
+    <div class="ts-grid">
+      <a href="#s-teoria18"><b>18.1</b>Direito autoral, propriedade industrial e a ação penal de cada um</a>
+      <a href="#a-cpp-524"><b>Arts. 524 a 530-A</b>Busca e apreensão prévia, laudo, homologação e prazo de 30 dias</a>
+      <a href="#a-cpp-530b"><b>Arts. 530-B a 530-I</b>Apreensão pela polícia, termo, perícia por amostragem e destruição</a>
+    </div>
+    <p class="ts-tit" style="margin-top:16px">Parte II — Restauração de autos</p>
+    <div class="ts-grid">
+      <a href="#a-cpp-541"><b>Arts. 541 a 548</b>Cópia autêntica, diligências e valor dos autos restaurados</a>
+    </div>
+    <p class="ts-tit" style="margin-top:16px">Parte III — Medida de segurança por fato não criminoso</p>
+    <div class="ts-grid">
+      <a href="#a-cpp-549"><b>Arts. 549 a 555</b>Um capítulo que o Código Penal de 1984 esvaziou</a>
+    </div>
+    <p class="ts-tit" style="margin-top:16px">Parte IV — Processos de competência originária</p>
+    <div class="ts-grid">
+      <a href="#a-cpp-556"><b>Arts. 556 a 562</b>Revogados pela Lei 8.658/1993</a>
+      <a href="#s-lei8038"><b>Lei 8.038/1990</b>Denúncia, resposta, recebimento colegiado e instrução pelo relator</a>
+    </div>
+    <p class="ts-tit" style="margin-top:16px">Parte V — Fechamento</p>
+    <div class="ts-grid">
+      <a href="#s-quadro18"><b>Quadro</b>Painel de decisão</a>
+      <a href="#s-revisao18"><b>Revisão</b>O capítulo em 5 minutos</a>
+    </div>
+  </div>
+</section>
+
+<div id="barra">
+  <div class="busca-linha">
+    <label class="campo" for="q">
+      <span class="lupa" aria-hidden="true">⌕</span>
+      <input id="q" type="text" placeholder="Buscar artigo, súmula, tese, palavra-chave…  (tecla /)" autocomplete="off">
+      <button id="limpar" type="button" aria-label="Limpar busca">×</button>
+    </label>
+    <button id="btnBarra" type="button" aria-expanded="true"><span id="btnBarraTxt">Ocultar busca</span> <span class="cv" aria-hidden="true">▴</span></button>
+  </div>
+  <div class="chips" id="chips">
+    <button class="chip" type="button" data-f="STF" aria-pressed="false">STF</button>
+    <button class="chip" type="button" data-f="STJ" aria-pressed="false">STJ</button>
+    <button class="chip" type="button" data-k="sumula" aria-pressed="false">Súmulas</button>
+    <button class="chip forte" type="button" data-k="divergencia" aria-pressed="false">Divergências</button>
+    <button class="chip" type="button" data-k="atencao" aria-pressed="false">Pegadinhas</button>
+    <button class="chip" type="button" data-k="novidade" aria-pressed="false">Novidades</button>
+    <button class="chip" type="button" data-k="tese" aria-pressed="false">Teses fixadas</button>
+    <button class="chip" type="button" data-k="lei" aria-pressed="false">Lei especial</button>
+    <button class="chip" type="button" data-e="pendentes" aria-pressed="false">Só pendentes</button>
+  </div>
+  <p id="contador">Exibindo <b id="cA">7</b> blocos · <b id="cJ">7</b> cartões</p>
+  <p class="barra-aviso">Busca oculta — clique em “Mostrar busca” para filtrar novamente.</p>
+</div>
+<div class="vazio" id="vazio">Nada encontrado com esse filtro. Limpe a busca e tente outro termo.</div>
+
+<div class="placar-mini">
+  <span class="pm-t">Treino</span>
+  <span><b id="qCertas">0</b> certas · <b id="qErradas">0</b> erradas · <b id="qFeitas">0</b> de <b id="qTotal">4</b></span>
+  <span>Aproveitamento: <b id="qPct">0%</b></span>
+  <svg width="0" height="0" aria-hidden="true"><circle id="qArc" r="23.5" stroke-dasharray="147.65" stroke-dashoffset="147.65"></circle></svg>
+  <button id="qZerar" type="button">Zerar placar</button>
+</div>
+
+<div class="placar-mini">
+  <span class="pm-t" style="color:var(--teal)">Escrita</span>
+  <span>Desafios digitados: <b id="dCertos">0</b> de <b id="dTotal">9</b> resolvidos de cabeça</span>
+  <button id="dZerar" type="button">Zerar desafios</button>
+</div>
+
+<div class="divisor titulo" id="s-abertura18"><span class="d-num">CPP · Livro II · Títulos II e III</span><h2>Os procedimentos que <i>sobraram</i></h2></div>
+<section class="abertura">
+  <h2>O que o capítulo 12 deixou para trás</h2>
+  <p>O capítulo 12 percorreu o procedimento comum (ordinário, sumário e sumaríssimo), os crimes funcionais, os crimes contra a honra e a Lei de Drogas. <span class="hl hl-cond">Ficaram de fora quatro blocos do Livro II que a FGV cobra justamente porque quase ninguém os lê:</span> o rito dos crimes contra a <b>propriedade imaterial</b>, a <b>restauração de autos</b>, a <b>medida de segurança por fato não criminoso</b> e o processo nos <b>tribunais</b>.</p>
+  <p>São regimes muito desiguais. O primeiro é vivo e cheio de detalhes numéricos (dois peritos, três dias, trinta dias, oito dias, duas testemunhas). O segundo é técnico e quase intocado desde 1941. O terceiro está <b>tacitamente revogado</b>. O quarto foi <b>expressamente revogado</b> e substituído por lei especial. <span class="hl hl-neg">Saber em qual dessas situações está cada artigo é metade da questão.</span></p>
+  <p>  <div class="grade-cores">
+    <div class="cartao-cor" data-cor="coral"><p class="cc-tit">Súmula 574-STJ</p><p class="cc-txt">Na violação de direito autoral, basta a <b>perícia por amostragem</b>, nos aspectos externos do material, sendo desnecessário identificar os titulares dos direitos violados.</p><span class="cc-tag">Cai sempre</span></div>
+    <div class="cartao-cor" data-cor="violeta"><p class="cc-tit">Info 692 · STJ</p><p class="cc-txt">O prazo de <b>30 dias</b> do art. 529 <b>não afasta</b> a decadência de <b>6 meses</b> contada da ciência da autoria (REsp 1.762.142-MG).</p><span class="cc-tag">Prazo duplo</span></div>
+    <div class="cartao-cor" data-cor="teal"><p class="cc-tit">Lei 8.038/1990</p><p class="cc-txt">Nos tribunais, a denúncia é recebida pelo <b>colegiado</b>, depois de <b>resposta em 15 dias</b> — e o STF manda interrogar o réu <b>ao final</b>.</p><span class="cc-tag">Ação penal originária</span></div>
+  </div>
+</p>
+  <p>    <div class="importante">
+      <div class="imp-h"><span class="imp-x">↔</span> O que já foi visto e como reaparece aqui</div>
+      <div class="imp-b">
+        <b>Capítulo 3:</b> a <b>ação penal privada</b>, a decadência do art. 38 e a <b>indivisibilidade</b> — aqui, o prazo especial do art. 529.
+        <b>Capítulo 4:</b> a <b>competência por prerrogativa de função</b> (AP 937 e HC 232.627) — aqui, o rito que o tribunal segue quando é o juiz natural.
+        <b>Capítulo 7:</b> o <b>exame de corpo de delito</b> (art. 158) — o art. 525 transforma a perícia em <b>condição de procedibilidade</b>.
+        <b>Capítulo 11:</b> a <b>sentença absolutória imprópria</b> (art. 386, p.ú., III) — que tornou obsoleto o capítulo da medida de segurança por fato não criminoso.
+      </div>
+    </div>
+</p>
+  <b>Aviso de método:</b> <span class="hl hl-cond">lei seca integral dos arts. 524 a 562</span> (com a indicação do que está revogado), a Lei 8.038/1990 no que cai em prova, súmulas e julgados colados ao dispositivo, questões de provas intercaladas e <b class="hl hl-org">desafios de escrita</b>.
+</section>
+<div class="divisor" id="s-parte1"><span class="d-num">Parte 1</span><h2>Crimes contra a propriedade imaterial</h2></div>
+<article class="artigo" id="s-teoria18" data-art="s-teoria18" data-busca="propriedade imaterial direito autoral propriedade industrial lei 9610 lei 9279 art 184 art 186 acao penal privada publica incondicionada condicionada pirataria art 199 art 191 art 200 art 201 patente de processo">
+  <div class="art-head">
+    <div class="ah-l"><span class="art-num">18.1</span><span class="ct">Teoria</span><span class="ct alt">Doutrina e legislação</span></div>
+    <p class="art-tema">A natureza da ação penal escolhe o rito.</p>
+  </div>
+  <div class="art-corpo">
+
+    <p>“Propriedade imaterial” é gênero: abrange o <b>direito autoral</b> (Lei 9.610/1998; CP, art. 184) e a <b>propriedade industrial</b> — patentes, desenhos industriais, marcas, concorrência desleal (Lei 9.279/1996, arts. 183 a 195). <span class="hl hl-cond">O CPP desenhou dois ritos, e o critério de escolha é a natureza da ação penal</span>, que varia conforme o crime.</p>
+    <div class="importante">
+      <div class="imp-h"><span class="imp-x">★</span> Qual ação, qual rito</div>
+      <div class="imp-b">
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Crime</th><th>Ação penal</th><th>Rito do CPP</th></tr></thead>
+          <tbody>
+            <tr><td><b>Violação de direito autoral</b> simples (CP, art. 184, <i>caput</i>)</td><td><b>Privada</b> (CP, art. 186, I)</td><td class="ok-cell">Arts. 524 a 530 (via art. 530-A)</td></tr>
+            <tr><td>Art. 184, §§ 1º e 2º (reprodução com <b>intuito de lucro</b>; venda de cópias “piratas”)</td><td><b>Pública incondicionada</b> (art. 186, II)</td><td class="ok-cell">Arts. 530-B a 530-H (via art. 530-I)</td></tr>
+            <tr><td>Art. 184, § 3º (oferta ao público por cabo, fibra, satélite etc., com intuito de lucro)</td><td><b>Pública condicionada</b> (art. 186, IV)</td><td class="ok-cell">Arts. 530-B a 530-H</td></tr>
+            <tr><td>Qualquer forma do art. 184 contra <b>entidade de direito público</b>, autarquia, empresa pública, SEM ou fundação pública</td><td><b>Pública incondicionada</b> (art. 186, III)</td><td class="ok-cell">Arts. 530-B a 530-H</td></tr>
+            <tr><td><b>Propriedade industrial</b> (Lei 9.279/1996)</td><td><b>Privada</b>, como regra (art. 199); <b>pública</b> no art. 191 (uso de armas, brasões ou distintivos oficiais)</td><td class="ok-cell">Arts. 524 a 530 + diligências dos arts. 200 e 201 da LPI</td></tr>
+          </tbody>
+        </table></div>
+        <span class="hl hl-neg">A pegadinha:</span> a pirataria comercial (art. 184, § 2º) é de <b>ação pública incondicionada</b> — o delegado instaura inquérito de ofício e apreende tudo. Já a mera cópia sem intuito de lucro (<i>caput</i>) é de <b>ação privada</b> e segue o rito da queixa.
+      </div>
+    </div>
+    <div class="zona">
+      <p class="zona-t">Propriedade industrial: as regras da Lei 9.279/1996</p>
+      <div class="selos">
+        <div class="selo" data-k="lei" data-c="Lei" data-busca="lei 9279 propriedade industrial art 199 acao privada art 191 acao publica art 200 diligencia busca e apreensao patente de processo perito art 201 estabelecimento legalmente organizado vistoria apreensao nao paralisar atividade">
+          <div class="selo-h"><span class="si">▣</span><span class="sl">Busca e apreensão na LPI</span><span class="src">Lei 9.279/1996, arts. 199 a 201</span></div>
+          <div class="selo-b">
+            <b>Art. 199:</b> nos crimes contra a propriedade industrial, procede-se mediante <b>queixa</b>, salvo no crime do art. 191, em que a ação é <b>pública</b>.
+            <b>Art. 200:</b> a ação penal e as diligências preliminares de busca e apreensão obedecem ao <b>CPP</b>, com uma especialidade: em crime contra <b>patente de processo</b>, o oficial do juízo é acompanhado por <b>perito</b>, que verifica preliminarmente a existência do ilícito, podendo o juiz ordenar a apreensão de produtos obtidos com o processo patenteado.
+            <b>Art. 201:</b> tratando-se de <b>estabelecimento legalmente organizado e funcionando publicamente</b>, as diligências limitam-se à <b>vistoria e apreensão dos produtos</b>, <b>não podendo ser paralisada</b> a atividade licitamente exercida.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="q-inline">
+      <p class="bloco-q-h"><span class="bq-n">Questão 1</span> Lei 9.279/1996</p>
+      <article class="questao" data-q="c18q1" data-gab="D" data-dif="muito">
+        <div class="q-head"><span class="q-num">Q1</span><span class="q-dif" data-d="muito">Muito difícil</span><span class="q-marca"></span><span class="q-banca">FGV · MPGO · Promotor de Justiça Substituto</span></div>
+        <p class="q-enunciado">O Ministério Público do Estado de Goiás recebeu denúncia anônima informando que José, agindo com dolo, teria cometido crime contra a propriedade industrial ao fabricar, sem autorização do titular, dezenas de produtos cobertos por patente de invenção. De acordo com a narrativa e considerando as disposições da Lei nº 9.279/1996, analise as afirmativas a seguir. I. Na diligência de busca e apreensão, em crime contra patente que tenha por objeto a invenção de processo, o oficial do juízo será acompanhado por perito, que verificará, preliminarmente, a existência do ilícito, podendo o juiz ordenar a apreensão de produtos obtidos pelo contrafator com o emprego do processo patenteado. II. Tratando-se de estabelecimentos industriais ou comerciais legalmente organizados e que estejam funcionando publicamente, as diligências preliminares limitar-se-ão à vistoria e apreensão dos produtos, quando ordenadas pelo juiz, não podendo ser paralisada a sua atividade licitamente exercida. III. Os crimes contra a propriedade industrial são persequíveis mediante ação penal pública condicionada à representação do ofendido. Está correto o que se afirma em</p>
+        <ul class="q-alts">
+          <li class="q-alt" data-l="A"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">A</span><span>I, apenas.</span></button></li>
+          <li class="q-alt" data-l="B"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">B</span><span>II, apenas.</span></button></li>
+          <li class="q-alt" data-l="C"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">C</span><span>III, apenas.</span></button></li>
+          <li class="q-alt" data-l="D"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">D</span><span>I e II, apenas.</span></button></li>
+          <li class="q-alt" data-l="E"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">E</span><span>I, II e III.</span></button></li>
+        </ul>
+        <div class="q-acoes">
+          <button class="q-btn primario q-responder" type="button">Revelar gabarito</button>
+          <button class="q-btn q-limpar" type="button">Limpar marcações</button>
+          <button class="q-btn q-refazer" type="button">Refazer</button>
+          <span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span>
+        </div>
+        <div class="q-coment" hidden>
+          <p class="qc-t">Gabarito comentado</p>
+          <p><span class="qc-gab">Gabarito: D.</span></p>
+          <p>I e II reproduzem os <b>arts. 200 e 201</b> da Lei 9.279/1996. <b>III</b> é incorreta: em regra, os crimes contra a propriedade industrial são de <b>ação penal privada</b> (art. 199); a ação é <b>pública</b> apenas no crime do art. 191. Aplica-se o rito dos arts. 524 e seguintes do CPP.</p>
+        </div>
+      </article>
+    </div>
+    <div class="desafio" data-d="c18d1" data-resp="privada|acao privada|ação privada|queixa" data-dica="CP, art. 186, I — a ação penal na violação de direito autoral do caput do art. 184." data-porque="&lt;b&gt;CP, art. 186, I:&lt;/b&gt; no crime do art. 184, &lt;i&gt;caput&lt;/i&gt;, procede-se mediante &lt;b&gt;queixa&lt;/b&gt; (ação penal &lt;b&gt;privada&lt;/b&gt;). Os §§ 1º e 2º são de ação pública incondicionada (II) e o § 3º, de ação pública condicionada (IV).">
+      <div class="df-h"><span class="df-ic">⚖</span><span class="df-t">Escreva de cabeça</span><span class="df-tag">CP, art. 186, I</span></div>
+      <p class="df-p">Na violação de direito autoral do caput do art. 184 do CP, a ação penal é <span class="df-gap">?</span>.</p>
+      <div class="df-in">
+        <input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false">
+        <button class="df-ok" type="button">Conferir</button>
+        <button class="df-ver" type="button">Ver resposta</button>
+      </div>
+      <div class="df-de" hidden></div>
+      <div class="df-fb" hidden></div>
+    </div>
+
+
+    <button class="art-check" type="button" data-id="s-teoria18" aria-pressed="false"><span class="acx">✓</span><span class="act">Marcar estudado</span></button>
+  </div>
+</article>
+<article class="artigo" id="a-cpp-524" data-art="a-cpp-524" data-busca="art 524 crimes contra a propriedade imaterial art 525 exame pericial queixa ou denuncia nao sera recebida art 526 prova de direito a acao art 527 dois peritos tres dias laudo impugnar art 528 homologacao do laudo art 529 trinta dias apos a homologacao vista ao ministerio publico art 530 prisao em flagrante oito dias art 530 a mediante queixa resp 1762142 info 692 decadencia seis meses">
+  <div class="art-head">
+    <div class="ah-l"><span class="art-num">Arts. 524 a 530-A</span><span class="ct">Lei seca</span></div>
+    <p class="art-tema">Dois peritos, três dias, homologação e trinta dias para a queixa.</p>
+  </div>
+  <div class="art-corpo">
+
+    <p class="lex"><b class="k-ref">Art. 524.</b>  No processo e julgamento dos crimes contra a propriedade imaterial, observar-se-á o disposto nos <b>Capítulos I e III do Título I</b> deste Livro, com as modificações constantes dos artigos seguintes.</p>
+    <p class="lex"><b class="k-ref">Art. 525.</b>  No caso de haver o crime deixado vestígio, a queixa ou a denúncia <b>não será recebida</b> se não for instruída com o <b>exame pericial</b> dos objetos que constituam o corpo de delito.</p>
+    <p class="lex"><b class="k-ref">Art. 526.</b>  <b>Sem a prova de direito à ação</b>, não será recebida a queixa, nem ordenada qualquer diligência preliminarmente requerida pelo ofendido.</p>
+    <p class="lex"><b class="k-ref">Art. 527.</b>  A diligência de busca ou de apreensão será realizada por <b>dois peritos nomeados pelo juiz</b>, que verificarão a existência de fundamento para a apreensão, e quer esta se realize, quer não, o laudo pericial será apresentado dentro de <b>3 (três) dias</b> após o encerramento da diligência.</p>
+    <p class="lex"><b>Parágrafo único.</b>  O requerente da diligência poderá <b>impugnar o laudo contrário</b> à apreensão, e o juiz ordenará que esta se efetue, se reconhecer a improcedência das razões aduzidas pelos peritos.</p>
+    <p class="lex"><b class="k-ref">Art. 528.</b>  Encerradas as diligências, os autos serão conclusos ao juiz para <b>homologação do laudo</b>.</p>
+    <p class="lex"><b class="k-ref">Art. 529.</b>  Nos crimes de ação privativa do ofendido, não será admitida queixa com fundamento em apreensão e em perícia, se decorrido o prazo de <b>30 dias, após a homologação do laudo</b>.</p>
+    <p class="lex"><b>Parágrafo único.</b>  Será dada <b>vista ao Ministério Público</b> dos autos de busca e apreensão requeridas pelo ofendido, se o crime for de ação pública e não tiver sido oferecida queixa no prazo fixado neste artigo.</p>
+    <p class="lex"><b class="k-ref">Art. 530.</b>  Se ocorrer <b>prisão em flagrante</b> e o réu não for posto em liberdade, o prazo a que se refere o artigo anterior será de <b>8 (oito) dias</b>.</p>
+    <p class="lex"><b class="k-ref">Art. 530-A.</b>  O disposto nos arts. 524 a 530 será aplicável aos crimes em que se proceda <b>mediante queixa</b>. <i>(Incluído pela Lei nº 10.695, de 2003)</i></p>
+    <div class="importante">
+      <div class="imp-h"><span class="imp-x">★</span> O rito da queixa em cinco passos</div>
+      <div class="imp-b">
+        <div class="fluxo"><div class="fx-p" data-c="1"><span class="fx-n">1</span><span class="fx-t">O ofendido prova o <b>direito à ação</b> — a titularidade do direito violado (art. 526)</span></div><div class="fx-p" data-c="2"><span class="fx-n">2</span><span class="fx-t">Requer a <b>busca e apreensão</b> como diligência preliminar: <b>dois peritos</b> nomeados pelo juiz (art. 527)</span></div><div class="fx-p" data-c="3"><span class="fx-n">3</span><span class="fx-t">Laudo em <b>3 dias</b>; se contrário à apreensão, o requerente pode <b>impugná-lo</b> (art. 527, p.ú.)</span></div><div class="fx-p" data-c="4"><span class="fx-n">4</span><span class="fx-t">O juiz <b>homologa o laudo</b> (art. 528) — decisão com força de definitiva, que desafia <b>apelação</b> (art. 593, II)</span></div><div class="fx-p" data-c="1"><span class="fx-n">5</span><span class="fx-t">Queixa em <b>30 dias</b> da homologação; <b>8 dias</b> se houver réu preso em flagrante (arts. 529 e 530)</span></div></div>
+        <span class="hl hl-cond">O art. 525 cria uma condição de procedibilidade específica:</span> nos crimes que deixam vestígio, a peça acusatória <b>não será recebida</b> sem o laudo. É regra mais rígida que a do art. 158, que permite a juntada do exame no curso da instrução.
+      </div>
+    </div>
+    <div class="zona">
+      <p class="zona-t">O prazo do art. 529 e a decadência</p>
+      <div class="selos">
+        <div class="selo" data-k="juris" data-c="STJ" data-busca="prazo do art 529 do cpp nao afasta a decadencia de seis meses contados da ciencia da autoria crimes contra a propriedade imaterial laudo homologado fraude">
+          <div class="selo-h"><span class="si">⚖</span><span class="sl">Os 30 dias do art. 529 não afastam a decadência de 6 meses</span><span class="src">STJ, 6ª T., REsp 1.762.142-MG (Info 692)</span></div>
+          <div class="selo-b">
+            <p>“O prazo do art. 529 do CPP <b>não afasta a decadência</b> pelo não exercício do direito de queixa em <b>seis meses</b>, contados da ciência da autoria do crime.”</p>
+            <span class="hl hl-cond">Como os dois prazos convivem:</span> com a ciência da autoria começa o prazo de <b>6 meses</b> (art. 38); se, nesse ínterim, o laudo for homologado, o prazo <b>reduz-se para 30 dias</b> contados da homologação. Entender o contrário permitiria ao querelante, anos depois, pedir a perícia e “reabrir” o prazo a seu bel-prazer.
+            <span class="cite">STJ, 6ª Turma, REsp 1.762.142-MG, Rel. Min. Sebastião Reis Júnior, j. 13/04/2021 (Info 692).</span>
+          </div>
+        </div>
+        <div class="selo" data-k="atencao" data-c="CPP" data-busca="indeferimento da busca e apreensao homologacao do laudo decisao com forca de definitiva apelacao art 593 ii">
+          <div class="selo-h"><span class="si">!</span><span class="sl">Recurso contra o indeferimento da busca e contra a homologação</span><span class="src">CPP, art. 593, II</span></div>
+          <div class="selo-b">
+            <p>A decisão que <b>indefere</b> a busca e apreensão requerida pelo ofendido e a que <b>homologa</b> o laudo encerram o procedimento preparatório: são decisões <b>com força de definitiva</b>, impugnáveis por <b>apelação</b> (art. 593, II), e não por RESE — o art. 581 não as prevê.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="q-inline">
+      <p class="bloco-q-h"><span class="bq-n">Questão 2</span> Arts. 524 a 530-A</p>
+      <article class="questao" data-q="c18q2" data-gab="E" data-dif="medio">
+        <div class="q-head"><span class="q-num">Q2</span><span class="q-dif" data-d="medio">Média</span><span class="q-marca"></span><span class="q-banca">FGV · TJMS · Analista Judiciário - Área Fim</span></div>
+        <p class="q-enunciado">Sobre o procedimento especial dos crimes de propriedade imaterial, considere as afirmativas a seguir: I. Há dois procedimentos especiais para os crimes contra a propriedade imaterial previstos no Código de Processo Penal: procedimento especial dos crimes de ação penal privada e procedimento especial dos crimes de ação penal pública. II. Nos crimes de ação penal de iniciativa privada, há previsão legal de medida prévia, consistente em busca e apreensão e elaboração de laudo pericial, que deverá ser homologado pelo órgão julgador. III. Havendo indeferimento, pelo juiz, do pedido de busca e apreensão, nas ações penais de iniciativa privada, caberá recurso de apelação. Está correto o que se afirma em:</p>
+        <ul class="q-alts">
+          <li class="q-alt" data-l="A"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">A</span><span>somente I;</span></button></li>
+          <li class="q-alt" data-l="B"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">B</span><span>somente II;</span></button></li>
+          <li class="q-alt" data-l="C"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">C</span><span>somente III;</span></button></li>
+          <li class="q-alt" data-l="D"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">D</span><span>somente I e II;</span></button></li>
+          <li class="q-alt" data-l="E"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">E</span><span>I, II e III.</span></button></li>
+        </ul>
+        <div class="q-acoes">
+          <button class="q-btn primario q-responder" type="button">Revelar gabarito</button>
+          <button class="q-btn q-limpar" type="button">Limpar marcações</button>
+          <button class="q-btn q-refazer" type="button">Refazer</button>
+          <span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span>
+        </div>
+        <div class="q-coment" hidden>
+          <p class="qc-t">Gabarito comentado</p>
+          <p><span class="qc-gab">Gabarito: E.</span></p>
+          <p>I – correta: o CPP prevê um rito para a ação privada (arts. 524 a 530, via art. 530-A) e outro para a ação pública (arts. 530-B a 530-H, via art. 530-I). II – correta: busca e apreensão com laudo pericial homologado pelo juiz (arts. 527 e 528). III – correta: o indeferimento tem força de definitiva e desafia apelação (art. 593, II).</p>
+        </div>
+      </article>
+    </div>
+    <div class="desafio" data-d="c18d2" data-resp="30 dias|trinta dias|30" data-dica="Art. 529 — prazo para a queixa depois da homologação do laudo." data-porque="&lt;b&gt;CPP, art. 529:&lt;/b&gt; nos crimes de ação privativa do ofendido, não será admitida queixa com fundamento em apreensão e perícia se decorrido o prazo de &lt;b&gt;30 dias após a homologação do laudo&lt;/b&gt;. Com réu preso em flagrante, o prazo é de &lt;b&gt;8 dias&lt;/b&gt; (art. 530).">
+      <div class="df-h"><span class="df-ic">⚖</span><span class="df-t">Escreva de cabeça</span><span class="df-tag">Art. 529</span></div>
+      <p class="df-p">Não será admitida queixa com fundamento em apreensão e perícia se decorrido o prazo de <span class="df-gap">?</span> após a homologação do laudo.</p>
+      <div class="df-in">
+        <input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false">
+        <button class="df-ok" type="button">Conferir</button>
+        <button class="df-ver" type="button">Ver resposta</button>
+      </div>
+      <div class="df-de" hidden></div>
+      <div class="df-fb" hidden></div>
+    </div>
+    <div class="desafio" data-d="c18d3" data-resp="dois peritos|2 peritos|dois" data-dica="Art. 527 — quantos peritos fazem a diligência de busca no rito da queixa." data-porque="&lt;b&gt;CPP, art. 527:&lt;/b&gt; a diligência de busca ou apreensão é realizada por &lt;b&gt;dois peritos nomeados pelo juiz&lt;/b&gt;, que apresentam laudo em &lt;b&gt;3 dias&lt;/b&gt;. Não confundir com o rito da ação pública (art. 530-D), em que basta &lt;b&gt;um&lt;/b&gt; perito oficial.">
+      <div class="df-h"><span class="df-ic">⚖</span><span class="df-t">Escreva de cabeça</span><span class="df-tag">Art. 527</span></div>
+      <p class="df-p">No rito da queixa, a diligência de busca ou apreensão será realizada por <span class="df-gap">?</span> nomeados pelo juiz.</p>
+      <div class="df-in">
+        <input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false">
+        <button class="df-ok" type="button">Conferir</button>
+        <button class="df-ver" type="button">Ver resposta</button>
+      </div>
+      <div class="df-de" hidden></div>
+      <div class="df-fb" hidden></div>
+    </div>
+
+
+    <button class="art-check" type="button" data-id="a-cpp-524" aria-pressed="false"><span class="acx">✓</span><span class="act">Marcar estudado</span></button>
+  </div>
+</article>
+<article class="artigo" id="a-cpp-530b" data-art="a-cpp-530b" data-busca="art 530 b autoridade policial apreensao bens ilicitamente produzidos ou reproduzidos totalidade equipamentos precipuamente art 530 c termo duas testemunhas art 530 d perito oficial pessoa tecnicamente habilitada art 530 e fieis depositarios art 530 f destruicao requerimento da vitima art 530 g perdimento fazenda nacional art 530 h associacoes assistente da acusacao art 530 i acao publica sumula 574 stj sumula 502 stj">
+  <div class="art-head">
+    <div class="ah-l"><span class="art-num">Arts. 530-B a 530-I</span><span class="ct">Lei 10.695/2003</span></div>
+    <p class="art-tema">Pirataria comercial: a polícia apreende, o perito oficial examina, a amostra basta.</p>
+  </div>
+  <div class="art-corpo">
+
+    <p class="lex"><b class="k-ref">Art. 530-B.</b>  Nos casos das infrações previstas nos <b>§§ 1º, 2º e 3º do art. 184 do Código Penal</b>, a <b>autoridade policial</b> procederá à apreensão dos bens ilicitamente produzidos ou reproduzidos, <b>em sua totalidade</b>, juntamente com os equipamentos, suportes e materiais que possibilitaram a sua existência, desde que estes se destinem <b>precipuamente</b> à prática do ilícito.</p>
+    <p class="lex"><b class="k-ref">Art. 530-C.</b>  Na ocasião da apreensão será lavrado <b>termo</b>, assinado por <b>2 (duas) ou mais testemunhas</b>, com a descrição de todos os bens apreendidos e informações sobre suas origens, o qual deverá integrar o inquérito policial ou o processo.</p>
+    <p class="lex"><b class="k-ref">Art. 530-D.</b>  Subsequente à apreensão, será realizada, por <b>perito oficial</b>, ou, na falta deste, por <b>pessoa tecnicamente habilitada</b>, perícia sobre todos os bens apreendidos e elaborado o laudo que deverá integrar o inquérito policial ou o processo.</p>
+    <p class="lex"><b class="k-ref">Art. 530-E.</b>  Os <b>titulares de direito de autor</b> e os que lhe são conexos serão os <b>fiéis depositários</b> de todos os bens apreendidos, devendo colocá-los à disposição do juiz quando do ajuizamento da ação.</p>
+    <p class="lex"><b class="k-ref">Art. 530-F.</b>  Ressalvada a possibilidade de se preservar o corpo de delito, o juiz poderá determinar, <b>a requerimento da vítima</b>, a <b>destruição</b> da produção ou reprodução apreendida quando <b>não houver impugnação</b> quanto à sua ilicitude ou quando a ação penal <b>não puder ser iniciada por falta de determinação de quem seja o autor</b> do ilícito.</p>
+    <p class="lex"><b class="k-ref">Art. 530-G.</b>  O juiz, ao prolatar a <b>sentença condenatória</b>, poderá determinar a destruição dos bens ilicitamente produzidos ou reproduzidos e o <b>perdimento dos equipamentos</b> apreendidos, desde que precipuamente destinados à produção e reprodução dos bens, em favor da <b>Fazenda Nacional</b>, que deverá destruí-los ou doá-los aos Estados, Municípios e Distrito Federal, a instituições públicas de ensino e pesquisa ou de assistência social, bem como incorporá-los, por economia ou interesse público, ao patrimônio da União, que não poderão retorná-los aos canais de comércio.</p>
+    <p class="lex"><b class="k-ref">Art. 530-H.</b>  As <b>associações de titulares</b> de direitos de autor e os que lhes são conexos poderão, <b>em seu próprio nome</b>, funcionar como <b>assistente da acusação</b> nos crimes previstos no art. 184 do Código Penal, quando praticado em detrimento de qualquer de seus associados.</p>
+    <p class="lex"><b class="k-ref">Art. 530-I.</b>  Nos crimes em que caiba ação penal <b>pública incondicionada ou condicionada</b>, observar-se-ão as normas constantes dos arts. 530-B, 530-C, 530-D, 530-E, 530-F, 530-G e 530-H.</p>
+    <div class="importante">
+      <div class="imp-h"><span class="imp-x">★</span> Os dois ritos lado a lado</div>
+      <div class="imp-b">
+        <div class="tbl-wrap"><table>
+          <thead><tr><th></th><th>Ação privada (arts. 524-530)</th><th>Ação pública (arts. 530-B-530-H)</th></tr></thead>
+          <tbody>
+            <tr><td>Quem apreende</td><td>Peritos nomeados pelo juiz, a requerimento do ofendido</td><td class="ok-cell">A <b>autoridade policial</b>, de ofício</td></tr>
+            <tr><td>Peritos</td><td><b>Dois</b>, nomeados pelo juiz</td><td class="ok-cell"><b>Um</b> perito oficial ou, na falta, pessoa habilitada</td></tr>
+            <tr><td>Documentação</td><td>Laudo em 3 dias, homologado pelo juiz</td><td class="ok-cell"><b>Termo</b> com <b>2 ou mais testemunhas</b> + laudo</td></tr>
+            <tr><td>Depósito dos bens</td><td>—</td><td class="ok-cell">Titulares do direito como <b>fiéis depositários</b></td></tr>
+            <tr><td>Destruição antecipada</td><td>—</td><td class="ok-cell">Pelo juiz, <b>a requerimento da vítima</b>, sem impugnação ou sem autoria conhecida</td></tr>
+            <tr><td>Assistência</td><td>Querelante é parte</td><td class="ok-cell"><b>Associações de titulares</b> podem ser assistentes em nome próprio</td></tr>
+          </tbody>
+        </table></div>
+        <span class="hl hl-neg">Três números que a banca troca:</span> termo com <b>duas</b> testemunhas (não três); <b>um</b> perito oficial (não dois); destruição a requerimento <b>da vítima</b> (não de ofício nem a pedido do MP).
+      </div>
+    </div>
+    <div class="zona">
+      <p class="zona-t">Súmula e prova da materialidade</p>
+      <div class="selos">
+        <div class="selo" data-k="sumula" data-c="STJ" data-busca="sumula 574 stj violacao de direito autoral materialidade pericia por amostragem aspectos externos desnecessaria identificacao dos titulares">
+          <div class="selo-h"><span class="si">§</span><span class="sl">Súmula 574-STJ — perícia por amostragem</span><span class="src">Súmula 574-STJ</span></div>
+          <div class="selo-b">
+            <p>“Para a configuração do delito de violação de direito autoral e a comprovação de sua materialidade, é <b>suficiente a perícia realizada por amostragem</b> do produto apreendido, nos <b>aspectos externos</b> do material, e é <b>desnecessária a identificação dos titulares</b> dos direitos autorais violados ou daqueles que os representem.”</p>
+            <span class="hl hl-cond">Tradução prática:</span> o laudo não precisa examinar cada DVD nem localizar cada artista lesado — basta a amostra e a constatação de que o material é falsificado (capas reprografadas, ausência de selo, mídia virgem).
+          </div>
+        </div>
+        <div class="selo" data-k="atencao" data-c="STJ/STF" data-busca="sumula 502 stj adequacao social venda de cds e dvds piratas tipicidade material principio da adequacao social nao se aplica">
+          <div class="selo-h"><span class="si">!</span><span class="sl">Pirataria não é fato atípico</span><span class="src">CP, art. 184, § 2º · Súmula 502-STJ</span></div>
+          <div class="selo-b">
+            <b>Súmula 502-STJ:</b> “Presentes a materialidade e a autoria, afigura-se <b>típica</b>, em relação ao crime previsto no art. 184, § 2º, do CP, a conduta de expor à venda CDs e DVDs piratas.” <span class="hl hl-neg">O princípio da adequação social não afasta o crime.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="zona inline">
+      <p class="zona-t">Jurisprudência complementar</p>
+      <div class="selos">
+        <div class="selo" data-k="juris" data-c="" data-busca="crime de violacao de direito autoral art 184 do cp crime de violacao de direito autoral basta a pericia por amostragem">
+          <div class="selo-h"><span class="si">⚖</span><span class="sl">Crime de violação de direito autoral (art. 184 do CP)</span><span class="src"></span></div>
+          <div class="selo-b">
+            <p class="selo-t">Crime de violação de direito autoral: basta a perícia por amostragem</p>
+            <details class="jx"><summary>Entenda o julgado</summary><p>Súmula 574-STJ: Para a configuração do delito de violação de direito autoral e a comprovação de sua materialidade, é suficiente a perícia realizada por amostragem do produto apreendido, nos aspectos externos do material, e é desnecessária a identificação dos titulares dos direitos autorais violados ou daqueles que os representem.</p></details>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="desafio" data-d="c18d4" data-resp="amostragem|por amostragem" data-dica="Súmula 574-STJ — como se faz a perícia do material apreendido." data-porque="&lt;b&gt;Súmula 574-STJ:&lt;/b&gt; basta a perícia realizada &lt;b&gt;por amostragem&lt;/b&gt; do produto apreendido, nos aspectos externos do material, sendo desnecessária a identificação dos titulares dos direitos violados.">
+      <div class="df-h"><span class="df-ic">⚖</span><span class="df-t">Escreva de cabeça</span><span class="df-tag">Súmula 574-STJ</span></div>
+      <p class="df-p">Para comprovar a materialidade da violação de direito autoral, é suficiente a perícia realizada por <span class="df-gap">?</span> do produto apreendido.</p>
+      <div class="df-in">
+        <input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false">
+        <button class="df-ok" type="button">Conferir</button>
+        <button class="df-ver" type="button">Ver resposta</button>
+      </div>
+      <div class="df-de" hidden></div>
+      <div class="df-fb" hidden></div>
+    </div>
+
+
+    <button class="art-check" type="button" data-id="a-cpp-530b" aria-pressed="false"><span class="acx">✓</span><span class="act">Marcar estudado</span></button>
+  </div>
+</article>
+<div class="divisor" id="s-parte2"><span class="d-num">Parte 2</span><h2>Restauração de autos extraviados ou destruídos</h2></div>
+<article class="artigo" id="a-cpp-541" data-art="a-cpp-541" data-busca="art 541 autos originais extraviados ou destruidos restaurados copia autentica certidao considerada como original de oficio escrivao certifique citadas pessoalmente edital dez dias primeira instancia art 542 art 543 reinquirir testemunhas substituidas exames repetidos mesmos peritos art 544 vinte dias art 545 art 546 custas em dobro art 547 valerao pelos originais art 548 sentenca condenatoria em execucao continuara a produzir efeito">
+  <div class="art-head">
+    <div class="ah-l"><span class="art-num">Arts. 541 a 548</span><span class="ct">Lei seca</span></div>
+    <p class="art-tema">Restaura-se em primeiro grau, de ofício, e a execução não para.</p>
+  </div>
+  <div class="art-corpo">
+
+    <p class="lex"><b class="k-ref">Art. 541.</b>  Os autos originais de processo penal <b>extraviados ou destruídos</b>, em primeira ou segunda instância, <b>serão restaurados</b>.</p>
+    <p class="lex"><b>§ 1º</b>  Se existir e for exibida <b>cópia autêntica ou certidão</b> do processo, será uma ou outra <b>considerada como original</b>.</p>
+    <p class="lex"><b>§ 2º</b>  Na falta de cópia autêntica ou certidão do processo, o juiz mandará, <b>de ofício, ou a requerimento</b> de qualquer das partes, que:</p>
+    <p class="lex">a) o escrivão certifique o estado do processo, segundo a sua lembrança, e reproduza o que houver a respeito em seus protocolos e registros;</p>
+    <p class="lex">b) sejam requisitadas cópias do que constar a respeito no Instituto Médico-Legal, no Instituto de Identificação e Estatística ou em estabelecimentos congêneres, repartições públicas, penitenciárias ou cadeias;</p>
+    <p class="lex">c) as partes sejam citadas pessoalmente, ou, se não forem encontradas, por edital, com o prazo de <b>dez dias</b>, para o processo de restauração dos autos.</p>
+    <p class="lex"><b>§ 3º</b>  Proceder-se-á à restauração <b>na primeira instância</b>, ainda que os autos se tenham extraviado na segunda.</p>
+    <p class="lex"><b class="k-ref">Art. 542.</b>  No dia designado, as partes serão ouvidas, mencionando-se em termo circunstanciado os pontos em que estiverem acordes e a exibição e a conferência das certidões e mais reproduções do processo apresentadas e conferidas.</p>
+    <p class="lex"><b class="k-ref">Art. 543.</b>  O juiz determinará as diligências necessárias para a restauração, observando-se o seguinte:</p>
+    <p class="lex">I – caso ainda não tenha sido proferida a sentença, <b>reinquirir-se-ão as testemunhas</b> podendo ser <b>substituídas</b> as que tiverem falecido ou se encontrarem em lugar não sabido;</p>
+    <p class="lex">II – os exames periciais, quando possível, serão repetidos, e de preferência <b>pelos mesmos peritos</b>;</p>
+    <p class="lex">III – a prova documental será reproduzida por meio de cópia autêntica ou, quando impossível, <b>por meio de testemunhas</b>;</p>
+    <p class="lex">IV – poderão também ser inquiridas sobre os atos do processo, que deverá ser restaurado, as autoridades, os serventuários, os peritos e mais pessoas que tenham nele funcionado;</p>
+    <p class="lex">V – o Ministério Público e as partes poderão oferecer testemunhas e produzir documentos, para provar o teor do processo extraviado ou destruído.</p>
+    <p class="lex"><b class="k-ref">Art. 544.</b>  Realizadas as diligências que, salvo motivo de força maior, deverão concluir-se dentro de <b>vinte dias</b>, serão os autos conclusos para julgamento.</p>
+    <p class="lex"><b>Parágrafo único.</b>  No curso do processo, e depois de subirem os autos conclusos para sentença, o juiz poderá, dentro em cinco dias, requisitar de autoridades ou de repartições todos os esclarecimentos para a restauração.</p>
+    <p class="lex"><b class="k-ref">Art. 545.</b>  Os selos e as taxas judiciárias, já pagos nos autos originais, não serão novamente cobrados.</p>
+    <p class="lex"><b class="k-ref">Art. 546.</b>  Os <b>causadores de extravio</b> de autos responderão pelas <b>custas, em dobro</b>, sem prejuízo da responsabilidade criminal.</p>
+    <p class="lex"><b class="k-ref">Art. 547.</b>  Julgada a restauração, os autos respectivos <b>valerão pelos originais</b>.</p>
+    <p class="lex"><b>Parágrafo único.</b>  Se no curso da restauração <b>aparecerem os autos originais</b>, nestes continuará o processo, apensos a eles os autos da restauração.</p>
+    <p class="lex"><b class="k-ref">Art. 548.</b>  Até à decisão que julgue restaurados os autos, a <b>sentença condenatória em execução continuará a produzir efeito</b>, desde que conste da respectiva guia arquivada na cadeia ou na penitenciária, onde o réu estiver cumprindo a pena, ou de registro que torne a sua existência inequívoca.</p>
+    <div class="importante">
+      <div class="imp-h"><span class="imp-x">★</span> Os pontos que viram questão</div>
+      <div class="imp-b">
+        <ul class="plain"><li><b>Iniciativa:</b> o juiz age <b>de ofício</b> ou a requerimento de qualquer parte (§ 2º) — não depende de provocação.</li><li><b>Onde:</b> sempre na <b>primeira instância</b>, ainda que o extravio tenha ocorrido no tribunal (§ 3º).</li><li><b>Testemunhas:</b> se ainda não houve sentença, são <b>reinquiridas</b> e podem ser <b>substituídas</b> as falecidas ou em lugar incerto (art. 543, I).</li><li><b>Prazo das diligências:</b> <b>20 dias</b>, salvo força maior (art. 544).</li><li><b>Quem extraviou:</b> paga as custas <b>em dobro</b> e responde criminalmente (art. 546; CP, arts. 314 e 356).</li><li><b>Execução:</b> não se interrompe enquanto se restauram os autos, se houver guia ou registro inequívoco da condenação (art. 548).</li></ul>
+        <span class="hl hl-neg">Comparação com o CPC (arts. 712 a 718):</span> no processo civil, a parte contrária é citada para contestar em <b>5 dias</b> e, se o desaparecimento ocorreu no tribunal, o processo é distribuído, sempre que possível, ao <b>relator originário</b>. No CPP, a restauração é feita <b>em primeiro grau</b>.
+      </div>
+    </div>
+    <div class="desafio" data-d="c18d5" data-resp="primeira instancia|primeira instância|primeiro grau|1ª instância|1a instancia" data-dica="Art. 541, § 3º — onde se processa a restauração." data-porque="&lt;b&gt;CPP, art. 541, § 3º:&lt;/b&gt; “Proceder-se-á à restauração na &lt;b&gt;primeira instância&lt;/b&gt;, ainda que os autos se tenham extraviado na segunda.”">
+      <div class="df-h"><span class="df-ic">⚖</span><span class="df-t">Escreva de cabeça</span><span class="df-tag">Art. 541, § 3º</span></div>
+      <p class="df-p">Proceder-se-á à restauração na <span class="df-gap">?</span>, ainda que os autos se tenham extraviado na segunda.</p>
+      <div class="df-in">
+        <input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false">
+        <button class="df-ok" type="button">Conferir</button>
+        <button class="df-ver" type="button">Ver resposta</button>
+      </div>
+      <div class="df-de" hidden></div>
+      <div class="df-fb" hidden></div>
+    </div>
+    <div class="q-inline">
+      <p class="bloco-q-h"><span class="bq-n">Questão 3</span> Arts. 541 a 548</p>
+      <article class="questao" data-q="c18q4" data-gab="C" data-dif="dificil">
+        <div class="q-head"><span class="q-num">Q3</span><span class="q-dif" data-d="dificil">Difícil</span><span class="q-marca"></span><span class="q-banca">Inédita · padrão FGV</span></div>
+        <p class="q-enunciado">Durante o processamento de apelação criminal no Tribunal de Justiça, os autos físicos de processo por roubo foram destruídos em um incêndio no cartório da câmara criminal. Não havia cópia autêntica nem certidão integral do processo. O réu, condenado em primeiro grau, cumpria pena em execução provisória, com guia arquivada na penitenciária. Sobre a situação, à luz do CPP, é correto afirmar que:</p>
+        <ul class="q-alts">
+          <li class="q-alt" data-l="A"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">A</span><span>a restauração deverá ser processada no próprio Tribunal de Justiça, perante o relator da apelação, por ter sido lá que ocorreu a destruição dos autos.</span></button></li>
+          <li class="q-alt" data-l="B"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">B</span><span>a restauração depende de requerimento do Ministério Público ou da defesa, vedada a iniciativa de ofício do juiz.</span></button></li>
+          <li class="q-alt" data-l="C"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">C</span><span>a restauração será processada em primeira instância, e a sentença condenatória continuará a produzir efeitos até a decisão que julgar restaurados os autos, dada a existência de guia arquivada na penitenciária.</span></button></li>
+          <li class="q-alt" data-l="D"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">D</span><span>enquanto não restaurados os autos, a execução da pena deve ser suspensa, com a imediata soltura do réu.</span></button></li>
+          <li class="q-alt" data-l="E"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">E</span><span>julgada a restauração, os autos restaurados servirão apenas como prova indiciária, devendo a instrução ser integralmente renovada.</span></button></li>
+        </ul>
+        <div class="q-acoes">
+          <button class="q-btn primario q-responder" type="button">Revelar gabarito</button>
+          <button class="q-btn q-limpar" type="button">Limpar marcações</button>
+          <button class="q-btn q-refazer" type="button">Refazer</button>
+          <span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span>
+        </div>
+        <div class="q-coment" hidden>
+          <p class="qc-t">Gabarito comentado</p>
+          <p><span class="qc-gab">Gabarito: C.</span></p>
+          <b>C</b> — CPP, arts. 541, § 3º, e 548.<ul class="plain"><li><b>A</b> — errada: a restauração se faz na <b>primeira instância</b>, ainda que os autos tenham se extraviado na segunda (art. 541, § 3º).</li><li><b>B</b> — errada: o juiz pode agir <b>de ofício</b> (art. 541, § 2º).</li><li><b>D</b> — errada: a sentença em execução <b>continua a produzir efeito</b> se houver guia ou registro inequívoco (art. 548).</li><li><b>E</b> — errada: julgada a restauração, os autos <b>valem pelos originais</b> (art. 547).</li></ul>
+        </div>
+      </article>
+    </div>
+
+
+    <button class="art-check" type="button" data-id="a-cpp-541" aria-pressed="false"><span class="acx">✓</span><span class="act">Marcar estudado</span></button>
+  </div>
+</article>
+<div class="divisor" id="s-parte3"><span class="d-num">Parte 3</span><h2>Medida de segurança por fato não criminoso</h2></div>
+<article class="artigo" id="a-cpp-549" data-art="a-cpp-549" data-busca="art 549 fato que embora nao constituindo infracao penal possa determinar aplicacao de medida de seguranca arts 14 e 27 do codigo penal inquerito periculosidade art 550 art 551 art 552 art 553 tres testemunhas art 554 art 555 revogacao tacita reforma de 1984 sistema vicariante duplo binario absolvicao impropria">
+  <div class="art-head">
+    <div class="ah-l"><span class="art-num">Arts. 549 a 555</span><span class="ct">Lei seca</span><span class="ct alt2">Tacitamente revogado</span></div>
+    <p class="art-tema">Medida de segurança sem crime: uma ideia que o Código Penal de 1984 enterrou.</p>
+  </div>
+  <div class="art-corpo">
+
+    <p class="lex"><b class="k-ref">Art. 549.</b>  Se a autoridade policial tiver conhecimento de fato que, <b>embora não constituindo infração penal</b>, possa determinar a aplicação de medida de segurança (Código Penal, arts. 14 e 27), deverá proceder a inquérito, a fim de apurá-lo e averiguar todos os elementos que possam interessar à verificação da periculosidade do agente.</p>
+    <p class="lex"><b class="k-ref">Art. 550.</b>  O processo será promovido pelo Ministério Público, mediante requerimento que conterá a exposição sucinta do fato, as suas circunstâncias e todos os elementos em que se fundar o pedido.</p>
+    <p class="lex"><b class="k-ref">Art. 551.</b>  O juiz, ao deferir o requerimento, ordenará a intimação do interessado para comparecer em juízo, a fim de ser interrogado.</p>
+    <p class="lex"><b class="k-ref">Art. 552.</b>  Após o interrogatório ou dentro do prazo de dois dias, o interessado ou seu defensor poderá oferecer alegações.</p>
+    <p class="lex"><b>Parágrafo único.</b>  O juiz nomeará defensor ao interessado que não o tiver.</p>
+    <p class="lex"><b class="k-ref">Art. 553.</b>  O Ministério Público, ao fazer o requerimento inicial, e a defesa, no prazo estabelecido no artigo anterior, poderão requerer exames, diligências e arrolar até três testemunhas.</p>
+    <p class="lex"><b class="k-ref">Art. 554.</b>  Após o prazo de defesa ou a realização dos exames e diligências ordenados pelo juiz, de ofício ou a requerimento das partes, será marcada audiência, em que, inquiridas as testemunhas e produzidas alegações orais pelo órgão do Ministério Público e pelo defensor, dentro de dez minutos para cada um, o juiz proferirá sentença.</p>
+    <p class="lex"><b>Parágrafo único.</b>  Se o juiz não se julgar habilitado a proferir a decisão, designará, desde logo, outra audiência, que se realizará dentro de cinco dias, para publicar a sentença.</p>
+    <p class="lex"><b class="k-ref">Art. 555.</b>  Quando, instaurado processo por infração penal, o juiz, absolvendo ou impronunciando o réu, reconhecer a existência de qualquer dos fatos previstos no art. 14 ou no art. 27 do Código Penal, aplicar-lhe-á, se for caso, medida de segurança.</p>
+    <div class="importante">
+      <div class="imp-h"><span class="imp-x">!</span> Um capítulo tacitamente revogado</div>
+      <div class="imp-b">
+        <p>Os “arts. 14 e 27” citados são do <b>Código Penal de 1940 em sua redação original</b>: o <b>crime impossível</b> e o <b>ajuste, determinação, instigação ou auxílio</b> não puníveis (hoje, arts. 17 e 31). O CP de 1940 permitia aplicar <b>medida de segurança</b> a quem praticasse esses fatos, se perigoso — uma medida <b>sem crime</b>.</p>
+        <span class="hl hl-cond">A reforma da Parte Geral de 1984 (Lei 7.209/1984) acabou com isso:</span> adotou o <b>sistema vicariante</b> e passou a admitir medida de segurança <b>apenas para o inimputável e o semi-imputável que praticam fato típico e ilícito</b> (CP, arts. 26, 96 a 99). Sem fato criminoso, não há medida de segurança — e o capítulo dos arts. 549 a 555 perdeu objeto. É a posição da doutrina majoritária (Nestor Távora; Fábio Roque Araújo).
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Ontem (CP 1940)</th><th>Hoje (CP 1984)</th></tr></thead>
+          <tbody>
+            <tr><td>Medida de segurança para <b>imputável perigoso</b> (duplo binário)</td><td class="ok-cell"><b>Sistema vicariante</b>: pena <b>ou</b> medida de segurança</td></tr>
+            <tr><td>Medida de segurança por <b>fato não criminoso</b> (crime impossível, ajuste impunível)</td><td class="no-cell"><b>Inexistente</b> — exige-se fato típico e ilícito</td></tr>
+            <tr><td>Processo autônomo dos arts. 549 a 554</td><td class="ok-cell">Medida de segurança aplicada na <b>sentença absolutória imprópria</b> (CPP, art. 386, p.ú., III)</td></tr>
+          </tbody>
+        </table></div>
+        <span class="hl hl-neg">E no júri?</span> A inimputabilidade, quando for a <b>única tese defensiva</b>, autoriza a <b>absolvição sumária imprópria</b> (art. 415, IV e p.ú.), com aplicação de medida de segurança — tema do capítulo 13.
+      </div>
+    </div>
+    <div class="desafio" data-d="c18d6" data-resp="vicariante|sistema vicariante" data-dica="Lei 7.209/1984 — o sistema que substituiu o duplo binário." data-porque="A reforma de 1984 trocou o &lt;b&gt;duplo binário&lt;/b&gt; (pena &lt;b&gt;e&lt;/b&gt; medida de segurança) pelo &lt;b&gt;sistema vicariante&lt;/b&gt; (pena &lt;b&gt;ou&lt;/b&gt; medida de segurança), restrito a inimputáveis e semi-imputáveis que praticam fato típico e ilícito. Por isso o processo de medida de segurança por fato não criminoso (arts. 549 a 555) está tacitamente revogado.">
+      <div class="df-h"><span class="df-ic">⚖</span><span class="df-t">Escreva de cabeça</span><span class="df-tag">CP, arts. 26 e 98</span></div>
+      <p class="df-p">Desde 1984, o Código Penal adota o sistema <span class="df-gap">?</span>, que tornou inaplicáveis os arts. 549 a 555 do CPP.</p>
+      <div class="df-in">
+        <input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false">
+        <button class="df-ok" type="button">Conferir</button>
+        <button class="df-ver" type="button">Ver resposta</button>
+      </div>
+      <div class="df-de" hidden></div>
+      <div class="df-fb" hidden></div>
+    </div>
+
+
+    <button class="art-check" type="button" data-id="a-cpp-549" aria-pressed="false"><span class="acx">✓</span><span class="act">Marcar estudado</span></button>
+  </div>
+</article>
+<div class="divisor" id="s-parte4"><span class="d-num">Parte 4</span><h2>Processos de competência originária dos tribunais</h2></div>
+<article class="artigo" id="a-cpp-556" data-art="a-cpp-556" data-busca="arts 556 a 562 revogados lei 8658 1993 processos de competencia do supremo tribunal federal e dos tribunais de apelacao lei 8038 1990 acao penal originaria tribunal de justica tribunal regional federal juiz das garantias nao se aplica adi 6298">
+  <div class="art-head">
+    <div class="ah-l"><span class="art-num">Arts. 556 a 562</span><span class="ct">Revogados</span><span class="ct alt2">Revogados</span></div>
+    <p class="art-tema">O CPP saiu de cena; a Lei 8.038/1990 assumiu.</p>
+  </div>
+  <div class="art-corpo">
+
+    <p class="lex"><b>TÍTULO III — DOS PROCESSOS DE COMPETÊNCIA DO SUPREMO TRIBUNAL FEDERAL E DOS TRIBUNAIS DE APELAÇÃO</b></p>
+    <p class="lex"><b class="k-ref">Arts. 556 a 560.</b>  <i>(Revogados pela Lei nº 8.658, de 26.5.1993)</i></p>
+    <p class="lex"><b class="k-ref">Arts. 561 e 562.</b>  <i>(Revogados pela Lei nº 8.658, de 26.5.1993)</i></p>
+    <div class="importante">
+      <div class="imp-h"><span class="imp-x">★</span> Da revogação à Lei 8.038/1990</div>
+      <div class="imp-b">
+        <p>A <b>Lei 8.038/1990</b> instituiu normas procedimentais para o <b>STJ e o STF</b>, inclusive a <b>ação penal originária</b> (arts. 1º a 12). A <b>Lei 8.658/1993</b> estendeu esse rito aos <b>Tribunais de Justiça e Tribunais Regionais Federais</b> e revogou os arts. 556 a 562 do CPP.</p>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Quem é julgado originariamente</th><th>Tribunal</th><th>Rito</th></tr></thead>
+          <tbody>
+            <tr><td>Presidente, Vice, parlamentares federais, Ministros, PGR</td><td>STF (CF, art. 102, I, <i>b</i> e <i>c</i>)</td><td class="ok-cell">Lei 8.038/1990</td></tr>
+            <tr><td>Governadores, desembargadores, membros do MPU que oficiam em tribunais</td><td>STJ (CF, art. 105, I, <i>a</i>)</td><td class="ok-cell">Lei 8.038/1990</td></tr>
+            <tr><td>Juízes federais e procuradores da República</td><td>TRF (CF, art. 108, I, <i>a</i>)</td><td class="ok-cell">Lei 8.038/1990, por força da Lei 8.658/1993</td></tr>
+            <tr><td>Prefeitos, juízes estaduais, promotores</td><td>TJ (CF, arts. 29, X, e 96, III)</td><td class="ok-cell">Lei 8.038/1990, por força da Lei 8.658/1993</td></tr>
+          </tbody>
+        </table></div>
+        <span class="hl hl-neg">Juiz das garantias:</span> o STF (ADIs 6.298, 6.299, 6.300 e 6.305) declarou que as normas do juiz das garantias <b>não se aplicam</b> aos processos de <b>competência originária dos tribunais</b>, regidos pela Lei 8.038/1990, nem ao júri, à violência doméstica e às infrações de menor potencial ofensivo.
+      </div>
+    </div>
+
+    <div class="q-inline">
+      <p class="bloco-q-h"><span class="bq-n">Questão 4</span> Arts. 556 a 562 · Revogados</p>
+      <article class="questao" data-q="cx-man-s21-8b44b7fe" data-gab="C" data-dif="dificil">
+        <div class="q-head"><span class="q-num">Q4</span><span class="q-dif" data-d="dificil">Difícil</span><span class="q-marca"></span><span class="q-banca">FUNDEP (Gestão de Concursos) · 2023 · DPE-MG · FUNDEP (Gestão de Concursos</span></div>
+        <p class="q-enunciado">- 2023 - DPE-MG - Defensor Público de Classe Inicial. Acerca do instituto do Juiz de Garantias, a partir da interpretação que o STF lhe conferiu, assinale a alternativa correta.</p>
+        <ul class="q-alts">
+          <li class="q-alt" data-l="A"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">A</span><span>Foi declarada sua inconstitucionalidade, sendo inaplicável ao nosso Direito Processual Penal.</span></button></li>
+          <li class="q-alt" data-l="B"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">B</span><span>Foi entendido como constitucional aplicando-se todas as disposições a seu respeito, previstas na Lei n° 13.964/19.</span></button></li>
+          <li class="q-alt" data-l="C"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">C</span><span>Foi entendido como constitucional em partes, mas será o(a) juiz(a) do processo quem receberá a denúncia.</span></button></li>
+          <li class="q-alt" data-l="D"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">D</span><span>Foi entendido como constitucional em partes, incumbindo-lhe receber a denúncia.</span></button></li>
+          <li class="q-alt" data-l="E"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">E</span><span>Foi entendido como constitucional em partes, mantida a previsão legal de exclusão física dos autos do inquérito policial.</span></button></li>
+        </ul>
+        <div class="q-acoes">
+          <button class="q-btn primario q-responder" type="button">Revelar gabarito</button>
+          <button class="q-btn q-limpar" type="button">Limpar marcações</button>
+          <button class="q-btn q-refazer" type="button">Refazer</button>
+          <span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span>
+        </div>
+        <div class="q-coment" hidden>
+          <p class="qc-t">Gabarito comentado</p>
+          <p><span class="qc-gab">Gabarito: C.</span></p>
+          <p>.</p>
+          <p>Além disso, atribuiu-se interpretação conforme, por unanimidade, à primeira parte do art. 3ºC, para esclarecer que as normas relativas ao juiz das garantias não se aplicam às seguintes situações:</p>
+          <p>a) Processos de competência originária dos tribunais, os quais são regidos pela Lei n. 8.038/90;</p>
+          <p>b) Processos de competência do tribunal do júri;</p>
+          <p>c) Casos de violência doméstica e familiar;</p>
+          <p>d) Infrações de menor potencial ofensivo.</p>
+          <p>Observação. o Min. Dias Toffoli em decisão liminar proferida nas ADIs, havia esclarecido que as normas não seria aplicável aos seguintes casos:</p>
+          <p>a) Processos de competência originária dos tribunais, os quais são regidos pela Lei nº</p>
+          <p>8.038/1990.</p>
+          <p>Os processos de competência originária dos tribunais superiores e dos tribunais de justiça dos Estados e do Distrito Federal, e dos Tribunais Regionais Federais são regidos pela Lei nº</p>
+          <p>8.038/1990. Essa norma não foi alterada pela Lei nº 13.964/2019. Além disso, conforme já decidiu o Supremo Tribunal Federal (ADI 4.414/AL), a colegialidade, por si só, é fator e reforço da independência e da imparcialidade judicial.</p>
+          <p>b) Processos de competência do Tribunal do Júri Nesses casos, o veredicto fica a cargo de um órgão coletivo, o Conselho de Sentença. Opera-se uma lógica semelhante à dos Tribunais: o julgamento coletivo, por si só, é fator de reforço da imparcialidade.</p>
+          <p>c) Casos de violência doméstica e familiar Os casos de violência doméstica e familiar exigem disciplina processual penal específica, que traduza um procedim</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="q-inline">
+      <p class="bloco-q-h"><span class="bq-n">Questão 5</span> Arts. 556 a 562 · Revogados</p>
+      <article class="questao" data-q="cx-fgv-mpu2025-171" data-gab="B" data-dif="muito">
+        <div class="q-head"><span class="q-num">Q5</span><span class="q-dif" data-d="muito">Muito difícil</span><span class="q-marca"></span><span class="q-banca">FGV · MPU · Analista do MPU - Direito</span></div>
+        <p class="q-enunciado">Lucas, estagiário do Ministério Público Federal, participou, na qualidade de ouvinte, de um seminário que se propôs a discutir temas atuais e centrais sobre o ordenamento jurídico brasileiro, em especial sobre o foro por prerrogativa de função, contando com a participação de um procurador regional da República, membro do Ministério Público Federal que oficia perante os tribunais, de um chefe de missão diplomática de caráter permanente e de um deputado federal. Nesse cenário, considerando as disposições da Constituição Federal, é correto afirmar que:</p>
+        <ul class="q-alts">
+          <li class="q-alt" data-l="A"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">A</span><span>os chefes de missões diplomáticas de caráter permanente possuem foro por prerrogativa de função no Superior Tribunal de Justiça. Por outro lado, os membros do Ministério Público Federal que oficiam perante tribunais e os deputados federais dispõem de foro por prerrogativa de função no Supremo Tribunal Federal;</span></button></li>
+          <li class="q-alt" data-l="B"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">B</span><span>os membros do Ministério Público Federal que oficiam perante tribunais possuem foro por prerrogativa de função no Superior Tribunal de Justiça. Por outro lado, os chefes de missões diplomáticas de caráter permanente e os deputados federais dispõem de foro por prerrogativa de função no Supremo Tribunal Federal;</span></button></li>
+          <li class="q-alt" data-l="C"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">C</span><span>os chefes de missões diplomáticas de caráter permanente e os deputados federais possuem foro por prerrogativa de função no Superior Tribunal de Justiça. Por outro lado, os membros do Ministério Público Federal que oficiam perante tribunais dispõem de foro por prerrogativa de função no Supremo Tribunal Federal;</span></button></li>
+          <li class="q-alt" data-l="D"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">D</span><span>os membros do Ministério Público Federal que oficiam perante tribunais, os chefes de missões diplomáticas de caráter permanente e os deputados federais possuem foro por prerrogativa de função no Superior Tribunal de Justiça;</span></button></li>
+          <li class="q-alt" data-l="E"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">E</span><span>os membros do Ministério Público Federal que oficiam perante tribunais, os chefes de missões diplomáticas de caráter permanente e os deputados federais possuem foro por prerrogativa de função no Supremo Tribunal Federal.</span></button></li>
+        </ul>
+        <div class="q-acoes">
+          <button class="q-btn primario q-responder" type="button">Revelar gabarito</button>
+          <button class="q-btn q-limpar" type="button">Limpar marcações</button>
+          <button class="q-btn q-refazer" type="button">Refazer</button>
+          <span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span>
+        </div>
+        <div class="q-coment" hidden>
+          <p class="qc-t">Gabarito comentado</p>
+          <p><span class="qc-gab">Gabarito: B.</span></p>
+          <p>Membros do MPU que oficiam perante tribunais têm foro no STJ (art. 105, I, a, da CF). Chefes de missão diplomática de caráter permanente e deputados federais são julgados pelo STF nas infrações penais comuns (art. 102, I, b e c).</p>
+        </div>
+      </article>
+    </div>
+    <div class="desafio" data-d="c18d7" data-resp="8.658|lei 8.658|8658" data-dica="A lei que revogou os arts. 556 a 562 e estendeu a Lei 8.038 aos TJs e TRFs." data-porque="A &lt;b&gt;Lei 8.658/1993&lt;/b&gt; revogou os arts. 556 a 562 do CPP e mandou aplicar as normas da &lt;b&gt;Lei 8.038/1990&lt;/b&gt; (arts. 1º a 12) às ações penais originárias nos &lt;b&gt;Tribunais de Justiça&lt;/b&gt; e nos &lt;b&gt;Tribunais Regionais Federais&lt;/b&gt;.">
+      <div class="df-h"><span class="df-ic">⚖</span><span class="df-t">Escreva de cabeça</span><span class="df-tag">Lei 8.658/1993</span></div>
+      <p class="df-p">Os arts. 556 a 562 do CPP foram revogados pela Lei <span class="df-gap">?</span>, de 1993.</p>
+      <div class="df-in">
+        <input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false">
+        <button class="df-ok" type="button">Conferir</button>
+        <button class="df-ver" type="button">Ver resposta</button>
+      </div>
+      <div class="df-de" hidden></div>
+      <div class="df-fb" hidden></div>
+    </div>
+
+
+    <button class="art-check" type="button" data-id="a-cpp-556" aria-pressed="false"><span class="acx">✓</span><span class="act">Marcar estudado</span></button>
+  </div>
+</article>
+<article class="artigo" id="s-lei8038" data-art="s-lei8038" data-busca="lei 8038 1990 acao penal originaria art 1 quinze dias cinco dias preso art 3 relator juiz da instrucao delegar atos lei 12019 art 4 notificacao resposta quinze dias art 5 art 6 recebimento rejeicao improcedencia sustentacao oral quinze minutos art 7 interrogatorio art 400 ap 528 hc 127900 art 11 alegacoes escritas art 12 uma hora assistente um quarto diplomacao superveniente prefeito atos validos">
+  <div class="art-head">
+    <div class="ah-l"><span class="art-num">Lei 8.038/1990</span><span class="ct">Ação penal originária</span><span class="ct alt">Lei especial</span></div>
+    <p class="art-tema">Defesa antes do recebimento, colegiado no recebimento e no julgamento.</p>
+  </div>
+  <div class="art-corpo">
+
+    <p>A Lei 8.038/1990 é curta e numérica. <span class="hl hl-cond">Sua marca é a <b>defesa antes do recebimento</b> e o <b>recebimento pelo colegiado</b></span>, em sessão com sustentação oral — o tribunal pode até julgar <b>improcedente</b> a acusação já nessa fase.</p>
+    <div class="importante">
+      <div class="imp-h"><span class="imp-x">★</span> O rito em ordem cronológica</div>
+      <div class="imp-b">
+        <div class="fluxo"><div class="fx-p" data-c="1"><span class="fx-n">1</span><span class="fx-t"><b>Art. 1º:</b> o MP tem <b>15 dias</b> para oferecer denúncia ou pedir arquivamento (<b>5 dias</b> se o indiciado estiver <b>preso</b>); diligências interrompem o prazo</span></div><div class="fx-p" data-c="2"><span class="fx-n">2</span><span class="fx-t"><b>Art. 3º:</b> o <b>relator</b> é o juiz da instrução — determina o arquivamento quando requerido pelo MP, decreta a extinção da punibilidade e pode <b>delegar</b> atos de instrução a juízes ou desembargadores (Lei 12.019/2009)</span></div><div class="fx-p" data-c="3"><span class="fx-n">3</span><span class="fx-t"><b>Art. 4º:</b> oferecida a denúncia ou queixa, o acusado é <b>notificado</b> para oferecer <b>resposta em 15 dias</b></span></div><div class="fx-p" data-c="4"><span class="fx-n">4</span><span class="fx-t"><b>Art. 5º:</b> se a resposta trouxer documentos novos, a parte contrária fala em <b>5 dias</b></span></div><div class="fx-p" data-c="1"><span class="fx-n">5</span><span class="fx-t"><b>Art. 6º:</b> o <b>tribunal</b> delibera sobre o <b>recebimento</b>, a <b>rejeição</b> da denúncia ou a <b>improcedência</b> da acusação, se a decisão não depender de outras provas; <b>sustentação oral de 15 minutos</b></span></div><div class="fx-p" data-c="2"><span class="fx-n">6</span><span class="fx-t"><b>Arts. 7º a 10:</b> recebida a denúncia, cita-se o acusado; instrução pelo CPP; diligências em 5 dias</span></div><div class="fx-p" data-c="3"><span class="fx-n">7</span><span class="fx-t"><b>Art. 11:</b> <b>alegações escritas</b> em 15 dias, sucessivamente, acusação e defesa</span></div><div class="fx-p" data-c="4"><span class="fx-n">8</span><span class="fx-t"><b>Art. 12:</b> julgamento pelo colegiado, com <b>uma hora</b> de sustentação oral para cada parte, assegurado ao assistente <b>um quarto</b> do tempo da acusação</span></div></div>
+        <span class="hl hl-neg">Interrogatório ao final:</span> o art. 7º da Lei 8.038 previa o interrogatório logo após o recebimento. O STF passou a aplicar o <b>art. 400 do CPP</b> (interrogatório como último ato), por ser mais favorável à defesa (AP 528 AgR) — e, no HC 127.900, estendeu a exigência a todos os procedimentos especiais.
+        <span class="hl hl-cond">Sem dilação probatória antes do recebimento:</span> entre a denúncia e a deliberação do colegiado, há resposta e eventual réplica documental, mas não instrução; o juízo é de admissibilidade (justa causa).
+      </div>
+    </div>
+
+    <div class="q-inline">
+      <p class="bloco-q-h"><span class="bq-n">Questão 6</span> Lei 8.038/1990 · Ação penal originária</p>
+      <article class="questao" data-q="cx-fgv-mpgo21-104" data-gab="E" data-dif="muito">
+        <div class="q-head"><span class="q-num">Q6</span><span class="q-dif" data-d="muito">Muito difícil</span><span class="q-marca"></span><span class="q-banca">FGV · MPGO · Promotor de Justiça Substituto</span></div>
+        <p class="q-enunciado">Em relação ao procedimento fixado na Lei nº 8.038/1990, referente à competência originária dos Tribunais, é correto afirmar que:</p>
+        <ul class="q-alts">
+          <li class="q-alt" data-l="A"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">A</span><span>após o oferecimento da denúncia, a parte acusada será notificada pelo relator designado por sorteio para apresentar defesa prévia;</span></button></li>
+          <li class="q-alt" data-l="B"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">B</span><span>no julgamento que deliberar sobre o recebimento da denúncia, não há previsão de sustentação oral para qualquer uma das partes;</span></button></li>
+          <li class="q-alt" data-l="C"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">C</span><span>ofertada a denúncia, o relator designado por sorteio deliberará sobre o seu recebimento, determinando a citação do acusado em caso de admissibilidade;</span></button></li>
+          <li class="q-alt" data-l="D"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">D</span><span>o procedimento especial privilegia a oralidade, disciplinandose a ocorrência de debates orais após a instrução, facultada a conversão em memoriais, em caso de complexidade;</span></button></li>
+          <li class="q-alt" data-l="E"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">E</span><span>entre o oferecimento da denúncia e o juízo de admissibilidade a ser proferido pelo Tribunal, não há espaço para dilações probatórias.</span></button></li>
+        </ul>
+        <div class="q-acoes">
+          <button class="q-btn primario q-responder" type="button">Revelar gabarito</button>
+          <button class="q-btn q-limpar" type="button">Limpar marcações</button>
+          <button class="q-btn q-refazer" type="button">Refazer</button>
+          <span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span>
+        </div>
+        <div class="q-coment" hidden>
+          <p class="qc-t">Gabarito comentado</p>
+          <p><span class="qc-gab">Gabarito: E.</span></p>
+          <p>Na Lei 8.038/90, o acusado é notificado para resposta em 15 dias (art. 4º), e o Tribunal delibera sobre o recebimento com sustentação oral (art. 6º). Entre a denúncia e esse juízo de admissibilidade não há instrução probatória: o exame se limita à justa causa.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="q-inline">
+      <p class="bloco-q-h"><span class="bq-n">Questão 7</span> Lei 8.038/1990 · Ação penal originária</p>
+      <article class="questao" data-q="cx-oab-639-67" data-gab="D" data-dif="dificil">
+        <div class="q-head"><span class="q-num">Q7</span><span class="q-dif" data-d="dificil">Difícil</span><span class="q-marca"></span><span class="q-banca">FGV · 2022 · Exame de Ordem (OAB) · 36º Exame</span></div>
+        <p class="q-enunciado">O prefeito do Município de Canto Feliz, juntamente com o juiz estadual e o promotor de justiça, todos da mesma comarca (Art. 77, inciso I, do CPP), cometeu um crime contra a administração pública federal - interesse da União -, delito que não era de menor potencial ofensivo e nem cabia, objetivamente, qualquer medida penal consensual. Todos foram denunciados pelo Ministério Público federal perante a 1ª Vara Criminal da Justiça Federal da correspondente Seção Judiciária. Recebida a denúncia, a fase probatória da instrução criminal foi encerrada, sendo que o Dr. João dos Anjos, que era advogado em comum aos réus (inexistência de colidência de defesas), faleceu, tendo os acusados constituído um novo advogado para apresentar memoriais (Art. 403, § 3º, do CPP) e prosseguir em suas defesas. Nessa fase de alegações finais, somente há uma matéria de mérito a ser defendida em relação a todos os réus, que é a negativa de autoria. Todavia, antes de adentrar ao mérito, existe uma questão preliminar processual a ser suscitada, relativa à competência, e consequente arguição de nulidade. Como advogado(a) dos réus, assinale a opção que indica como você fundamentaria a existência dessa nulidade.</p>
+        <ul class="q-alts">
+          <li class="q-alt" data-l="A"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">A</span><span>O processo é nulo, por ser o juízo relativamente incompetente, aproveitando-se os atos instrutórios. Anulado o processo, este deverá prosseguir para todos a partir da apresentação dos memoriais perante uma das Turmas do Tribunal Regional Federal da respectiva Seção Judiciária, por serem os réus detentores de foro especial por prerrogativa de função junto àquele órgão jurisdicional.</span></button></li>
+          <li class="q-alt" data-l="B"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">B</span><span>O processo é nulo, por ser o juízo absolutamente incompetente desde o recebimento da denúncia, devendo ser reiniciado para todos a partir deste momento processual perante o Tribunal de Justiça do respectivo Estado da Federação, por serem os réus detentores de foro especial por prerrogativa de função perante aquela Corte estadual de justiça.</span></button></li>
+          <li class="q-alt" data-l="C"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">C</span><span>O processo é nulo, por ser o juízo relativamente incompetente, aproveitando-se os atos instrutórios. Anulado o processo este deverá prosseguir a partir da apresentação dos memoriais perante o Tribunal de Justiça do respectivo Estado da Federação, por serem todos os réus detentores de foro especial por prerrogativa de função perante aquela Corte estadual de justiça.</span></button></li>
+          <li class="q-alt" data-l="D"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">D</span><span>O processo é nulo, por ser o juízo absolutamente incompetente. Em relação ao Prefeito do Município de Canto Feliz, o processo deverá ser remetido a uma das Turmas do Tribunal Regional Federal da respectiva Seção Judiciária, sendo reiniciado a partir do recebimento da denúncia. Em relação ao Juiz estadual e ao Promotor de Justiça, há nulidade por vício de incompetência absoluta, com a necessidade de desmembramento do processo, devendo ser reiniciado para ambos a partir do recebimento da denúncia, sendo de competência do Tribunal de Justiça do respectivo Estado da Federação.</span></button></li>
+        </ul>
+        <div class="q-acoes">
+          <button class="q-btn primario q-responder" type="button">Revelar gabarito</button>
+          <button class="q-btn q-limpar" type="button">Limpar marcações</button>
+          <button class="q-btn q-refazer" type="button">Refazer</button>
+          <span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span>
+        </div>
+        <div class="q-coment" hidden>
+          <p class="qc-t">Gabarito comentado</p>
+          <p><span class="qc-gab">Gabarito: D.</span></p>
+          <p>O prefeito que comete crime federal é julgado pelo TRF (Súmula 702 do STF). Juiz e promotor estaduais são julgados pelo Tribunal de Justiça, inclusive nos crimes da competência da Justiça Federal, ressalvada a Eleitoral (art. 96, III, da CF). Há incompetência absoluta e o processo deve ser desmembrado e reiniciado a partir do recebimento da denúncia.</p>
+        </div>
+      </article>
+    </div>
+    <div class="zona">
+      <p class="zona-t">Competência originária: o que o STF e o STJ dizem</p>
+      <div class="selos">
+        <div class="selo" data-k="juris" data-c="STF" data-busca="foro por prerrogativa de funcao crimes praticados no cargo e em razao dele subsiste apos o fim do mandato hc 232627 ap 937">
+          <div class="selo-h"><span class="si">⚖</span><span class="sl">Foro após o fim do mandato</span><span class="src">STF, Plenário, HC 232.627 (2025) · AP 937 QO</span></div>
+          <div class="selo-b">
+            <p>Na <b>AP 937 QO</b> (2018), o STF restringiu o foro aos crimes praticados <b>no cargo e em razão dele</b>. No <b>HC 232.627</b> (2025), passou a entender que o foro <b>subsiste após o fim do mandato</b> para esses crimes. Fatos estranhos ao cargo seguem para a primeira instância.</p>
+          </div>
+        </div>
+
+    <div class="q-inline">
+      <p class="bloco-q-h"><span class="bq-n">Questão 8</span> Lei 8.038/1990 · Ação penal originária</p>
+      <article class="questao" data-q="cx-fgv-tjpr25-56" data-gab="B" data-dif="muito">
+        <div class="q-head"><span class="q-num">Q8</span><span class="q-dif" data-d="muito">Muito difícil</span><span class="q-marca"></span><span class="q-banca">FGV · TJPR · Juiz Substituto</span></div>
+        <p class="q-enunciado">A Polícia Federal, no âmbito da Operação Braseiro, investigava um esquema de desvio de verbas públicas em um município. Após o encerramento do mandato do Prefeito, surgiram indícios de sua participação nos crimes investigados, que teriam sido cometidos durante e em razão do exercício de sua função. A denúncia foi oferecida perante o Juízo de Direito de Primeiro Grau, já que não restou comprovada nenhuma das hipóteses do Art. 108 ou do Art. 109 da Constituição Federal. Considerando o entendimento do Supremo Tribunal Federal (STF) sobre a competência por prerrogativa de função, assinale a afirmativa correta.</p>
+        <ul class="q-alts">
+          <li class="q-alt" data-l="A"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">A</span><span>A competência para processar e julgar o ex-prefeito é do Juízo de Primeiro Grau, pois a prerrogativa de foro cessa com o fim do mandato, não se prorrogando.</span></button></li>
+          <li class="q-alt" data-l="B"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">B</span><span>A competência será do Tribunal de Justiça respectivo, pois, mesmo após o fim do mandato, a prerrogativa de foro subsiste, caso os crimes tenham sido cometidos no cargo e em razão dele.</span></button></li>
+          <li class="q-alt" data-l="C"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">C</span><span>A competência para julgar o ex-prefeito será do Tribunal Regional Federal, uma vez que a investigação foi conduzida pela Polícia Federal e envolve verbas públicas federais.</span></button></li>
+          <li class="q-alt" data-l="D"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">D</span><span>A competência para o processo e julgamento é do Juízo de Primeiro Grau, pois o novo entendimento do STF sobre a manutenção do foro aplica-se apenas a parlamentares federais, não se estendendo a prefeitos.</span></button></li>
+          <li class="q-alt" data-l="E"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">E</span><span>A competência será definida pela prevenção, cabendo ao Juízo que primeiro conheceu dos fatos, independentemente da prerrogativa de foro, que não pode ser declarada após o oferecimento da denúncia.</span></button></li>
+        </ul>
+        <div class="q-acoes">
+          <button class="q-btn primario q-responder" type="button">Revelar gabarito</button>
+          <button class="q-btn q-limpar" type="button">Limpar marcações</button>
+          <button class="q-btn q-refazer" type="button">Refazer</button>
+          <span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span>
+        </div>
+        <div class="q-coment" hidden>
+          <p class="qc-t">Gabarito comentado</p>
+          <p><span class="qc-gab">Gabarito: B.</span></p>
+          <p>Na QO na AP 937 (2018), o STF restringiu o foro a crimes cometidos no cargo e em razão dele. No HC 232.627 (2025) passou a entender que a prerrogativa subsiste após o fim do mandato quando o crime foi praticado nessas condições. Sem interesse da União, o ex-prefeito é julgado pelo TJ (art. 29, X, da CF).</p>
+        </div>
+      </article>
+    </div>
+        <div class="selo" data-k="juris" data-c="STF/STJ" data-busca="diplomacao superveniente prefeito deslocamento de competencia atos praticados validos sem necessidade de ratificacao instrucao prossegue">
+          <div class="selo-h"><span class="si">⚖</span><span class="sl">Diplomação superveniente: os atos anteriores valem</span><span class="src">Teoria do juízo aparente · CPP, art. 567</span></div>
+          <div class="selo-b">
+            <p>Se, no curso do processo em primeira instância, o réu é <b>diplomado ou empossado</b> em cargo com foro (por exemplo, prefeito), os autos sobem ao tribunal, que <b>prossegue</b> do ponto em que parou. <span class="hl hl-cond">Os atos praticados pelo juiz então competente são válidos e não precisam ser ratificados</span>, decisórios ou não: não houve incompetência na origem, mas <b>modificação superveniente</b> da competência.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="q-inline">
+      <p class="bloco-q-h"><span class="bq-n">Questão 9</span> Lei 8.038/1990</p>
+      <article class="questao" data-q="c18q5" data-gab="A" data-dif="medio">
+        <div class="q-head"><span class="q-num">Q9</span><span class="q-dif" data-d="medio">Média</span><span class="q-marca"></span><span class="q-banca">FGV · TJPI · Analista Judiciário - Judiciária - Oficial de Justiça e Avaliador</span></div>
+        <p class="q-enunciado">João foi denunciado pelos crimes de associação criminosa e concussão, por diversas vezes. Sua resposta preliminar não foi suficiente para ilidir a acusação. Com o recebimento da denúncia e citação foi iniciada a instrução processual. O Ministério Público havia pedido, na cota da exordial, a quebra do sigilo fiscal e bancário, relativa a cinco contas titularizadas pelo réu, o que foi deferido, por decisão fundamentada, e, após a resposta das instituições bancárias, foram juntados aos autos diversos documentos. Diante da complexidade do caso, a instrução processual foi cindida. Em meados de dezembro, foram ouvidas quinze testemunhas arroladas pelo Ministério Público, sendo designada a continuidade da audiência de instrução e julgamento, para oitiva das testemunhas arroladas pela Defesa, para a última semana de janeiro. Ocorre que, no início de janeiro, João assumiu o cargo de Prefeito de um município do interior. O Magistrado, então, após ouvir o Ministério Público, declinou de sua competência em favor do Tribunal de Justiça estadual. Ao receber a demanda, observado o rito da competência originária, o Relator deverá:</p>
+        <ul class="q-alts">
+          <li class="q-alt" data-l="A"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">A</span><span>dar prosseguimento à instrução, sem a necessidade de ratificação dos atos sem ou com caráter decisório;</span></button></li>
+          <li class="q-alt" data-l="B"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">B</span><span>dar prosseguimento à instrução, sem a necessidade de ratificação dos atos sem caráter decisório;</span></button></li>
+          <li class="q-alt" data-l="C"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">C</span><span>dar prosseguimento à instrução, sem a necessidade de ratificação dos atos com caráter decisório;</span></button></li>
+          <li class="q-alt" data-l="D"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">D</span><span>dar prosseguimento à instrução, após a ratificação de todos os atos com caráter decisório;</span></button></li>
+          <li class="q-alt" data-l="E"><button class="q-tesoura" type="button" aria-pressed="false" title="Cortar alternativa">✂</button><button class="q-pick" type="button"><span class="q-letra">E</span><span>declarar a nulidade dos atos instrutórios praticados, retomando o procedimento a partir do recebimento da denúncia.</span></button></li>
+        </ul>
+        <div class="q-acoes">
+          <button class="q-btn primario q-responder" type="button">Revelar gabarito</button>
+          <button class="q-btn q-limpar" type="button">Limpar marcações</button>
+          <button class="q-btn q-refazer" type="button">Refazer</button>
+          <span class="q-aviso">Use a ✂ para eliminar alternativas antes de decidir.</span>
+        </div>
+        <div class="q-coment" hidden>
+          <p class="qc-t">Gabarito comentado</p>
+          <p><span class="qc-gab">Gabarito: A.</span></p>
+          <p>A posse superveniente no cargo de prefeito desloca a competência para o TJ (CF, art. 29, X), mas os atos praticados pelo juiz que era competente à época — inclusive os decisórios, como o recebimento da denúncia e a quebra de sigilo — são <b>válidos</b> e <b>dispensam ratificação</b>. Não se aplica o art. 567 do CPP, que pressupõe incompetência originária. O relator prossegue com a instrução pelo rito da Lei 8.038/1990.</p>
+        </div>
+      </article>
+    </div>
+    <div class="desafio" data-d="c18d8" data-resp="15 dias|quinze dias|15" data-dica="Lei 8.038/1990, art. 4º — prazo da resposta do acusado antes do recebimento." data-porque="&lt;b&gt;Lei 8.038/1990, art. 4º:&lt;/b&gt; apresentada a denúncia ou a queixa ao tribunal, far-se-á a &lt;b&gt;notificação do acusado&lt;/b&gt; para oferecer &lt;b&gt;resposta no prazo de quinze dias&lt;/b&gt;. Só depois o colegiado delibera sobre o recebimento (art. 6º).">
+      <div class="df-h"><span class="df-ic">⚖</span><span class="df-t">Escreva de cabeça</span><span class="df-tag">Lei 8.038, art. 4º</span></div>
+      <p class="df-p">Na ação penal originária, o acusado é notificado para oferecer resposta no prazo de <span class="df-gap">?</span> antes do recebimento da denúncia.</p>
+      <div class="df-in">
+        <input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false">
+        <button class="df-ok" type="button">Conferir</button>
+        <button class="df-ver" type="button">Ver resposta</button>
+      </div>
+      <div class="df-de" hidden></div>
+      <div class="df-fb" hidden></div>
+    </div>
+
+
+    <button class="art-check" type="button" data-id="s-lei8038" aria-pressed="false"><span class="acx">✓</span><span class="act">Marcar estudado</span></button>
+  </div>
+</article>
+<div class="divisor" id="s-quadro18"><span class="d-num">Painel</span><h2>Quadro de decisão do Delegado</h2></div>
+<section class="abertura">
+  <h2>Apreensão de material pirata e falsificado</h2>
+  <p>Dos quatro blocos do capítulo, um é rotina de delegacia: a apreensão de produtos falsificados. O rito depende da ação penal — e a ação penal depende do intuito de lucro.</p>
+  <div class="tbl-wrap"><table>
+          <thead><tr><th>A situação</th><th>A conduta</th><th>O fundamento</th></tr></thead>
+          <tbody>
+            <tr><td>Banca vende <b>DVDs e CDs piratas</b> na feira</td><td class="ok-cell">Inquérito <b>de ofício</b>; apreensão da <b>totalidade</b> dos bens e dos equipamentos destinados precipuamente à reprodução</td><td>CP, arts. 184, § 2º, e 186, II; CPP, art. 530-B; Súmula 502-STJ</td></tr>
+            <tr><td>Como documento a apreensão?</td><td class="ok-cell"><b>Termo</b> com <b>2 ou mais testemunhas</b>, descrevendo os bens e sua origem</td><td>CPP, art. 530-C</td></tr>
+            <tr><td>Preciso periciar milhares de mídias?</td><td class="ok-cell">Não: basta perícia <b>por amostragem</b>, nos aspectos externos, por <b>perito oficial</b></td><td>CPP, art. 530-D; Súmula 574-STJ</td></tr>
+            <tr><td>Onde ficam os bens apreendidos?</td><td class="ok-cell">Com os <b>titulares do direito autoral</b>, como fiéis depositários</td><td>CPP, art. 530-E</td></tr>
+            <tr><td>Fábrica de produto que viola <b>patente</b> funcionando regularmente</td><td class="no-cell">Não paralisar a atividade lícita: <b>vistoria e apreensão</b> dos produtos, por ordem judicial, no rito da <b>queixa</b></td><td>Lei 9.279/1996, arts. 199 e 201</td></tr>
+            <tr><td>Cópia de obra <b>sem intuito de lucro</b></td><td class="no-cell">Ação <b>privada</b>: a busca e apreensão depende de requerimento do ofendido ao juiz</td><td>CP, art. 186, I; CPP, arts. 526 e 527</td></tr>
+          </tbody>
+        </table></div>
+</section>
+<div class="divisor" id="s-revisao18"><span class="d-num">Fechamento</span><h2>O capítulo em cinco minutos</h2></div>
+<section class="abertura">
+  <h2>Revisão final</h2>
+  <ul class="plain"><li><b>Propriedade imaterial:</b> dois ritos, escolhidos pela ação penal — <b>queixa</b> (arts. 524 a 530, via 530-A) e <b>ação pública</b> (arts. 530-B a 530-H, via 530-I).</li><li><b>Rito da queixa:</b> prova do direito à ação; <b>dois peritos</b>; laudo em <b>3 dias</b>; homologação; queixa em <b>30 dias</b> (8 com réu preso) — sem afastar a decadência de 6 meses (Info 692); indeferimento e homologação → <b>apelação</b>.</li><li><b>Rito da ação pública:</b> polícia apreende tudo; termo com <b>2 testemunhas</b>; <b>um</b> perito oficial; perícia por <b>amostragem</b> (Súmula 574); titulares como depositários; destruição a requerimento da <b>vítima</b>; associações como assistentes.</li><li><b>LPI:</b> ação privada (salvo art. 191); perito acompanha a busca em patente de processo; estabelecimento regular não é paralisado.</li><li><b>Restauração:</b> de ofício; em <b>primeira instância</b>; diligências em <b>20 dias</b>; custas em dobro para quem extraviou; autos restaurados valem pelos originais; a execução continua.</li><li><b>Arts. 549 a 555:</b> tacitamente revogados pela reforma de 1984 (<b>sistema vicariante</b>).</li><li><b>Arts. 556 a 562:</b> revogados pela <b>Lei 8.658/1993</b>; rito da <b>Lei 8.038/1990</b> — MP em 15 dias (5 se preso); resposta em <b>15 dias</b>; recebimento pelo colegiado; interrogatório ao final (art. 400); sem juiz das garantias.</li></ul>
+  <p>    <div class="desafio" data-d="c18d9" data-resp="3 dias|tres dias|três dias|3" data-dica="Art. 527 — prazo para apresentação do laudo no rito da queixa." data-porque="&lt;b&gt;CPP, art. 527:&lt;/b&gt; realizada ou não a apreensão, o laudo pericial será apresentado dentro de &lt;b&gt;3 (três) dias&lt;/b&gt; após o encerramento da diligência.">
+      <div class="df-h"><span class="df-ic">⏱</span><span class="df-t">Último desafio</span><span class="df-tag">Art. 527</span></div>
+      <p class="df-p">No rito da queixa, o laudo pericial será apresentado dentro de <span class="df-gap">?</span> após o encerramento da diligência.</p>
+      <div class="df-in">
+        <input class="df-campo" type="text" placeholder="digite sua resposta e tecle Enter…" autocomplete="off" spellcheck="false">
+        <button class="df-ok" type="button">Conferir</button>
+        <button class="df-ver" type="button">Ver resposta</button>
+      </div>
+      <div class="df-de" hidden></div>
+      <div class="df-fb" hidden></div>
+    </div>
+</p>
+  <p>    <div class="importante">
+      <div class="imp-h"><span class="imp-x">→</span> O que vem no Capítulo 19</div>
+      <div class="imp-b">
+        <p>O <b>Livro IV</b> do Código — a <b>execução</b> (arts. 668 a 779) — lido à luz da <b>Lei de Execução Penal</b> (Lei 7.210/1984), que substituiu a maior parte daqueles dispositivos: competência do juízo da execução, progressão, remição, livramento condicional, faltas disciplinares, RDD, indulto e reabilitação.</p>
+      </div>
+    </div>
+</p>
+</section>
+
+</div></main>
+</div>
+
+<div id="console">
+  <button class="cbtn" id="btnRail" type="button" title="Mostrar/ocultar sumário lateral" aria-label="Sumário lateral">☰</button>
+  <span id="timerBox">
+    <button class="cbtn" id="btnPlay" type="button" title="Iniciar/pausar cronômetro">▶</button>
+    <span id="clock">00:00:00</span>
+    <button class="cbtn" id="btnZero" type="button" title="Zerar cronômetro">↺</button>
+  </span>
+  <button class="cbtn" id="btnGear" type="button" title="Ajustes">⚙</button>
+</div>
+
+<div id="settings" aria-label="Ajustes">
+  <h5>Ajustes de leitura</h5>
+  <div class="srow"><span>Cronômetro visível</span><button class="tgl" id="tglTimer" type="button" aria-pressed="true"></button></div>
+  <div class="srow"><span>Sumário lateral</span><button class="tgl" id="tglRail" type="button" aria-pressed="true"></button></div>
+  <div class="srow"><span>Barra de busca</span><button class="tgl" id="tglBarra" type="button" aria-pressed="true"></button></div>
+  <div class="srow"><span>Coluna larga</span><button class="tgl" id="tglWide" type="button" aria-pressed="false"></button></div>
+  <div class="srow"><span>Tema claro</span><button class="tgl" id="tglLight" type="button" aria-pressed="false"></button></div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<canvas id="fx"></canvas>
+<div id="festa"><div class="festa-card" id="fcCard">
+  <div class="fc-g">
+    <svg viewBox="0 0 52 52" width="52" height="52" aria-hidden="true"><circle class="gtrack" cx="26" cy="26" r="22"></circle><circle class="garc" id="fcArc" cx="26" cy="26" r="22" stroke-dasharray="138.2" stroke-dashoffset="138.2"></circle></svg>
+    <span class="gtxt" id="fcPct">0%</span>
+  </div>
+  <div class="fc-b">
+    <div class="fc-h"><p class="fc-t" id="fcT">Sistema pronto</p><span class="fc-i" id="fcI">OK</span></div>
+    <p class="fc-s" id="fcS">Progresso salvo.</p>
+    <div class="fc-seg"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</div></div>
+
+<script>
+
+(function(){
+'use strict';
+var K='ppDelta.cap18.v1';
+var state={done:{},fim:{},timer:0,running:false,timerOff:false,railOff:false,railUser:false,topSumOff:false,wide:false,barraOff:false,light:false,quiz:{},desafio:{}};
+try{var raw=localStorage.getItem(K);if(raw){var o=JSON.parse(raw);for(var k in o)state[k]=o[k];}}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(state));}catch(e){}}
+var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+
+/* ---------- toast ---------- */
+var toastEl=$('#toast'),toastT;
+function toast(m){if(!toastEl)return;toastEl.textContent=m;toastEl.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){toastEl.classList.remove('show');},2400);}
+
+/* ---------- ignicao do painel (substitui o confete) ---------- */
+var cv=$('#fx'),ctx=cv?cv.getContext('2d'):null,anim=null;
+function sizeCv(){if(!cv||!ctx)return;cv.width=innerWidth*devicePixelRatio;cv.height=innerHeight*devicePixelRatio;cv.style.width=innerWidth+'px';cv.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);}
+addEventListener('resize',sizeCv);sizeCv();
+var CORES=['#F5A524','#FF4D8D','#A855F7','#22D37F','#2DD4BF','#6EA8FE'];
+function _rgb(h){h=String(h||'').replace('#','');if(h.length===3)h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2];var n=parseInt(h,16);if(isNaN(n))return '45,212,191';return ((n>>16)&255)+','+((n>>8)&255)+','+(n&255);}
+var RGB=_rgb(CORES&&CORES.length?CORES[CORES.length-1]:'#2DD4BF');
+var SUAVE=matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function agora(){return (window.performance&&performance.now)?performance.now():Date.now();}
+function ignicao(inten){
+  if(!ctx||SUAVE)return;
+  var f=Math.max(.35,Math.min(1,inten||.6)),t0=agora(),DUR=1000;
+  cv.classList.add('on');
+  if(anim)cancelAnimationFrame(anim);
+  function frame(){
+    var t=(agora()-t0)/DUR;
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+    if(t>=1){cv.classList.remove('on');anim=null;return;}
+    var fade=t<.70?1:1-(t-.70)/.30;
+    var rise=Math.min(1,t/.45);
+    var gb=ctx.createLinearGradient(0,innerHeight,0,innerHeight*(1-.40*rise));
+    gb.addColorStop(0,'rgba('+RGB+','+(.13*f*fade)+')');
+    gb.addColorStop(1,'rgba('+RGB+',0)');
+    ctx.fillStyle=gb;ctx.fillRect(0,0,innerWidth,innerHeight);
+    var e=1-Math.pow(1-Math.min(1,t/.8),3),x=(-.25+1.5*e)*innerWidth,w=innerWidth*.22;
+    var gs=ctx.createLinearGradient(x-w,0,x+w,0);
+    gs.addColorStop(0,'rgba('+RGB+',0)');
+    gs.addColorStop(.5,'rgba('+RGB+','+(.10*f*fade)+')');
+    gs.addColorStop(1,'rgba('+RGB+',0)');
+    ctx.fillStyle=gs;ctx.fillRect(x-w,0,w*2,innerHeight);
+    ctx.strokeStyle='rgba('+RGB+','+(.20*f*fade)+')';ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,innerHeight);ctx.stroke();
+    anim=requestAnimationFrame(frame);
+  }
+  anim=requestAnimationFrame(frame);
+}
+var festa=$('#festa'),festaT,GARC=138.2;
+function comemorar(titulo,sub,tag,n){
+  ignicao(Math.min(1,(n||140)/240));
+  if(!festa)return;
+  var el;
+  if(el=$('#fcT'))el.textContent=titulo;
+  if(el=$('#fcS'))el.textContent=sub||'';
+  if(el=$('#fcI'))el.textContent=tag||'OK';
+  var total=(artigos&&artigos.length)||0,feitos=0;
+  if(total)artigos.forEach(function(a){if(state.done[a.dataset.art])feitos++;});
+  var pct=total?Math.round(feitos/total*100):0;
+  var card=$('#fcCard');if(card)card.classList.toggle('max',pct>=100);
+  var arc=$('#fcArc'),txt=$('#fcPct');
+  if(txt)txt.textContent=pct+'%';
+  if(arc)arc.setAttribute('stroke-dashoffset',String(GARC));
+  var segs=$$('.fc-seg i',festa);
+  segs.forEach(function(s){s.style.animation='none';});
+  void festa.offsetWidth;
+  segs.forEach(function(s){s.style.animation='';});
+  festa.classList.add('on');
+  if(arc)setTimeout(function(){arc.setAttribute('stroke-dashoffset',String(GARC-GARC*pct/100));},70);
+  clearTimeout(festaT);festaT=setTimeout(function(){festa.classList.remove('on');},2400);
+}
+
+/* ---------- progresso ---------- */
+var artigos=$$('.artigo'),navLinks=$$('#railNav a'),ARC=163.4;
+function pintaProgresso(){
+  var total=artigos.length,feitos=0;
+  artigos.forEach(function(a){var on=!!state.done[a.dataset.art];a.classList.toggle('done',on);
+    var b=$('.art-check',a);if(b)b.setAttribute('aria-pressed',on?'true':'false');if(on)feitos++;});
+  navLinks.forEach(function(l){l.classList.toggle('done',!!state.done[l.dataset.nav]);});
+  var pct=total?Math.round(feitos/total*100):0;
+  var arc=$('#ringArc');if(arc)arc.setAttribute('stroke-dashoffset',String(ARC-ARC*pct/100));
+  var rt=$('#ringTxt');if(rt)rt.textContent=pct+'%';
+  var sa=$('#stA');if(sa)sa.textContent=String(feitos);
+  var mp=$('#mkPct');if(mp)mp.textContent=pct+'%';
+}
+document.addEventListener('click',function(ev){
+  var t=ev.target;if(!t.closest)return;
+  var btn=t.closest('.art-check');
+  if(btn){var id=btn.dataset.id;state.done[id]=!state.done[id];if(!state.done[id])delete state.done[id];
+    save();pintaProgresso();filtrar();
+    if(state.done[id]){
+      var tot=artigos.length,ft=0;artigos.forEach(function(x){if(state.done[x.dataset.art])ft++;});
+      if(tot&&ft>=tot){comemorar('Capítulo completo','Todos os blocos deste capítulo estão marcados.','100%',240);}
+      else{comemorar('Bloco registrado','Mais um pedaço do edital dominado.','OK',90);}
+    }else{toast('Marcação removida.');}
+    return;}
+  var fim=t.closest('.btn-fim');
+  if(fim){var f=fim.dataset.fim;state.fim[f]=!state.fim[f];if(!state.fim[f])delete state.fim[f];save();
+    fim.classList.toggle('feito',!!state.fim[f]);
+    if(state.fim[f]){
+      if(f.indexOf('capitulo')===0||f==='modulo'){comemorar('Capítulo concluído','Todos os blocos deste capítulo estão marcados.','100%',240);}
+      else{comemorar('Bloco concluído','Anotado no seu progresso.','OK',130);}
+    } else {toast('Conclusão desmarcada.');}
+    return;}
+});
+var reset=$('#btnReset');
+if(reset)reset.addEventListener('click',function(){state.done={};state.fim={};state.timer=0;state.running=false;state.quiz={};state.desafio={};save();location.reload();});
+
+/* ---------- busca ---------- */
+var q=$('#q'),limpar=$('#limpar'),vazio=$('#vazio');
+var fC={},fK={},soPend=false;
+function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+function ativo(o){for(var k in o){if(o[k])return true;}return false;}
+function filtrar(){
+  var termo=norm(q?q.value.trim():''),tc=ativo(fC),tk=ativo(fK);
+  var nA=0,nJ=0;
+  artigos.forEach(function(art){
+    var pend=!state.done[art.dataset.art];
+    if(soPend&&!pend){art.classList.add('hide');return;}
+    var casa=!termo||norm(art.dataset.busca).indexOf(termo)>-1,vis=0;
+    $$('.selo',art).forEach(function(s){
+      var ok=true;
+      if(tc){var cs=(s.dataset.c||'').split(' ');ok=cs.some(function(c){return !!fC[c];});}
+      if(ok&&tk&&!fK[s.dataset.k])ok=false;
+      if(ok&&termo&&norm(s.dataset.busca).indexOf(termo)<0&&!casa)ok=false;
+      s.classList.toggle('hide',!ok);if(ok)vis++;
+    });
+    $$('.zona',art).forEach(function(z){z.classList.toggle('hide',$$('.selo:not(.hide)',z).length===0);});
+    var mostra=(tc||tk)?vis>0:(casa||vis>0);
+    art.classList.toggle('hide',!mostra);
+    if(mostra){nA++;nJ+=vis;}
+  });
+  navLinks.forEach(function(l){var alvo=document.getElementById(l.dataset.nav);
+    if(alvo&&alvo.classList.contains('artigo'))l.style.display=alvo.classList.contains('hide')?'none':'';});
+  var cA=$('#cA'),cJ=$('#cJ');if(cA)cA.textContent=String(nA);if(cJ)cJ.textContent=String(nJ);
+  if(vazio)vazio.classList.toggle('on',nA===0);
+  if(limpar)limpar.classList.toggle('on',!!(q&&q.value));
+  var sf=$('#stFiltro');if(sf)sf.textContent=(termo||tc||tk||soPend)?('Filtro ativo: '+nJ+' cartões'):'Sem filtro ativo';
+}
+if(q){var deb;q.addEventListener('input',function(){clearTimeout(deb);deb=setTimeout(filtrar,120);});
+  q.addEventListener('keydown',function(e){if(e.key==='Escape'){q.value='';filtrar();}});}
+if(limpar)limpar.addEventListener('click',function(){if(q){q.value='';q.focus();}filtrar();});
+$$('#chips .chip').forEach(function(c){c.addEventListener('click',function(){
+  var on=c.getAttribute('aria-pressed')==='true';c.setAttribute('aria-pressed',on?'false':'true');
+  if(c.dataset.f)fC[c.dataset.f]=!on;else if(c.dataset.k)fK[c.dataset.k]=!on;else soPend=!on;
+  filtrar();});});
+
+/* ---------- cronômetro ---------- */
+var clock=$('#clock'),play=$('#btnPlay'),zero=$('#btnZero'),tick;
+function fmt(s){function p(n){return (n<10?'0':'')+n;}return p(Math.floor(s/3600))+':'+p(Math.floor((s%3600)/60))+':'+p(s%60);}
+function pintaRelogio(){if(clock){clock.textContent=fmt(state.timer);clock.classList.toggle('run',!!state.running);}
+  if(play){play.textContent=state.running?'❚❚':'▶';}}
+function roda(){clearInterval(tick);if(state.running)tick=setInterval(function(){state.timer++;pintaRelogio();if(state.timer%10===0)save();},1000);}
+if(play)play.addEventListener('click',function(){state.running=!state.running;save();pintaRelogio();roda();});
+if(zero)zero.addEventListener('click',function(){state.timer=0;save();pintaRelogio();toast('Cronômetro zerado.');});
+
+/* ---------- ajustes ---------- */
+var gear=$('#btnGear'),painel=$('#settings');
+if(gear)gear.addEventListener('click',function(e){e.stopPropagation();painel.classList.toggle('on');});
+document.addEventListener('click',function(e){if(painel&&painel.classList.contains('on')&&!painel.contains(e.target)&&e.target!==gear){painel.classList.remove('on');}});
+function liga(id,chave,classe,inverso){
+  var b=document.getElementById(id);if(!b)return;
+  function pinta(){var on=!!state[chave];document.body.classList.toggle(classe,on);
+    b.setAttribute('aria-pressed',inverso?(on?'false':'true'):(on?'true':'false'));}
+  b.addEventListener('click',function(){state[chave]=!state[chave];save();pinta();if(chave==='light')pintaTema();});
+  pinta();
+}
+liga('tglTimer','timerOff','timer-off',true);
+liga('tglWide','wide','wide',false);
+liga('tglLight','light','claro',false);
+function pintaTema(){if(state.light)document.documentElement.setAttribute('data-theme','light');else document.documentElement.removeAttribute('data-theme');}
+pintaTema();
+
+var btnBarra=$('#btnBarra');
+function pintaBarra(){var off=!!state.barraOff;document.body.classList.toggle('barra-off',off);
+  if(btnBarra){btnBarra.setAttribute('aria-expanded',off?'false':'true');$('#btnBarraTxt').textContent=off?'Mostrar busca':'Ocultar busca';}
+  var tb=$('#tglBarra');if(tb)tb.setAttribute('aria-pressed',off?'false':'true');}
+if(btnBarra)btnBarra.addEventListener('click',function(){state.barraOff=!state.barraOff;save();pintaBarra();if(state.barraOff&&q){q.value='';filtrar();}});
+var tglB=$('#tglBarra');if(tglB)tglB.addEventListener('click',function(){state.barraOff=!state.barraOff;save();pintaBarra();});
+pintaBarra();
+
+var railBtn=$('#btnRail');
+function railOculto(){return state.railUser?!!state.railOff:(innerWidth<=1040?true:!!state.railOff);}
+function pintaRail(){var off=railOculto();document.body.classList.toggle('rail-off',off);
+  var t=$('#tglRail');if(t)t.setAttribute('aria-pressed',off?'false':'true');}
+function alternaRail(){state.railOff=!railOculto();state.railUser=true;save();pintaRail();}
+if(railBtn)railBtn.addEventListener('click',alternaRail);
+var tglR=$('#tglRail');if(tglR)tglR.addEventListener('click',alternaRail);
+pintaRail();
+addEventListener('resize',function(){if(!state.railUser)pintaRail();});
+
+var topSum=$('#topSum'),tsHead=$('#tsHead');
+function pintaTop(){var off=!!state.topSumOff;if(topSum)topSum.classList.toggle('fechado',off);if(tsHead)tsHead.setAttribute('aria-expanded',off?'false':'true');}
+if(tsHead){tsHead.addEventListener('click',function(){state.topSumOff=!state.topSumOff;save();pintaTop();});
+  tsHead.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tsHead.click();}});}
+pintaTop();
+
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(!e.isIntersecting)return;
+    navLinks.forEach(function(l){l.classList.toggle('on',l.dataset.nav===e.target.id);});});},{rootMargin:'-15% 0px -70% 0px'});
+  artigos.forEach(function(a){io.observe(a);});
+}
+document.addEventListener('keydown',function(e){
+  if(e.target&&/^(INPUT|TEXTAREA)$/.test(e.target.tagName))return;
+  if(e.key==='/'){e.preventDefault();if(state.barraOff&&btnBarra)btnBarra.click();if(q)q.focus();}
+});
+
+/* ---------- questões ---------- */
+var questoes=$$('.questao'),AQ=147.65;
+var ELOGIOS=[['Alternativa correta','Certa — e pelo fundamento certo.','+1'],
+             ['Alternativa correta','Você separou a pegadinha da regra.','+1'],
+             ['Alternativa correta','Esse raciocínio vale ponto na prova.','+1'],
+             ['Alternativa correta','FGV adora esse detalhe — e você pegou.','+1']];
+function pintaPlacar(){
+  var total=questoes.length,feitas=0,certas=0;
+  for(var k in state.quiz){feitas++;if(state.quiz[k]&&state.quiz[k].ok)certas++;}
+  var pct=feitas?Math.round(certas/feitas*100):0;
+  var arc=$('#qArc');if(arc)arc.setAttribute('stroke-dashoffset',String(AQ-AQ*pct/100));
+  var e;
+  if(e=$('#qPct'))e.textContent=pct+'%';
+  if(e=$('#qCertas'))e.textContent=String(certas);
+  if(e=$('#qFeitas'))e.textContent=String(feitas);
+  if(e=$('#qTotal'))e.textContent=String(total);
+  if(e=$('#mkQ'))e.textContent=String(total);
+  if(e=$('#qErradas'))e.textContent=String(feitas-certas);
+  if(e=$('#stQ'))e.textContent=feitas?(pct+'% ('+certas+'/'+feitas+')'):'—';
+}
+function aplica(qe,letra,ok){
+  qe.classList.add('respondida');qe.classList.toggle('acertou',ok);qe.classList.toggle('errou',!ok);
+  var m=$('.q-marca',qe);if(m)m.textContent=ok?'Acertou':'Errou';
+  var gab=(qe.dataset.gab||'').toUpperCase();
+  $$('.q-alt',qe).forEach(function(a){var l=a.dataset.l;
+    a.classList.toggle('marcada',l===letra);a.classList.toggle('certa',l===gab);
+    a.classList.toggle('errada-marcada',l===letra&&l!==gab);});
+  var c=$('.q-coment',qe);if(c)c.hidden=false;
+}
+document.addEventListener('click',function(ev){
+  var t=ev.target;if(!t.closest)return;
+  var tes=t.closest('.q-tesoura');
+  if(tes){var a=tes.closest('.q-alt');if(!a||a.closest('.questao').classList.contains('respondida'))return;
+    a.classList.toggle('cortada');if(a.classList.contains('cortada'))a.classList.remove('marcada');
+    tes.setAttribute('aria-pressed',a.classList.contains('cortada')?'true':'false');return;}
+  var pick=t.closest('.q-pick');
+  if(pick){var al=pick.closest('.q-alt'),qe=pick.closest('.questao');
+    if(!al||!qe||qe.classList.contains('respondida'))return;
+    al.classList.remove('cortada');
+    $$('.q-alt',qe).forEach(function(x){x.classList.remove('marcada');});al.classList.add('marcada');return;}
+  var r=t.closest('.q-responder');
+  if(r){var qr=r.closest('.questao'),mk=$('.q-alt.marcada',qr);
+    if(!mk){toast('Escolha uma alternativa antes de revelar o gabarito.');return;}
+    var letra=mk.dataset.l,ok=letra===(qr.dataset.gab||'').toUpperCase();
+    state.quiz[qr.dataset.q]={r:letra,ok:ok};save();aplica(qr,letra,ok);pintaPlacar();
+    if(ok){var el=ELOGIOS[(Math.random()*ELOGIOS.length)|0];comemorar(el[0],el[1],el[2],160);}
+    else{toast('Errou — o gabarito é a alternativa '+(qr.dataset.gab||'').toUpperCase()+'. Leia o comentário.');}
+    return;}
+  var rf=t.closest('.q-refazer');
+  if(rf){var qf=rf.closest('.questao');delete state.quiz[qf.dataset.q];save();
+    qf.classList.remove('respondida','acertou','errou');
+    $$('.q-alt',qf).forEach(function(x){x.classList.remove('marcada','certa','errada-marcada','cortada');});
+    var c=$('.q-coment',qf);if(c)c.hidden=true;pintaPlacar();return;}
+  var lm=t.closest('.q-limpar');
+  if(lm){var ql=lm.closest('.questao');if(ql.classList.contains('respondida'))return;
+    $$('.q-alt',ql).forEach(function(x){x.classList.remove('marcada','cortada');});return;}
+  if(t.closest('#qZerar')){state.quiz={};save();
+    questoes.forEach(function(x){x.classList.remove('respondida','acertou','errou');
+      $$('.q-alt',x).forEach(function(y){y.classList.remove('marcada','certa','errada-marcada','cortada');});
+      var c=$('.q-coment',x);if(c)c.hidden=true;});
+    pintaPlacar();toast('Placar zerado.');return;}
+});
+questoes.forEach(function(x){var reg=state.quiz[x.dataset.q];if(reg&&reg.r)aplica(x,reg.r,!!reg.ok);});
+$$('.btn-fim').forEach(function(b){if(state.fim[b.dataset.fim])b.classList.add('feito');});
+/* ---------- DESAFIOS DIGITADOS (resposta escrita) ---------- */
+var desafios=$$('.desafio');
+function dnorm(s){
+  s=(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  s=s.replace(/[^0-9a-z\u00e7]+/g,' ').replace(/\s+/g,' ').trim();
+  s=s.replace(/^(o|a|os|as|um|uma|de|do|da|em|no|na)\s+/,'');
+  return s;
+}
+function lev(a,b){
+  if(a===b)return 0;if(!a.length)return b.length;if(!b.length)return a.length;
+  var v0=[],v1=[],i,j;for(j=0;j<=b.length;j++)v0[j]=j;
+  for(i=0;i<a.length;i++){v1[0]=i+1;
+    for(j=0;j<b.length;j++){var c=a.charAt(i)===b.charAt(j)?0:1;
+      v1[j+1]=Math.min(v1[j]+1,v0[j+1]+1,v0[j]+c);}
+    for(j=0;j<=b.length;j++)v0[j]=v1[j];}
+  return v1[b.length];
+}
+function dResp(d){return (d.dataset.resp||'').split('|').map(function(x){return x.trim();}).filter(Boolean);}
+function dConfere(d,txt){
+  var alvo=dResp(d),n=dnorm(txt),melhor=99,i,a;
+  if(!n)return {st:'vazio'};
+  for(i=0;i<alvo.length;i++){
+    a=dnorm(alvo[i]);
+    if(n===a)return {st:'ok',alvo:alvo[i]};
+    if(a.length>3&&n.length>3&&(n.indexOf(a)>=0||a.indexOf(n)>=0)&&Math.abs(a.length-n.length)<=Math.max(4,a.length*0.34))return {st:'ok',alvo:alvo[i]};
+    var dst=lev(n,a);if(dst<melhor){melhor=dst;}
+  }
+  var lim=n.length<=4?1:(n.length<=8?2:3);
+  if(melhor<=lim)return {st:'quase'};
+  return {st:'nao'};
+}
+function dPinta(d,reg){
+  var fb=$('.df-fb',d),inp=$('.df-campo',d),alvo=dResp(d);
+  d.classList.remove('acertou','errou','revelado');
+  if(!reg){if(fb){fb.hidden=true;fb.innerHTML='';}if(inp){inp.value='';inp.disabled=false;}return;}
+  if(inp&&reg.r)inp.value=reg.r;
+  var por=d.dataset.porque?('<br>'+d.dataset.porque):'';
+  if(reg.st==='ok'){
+    d.classList.add('acertou');if(inp)inp.disabled=true;
+    if(fb){fb.hidden=false;fb.innerHTML='<span class="fb-ok">✓ Isso mesmo.</span> <b>'+alvo[0]+'</b>.'+(por?' '+por:'');}
+  }else if(reg.st==='rev'){
+    d.classList.add('revelado');if(inp)inp.disabled=true;
+    if(fb){fb.hidden=false;fb.innerHTML='<span class="fb-qs">Resposta:</span> <b>'+alvo[0]+'</b>.'+por
+      +(alvo.length>1?'<span class="df-alt">Também aceito: '+alvo.slice(1).join(' · ')+'</span>':'');}
+  }
+}
+function dTotalPlacar(){
+  var t=desafios.length,c=0;for(var k in state.desafio){if(state.desafio[k]&&state.desafio[k].st==='ok')c++;}
+  var e;if(e=$('#dCertos'))e.textContent=String(c);
+  if(e=$('#dTotal'))e.textContent=String(t);
+  if(e=$('#mkD'))e.textContent=String(t);
+}
+function dResponder(d){
+  var inp=$('.df-campo',d),fb=$('.df-fb',d);if(!inp)return;
+  var res=dConfere(d,inp.value);
+  if(res.st==='vazio'){toast('Escreva sua resposta antes de conferir.');inp.focus();return;}
+  if(res.st==='ok'){
+    state.desafio[d.dataset.d]={r:inp.value,st:'ok'};save();dPinta(d,state.desafio[d.dataset.d]);dTotalPlacar();
+    comemorar('Resposta correta','Escrita de cabeça — é assim que a memória fixa.','ESCRITA',120);
+    return;}
+  d.classList.remove('acertou','revelado');d.classList.add('errou');
+  if(fb){fb.hidden=false;
+    fb.innerHTML = res.st==='quase'
+      ? '<span class="fb-qs">Quase lá!</span> A ideia está certa, mas o termo exato é outro (ou faltou precisão na grafia). Tente de novo.'
+      : '<span class="fb-no">Ainda não.</span> '+(d.dataset.dica?d.dataset.dica:'Releia o dispositivo acima e tente outra vez.');}
+  inp.select();
+}
+document.addEventListener('click',function(ev){
+  var t=ev.target;if(!t.closest)return;
+  var d=t.closest('.desafio');if(!d)return;
+  if(t.closest('.df-ok')){dResponder(d);return;}
+  if(t.closest('.df-ver')){
+    state.desafio[d.dataset.d]={r:($('.df-campo',d)||{}).value||'',st:'rev'};save();
+    dPinta(d,state.desafio[d.dataset.d]);dTotalPlacar();return;}
+  if(t.closest('.df-de')){delete state.desafio[d.dataset.d];save();dPinta(d,null);dTotalPlacar();
+    var i=$('.df-campo',d);if(i){i.disabled=false;i.value='';i.focus();}return;}
+});
+document.addEventListener('keydown',function(ev){
+  if(ev.key!=='Enter')return;var t=ev.target;
+  if(t&&t.classList&&t.classList.contains('df-campo')){ev.preventDefault();var d=t.closest('.desafio');if(d)dResponder(d);}
+});
+desafios.forEach(function(d){var reg=state.desafio[d.dataset.d];if(reg)dPinta(d,reg);});
+var dz=$('#dZerar');if(dz)dz.addEventListener('click',function(){state.desafio={};save();
+  desafios.forEach(function(d){dPinta(d,null);});dTotalPlacar();toast('Desafios zerados.');});
+dTotalPlacar();
+pintaPlacar();pintaProgresso();pintaRelogio();roda();filtrar();
+})();
+
+</script>
+</body>
+</html>
